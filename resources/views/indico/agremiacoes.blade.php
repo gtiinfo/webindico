@@ -642,43 +642,42 @@
                     <p>Pedir simulação</p>
                 </div>
                 <ul>
-                    <li> 
-                        <div class="icon me-2">
-                            <i class="fas fa-caret-right"></i>
-                        </div>
-                        <div class="text">
-                            <label for=""><a href="../empresas/automevel-dp-basico.html">Automóvel</a></label>
-                        </div>
+                    <li>
+                      <div class="icon me-2">
+                        <i class="fas fa-caret-right"></i>
+                      </div>
+                      <div class="text">
+                        <label for=""><a href="{{ __route('view.danos-proprios-part') }}">Automóvel</a></label>
+                      </div>
                     </li>
                     <li>
-                        <div class="icon me-2">
-                            <i class="fas fa-caret-right"></i>
-                        </div>
-                        <div class="text">
-                            <label for=""><a href="../particulares/viagem.html">Viagem</a></label>
-                        </div>
+                      <div class="icon me-2">
+                        <i class="fas fa-caret-right"></i>
+                      </div>
+                      <div class="text">
+                        <label for=""><a href="{{ __route('view.viagem-part') }}">Viagem</a></label>
+                      </div>
                     </li>
                     <li>
-                        <div class="icon me-2">
-                            <i class="fas fa-caret-right"></i>
-                        </div>
-                        <div class="text">
-                            <label for=""><a href="../particulares/funeral.html">Funeral</a></label>
-                        </div>
+                      <div class="icon me-2">
+                        <i class="fas fa-caret-right"></i>
+                      </div>
+                      <div class="text">
+                        <label for=""><a href="{{ __route('view.funeral') }}">Funeral</a></label>
+                      </div>
                     </li>
                     <li>
-                        <div class="icon me-2">
-                            <i class="fas fa-caret-right"></i>
-                        </div>
-                        <div class="text">
-                            <label for=""><a href="../empresas/acidente-trabalho.html">Acidente de
-                                    Trabalho</a></label>
-                        </div>
+                      <div class="icon me-2">
+                        <i class="fas fa-caret-right"></i>
+                      </div>
+                      <div class="text">
+                        <label for=""><a href="{{ __route('view.acidente-trabalho') }}">Acidente de Trabalho</a></label>
+                      </div>
                     </li>
-                </ul>
-                <div class="img-bottom"></div>
-            </li>
-        </ul>
+                  </ul>
+                  <div class="img-bottom"></div>
+                </li>
+              </ul>
     </div><!-- END LATERAL MENU -->
     <section class="intro-box-section">
         <!-- Intro-Box -->

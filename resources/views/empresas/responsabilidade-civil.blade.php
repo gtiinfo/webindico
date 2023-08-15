@@ -527,7 +527,7 @@
               <i class="fas fa-caret-right"></i>
             </div>
             <div class="text">
-              <label for=""><a href="./automevel-dp-basico.html">Automóvel</a></label>
+              <label for=""><a href="{{ __route('view.danos-proprios-part') }}">Automóvel</a></label>
             </div>
           </li>
           <li>
@@ -535,7 +535,7 @@
               <i class="fas fa-caret-right"></i>
             </div>
             <div class="text">
-              <label for=""><a href="../particulares/viagem.html">Viagem</a></label>
+              <label for=""><a href="{{ __route('view.viagem-part') }}">Viagem</a></label>
             </div>
           </li>
           <li>
@@ -543,7 +543,7 @@
               <i class="fas fa-caret-right"></i>
             </div>
             <div class="text">
-              <label for=""><a href="../particulares/funeral.html">Funeral</a></label>
+              <label for=""><a href="{{ __route('view.funeral') }}">Funeral</a></label>
             </div>
           </li>
           <li>
@@ -551,7 +551,7 @@
               <i class="fas fa-caret-right"></i>
             </div>
             <div class="text">
-              <label for=""><a href="./acidente-trabalho.html">Acidente de Trabalho</a></label>
+              <label for=""><a href="{{ __route('view.acidente-trabalho') }}">Acidente de Trabalho</a></label>
             </div>
           </li>
         </ul>
