@@ -643,41 +643,43 @@
                 </div>
                 <ul>
                     <li>
-                      <div class="icon me-2">
-                        <i class="fas fa-caret-right"></i>
-                      </div>
-                      <div class="text">
-                        <label for=""><a href="{{ __route('view.danos-proprios-part') }}">Automóvel</a></label>
-                      </div>
+                        <div class="icon me-2">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                        <div class="text">
+                            <label for=""><a
+                                    href="{{ __(route('view.danos-proprios-part')) }}">Automóvel</a></label>
+                        </div>
                     </li>
                     <li>
-                      <div class="icon me-2">
-                        <i class="fas fa-caret-right"></i>
-                      </div>
-                      <div class="text">
-                        <label for=""><a href="{{ __route('view.viagem-part') }}">Viagem</a></label>
-                      </div>
+                        <div class="icon me-2">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                        <div class="text">
+                            <label for=""><a href="{{ __(route('view.viagem-part')) }}">Viagem</a></label>
+                        </div>
                     </li>
                     <li>
-                      <div class="icon me-2">
-                        <i class="fas fa-caret-right"></i>
-                      </div>
-                      <div class="text">
-                        <label for=""><a href="{{ __route('view.funeral') }}">Funeral</a></label>
-                      </div>
+                        <div class="icon me-2">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                        <div class="text">
+                            <label for=""><a href="{{ __(route('view.funeral')) }}">Funeral</a></label>
+                        </div>
                     </li>
                     <li>
-                      <div class="icon me-2">
-                        <i class="fas fa-caret-right"></i>
-                      </div>
-                      <div class="text">
-                        <label for=""><a href="{{ __route('view.acidente-trabalho') }}">Acidente de Trabalho</a></label>
-                      </div>
+                        <div class="icon me-2">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                        <div class="text">
+                            <label for=""><a href="{{ __(route('view.acidente-trabalho')) }}">Acidente de
+                                    Trabalho</a></label>
+                        </div>
                     </li>
-                  </ul>
-                  <div class="img-bottom"></div>
-                </li>
-              </ul>
+                </ul>
+                <div class="img-bottom"></div>
+            </li>
+        </ul>
     </div><!-- END LATERAL MENU -->
     <section class="intro-box-section">
         <!-- Intro-Box -->
@@ -728,7 +730,7 @@
                                     Valores.</span></li>
                         </ul>
                         <div class="mb-3">
-                            <a href="{{ __route('view.form-talento')}}" class="text-uppercase">Inscreva-se aqui!</a>
+                            <a href="{{ __route('view.form-talento') }}" class="text-uppercase">Inscreva-se aqui!</a>
                         </div>
                     </div>
                     <div class="img-border-bottom"></div>

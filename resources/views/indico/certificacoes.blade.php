@@ -647,7 +647,7 @@
                         <i class="fas fa-caret-right"></i>
                       </div>
                       <div class="text">
-                        <label for=""><a href="{{ __route('view.danos-proprios-part') }}">Automóvel</a></label>
+                        <label for=""><a href="{{ __(route('view.danos-proprios-part')) }}">Automóvel</a></label>
                       </div>
                     </li>
                     <li>
@@ -655,7 +655,7 @@
                         <i class="fas fa-caret-right"></i>
                       </div>
                       <div class="text">
-                        <label for=""><a href="{{ __route('view.viagem-part') }}">Viagem</a></label>
+                        <label for=""><a href="{{ __(route('view.viagem-part')) }}">Viagem</a></label>
                       </div>
                     </li>
                     <li>
@@ -663,7 +663,7 @@
                         <i class="fas fa-caret-right"></i>
                       </div>
                       <div class="text">
-                        <label for=""><a href="{{ __route('view.funeral') }}">Funeral</a></label>
+                        <label for=""><a href="{{ __(route('view.funeral')) }}">Funeral</a></label>
                       </div>
                     </li>
                     <li>
@@ -671,13 +671,10 @@
                         <i class="fas fa-caret-right"></i>
                       </div>
                       <div class="text">
-                        <label for=""><a href="{{ __route('view.acidente-trabalho') }}">Acidente de Trabalho</a></label>
+                        <label for=""><a href="{{ __(route('view.acidente-trabalho')) }}">Acidente de Trabalho</a></label>
                       </div>
                     </li>
                   </ul>
-                  <div class="img-bottom"></div>
-                </li>
-              </ul>
     </div><!-- END LATERAL MENU -->
     <section class="intro-box-section">
         <!-- Intro-Box -->

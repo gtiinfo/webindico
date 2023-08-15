@@ -725,8 +725,8 @@
               <div class="card position-relative n me-4">
                 <div class="d-flex justify-content-between">
                   <div class="content-text">
-                    <h4>Participar <br>Sinistro</h4>
-                    <p>Participar de Sinistro Aqui! <br>Simples e Rápido</p>
+                    <h4>Sinistro</h4>
+                    <p>Participe o seu Sinistro Aqui!</p>
                   </div>
                   <div class="content-img">
                     <img src="./assets/img/Outros_icones_Participação_Sinistro-01.png" alt="">
@@ -740,7 +740,7 @@
                 <div class="d-flex justify-content-between">
                   <div class="content-text">
                     <h4>Consultar <br>Estado</h4>
-                    <p>Acompanhe o estado da <br>sua participação</p>
+                    <p>Acompanhe o estado <br>do seu sinistro</p>
                   </div>
                   <div class="content-img">
                     <img src="./assets/img/Outros_icones_Consulta_Estado-01.png" alt="">
