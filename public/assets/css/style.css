@@ -444,7 +444,7 @@ small {
     opacity: 1;
 }
 
-.loading-spinner {
+/* .loading-spinner {
     display: none;
     position: fixed;
     top: 0;
@@ -469,7 +469,7 @@ small {
   @keyframes spin {
     0% { transform: translate(-50%, -50%) rotate(0deg); }
     100% { transform: translate(-50%, -50%) rotate(360deg); }
-  }
+  } */
 /*******************************
             LATERAL MENU
 *******************************/

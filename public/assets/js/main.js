@@ -24,21 +24,21 @@ $('.item-0 > li').on('click', function (event) {
   });
 });
 
-// Show loading spinner
-function showLoadingSpinner() {
-  var spinner = document.querySelector('.loading-spinner');
-  spinner.style.display = 'block';
-}
+// // Show loading spinner
+// function showLoadingSpinner() {
+//   var spinner = document.querySelector('.loading-spinner');
+//   spinner.style.display = 'block';
+// }
 
-// Hide loading spinner
-function hideLoadingSpinner() {
-  var spinner = document.querySelector('.loading-spinner');
-  spinner.style.display = 'none';
-}
+// // Hide loading spinner
+// function hideLoadingSpinner() {
+//   var spinner = document.querySelector('.loading-spinner');
+//   spinner.style.display = 'none';
+// }
 
-// Attach event handlers for page load events
-window.addEventListener('load', hideLoadingSpinner);
-window.addEventListener('beforeunload', showLoadingSpinner);
+// // Attach event handlers for page load events
+// window.addEventListener('load', hideLoadingSpinner);
+// window.addEventListener('beforeunload', showLoadingSpinner);
 
 // habitacao
 jQuery(function () {
