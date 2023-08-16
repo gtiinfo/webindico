@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.min.css?version=1.1" />
     <link rel="stylesheet" href="./assets/vendor/mdbootstrap/css/mdb.min.css?version=1.1" />
     <link rel="stylesheet" href="./assets/vendor/fontawesome/css/all.min.css?version=1.1" />
+    <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css">
     <link rel="stylesheet" href="./assets/css/extend.css?version=1.1" />
     <link rel="stylesheet" href="./assets/css/style.css?version=1.1" />
     <link rel="stylesheet" href="./assets/css/list-style.css">
@@ -585,38 +586,40 @@
                 </div>
                 <ul>
                     <li>
-                      <div class="icon me-2">
-                        <i class="fas fa-caret-right"></i>
-                      </div>
-                      <div class="text">
-                      <label for=""><a href="{{ __(route('view.danos-proprios-part')) }}">Automóvel</a></label>
-                      </div>
+                        <div class="icon me-2">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                        <div class="text">
+                            <label for=""><a
+                                    href="{{ __(route('view.danos-proprios-part')) }}">Automóvel</a></label>
+                        </div>
                     </li>
                     <li>
-                      <div class="icon me-2">
-                        <i class="fas fa-caret-right"></i>
-                      </div>
-                      <div class="text">
-                        <label for=""><a href="{{ __(route('view.viagem-part')) }}">Viagem</a></label>
-                      </div>
+                        <div class="icon me-2">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                        <div class="text">
+                            <label for=""><a href="{{ __(route('view.viagem-part')) }}">Viagem</a></label>
+                        </div>
                     </li>
                     <li>
-                      <div class="icon me-2">
-                        <i class="fas fa-caret-right"></i>
-                      </div>
-                      <div class="text">
-                        <label for=""><a href="{{ __(route('view.funeral')) }}">Funeral</a></label>
-                      </div>
+                        <div class="icon me-2">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                        <div class="text">
+                            <label for=""><a href="{{ __(route('view.funeral')) }}">Funeral</a></label>
+                        </div>
                     </li>
                     <li>
-                      <div class="icon me-2">
-                        <i class="fas fa-caret-right"></i>
-                      </div>
-                      <div class="text">
-                        <label for=""><a href="{{ __(route('view.acidente-trabalho')) }}">Acidente de Trabalho</a></label>
-                      </div>
+                        <div class="icon me-2">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                        <div class="text">
+                            <label for=""><a href="{{ __(route('view.acidente-trabalho')) }}">Acidente de
+                                    Trabalho</a></label>
+                        </div>
                     </li>
-                  </ul>
+                </ul>
                 <div class="img-bottom"></div>
             </li>
         </ul>
@@ -629,8 +632,601 @@
         <!-- End Intro-Box -->
     </section>
     <!-- Box Inf -->
+    <section class="list">
+    <iframe src="https://www.google.com/maps/d/embed?mid=118c9wLgvIlxVIXXytW2ETF5KHnJ96Sk&ehbc=2E312F" width="100%" height="550"></iframe>
 
-    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=118c9wLgvIlxVIXXytW2ETF5KHnJ96Sk&ehbc=2E312F" width="100%" height="480"></iframe>
+    <div class="list-agences">
+        <div class="card-main">
+            <div class="card-header">
+                <div class="title">
+                    <h4>Lista das Agências</h4>
+                </div>
+                <div class="icon">
+                    <i class='bx bx-search'></i>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="card">
+                    <div class="card-info">
+                        <div class="content-text">
+                            <div class="name">
+                                <h4>Agência Sede</h4>
+                            </div>
+                            <div class="location">
+                                <p>Av. Barnabé Thawé, Nº 333/659 Bairro da Sommerschield - Cidade de Maputo</p>
+                            </div>
+                            <div class="time">
+                                <p class="time-status"></p>
+                            </div>
+                        </div>
+                        <div class="content-icon">
+                            <div class="icon-left">
+                                <i class='bx bxs-direction-right'></i>
+                                <h4><a href="https://www.google.com/maps/dir//Companhia+de+Seguros+%C3%8Dndico,+S.A.,+333%2F659,+Av.+Bernab%C3%A9+Thaw%C3%A9,+Maputo/@-25.9684791,32.5987396,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x1ee69bba1ada3f7f:0x98bd4ebd3339276!2m2!1d32.5987915!2d-25.968484?entry=ttu" target="_blank">Direccão</a></h4>
+                            </div>
+                            <div class="icon-right">
+                                <i class='bx bxs-phone-call'></i>
+                                <h4>Ligar</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-alert">
+                    <div class="img-agencia">
+                        <img src="./assets/img/background.png" alt="">
+                    </div>
+                    <div class="content-text">
+                        <div class="name">
+                            <h4>Agência Sede</h4>
+                        </div>
+                        <div class="location">
+                            <p>Av. Barnabé Thawé, Nº 333/659 Bairro da Sommerschield - Cidade de Maputo</p>
+                        </div>
+                        <div class="time">
+                            <p class="time-status"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-info">
+                        <div class="content-text">
+                            <div class="name">
+                                <h4>Agência da Matola</h4>
+                            </div>
+                            <div class="location">
+                                <p>Av.Alberto Nkutumula Nº 580 Bairro da Matola A- Moçambique </p>
+                            </div>
+                            <div class="time">
+                                <p class="time-status"></p>
+                            </div>
+                        </div>
+                        <div class="content-icon">
+                            <div class="icon-left">
+                                <i class='bx bxs-direction-right'></i>
+                                <h4><a href="https://www.google.com/maps/dir//2FQ3%2BGMM+Indico+Seguros,+SA,+Maputo/@-25.9611723,32.4541576,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x1ee6859ac7cb1221:0x626ede2e0783c341!2m2!1d32.4541584!2d-25.9611736?entry=ttu" target="_blank">Direccão</a></h4>
+                            </div>
+                            <div class="icon-right">
+                                <i class='bx bxs-phone-call'></i>
+                                <h4>Ligar</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-alert">
+                    <div class="img-agencia">
+                        <img src="./assets/img/background.png" alt="">
+                    </div>
+                    <div class="content-text">
+                        <div class="name">
+                            <h4>Agência da Matola</h4>
+                        </div>
+                        <div class="location">
+                            <p>Av.Alberto Nkutumula Nº 580 Bairro da Matola A- Moçambique</p>
+                        </div>
+                        <div class="time">
+                            <p class="time-status"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-info">
+                        <div class="content-text">
+                            <div class="name">
+                                <h4>Agência da Manhiça</h4>
+                            </div>
+                            <div class="location">
+                                <p>Estrada Nacional Nr º 1 Manhiça Shopping Center Vila da Manhiça</p>
+                            </div>
+                            <div class="time">
+                                <p class="time-status"></p>
+                            </div>
+                        </div>
+                        <div class="content-icon">
+                            <div class="icon-left">
+                                <i class='bx bxs-direction-right'></i>
+                                <h4><a href="https://www.google.com/maps/dir//-25.41034,32.74467/@-25.4103351,32.7420951,17z?entry=ttu" target="_blank">Direccão</a></h4>
+                            </div>
+                            <div class="icon-right">
+                                <i class='bx bxs-phone-call'></i>
+                                <h4>Ligar</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-alert">
+                    <div class="img-agencia">
+                        <img src="./assets/img/background.png" alt="">
+                    </div>
+                    <div class="content-text">
+                        <div class="name">
+                            <h4>Agência da Manhiça</h4>
+                        </div>
+                        <div class="location">
+                            <p>Estrada Nacional Nr º 1 Manhiça Shopping Center Vila da Manhiça</p>
+                        </div>
+                        <div class="time">
+                            <p class="time-status"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-info">
+                        <div class="content-text">
+                            <div class="name">
+                                <h4>Agência da Xai-Xai</h4>
+                            </div>
+                            <div class="location">
+                                <p>Av. Samora Machel, Shopping Xai-Xai - Moçambique</p>
+                            </div>
+                            <div class="time">
+                                <p class="time-status"></p>
+                            </div>
+                        </div>
+                        <div class="content-icon">
+                            <div class="icon-left">
+                                <i class='bx bxs-direction-right'></i>
+                                <h4><a href="https://www.google.com/maps/dir//-25.05536,33.65302/@-25.0553551,33.6504451,17z?entry=ttu" target="_blank">Direccão</a></h4>
+                            </div>
+                            <div class="icon-right">
+                                <i class='bx bxs-phone-call'></i>
+                                <h4>Ligar</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-alert ">
+                    <div class="img-agencia">
+                        <img src="./assets/img/background.png" alt="">
+                    </div>
+                    <div class="content-text">
+                        <div class="name">
+                            <h4>Agência da Xai-Xai</h4>
+                        </div>
+                        <div class="location">
+                            <p>Av. Samora Machel, Shopping Xai-Xai - Moçambique</p>
+                        </div>
+                        <div class="time">
+                            <p class="time-status"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-info">
+                        <div class="content-text">
+                            <div class="name">
+                                <h4>Agência da Maxixe</h4>
+                            </div>
+                            <div class="location">
+                                <p>Av. 25 de Setembro Cidade de Maxixe - Moçambique</p>
+                            </div>
+                            <div class="time">
+                                <p class="time-status"></p>
+                            </div>
+                        </div>
+                        <div class="content-icon">
+                            <div class="icon-left">
+                                <i class='bx bxs-direction-right'></i>
+                                <h4><a href="https://www.google.com/maps/dir//-25.05536,33.65302/@-25.0553551,33.6504451,17z?entry=ttu" target="_blank">Direccão</a></h4>
+                            </div>
+                            <div class="icon-right">
+                                <i class='bx bxs-phone-call'></i>
+                                <h4>Ligar</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-alert">
+                    <div class="img-agencia">
+                        <img src="./assets/img/background.png" alt="">
+                    </div>
+                    <div class="content-text">
+                        <div class="name">
+                            <h4>Agência da Maxixe</h4>
+                        </div>
+                        <div class="location">
+                            <p>Av. 25 de Setembro Cidade de Maxixe - Moçambique</p>
+                        </div>
+                        <div class="time">
+                            <p class="time-status"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-info">
+                        <div class="content-text">
+                            <div class="name">
+                                <h4>Agência da Vilankulo</h4>
+                            </div>
+                            <div class="location">
+                                <p>Bairro Central, Rua da Handling - Vilankulo- Moçambique</p>
+                            </div>
+                            <div class="time">
+                                <p class="time-status"></p>
+                            </div>
+                        </div>
+                        <div class="content-icon">
+                            <div class="icon-left">
+                                <i class='bx bxs-direction-right'></i>
+                                <h4><a href="https://www.google.com/maps/dir//-22.00299,+35.3195/@-22.0027633,35.2782126,13z/data=!4m6!4m5!1m0!1m3!2m2!1d35.3195!2d-22.00299?entry=ttu" target="_blank">Direccão</a></h4>
+                            </div>
+                            <div class="icon-right">
+                                <i class='bx bxs-phone-call'></i>
+                                <h4>Ligar</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-alert">
+                    <div class="img-agencia">
+                        <img src="./assets/img/background.png" alt="">
+                    </div>
+                    <div class="content-text">
+                        <div class="name">
+                            <h4>Agência da Vilankulo</h4>
+                        </div>
+                        <div class="location">
+                            <p>Bairro Central, Rua da Handling - Vilankulo- Moçambique</p>
+                        </div>
+                        <div class="time">
+                            <p class="time-status"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-info">
+                        <div class="content-text">
+                            <div class="name">
+                                <h4>Agência da Tete</h4>
+                            </div>
+                            <div class="location">
+                                <p>Av. Liberdade Edifício, Paraíso Misterioso Tete Moçambique</p>
+                            </div>
+                            <div class="time">
+                                <p class="time-status"></p>
+                            </div>
+                        </div>
+                        <div class="content-icon">
+                            <div class="icon-left">
+                                <i class='bx bxs-direction-right'></i>
+                                <h4><a href="https://www.google.com/maps/dir//-16.15797,+33.59166/@-16.1578878,33.550464,13z/data=!4m6!4m5!1m0!1m3!2m2!1d33.59166!2d-16.15797?entry=ttu" target="_blank">Direccão</a></h4>
+
+                            </div>
+                            <div class="icon-right">
+                                <i class='bx bxs-phone-call'></i>
+                                <h4>Ligar</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-alert">
+                    <div class="img-agencia">
+                        <img src="./assets/img/background.png" alt="">
+                    </div>
+                    <div class="content-text">
+                        <div class="name">
+                            <h4>Agência da Tete</h4>
+                        </div>
+                        <div class="location">
+                            <p>Av. Liberdade Edifício, Paraíso Misterioso Tete Moçambique</p>
+                        </div>
+                        <div class="time">
+                            <p class="time-status"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-info">
+                        <div class="content-text">
+                            <div class="name">
+                                <h4>Agência da Beira</h4>
+                            </div>
+                            <div class="location">
+                                <p>Rua Lisboa Lima, Edifício Entreposto Beira - Moçambique</p>
+                            </div>
+                            <div class="time">
+                                <p class="time-status"></p>
+                            </div>
+                        </div>
+                        <div class="content-icon">
+                            <div class="icon-left">
+                                <i class='bx bxs-direction-right'></i>
+                                <h4><a href="https://www.google.com/maps/dir//-19.82038,+34.84429/@-19.8202053,34.8030004,13z/data=!4m6!4m5!1m0!1m3!2m2!1d34.84429!2d-19.82038?entry=ttu" target="_blank">Direccão</a></h4>
+                            </div>
+                            <div class="icon-right">
+                                <i class='bx bxs-phone-call'></i>
+                                <h4>Ligar</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-alert">
+                    <div class="img-agencia">
+                        <img src="./assets/img/background.png" alt="">
+                    </div>
+                    <div class="content-text">
+                        <div class="name">
+                            <h4>Agência da Beira</h4>
+                        </div>
+                        <div class="location">
+                            <p>Rua Lisboa Lima, Edifício Entreposto Beira - Moçambique</p>
+                        </div>
+                        <div class="time">
+                            <p class="time-status"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-info">
+                        <div class="content-text">
+                            <div class="name">
+                                <h4>Agência da Chimoio</h4>
+                            </div>
+                            <div class="location">
+                                <p>Rua Dr. Américo Boavida Complexo Amirana Cidade de Chimoio - Moçambique</p>
+                            </div>
+                            <div class="time">
+                                <p class="time-status"></p>
+                            </div>
+                        </div>
+                        <div class="content-icon">
+                            <div class="icon-left">
+                                <i class='bx bxs-direction-right'></i>
+                                <h4><a href="https://www.google.com/maps/dir//-19.10548,+33.46077/@-19.1054022,33.4195746,13z/data=!4m6!4m5!1m0!1m3!2m2!1d33.46077!2d-19.10548?entry=ttu" target="_blank">Direccão</a></h4>
+                            </div>
+                            <div class="icon-right">
+                                <i class='bx bxs-phone-call'></i>
+                                <h4>Ligar</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-alert">
+                    <div class="img-agencia">
+                        <img src="./assets/img/background.png" alt="">
+                    </div>
+                    <div class="content-text">
+                        <div class="name">
+                            <h4>Agência da Chimoio</h4>
+                        </div>
+                        <div class="location">
+                            <p>Rua Dr. Américo Boavida Complexo Amirana Cidade de Chimoio - Moçambique</p>
+                        </div>
+                        <div class="time">
+                            <p class="time-status"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-info">
+                        <div class="content-text">
+                            <div class="name">
+                                <h4>Agência da Quelimane</h4>
+                            </div>
+                            <div class="location">
+                                <p>Av. Filipe Samuel Magaia, Nº203 Quelimane - Moçambique</p>
+                            </div>
+                            <div class="time">
+                                <p class="time-status"></p>
+                            </div>
+                        </div>
+                        <div class="content-icon">
+                            <div class="icon-left">
+                                <i class='bx bxs-direction-right'></i>
+                                <h4><a href="4m6!4m5!1m0!1m3!2m2!1d36.87968!2d-17.88005?entry=ttu" target="_blank">Direccão</a></h4>
+                            </div>
+                            <div class="icon-right">
+                                <i class='bx bxs-phone-call'></i>
+                                <h4>Ligar</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-alert">
+                    <div class="img-agencia">
+                        <img src="./assets/img/background.png" alt="">
+                    </div>
+                    <div class="content-text">
+                        <div class="name">
+                            <h4>Agência da Quelimane</h4>
+                        </div>
+                        <div class="location">
+                            <p>Av. Filipe Samuel Magaia, Nº203 Quelimane - Moçambique</p>
+                        </div>
+                        <div class="time">
+                            <p class="time-status"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-info">
+                        <div class="content-text">
+                            <div class="name">
+                                <h4>Agência da Lichinga</h4>
+                            </div>
+                            <div class="location">
+                                <p>Av. Filipe Samuel Magaia Edifício Vodacom Lichinga - Moçambique</p>
+                            </div>
+                            <div class="time">
+                                <p class="time-status"></p>
+                            </div>
+                        </div>
+                        <div class="content-icon">
+                            <div class="icon-left">
+                                <i class='bx bxs-direction-right'></i>
+                                <h4><a href="https://www.google.com/maps/dir//-13.30233,+35.2458/@-13.3023327,35.2045086,13z/data=!4m6!4m5!1m0!1m3!2m2!1d35.2458!2d-13.30233?entry=ttu" target="_blank">Direccão</a></h4>
+                            </div>
+                            <div class="icon-right">
+                                <i class='bx bxs-phone-call'></i>
+                                <h4>Ligar</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-alert">
+                    <div class="img-agencia">
+                        <img src="./assets/img/background.png" alt="">
+                    </div>
+                    <div class="content-text">
+                        <div class="name">
+                            <h4>Agência da Lichinga</h4>
+                        </div>
+                        <div class="location">
+                            <p>Av. Filipe Samuel Magaia Edifício Vodacom Lichinga - Moçambique</p>
+                        </div>
+                        <div class="time">
+                            <p class="time-status"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-info">
+                        <div class="content-text">
+                            <div class="name">
+                                <h4>Agência da Nacala</h4>
+                            </div>
+                            <div class="location">
+                                <p>Bairro Maiaia Rua dos Anjos Nacala - Moçambique</p>
+                            </div>
+                            <div class="time">
+                                <p class="time-status"></p>
+                            </div>
+                        </div>
+                        <div class="content-icon">
+                            <div class="icon-left">
+                                <i class='bx bxs-direction-right'></i>
+                                <h4><a href="https://www.google.com/maps/dir//-14.54551,+40.67812/@-14.5453709,40.6370519,13z/data=!4m6!4m5!1m0!1m3!2m2!1d40.67812!2d-14.54551?entry=ttu" target="_blank">Direccão</a></h4>
+                            </div>
+                            <div class="icon-right">
+                                <i class='bx bxs-phone-call'></i>
+                                <h4>Ligar</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-alert">
+                    <div class="img-agencia">
+                        <img src="./assets/img/background.png" alt="">
+                    </div>
+                    <div class="content-text">
+                        <div class="name">
+                            <h4>Agência da Nacala</h4>
+                        </div>
+                        <div class="location">
+                            <p>Bairro Maiaia Rua dos Anjos Nacala - Moçambique</p>
+                        </div>
+                        <div class="time">
+                            <p class="time-status"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-info">
+                        <div class="content-text">
+                            <div class="name">
+                                <h4>Agência da Nampula</h4>
+                            </div>
+                            <div class="location">
+                                <p>Bairro Muahivire, Monica Shopping Loja L Nampula - Moçambique</p>
+                            </div>
+                            <div class="time">
+                                <p class="time-status"></p>
+                            </div>
+                        </div>
+                        <div class="content-icon">
+                            <div class="icon-left">
+                                <i class='bx bxs-direction-right'></i>
+                                <h4><a href="https://www.google.com/maps/dir//-15.12789,+39.26428/@-15.1277829,39.2230164,13z/data=!4m6!4m5!1m0!1m3!2m2!1d39.26428!2d-15.12789?entry=ttu" target="_blank">Direccão</a></h4>
+                            </div>
+                            <div class="icon-right">
+                                <i class='bx bxs-phone-call'></i>
+                                <h4>Ligar</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-alert">
+                    <div class="img-agencia">
+                        <img src="./assets/img/background.png" alt="">
+                    </div>
+                    <div class="content-text">
+                        <div class="name">
+                            <h4>Agência da Nampula</h4>
+                        </div>
+                        <div class="location">
+                            <p>Bairro Muahivire, Monica Shopping Loja L Nampula - Moçambique</p>
+                        </div>
+                        <div class="time">
+                            <p class="time-status"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-info">
+                        <div class="content-text">
+                            <div class="name">
+                                <h4>Agência da Pemba</h4>
+                            </div>
+                            <div class="location">
+                                <p>Av. Eduardo Mondlane R/C N 393 Pemba - Moçambique</p>
+                            </div>
+                            <div class="time">
+                                <p class="time-status"></p>
+                            </div>
+                        </div>
+                        <div class="content-icon">
+                            <div class="icon-left">
+                                <i class='bx bxs-direction-right'></i>
+                                <h4><a href="https://www.google.com/maps/dir//-12.95917,+40.50272/@-12.9590928,40.4615293,13z/data=!3m1!4b1!4m6!4m5!1m0!1m3!2m2!1d40.50272!2d-12.95917?entry=ttu" target="_blank">Direccão</a></h4>
+                            </div>
+                            <div class="icon-right">
+                                <i class='bx bxs-phone-call'></i>
+                                <h4>Ligar</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-alert">
+                    <div class="img-agencia">
+                        <img src="./assets/img/background.png" alt="">
+                    </div>
+                    <div class="content-text">
+                        <div class="name">
+                            <h4>Agência da Pemba</h4>
+                        </div>
+                        <div class="location">
+                            <p>Av. Eduardo Mondlane R/C N 393 Pemba - Moçambique</p>
+                        </div>
+                        <div class="time">
+                            <p class="time-status"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer"></div>
+            </div>
+
+        </div>
+    </div>
+    </section>
 
     <footer>
         <div class="footer mt-5">
@@ -646,7 +1242,7 @@
                             <li class="title">Particulares</li>
                             <li><a href="{{ __(route('view.danos-proprios-part')) }}">Danos Próprios</a></li>
                             <li><a href="{{ __(route('view.resp-civil-part')) }}">Responsabilidade Civil</a></li>
-                            <li><a href="{{ __(route('view.resp-civil-bombas-part')) }}">Responsabilidade Civil
+                            <li><a href="{{ __(route('view.resp-civil-bombas-part')) }}">Resp. Civil
                                     Bombas</a></li>
                             <li><a href="{{ __(route('view.habitacao')) }}">Multirisco Habitação</a></li>
                             <li><a href="{{ __(route('view.empregados')) }}">Empregados Domésticos</a></li>
@@ -738,14 +1334,11 @@
             <img src="./assets/img/footer_bar.png" alt="">
         </div>
     </footer>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwK1pXNO_7LyHbRZyC62w1b41WZD6pRe4&callback=initMap"></script>
     <script src="./assets/vendor/jquery/js/jquery.min.js?version=1.1"></script>
     <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js?version=1.1"></script>
     <script src="./assets/vendor/mdbootstrap/js/mdb.min.js?version=1.1"></script>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/function.js"></script>
-
 
 </body>
 
