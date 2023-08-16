@@ -1383,6 +1383,7 @@ small {
     left: 50%;
     transform: translate(-50%, -50%) scale(0.1);
     text-align: center;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
     padding: 0 30px 30px;
     color: #333;
     z-index: 11;
