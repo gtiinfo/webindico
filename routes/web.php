@@ -11,7 +11,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
     Route::get('/faq', 'HomeController@faq')->name('view.faq');
     Route::get('/lista-agencias', 'HomeController@listAgencies')->name('view.agencias');
     Route::get('/admin', 'AdminController@dashboard')->name('view.admim');
-    Route::post('/send-participation', 'ParticipationController@sendEmail');
+    Route::post('/download', 'ParticipationController@sendEmail');
    
     
     Route::prefix('admin')->group(function(){
@@ -34,8 +34,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         Route::get('/actualizacao-dados', 'HomeController@actualizacaoDados')->name('view.actualizacao-dados-part');
         Route::get('/aviso-cobranca', 'HomeController@avisoCobranca')->name('view.aviso-cobranca');
         Route::get('/condicoes-gerais', 'HomeController@condicoesGerais')->name('view.condicoes-gerais-part');
-        Route::get('/consultar-sinitro', 'HomeController@consultarSinistro')->name('view.consul-sinistro-part');
-        Route::get('/danos-proprios', 'HomeController@danoProprios')->name('view.danos-proprios-part');
+        Route::get('/consultar-sinitro', 'HomeController@consultaSinistro')->name('view.consul-sinistro-part');
+        Route::get('/danos-proprios', 'HomeController@danoProprios')->name('view.danos-proprios-part'); 
         Route::get('/empregados-domesticos', 'HomeController@empregada')->name('view.empregados');
         Route::get('/funeral', 'HomeController@funeral')->name('view.funeral');
         Route::get('/habitacao', 'HomeController@habitacao')->name('view.habitacao');

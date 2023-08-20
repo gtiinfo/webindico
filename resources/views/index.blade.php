@@ -725,8 +725,8 @@
               <div class="card position-relative n me-4">
                 <div class="d-flex justify-content-between">
                   <div class="content-text">
-                    <h4>Sinistro</h4>
-                    <p>Participe o seu Sinistro Aqui!</p>
+                    <h4>Participe o seu Sinistro Aqui! </h4>
+                    <p>Simples e Rápido</p>
                   </div>
                   <div class="content-img">
                     <img src="./assets/img/Outros_icones_Participação_Sinistro-01.png" alt="">
@@ -739,8 +739,8 @@
               <div class="card position-relative">
                 <div class="d-flex justify-content-between">
                   <div class="content-text">
-                    <h4>Consultar <br>Estado</h4>
-                    <p>Acompanhe o estado <br>do seu sinistro</p>
+                    <h4>Acompanhe o estado do seu sinistro</h4>
+                    {{-- <p>Acompanhe o estado <br>do seu sinistro</p> --}}
                   </div>
                   <div class="content-img">
                     <img src="./assets/img/Outros_icones_Consulta_Estado-01.png" alt="">
@@ -755,7 +755,7 @@
               <div class="card position-relative mt-4">
                 <div class="d-flex justify-content-between">
                   <div class="content-text">
-                    <h4>Peça uma Simulação</h4>
+                    <h4>Simulação</h4>
                     <p>Peça a sua cotação</p>
                   </div>
                   <div class="content-img">
@@ -783,33 +783,21 @@
             <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
               <div class="img">
                 <img src="./assets/img/img_service_app.png" alt="">
-                <!-- <div class="info-overlay">
-                <div>
-                    <h3>Meios de Pagamentos</h3>
-                  </div>
-                </div> -->
+               
                 <div class="img-bottom"></div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
               <div class="img">
                 <img src="./assets/img/img_service_ussd.png" alt="">
-                <!-- <div class="info-overlay">
-                <div>
-                    <h3>USSD</h3>
-                  </div>
-                </div> -->
+                
                 <div class="img-bottom"></div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
               <div class="img">
                 <img src="./assets/img/img_service_bot.png" alt="">
-                <!-- <div class="info-overlay">
-                  <div>
-                    <h3>WhatsApp</h3>
-                  </div>
-                </div> -->
+                
                 <div class="img-bottom"></div>
               </div>
             </div>
@@ -832,7 +820,7 @@
               <li class="title">Particulares</li>
               <li><a href="{{ __(route('view.danos-proprios-part')) }}">Danos Próprios</a></li>
               <li><a href="{{ __(route('view.resp-civil-part')) }}">Responsabilidade Civil</a></li>
-              <li><a href="{{ __(route('view.resp-civil-bombas-part')) }}">Responsabilidade Civil Bombas</a></li>
+              <li><a href="{{ __(route('view.resp-civil-bombas-part')) }}">Resp. Civil Bombas</a></li>
               <li><a href="{{ __(route('view.habitacao')) }}">Multirisco Habitação</a></li>
               <li><a href="{{ __(route('view.empregados')) }}">Empregados Domésticos</a></li>
               <li><a href="{{ __(route('view.funeral')) }}">Funeral</a></li>

@@ -43,8 +43,8 @@ class AdminController extends Controller
             'document' => 'required|file|mimes:pdf,jpeg,jpg,png',
         ]);
 
-        $imageDir = $request->file('image')->storePublicly('image/articles');
-        $documentDir = $request->file('document')->storePublicly('document/articles');
+        $imageDir = $request->file('image')->store('image/articles');
+        $documentDir = $request->file('document')->store('document/articles');
       
         $article = new Article;
         $article->name = $request->fullname;

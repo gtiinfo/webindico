@@ -38,6 +38,7 @@ class HomeController extends Controller
         return view('particulares.condicoes-gerais');
     }
     public function consultaSinistro(){
+        
         return view('particulares.consultar-sinistro');
     }
     public function danoProprios(){

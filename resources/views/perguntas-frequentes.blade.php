@@ -1708,7 +1708,7 @@
               <li class="title">Particulares</li>
               <li><a href="{{ __(route('view.danos-proprios-part')) }}">Danos Próprios</a></li>
               <li><a href="{{ __(route('view.resp-civil-part')) }}">Responsabilidade Civil</a></li>
-              <li><a href="{{ __(route('view.resp-civil-bombas-part')) }}">Responsabilidade Civil Bombas</a></li>
+              <li><a href="{{ __(route('view.resp-civil-bombas-part')) }}">Resp. Civil Bombas</a></li>
               <li><a href="{{ __(route('view.habitacao')) }}">Multirisco Habitação</a></li>
               <li><a href="{{ __(route('view.empregados')) }}">Empregados Domésticos</a></li>
               <li><a href="{{ __(route('view.funeral')) }}">Funeral</a></li>

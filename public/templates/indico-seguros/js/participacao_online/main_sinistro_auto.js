@@ -1,42 +1,58 @@
 function participate() {
     if (validar()) {
-        var participationData = createJsonString();
-        var simString = window.location.protocol +'/api/participation';
-        var response;
-        jQuery.ajax(
-                {url: simString,
-                    type: 'POST',
-                    dataType: 'json',
-                    contentType: 'application/json',
-                    data: participationData,
-                    headers: {
-                      'cache-control': 'no-cache',
-                    //   'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    var participationData = createJsonString();
+    var simString = window.location.protocol + '/api/participation';
+    var response;
+    jQuery.ajax(
+        {
+            url: simString,
+            type: 'POST',
+            dataType: 'json',
+            contentType: 'application/json',
+            data: participationData,
+            headers: {
+                'cache-control': 'no-cache',
 
-                    },
-                    success: function (data) {
-                        response = data;
-                        if (data.successful) {
-                            alert(data.message);
-                            // console.log(data.message)
-                            //download do PDF
-                            const arrayBuffer = base64ToArrayBuffer(data.payload.fileResponse.data);
-                            createAndDownloadBlobFile(arrayBuffer, 'Participacao_Sinistro_Auto.pdf');
-                        } else {
-                            alert("Ocorreu um erro ao registar a sua particiapação de sinistro.");
-                        }
-                    },
-                    error: function(jqXHR, textStatus, errorThrown) {
-                        response = jqXHR.responseText;
-                        console.log(response);
-                        alert("Erro ao enviar a sua participação de sinistro. Volte a tentar depois de 5 minutos.");
-                  	},
-                }
-        );
-        
-    }
-    
-   
+            },
+            beforeSend: function() {
+                // Mostra o spinner antes da chamada Ajax
+                $('#loading-spinner').show();
+            },
+            success: function (data, status, xhr) {
+               if(data.successful){
+                Swal.fire({
+                    title: 'Sucesso!',
+                    text: data.message,
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                });
+                // alert(data.message);
+               }else{
+                Swal.fire({
+                    title: 'Erro!',
+                    text: data.message,
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
+               }
+            },
+            error: function(xhr, status, error) {
+                Swal.fire({
+                    title: 'Erro!',
+                    text: 'Ocorreu um erro ao enviar esse formulario!!',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
+            },
+            complete: function() {
+                $('#loading-spinner').hide();
+            }
+        }
+    );
+
+}
+
+
 }
 
 
@@ -128,7 +144,7 @@ function createJsonString() {
                 "observations": jQuery('#observacoes_b').val(),
                 "visibleDamages": jQuery('#danos_visiveis_b').val()
             },
-           "firstVehicleAccidentCircunstanceRequest": {
+            "firstVehicleAccidentCircunstanceRequest": {
                 "wasParked": jQuery('#estava_estacionado_a').is(':checked') ? 'X' : '',
                 "wasLeavingParking": jQuery('#saia_do_estacionado_a').is(':checked') ? 'X' : '',
                 "wasParking": jQuery('#ia_estacionar_a').is(':checked') ? 'X' : '',
@@ -247,7 +263,7 @@ function createJsonString() {
                 "p36": 'X',
                 "p37": 'X'
             },
-             "crashImage": {
+            "crashImage": {
                 "filename": "Pontos de Embate",
                 "extension": "png",
                 "data": jQuery("#img_canvas")[0].toDataURL().replace(/^data:image\/[a-z]+;base64,/, "")
@@ -322,33 +338,8 @@ function createJsonString() {
     return JSON.stringify(participationData);
 }
 
-function base64ToArrayBuffer(base64) {
-    const binaryString = window.atob(base64); // Comment this if not using base64
-    const bytes = new Uint8Array(binaryString.length);
-    return bytes.map((byte, i) => binaryString.charCodeAt(i));
-}
 
-function createAndDownloadBlobFile(body, fileName) {
-    const blob = new Blob([body], {type: 'application/pdf'});
-    if (navigator.msSaveBlob) {
-        // IE 10+
-        navigator.msSaveBlob(blob, fileName);
-    } else {
-        const link = document.createElement('a');
-      	const url = URL.createObjectURL(blob);
-        // Browsers that support HTML5 download attribute
-        if (link.download !== undefined) {
-            link.setAttribute('href', url);
-            link.setAttribute('download', fileName);
-            link.style.visibility = 'hidden';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        } else { //Browsers that don't support HTML5, just open the file
-          window.open(url);  
-        }
-    }
-}
+
 
 function loadBrands(veiculo) {
     var newelements = '';
@@ -675,17 +666,29 @@ function validar() {
     }
 
     if (not_complete == 1) {
-        alert("Por favor preencha todos os campos obrigatórios");
-        jQuery('#msgmail').html("<span style=\"color:red;\">Por favor preencha todos os campos obrigat&oacute;rios.</span>");
+        Swal.fire({
+            title: 'Erro!',
+            text: 'Por favor preencha todos os campos obrigatórios',
+            icon: 'error',
+            confirmButtonText: 'OK'
+        });
+        // alert("Por favor preencha todos os campos obrigatórios");
+        // jQuery('#msgmail').html("<span style=\"color:red;\">Por favor preencha todos os campos obrigat&oacute;rios.</span>");
         return false;
     }
 
     if (email_not_valid) {
-        alert("Por favor introduza email(s) válido(s).");
-        jQuery('#msgmail').html("<span style=\"color:red;\">Por favor introduza email(s) v&aacute;lido(s).</span>");
+        Swal.fire({
+            title: 'Erro!',
+            text: 'Por favor introduza email(s) válido(s).',
+            icon: 'error',
+            confirmButtonText: 'OK'
+        });
+        // alert("Por favor introduza email(s) válido(s).");
+        // jQuery('#msgmail').html("<span style=\"color:red;\">Por favor introduza email(s) v&aacute;lido(s).</span>");
         return false;
     }
 
     return true;
-//    form.submit.disabled = true;
+    //    form.submit.disabled = true;
 }

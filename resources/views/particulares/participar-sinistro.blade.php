@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="../templates/indico-seguros/libs/jquery-accordion/css/jquery.accordion.css"
         media="screen">
     <link rel="stylesheet" href="../templates/indico-seguros/libs/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
+
 
     <link rel="stylesheet" href="../templates/indico-seguros/css/tree.css">
 
@@ -28,53 +30,31 @@
     <script src="../templates/indico-seguros/libs/jquery-accordion/js/jquery.accordion.js"></script>
     <script src="../templates/indico-seguros/js/jquery.formatCurrency-1.4.0.min.js"></script>
     <script src="../templates/indico-seguros/js/main.js"></script>
-    <!-- <script>
-        jQuery(document).ready(function () {
-            jQuery(document).on({
-                ajaxStart: function () {
-                    jQuery("body").addClass("loading");
-                },
-                ajaxStop: function () {
-                    jQuery("body").removeClass("loading");
-                }
-            });
+<style>
+    .loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 9999; 
+    }
 
-            //particulares
-            jQuery("[role='rodape242_selected']").each(function () {
-                jQuery("#mnu_229").addClass("mnu-selected");
-            });
-
-            //empresas
-            jQuery("[role='rodape243_selected']").each(function () {
-                jQuery("#mnu_230").addClass("mnu-selected");
-            });
-
-            //indico
-            jQuery("[role='rodape244_selected']").each(function () {
-                jQuery("#mnu_231").addClass("mnu-selected");
-            });
-
-            //sinistro
-            jQuery("[role='rodape245_selected']").each(function () {
-                jQuery("#mnu_229").addClass("mnu-selected");
-            });
-
-            //contactos
-            jQuery("[role='rodape246_selected']").each(function () {
-                jQuery("#mnu_231").addClass("mnu-selected");
-            });
-
-            jQuery('.currency').blur(function () {
-                jQuery('.currency').formatCurrency({ symbol: '', roundToDecimalPlace: 0 });
-            });
-
-
-
-        });
-    </script> -->
+    .loading-spinner img {
+        width: 70px;
+        height: 70px; 
+    }
+</style>
 </head>
 
 <body>
+    <div id="loading-spinner" class="loading-spinner" style="display: none;">
+        <img src="../assets/img/Spinner.gif" alt="Loading" />
+    </div>
     <!-- Body -->
     <div class="container-fluid">
 
@@ -4623,7 +4603,7 @@
 
         <script type="text/javascript"
             src="../templates/indico-seguros/js/participacao_online/main_sinistro_auto.js"></script>
-
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
     </div>
    
 

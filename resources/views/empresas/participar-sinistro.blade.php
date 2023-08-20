@@ -28,50 +28,6 @@
     <script src="../templates/indico-seguros/libs/jquery-accordion/js/jquery.accordion.js"></script>
     <script src="../templates/indico-seguros/js/jquery.formatCurrency-1.4.0.min.js"></script>
     <script src="../templates/indico-seguros/js/main.js"></script>
-    <!-- <script>
-        jQuery(document).ready(function () {
-            jQuery(document).on({
-                ajaxStart: function () {
-                    jQuery("body").addClass("loading");
-                },
-                ajaxStop: function () {
-                    jQuery("body").removeClass("loading");
-                }
-            });
-
-            //particulares
-            jQuery("[role='rodape242_selected']").each(function () {
-                jQuery("#mnu_229").addClass("mnu-selected");
-            });
-
-            //empresas
-            jQuery("[role='rodape243_selected']").each(function () {
-                jQuery("#mnu_230").addClass("mnu-selected");
-            });
-
-            //indico
-            jQuery("[role='rodape244_selected']").each(function () {
-                jQuery("#mnu_231").addClass("mnu-selected");
-            });
-
-            //sinistro
-            jQuery("[role='rodape245_selected']").each(function () {
-                jQuery("#mnu_229").addClass("mnu-selected");
-            });
-
-            //contactos
-            jQuery("[role='rodape246_selected']").each(function () {
-                jQuery("#mnu_231").addClass("mnu-selected");
-            });
-
-            jQuery('.currency').blur(function () {
-                jQuery('.currency').formatCurrency({ symbol: '', roundToDecimalPlace: 0 });
-            });
-
-
-
-        });
-    </script> -->
 </head>
 
 <body>
