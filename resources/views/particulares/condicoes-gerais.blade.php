@@ -395,15 +395,6 @@
               <i class="fas fa-caret-right"></i>
             </div>
             <div class="text">
-              <label for=""><a href="#">E-mola</a></label><br>
-              <small>Cód de comerciante: <strong>900148</strong></small>
-            </div>
-          </li>
-          <li>
-            <div class="icon me-2">
-              <i class="fas fa-caret-right"></i>
-            </div>
-            <div class="text">
               <label for=""><a href="#">Depósitos e Transferencias</a></label><br>
               <small>BCI MZN: 4585665410001 <br>NIB: 0008 0000 45856654101 80</small><br>
               <small>BCI ZAR: 4585665410003 <br>NIB: 0008 0000 45856654103 74</small><br>
@@ -737,7 +728,7 @@
               <li class="title">Particulares</li>
               <li><a href="{{ __(route('view.danos-proprios-part')) }}">Danos Próprios</a></li>
               <li><a href="{{ __(route('view.resp-civil-part')) }}">Responsabilidade Civil</a></li>
-              <li><a href="{{ __(route('view.resp-civil-bombas-part')) }}">Responsabilidade Civil Bombas</a></li>
+              <li><a href="{{ __(route('view.resp-civil-bombas-part')) }}">Resp. Civil Bombas</a></li>
               <li><a href="{{ __(route('view.habitacao')) }}">Multirisco Habitação</a></li>
               <li><a href="{{ __(route('view.empregados')) }}">Empregados Domésticos</a></li>
               <li><a href="{{ __(route('view.funeral')) }}">Funeral</a></li>

@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../assets/css/chatbot.css?version=1.1" />
     <link rel="stylesheet" href="../assets/vendor/hover/css/hover-min.css?version=1.1" />
 </head>
+
 <header class="header">
     <div class="container-fluid">
         <div class="row">
@@ -165,6 +166,7 @@
                                                                 <ul>
                                                                     <li class="dropdown0 icon-menu-drop">Parcerias</li>
                                                                     <ul class="dropdown1">
+                                                                        <li><a href="{{ __(route('view.advogados')) }}">Advogados</a></li>
                                                                         <li><a
                                                                                 href="{{ __(route('view.fornecedores')) }}">Fornecedores</a>
                                                                         </li>
@@ -177,6 +179,7 @@
                                                                         <li><a
                                                                                 href="{{ __(route('view.presta-medicos')) }}">Prestadores
                                                                                 Médicos</a></li>
+                                                                        
                                                                     </ul>
                                                                 </ul>
                                                                 <ul>
@@ -363,7 +366,7 @@
                                                 <li class="title">Governação</li>
                                                 <li><a href="../assets/documents/Codigo_Governacao_Corporativa.pdf">Código
                                                         de
-                                                        governação corporativa</a></li>
+                                                        governação <br>corporativa</a></li>
                                                 <li><a href="../assets/img/Organograma_2023.png">Organograma</a></li>
                                                 <li><a href="{{ __(route('view.estru-accionista')) }}">Estrutura
                                                         Accionista</a></li>
@@ -417,12 +420,14 @@
                                             </ul>
                                             <ul>
                                                 <li class="title">Parcerias</li>
+                                                <li><a href="{{ __(route('view.advogados')) }}">Advogados</a></li>
                                                 <li><a href="{{ __(route('view.fornecedores')) }}">Fornecedores</a>
                                                 </li>
                                                 <li><a href="{{ __(route('view.mediadores')) }}">Mediadores</a></li>
                                                 <li><a href="{{ __(route('view.oficina')) }}">Oficinas</a></li>
                                                 <li><a href="{{ __(route('view.presta-medicos')) }}">Prestadores
                                                         Médicos</a></li>
+                                                
                                             </ul>
                                             <ul>
                                                 <li class="title">Satisfação</li>
@@ -510,15 +515,6 @@
                         </div>
                         <div class="text">
                             <label for=""><a href="#">M-pesa</a></label><br>
-                            <small>Cód de comerciante: <strong>900148</strong></small>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="icon me-2">
-                            <i class="fas fa-caret-right"></i>
-                        </div>
-                        <div class="text">
-                            <label for=""><a href="#">E-mola</a></label><br>
                             <small>Cód de comerciante: <strong>900148</strong></small>
                         </div>
                     </li>
@@ -1585,7 +1581,7 @@
                             <li class="title">Particulares</li>
                             <li><a href="{{ __(route('view.danos-proprios-part')) }}">Danos Próprios</a></li>
                             <li><a href="{{ __(route('view.resp-civil-part')) }}">Responsabilidade Civil</a></li>
-                            <li><a href="{{ __(route('view.resp-civil-bombas-part')) }}">Responsabilidade Civil
+                            <li><a href="{{ __(route('view.resp-civil-bombas-part')) }}">Resp. Civil
                                     Bombas</a></li>
                             <li><a href="{{ __(route('view.habitacao')) }}">Multirisco Habitação</a></li>
                             <li><a href="{{ __(route('view.empregados')) }}">Empregados Domésticos</a></li>

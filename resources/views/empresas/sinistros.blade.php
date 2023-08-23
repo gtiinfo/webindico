@@ -114,9 +114,8 @@
                                   <li><a href="{{ __(route('view.recibo-emp')) }}">Recibo</a></li>
                                 </ul>
                                 <ul>
-                                  <li class="dropdown0 icon-menu-drop">Denúcia</li>
+                                  <li class="dropdown0 icon-menu-drop">Reclamações</li>
                                   <ul class="dropdown1">
-                                    <li><a href="{{ __(route('view.part-fraude-emp')) }}">Participar de Fraude</a></li>
                                     <li><a href="{{ __(route('view.reclamacoes')) }}">Reclamações</a></li>
                                   </ul>
                                 </ul>
@@ -393,15 +392,6 @@
             </div>
             <div class="text">
               <label for=""><a href="#">M-pesa</a></label><br>
-              <small>Cód de comerciante: <strong>900148</strong></small>
-            </div>
-          </li>
-          <li>
-            <div class="icon me-2">
-              <i class="fas fa-caret-right"></i>
-            </div>
-            <div class="text">
-              <label for=""><a href="#">E-mola</a></label><br>
               <small>Cód de comerciante: <strong>900148</strong></small>
             </div>
           </li>
@@ -721,57 +711,7 @@
     <!-- End Intro-Box -->
   </section>
   <!-- Box-Proposito -->
-  <?php
-  if (!empty($_POST["send"])) {
-    $numApolice = $_POST["numApolice"];
-    $variavelPHP = $_POST["teste"];
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $destinatario = "contact@indicoseguros.co.mz";
-    // $destinatario = "paulomaculuve758@gmail.com";
-    $assuntoEmail = "Formulário de Participação de Sinistro" . $variavelPHP . " - " . $numApolice;
-    $boundary = md5(time()); // Gerar um limite único para separar as partes do e-mail
-  
-    $headers = "From:  $email" . "\r\n"; // Endereço de e-mail do remetente
-    $headers .= "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-Type: multipart/mixed; boundary=" . $boundary . "\r\n"; // Indicar que é um e-mail com anexo
-  
-    $mensagem = "--" . $boundary . "\r\n";
-    $mensagem .= "Content-Type: text/html; charset='utf-8'\r\n"; // Conteúdo do e-mail
-    $mensagem .= "Content-Transfer-Encoding: 8bit\r\n\r\n";
-    $mensagem .= "Conteúdo do e-mail\r\n\r\n";
-
-    if (!empty($_FILES['formularioAuto']['tmp_name']) && is_uploaded_file($_FILES['formularioAuto']['tmp_name'])) {
-      $arquivo = $_FILES['formularioAuto']['tmp_name'];
-      $nome = $_FILES['formularioAuto']['name'];
-
-      $anexo = chunk_split(base64_encode(file_get_contents($arquivo)));
-
-      $mensagem .= "--" . $boundary . "\r\n";
-      $mensagem .= "Content-Type: application/octet-stream; name=\"" . $nome . "\"\r\n";
-      $mensagem .= "Content-Transfer-Encoding: base64\r\n";
-      $mensagem .= "Content-Disposition: attachment; filename=\"" . $nome . "\"\r\n\r\n";
-      $mensagem .= $anexo . "\r\n";
-    }
-
-    $mensagem .= "--" . $boundary . "--\r\n"; // Finalizar o e-mail com anexo
-  
-    if (mail($destinatario, $assuntoEmail, $mensagem, $headers)) {
-      ?>
-      <div class="alert alert-success text-center" role="alert">
-        E-mail enviado com sucesso!
-      </div>
-      <?php
-    } else {
-      ?>
-      <div class="alert alert-danger text-center" role="alert">
-        E-mail não enviado!
-      </div>
-      <?php
-    }
-  }
-  ?>
-
+ 
   <section class="box">
     <div class="">
       <div class="box-center">
@@ -850,7 +790,7 @@
               <li class="title">Particulares</li>
               <li><a href="{{ __(route('view.danos-proprios-part')) }}">Danos Próprios</a></li>
               <li><a href="{{ __(route('view.resp-civil-part')) }}">Responsabilidade Civil</a></li>
-              <li><a href="{{ __(route('view.resp-civil-bombas-part')) }}">Responsabilidade Civil Bombas</a></li>
+              <li><a href="{{ __(route('view.resp-civil-bombas-part')) }}">Resp. Civil Bombas</a></li>
               <li><a href="{{ __(route('view.habitacao')) }}">Multirisco Habitação</a></li>
               <li><a href="{{ __(route('view.empregados')) }}">Empregados Domésticos</a></li>
               <li><a href="{{ __(route('view.funeral')) }}">Funeral</a></li>
@@ -943,37 +883,6 @@
   <script src="../assets/js/main.js"> </script>
   <script src="../assets/js/function.js"></script>
 
-  <script>
-    $("#btnEmpresas").on("click", function () {
-      var selectBox = $("#tipoSeguraEmpresa");
-      var selectedValue = selectBox.val();
-
-      // Verifique o valor selecionado e abra o PDF correspondente
-      if (selectedValue === "automovel") {
-        var auto = "Automóvel";
-        $(".teste").val(auto);
-
-      } else if (selectedValue === "acidenteTrabalho") {
-        var acidenteTrabalho = "Acidente Trabalho";
-        $(".teste").val(acidenteTrabalho);
-      } else if (selectedValue === "multirisco") {
-        var multi = "Multirisco Habitação";
-        $(".teste").val(multi);
-
-      } else if (selectedValue === "engenharia") {
-        var eng = "Engenharia";
-        $(".teste").val(eng);
-
-      } else if (selectedValue === "transporteMercadorias") {
-        var transporteMercadorias = "Transporte Mercadorias"
-        $(".teste").val(transporteMercadorias);
-
-      } else if (selectedValue === "saude") {
-        var saude = "Saúde";
-        $(".teste").val(saude);
-      }
-    })
-  </script>
 </body>
 
 </html>

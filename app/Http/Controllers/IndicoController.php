@@ -65,6 +65,9 @@ class IndicoController extends Controller
     public function oficinas(){
         return view('indico.oficinas');
     }
+    public function advogados(){
+        return view('indico.advogados');
+    }
     public function orgaoSociais(){
         return view('indico.orgao-sociais');
     }

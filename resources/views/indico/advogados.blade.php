@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Formulario de Rectutamento | ÍNDICO SEGUROS</title>
+    <title>Advogados | ÍNDICO SEGUROS</title>
     <link rel="shortcut icon" href="../assets/img/favicon.ico" />
     <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css?version=1.1" />
     <link rel="stylesheet" href="../assets/vendor/mdbootstrap/css/mdb.min.css?version=1.1" />
@@ -493,6 +493,7 @@
         </div>
     </div>
 </header>
+
 <body>
     <!-- LOADING -->
     <div class="loading-spinner">
@@ -637,65 +638,53 @@
                 </div>
                 <ul>
                     <li>
-                        <div class="icon me-2">
-                            <i class="fas fa-caret-right"></i>
-                        </div>
-                        <div class="text">
-                            <label for=""><a
-                                    href="{{ __(route('view.danos-proprios-part')) }}">Automóvel</a></label>
-                        </div>
+                      <div class="icon me-2">
+                        <i class="fas fa-caret-right"></i>
+                      </div>
+                      <div class="text">
+                        <label for=""><a href="{{ __(route('view.danos-proprios-part')) }}">Automóvel</a></label>
+                      </div>
                     </li>
                     <li>
-                        <div class="icon me-2">
-                            <i class="fas fa-caret-right"></i>
-                        </div>
-                        <div class="text">
-                            <label for=""><a href="{{ __(route('view.viagem-part')) }}">Viagem</a></label>
-                        </div>
+                      <div class="icon me-2">
+                        <i class="fas fa-caret-right"></i>
+                      </div>
+                      <div class="text">
+                        <label for=""><a href="{{ __(route('view.viagem-part')) }}">Viagem</a></label>
+                      </div>
                     </li>
                     <li>
-                        <div class="icon me-2">
-                            <i class="fas fa-caret-right"></i>
-                        </div>
-                        <div class="text">
-                            <label for=""><a href="{{ __(route('view.funeral')) }}">Funeral</a></label>
-                        </div>
+                      <div class="icon me-2">
+                        <i class="fas fa-caret-right"></i>
+                      </div>
+                      <div class="text">
+                        <label for=""><a href="{{ __(route('view.funeral')) }}">Funeral</a></label>
+                      </div>
                     </li>
                     <li>
-                        <div class="icon me-2">
-                            <i class="fas fa-caret-right"></i>
-                        </div>
-                        <div class="text">
-                            <label for=""><a href="{{ __(route('view.acidente-trabalho')) }}">Acidente de
-                                    Trabalho</a></label>
-                        </div>
+                      <div class="icon me-2">
+                        <i class="fas fa-caret-right"></i>
+                      </div>
+                      <div class="text">
+                        <label for=""><a href="{{ __(route('view.acidente-trabalho')) }}">Acidente de Trabalho</a></label>
+                      </div>
                     </li>
-                </ul>
-                <div class="img-bottom"></div>
-            </li>
-        </ul>
+                  </ul>
+                  <div class="img-bottom"></div>
+                </li>
+              </ul>
     </div><!-- END LATERAL MENU -->
-    <section class="intro-box-section">
-        <!-- Intro-Box -->
-        <div id="intro-box d-flex" class="bg-image"
-            style="background: url(../assets/img/background.png); height: 400px;">
-
-        </div>
-        <!-- End Intro-Box -->
-    </section>
-    <!-- Box-Proposito -->
-    <section class="box">
+    <section class="box" style="margin-top: 150px;">
         <div class="">
             <div class="box-center">
-                <div class="box-medium" style="max-width: 720px;">
+                <div class="box-medium" style="max-width: 450px;">
                     <div class="title-bar">
                         <div class="title-icon"></div>
-                        <h4 class="text-uppercase" style="color: #00aeef;">Recrutamento</h4>
+                        <h4 class="title">Cadastro de Advogados</h4>
                     </div>
-                    <form class="needs-validation" novalidate>
-                        <div class="row">
-                            <div class="col-md-5 offset-md-1 col-sm-12 contact-column">
-                                <label class="title">Dados Pessoas</label>
+                    <div class="content mb-4">
+                        <form action="" class="needs-validation" novalidate>
+                            <div class="component-container mx-auto">
                                 <div class="mt-2 has-validation">
                                     <label for="" class="fw-bold">Nome Próprio<span
                                             class="text-danger">*</span></label>
@@ -705,67 +694,24 @@
                                     </small>
                                 </div>
                                 <div class="mt-4 has-validation">
-                                    <label for="" class="fw-bold">Apelido<span
+                                    <label for="" class="fw-bold">Contacto<span
                                             class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" required>
+                                    <input type="number" class="form-control" required>
+                                    <small class="invalid-feedback">
+                                        Por favor o campo é obrigatorio!
+                                    </small>
+                                </div>
+
+                                <div class="mt-4 has-validation">
+                                    <label for="" class="fw-bold">Email<span
+                                            class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" required>
                                     <small class="invalid-feedback">
                                         Por favor o campo é obrigatorio!
                                     </small>
                                 </div>
                                 <div class="mt-4 has-validation">
-                                    <label class="fw-bold">Sexo<span class="text-danger">*</span></label>
-                                    <div class="d-flex">
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio1" value="option1" required>
-                                            <label class="form-check-label" for="inlineRadio1">Masculino</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio2" value="option2" required>
-                                            <label class="form-check-label" for="inlineRadio2">Feminino</label>
-                                        </div>
-                                        <small class="invalid-feedback">
-                                            Por favor o campo é obrigatorio!
-                                        </small>
-                                    </div>
-                                </div>
-                                <div class="mt-4 has-validation">
-                                    <label for="" class="fw-bold">Data de Nascimento<span
-                                            class="text-danger">*</span></label>
-                                    <input type="date" class="form-control" required>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
-                                </div>
-                                <div class="mt-4 has-validation">
-                                    <label for="" class="fw-bold">Nacionalidade<span
-                                            class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" required>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
-                                </div><br>
-                                <label class="title">Residência</label>
-                                <div class="mt-2 has-validation">
-                                    <label for="" class="fw-bold">Província de Residência<span
-                                            class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" required>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
-                                </div>
-                                <div class="mt-4 has-validation">
-                                    <label for="" class="fw-bold">Cidade de Residência<span
-                                            class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" required>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
-                                </div><br>
-                                <label class="title">Contactos</label>
-                                <div class="mt-2">
-                                    <label for="" class="fw-bold">Contacto Telefónico<span
+                                    <label for="" class="fw-bold">NUIT<span
                                             class="text-danger">*</span></label>
                                     <input type="text" class="form-control" required>
                                     <small class="invalid-feedback">
@@ -773,200 +719,18 @@
                                     </small>
                                 </div>
                                 <div class="mt-4">
-                                    <label for="" class="fw-bold">Contacto Alternativo</label>
+                                    <label for="" class="fw-bold">Morada</label>
                                     <input type="text" class="form-control">
-                                </div>
-                                <div class="mt-4">
-                                    <label for="" class="fw-bold">Email</label>
-                                    <input type="email" class="form-control">
-                                </div><br>
-                                <label class="title">Formação Académica</label>
-                                <div class="mt-2 has-validation">
-                                    <label for="" class="fw-bold">Nível Acadêmico<span
-                                            class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" required>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
-                                </div>
-                                <div class="mt-4">
-                                    <label for="" class="fw-bold">Curso</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="mt-4">
-                                    <label for="" class="fw-bold">Instituição de Ensino</label>
-                                    <input type="text" class="form-control">
-                                </div><br>
-                                <label class="title">Anexos</label>
-                                <div class="mt-2">
-                                    <label for="" class="fw-bold">Curriculum Vitae</label>
-                                    <input type="file" class="">
-                                </div>
-                                <div class="mt-4">
-                                    <label for="" class="fw-bold">NUIT</label>
-                                    <input type="file" class="">
-                                </div>
-                                <div class="mt-4">
-                                    <label for="" class="fw-bold">Bilhete de Identidade</label>
-                                    <input type="file" class="">
-                                </div>
-                            </div>
-                            <div class="col-md-5 contact-dark-area contact-column">
-                                <label class="title">Línguas</label>
-                                <div class="mt-2 has-validation">
-                                    <label for="" class="fw-bold">Português<span
-                                            class="text-danger">*</span></label>
-                                    <select class="form-control" required id="portugues" name="portugues">
-                                        <option disabled="" selected="" value=""> -- Seleccione uma opção
-                                            -- </option>
-                                        <option value="Não Fala">Não Fala</option>
-                                        <option value="Básico">Básico</option>
-                                        <option value="Intermediário">Intermediário</option>
-                                        <option value="Fluente">Fluente</option>
-                                    </select>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
-                                </div>
-                                <div class="mt-4 has-validation">
-                                    <label for="" class="fw-bold">Inglês<span
-                                            class="text-danger">*</span></label>
-                                    <select class="form-control" required id="portugues" name="portugues">
-                                        <option disabled="" selected="" value=""> -- Seleccione uma opção
-                                            -- </option>
-                                        <option value="Não Fala">Não Fala</option>
-                                        <option value="Básico">Básico</option>
-                                        <option value="Intermediário">Intermediário</option>
-                                        <option value="Fluente">Fluente</option>
-                                    </select>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
-                                </div>
-                                <div class="mt-4">
-                                    <label for="" class="fw-bold">Línguas Locais</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="mt-4">
-                                    <label for="" class="fw-bold">Outras Línguas</label>
-                                    <input type="text" class="form-control">
-                                </div><br>
-                                <label class="title">Informática</label>
-                                <div class="mt-2 has-validation">
-                                    <label for="" class="fw-bold">Word<span
-                                            class="text-danger">*</span></label>
-                                    <select class="form-control" required id="word" name="word">
-                                        <option disabled="" selected="" value=""> -- Seleccione uma opção
-                                            -- </option>
-                                        <option value="Básico">Básico</option>
-                                        <option value="Intermediário">Intermediário</option>
-                                        <option value="Avançado">Avançado</option>
-                                    </select>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
-                                </div>
-                                <div class="mt-4 has-validation">
-                                    <label for="" class="fw-bold">Excel<span
-                                            class="text-danger">*</span></label>
-                                    <select class="form-control" required id="word" name="word">
-                                        <option disabled="" selected="" value=""> -- Seleccione uma opção
-                                            -- </option>
-                                        <option value="Básico">Básico</option>
-                                        <option value="Intermediário">Intermediário</option>
-                                        <option value="Avançado">Avançado</option>
-                                    </select>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
-                                </div>
-                                <div class="mt-4 has-validation">
-                                    <label for="" class="fw-bold">Power Point<span
-                                            class="text-danger">*</span></label>
-                                    <select class="form-control" required id="word" name="word">
-                                        <option disabled="" selected="" value=""> -- Seleccione uma opção
-                                            -- </option>
-                                        <option value="Básico">Básico</option>
-                                        <option value="Intermediário">Intermediário</option>
-                                        <option value="Avançado">Avançado</option>
-                                    </select>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
-                                </div>
-                                <div class="mt-4 has-validation">
-                                    <label for="" class="fw-bold">Access<span
-                                            class="text-danger">*</span></label>
-                                    <select class="form-control" required id="word" name="word">
-                                        <option disabled="" selected="" value=""> -- Seleccione uma opção
-                                            -- </option>
-                                        <option value="Básico">Básico</option>
-                                        <option value="Intermediário">Intermediário</option>
-                                        <option value="Avançado">Avançado</option>
-                                    </select>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
-                                </div><br>
-                                <label class="title">Experiência Profissional</label>
-                                <div class="mt-2 has-validation">
-                                    <label for="" class="fw-bold">Tem Experiência Profissional?<span
-                                            class="text-danger">*</span></label>
-                                    <div class="d-flex">
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio1" value="option1" required>
-                                            <label class="form-check-label" for="inlineRadio1">1</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio2" value="option2" required>
-                                            <label class="form-check-label" for="inlineRadio2">2</label>
-                                        </div>
-                                        <small class="invalid-feedback">
-                                            Por favor o campo é obrigatorio!
-                                        </small>
-                                    </div>
-                                </div><br>
-                                <label class="title">Áreas de Interesses</label>
-                                <div class="mt-2 has-validation">
-                                    <label for="" class="fw-bold">Área<span
-                                            class="text-danger">*</span></label>
-                                    <select class="form-control" id="word" name="word" required>
-                                        <option disabled="" selected="" value=""> -- Seleccione uma opção
-                                            -- </option>
-                                        <option value="Produção">Produção</option>
-                                        <option value="Sinistros">Sinistros</option>
-                                        <option value="Controlo de Crédito">Controlo de Crédito</option>
-                                        <option value="Contabilidade e Finanças">Contabilidade e Finanças</option>
-                                        <option value="Comunicação e Marketing">Comunicação e Marketing</option>
-                                        <option value="Jurídico e Compliance">Jurídico e Compliance</option>
-                                        <option value="Tecnologias de Informação">Tecnologias de Informação</option>
-                                        <option value="Administração e Recursos Humanos">Administração e Recursos
-                                            Humanos</option>
-                                        <option value="Comunicação e Marketing">Comunicação e Marketing</option>
-                                        <option value="Qualidade e Controlo Interno">Qualidade e Controlo Interno
-                                        </option>
-                                    </select>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
-                                </div><br>
-                                <label class="title">Motivação</label>
-                                <div class="mb-3">
-                                    <label for="" class="fw-bold">Motivação para a candidatura<span
-                                            class="text-danger">*</span></label>
-                                    <textarea name="" id="" cols="30" rows="3" required class="form-control"></textarea>
                                     <small class="invalid-feedback">
                                         Por favor o campo é obrigatorio!
                                     </small>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-10 offset-md-1 col-sm-12 btn-area">
-                            <button class="btn btn-primary btn-indico" type="submit">Enviar</button>
-                        </div>
-                    </form>
+                            <div class="mt-4">
+                                <button class="btn btn-primary btn-indico">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
                     <div class="img-border-bottom"></div>
                 </div>
             </div>

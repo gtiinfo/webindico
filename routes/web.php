@@ -82,6 +82,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
 
     Route::prefix('indico')->group(function(){
         Route::get('/agremiacoes', 'IndicoController@agremiacoes')->name('view.agremiacoes');
+        Route::get('/advogados', 'IndicoController@advogados')->name('view.advogados');
         Route::get('/artigos', 'IndicoController@artigos')->name('view.artigos');
         Route::get('/certificacoes', 'IndicoController@certificacoes')->name('view.certificacoes');
         Route::get('/dados-empresas', 'IndicoController@dadosEmpresas')->name('view.dados-empresas');

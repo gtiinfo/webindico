@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Particulares | ÍNDICO SEGUROS</title>
-  <link rel="shortcut icon"href="./assets/img/favicon.ico" />
+  <link rel="shortcut icon"href="assets/img/favicon.ico" />
   <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css?version=1.1" />
   <link rel="stylesheet" href="assets/vendor/mdbootstrap/css/mdb.min.css?version=1.1" />
   <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css?version=1.1" />
@@ -108,9 +108,8 @@
                                   <li><a href="{{ __(route('view.recibo-part')) }}">Recibo</a></li>
                                 </ul>
                                 <ul>
-                                  <li class="dropdown0 icon-menu-drop">Denúcia</li>
+                                  <li class="dropdown0 icon-menu-drop">Reclamações</li>
                                   <ul class="dropdown1">
-                                    <li><a href=" {{ __(route('view.parti-fraude-part')) }}">Participar de Fraude</a></li>
                                     <li><a href=" {{ __(route('view.reclamacoes-part')) }} ">Reclamações</a></li>
                                   </ul>
                                 </ul>
@@ -332,8 +331,7 @@
                         <li><a href="{{ __(route('view.recibo-part')) }}">Recibo</a></li>
                       </ul>
                       <ul>
-                        <li class="title">Denúcia</li>
-                        <li><a href="{{ __(route('view.parti-fraude-part')) }}">Participar Fraude</a></li>
+                        <li class="title">Reclamações</li>
                         <li><a href="{{ __(route('view.reclamacoes-part')) }}">Reclamações</a></li>
                       </ul>
                       <ul>
@@ -387,15 +385,6 @@
             </div>
             <div class="text">
               <label for=""><a href="#">M-pesa</a></label><br>
-              <small>Cód de comerciante: <strong>900148</strong></small>
-            </div>
-          </li>
-          <li>
-            <div class="icon me-2">
-              <i class="fas fa-caret-right"></i>
-            </div>
-            <div class="text">
-              <label for=""><a href="#">E-mola</a></label><br>
               <small>Cód de comerciante: <strong>900148</strong></small>
             </div>
           </li>

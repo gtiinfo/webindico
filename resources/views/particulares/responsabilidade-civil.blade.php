@@ -108,9 +108,8 @@
                                   <li><a href="{{ __(route('view.recibo-part')) }}">Recibo</a></li>
                                 </ul>
                                 <ul>
-                                  <li class="dropdown0 icon-menu-drop">Denúcia</li>
+                                  <li class="dropdown0 icon-menu-drop">Reclamações</li>
                                   <ul class="dropdown1">
-                                    <li><a href=" {{ __(route('view.parti-fraude-part')) }}">Participar de Fraude</a></li>
                                     <li><a href=" {{ __(route('view.reclamacoes-part')) }} ">Reclamações</a></li>
                                   </ul>
                                 </ul>
@@ -332,8 +331,7 @@
                         <li><a href="{{ __(route('view.recibo-part')) }}">Recibo</a></li>
                       </ul>
                       <ul>
-                        <li class="title">Denúcia</li>
-                        <li><a href="{{ __(route('view.parti-fraude-part')) }}">Participar Fraude</a></li>
+                        <li class="title">Reclamações</li>
                         <li><a href="{{ __(route('view.reclamacoes-part')) }}">Reclamações</a></li>
                       </ul>
                       <ul>
@@ -387,15 +385,6 @@
             </div>
             <div class="text">
               <label for=""><a href="#">M-pesa</a></label><br>
-              <small>Cód de comerciante: <strong>900148</strong></small>
-            </div>
-          </li>
-          <li>
-            <div class="icon me-2">
-              <i class="fas fa-caret-right"></i>
-            </div>
-            <div class="text">
-              <label for=""><a href="#">E-mola</a></label><br>
               <small>Cód de comerciante: <strong>900148</strong></small>
             </div>
           </li>
@@ -893,46 +882,7 @@
               </div>
             </div>
           </div>
-      <?php
-      // if (!empty($_POST["send"])) {
-      //   $name = $_POST["name"];
-      //   $dataNasc = $_POST["dataNasc"];
-      //   $endereco = $_POST["endereco"];
-      //   $contacto = $_POST["contacto"];
-      //   $email = $_POST["email"];
-      //   $numBi = $_POST["numBi"];
-      //   $ocupacao = $_POST["ocupacao"];
-      //   $registo = $_POST["registo"];
-      //   $marca = $_POST["marca"];
-      //   $modelo = $_POST["modelo"];
-      //   $numMotor = $_POST["numMotor"];
-      //   $numQuadro = $_POST["numQuadro"];
-      //   $tipoViatura = $_POST["tipoViatura"];
-
-      //   // $destinatario = "paulo.maculuve@bluteki.com";
-      //   $destinatario = "contact@indicoseguros.co.mz";
-      //   $assuntoEmail = "Cotação do Cliente $name";
-
-      //   $headers = "From:  $email" . "\r\n"; // Endereço de e-mail do remetente
-      //   $headers .= "MIME-Version: 1.0" . "\r\n";
-
-      //   $corpo = "Dados do Cliente \n\nNome do Cliente: $name \nData de Nascimento: $dataNasc \nEndereço: $endereco \nContacto: $contacto \nE-mail: $email \nNº do Bilhete de Identidade: $numBi \nOcupação: $ocupacao \n\n\nDados da Viatura \n\nRegisto: $registo \nMarca: $marca \nModelo: $modelo \nNúmero do Motor: $numMotor \nNúmero do Quadro: $numQuadro \n Tipo de Viatura: $tipoViatura";
-      //   if (mail($destinatario, $assuntoEmail, $corpo, $headers)) { ?>
-          <!-- <div class="alert alert-success text-center" role="alert">
-            E-mail enviado com sucesso!
-          </div> -->
-          <?php
-      // } else {
-          ?>
-          <!-- <div class="alert alert-danger text-center" role="alert">
-            E-mail não enviado!
-          </div> -->
-          <?php
-      //   }
-
-      // }
-
-      ?>
+  
       <div class="card-simuladores">
         <div class="close"></div>
         <div class="header-title">
@@ -1103,7 +1053,7 @@
               <li class="title">Particulares</li>
               <li><a href="{{ __(route('view.danos-proprios-part')) }}">Danos Próprios</a></li>
               <li><a href="{{ __(route('view.resp-civil-part')) }}">Responsabilidade Civil</a></li>
-              <li><a href="{{ __(route('view.resp-civil-bombas-part')) }}">Responsabilidade Civil Bombas</a></li>
+              <li><a href="{{ __(route('view.resp-civil-bombas-part')) }}">Resp. Civil Bombas</a></li>
               <li><a href="{{ __(route('view.habitacao')) }}">Multirisco Habitação</a></li>
               <li><a href="{{ __(route('view.empregados')) }}">Empregados Domésticos</a></li>
               <li><a href="{{ __(route('view.funeral')) }}">Funeral</a></li>

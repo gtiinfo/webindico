@@ -17,398 +17,481 @@
   <link rel="stylesheet" href="../assets/vendor/hover/css/hover-min.css?version=1.1" />
 </head>
 <header class="header">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="component mobile-only main-menu-mobile sticky-top" style="display: none;">
-        <div class="component-content">
-          <div class="row">
-            <div class="d-flex">
-              <div class="component image file-type-icon-media-link">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="component mobile-only main-menu-mobile sticky-top" style="display: none;">
                 <div class="component-content">
-                  <a href="{{ __(route('view.home'))}}">
-                    <img src="../assets/img/logo.png" alt="">
-                  </a>
-                </div>
-              </div>
-              <div class="component link btn-mobile_menu">
-                <div class="component-content">
-                  <div class="field-link">
-                    <div class="menu">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="component menu-mobile-wrap" style="display: none;">
-              <div class="component-content">
-                <div class="row">
-                  <div class="component tabs col-12 loader initialized">
-                    <div class="component-content">
-                      <div class="tabs-inner">
-                        <ul class="tabs-heading">
-                          <li><a href="{{ __(route('view.home')) }}">Particulares</a></li>
-                          <li><a href="{{ __(route('view.empresas')) }}">Empresas</a></li>
-                          <li><a href="{{ __(route('view.indico')) }}" class="active">Índico</a></li>
-                        </ul>
-                        <div class="tabs-container">
-                          <ul class="tabs-body">
-                            <div class="item-0">
-                              <li class="icon-menu-drop title">Institucional</li>
-                              <div class="list-item">
-                                <ul>
-                                  <li class="dropdown0 icon-menu-drop">Identidade Corporativa</li>
-                                  <ul class="dropdown1">
-                                    <li><a href="{{ __(route('view.dados-empresas')) }}">Dados da Empresa</a></li>
-                                    <li><a href="{{ __(route('view.historia')) }}">História</a></li>
-                                    <li><a href="{{ __(route('view.proposito'))}}">Proposito</a></li>
-                                  </ul>
-                                </ul>
-                                <ul>
-                                  <li class="dropdown0 icon-menu-drop">Governação</li>
-                                  <ul class="dropdown1">
-                                    <li><a
-                                        href="../assets/documents/Codigo_Governacao_Corporativa.pdf">Código
-                                        de
-                                        governação corporativa</a></li>
-                                    <li><a href="../assets/img/Organograma_2023.png">Organograma</a></li>
-                                    <li><a href="{{ __(route('view.estru-accionista')) }}">Estrutura Accionista</a></li>
-                                    <li><a href="{{ __(route('view.orgao-sociais')) }}">Órgãos Sociais</a></li>
-                                    <li><a href="{{ __(route('view.doc-insti')) }}">Documentos institucionais</a></li>
-                                  </ul>
-                                </ul>
-                                <ul>
-                                  <li class="dropdown0 icon-menu-drop">Informação Financeira</li>
-                                  <ul class="dropdown1">
-                                    <li><a href="{{ __(route('view.relatorio-conta')) }}">Relatório & Contas</a></li>
-                                  </ul>
-                                </ul>
-                                <ul>
-                                  <li class="dropdown0 icon-menu-drop">Recursos Humanos</li>
-                                  <ul class="dropdown1">
-                                    <li><a href="{{ __(route('view.equipe-gestao')) }}">Equipe de Gestão</a></li>
-                                    <li><a href="{{ __(route('view.programa-talento'))}}">Programa de Talentos</a></li>
-                                    <li><a href="{{ __(route('view.recrutamento'))}}">Recrutamento</a></li>
-                                  </ul>
-                                </ul>
-                                <ul>
-                                  <li class="dropdown0 icon-menu-drop">As nossas Políticas</li>
-                                  <ul class="dropdown1">
-                                    <li><a href="{{ __(route('view.helpdesk'))}}">Help Desk - Ética</a></li>
-                                    <li><a href="../assets/documents/Codigo_Etica_Conduta.pdf">Código
-                                        de ética e conduta</a></li>
-                                    <li><a
-                                        href="../assets/documents/Politica_Corrupcao_Proposta_Revisao_VF.pdf">Política
-                                        de prevenção e combate <br>a corrupção e
-                                        fraude</a></li>
-                                    <li><a
-                                        href="../assets/documents/Politica_Brindes_Presentes_VF.pdf">Política
-                                        de brindes</a></li>
-                                    <li><a
-                                        href="../assets/documents/Politica_Identificacao_clientes.pdf">Política
-                                        de Identificacao <br>de Clientes</a></li>
-                                    <li><a
-                                        href="../assets/documents/Politica_PrevencaoCombate_Assedio_Trabalho_VF.pdf">Política
-                                        de prevenção e combate ao <br>assédio no trabalho </a></li>
-                                    <li><a
-                                        href="../assets/documents/Politica_Proteccao_Denunciante.pdf">Política
-                                        de Protecção ao Denunciante</a></li>
-                                  </ul>
-                                </ul>
-                                <ul>
-                                  <li class="dropdown0 icon-menu-drop">Sustentabilidade</li>
-                                  <ul class="dropdown1">
-                                    <li><a href="{{ __(route('view.relatorio'))}}">Relatórios</a></li>
-                                    <li><a href="{{ __(route('view.certificacoes'))}}">Certificações</a></li>
-                                    <li><a href="{{ __(route('view.agremiacoes'))}}">Agremiações</a></li>
-                                    <li><a href="{{ __(route('view.resp-social'))}}">Responsabilidade Social</a></li>
-                                  </ul>
-                                </ul>
-                                <ul>
-                                  <li class="dropdown0 icon-menu-drop">Parcerias</li>
-                                  <ul class="dropdown1">
-                                    <li><a href="{{ __(route('view.fornecedores'))}}">Fornecedores</a></li>
-                                    <li><a href="{{ __(route('view.mediadores'))}}">Mediadores</a></li>
-                                    <li><a href="{{ __(route('view.oficina'))}}">Oficinas</a></li>
-                                    <li><a href="{{ __(route('view.presta-medicos'))}}">Prestadores Médicos</a></li>
-                                  </ul>
-                                </ul>
-                                <ul>
-                                  <li class="dropdown0 icon-menu-drop">Satisfação</li>
-                                  <ul class="dropdown1">
-                                    <li><a href="../assets/documents/Politica_Qualidade.pdf">Política de
-                                        Qualidade</a></li>
-                                    <li><a href="../assets/documents/Processo_Gestao_Reclamaes.pdf">Política de
-                                        Gestão de
-                                        Reclamações</a></li>
-                                    <li><a href="{{ __(route('view.inq-analise-marca'))}}">Inquérito de Análise de Marca </a></li>
-                                  </ul>
-                                </ul>
-                                <ul>
-                                  <li class="dropdown0 icon-menu-drop">Canal de Denúncias</li>
-                                  <ul class="dropdown1">
-                                    <li><a href="{{ __(route('view.denucias'))}}">Denúncias</a></li>
-                                  </ul>
-                                </ul>
-                              </div>
+                    <div class="row">
+                        <div class="d-flex">
+                            <div class="component image file-type-icon-media-link">
+                                <div class="component-content">
+                                    <a href="{{ __(route('view.home')) }}">
+                                        <img src="../assets/img/logo.png" alt="">
+                                    </a>
+                                </div>
                             </div>
-                            <div class="item-0">
-                              <li class="icon-menu-drop">Sala da Imprensa</li>
-                              <div class="list-item">
-                                <ul>
-                                  <li class=" dropdown0 icon-menu-drop">Notícias</li>
-                                  <ul class="dropdown1">
-                                    <li><a href="{{ __(route('view.noticia'))}}">Notícias</a></li>
-                                  </ul>
-                                </ul>
-                              </div>
+                            <div class="component link btn-mobile_menu">
+                                <div class="component-content">
+                                    <div class="field-link">
+                                        <div class="menu">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="item-0">
-                              <li class="icon-menu-drop">Educação Financeira</li>
-                              <div class="list-item">
-                                <ul>
-                                  <li class=" dropdown0 icon-menu-drop">Literácia Financeira</li>
-                                  <ul class="dropdown1">
-                                    <li><a href="{{ __(route('view.artigos')) }}">Artigos</a></li>
-                                  </ul>
-                                </ul>
-                              </div>
-                            </div>
-                          </ul>
                         </div>
-                      </div>
+                        <div class="component menu-mobile-wrap" style="display: none;">
+                            <div class="component-content">
+                                <div class="row">
+                                    <div class="component tabs col-12 loader initialized">
+                                        <div class="component-content">
+                                            <div class="tabs-inner">
+                                                <ul class="tabs-heading">
+                                                    <li><a href="{{ __(route('view.home')) }}">Particulares</a></li>
+                                                    <li><a href="{{ __(route('view.empresas')) }}">Empresas</a></li>
+                                                    <li><a href="{{ __(route('view.indico')) }}"
+                                                            class="active">Índico</a></li>
+                                                </ul>
+                                                <div class="tabs-container">
+                                                    <ul class="tabs-body">
+                                                        <div class="item-0">
+                                                            <li class="icon-menu-drop title">Institucional</li>
+                                                            <div class="list-item">
+                                                                <ul>
+                                                                    <li class="dropdown0 icon-menu-drop">Identidade
+                                                                        Corporativa</li>
+                                                                    <ul class="dropdown1">
+                                                                        <li><a
+                                                                                href="{{ __(route('view.dados-empresas')) }}">Dados
+                                                                                da Empresa</a></li>
+                                                                        <li><a
+                                                                                href="{{ __(route('view.historia')) }}">História</a>
+                                                                        </li>
+                                                                        <li><a
+                                                                                href="{{ __(route('view.proposito')) }}">Proposito</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li class="dropdown0 icon-menu-drop">Governação</li>
+                                                                    <ul class="dropdown1">
+                                                                        <li><a
+                                                                                href="../assets/documents/Codigo_Governacao_Corporativa.pdf">Código
+                                                                                de
+                                                                                governação corporativa</a></li>
+                                                                        <li><a
+                                                                                href="../assets/img/Organograma_2023.png">Organograma</a>
+                                                                        </li>
+                                                                        <li><a
+                                                                                href="{{ __(route('view.estru-accionista')) }}">Estrutura
+                                                                                Accionista</a></li>
+                                                                        <li><a
+                                                                                href="{{ __(route('view.orgao-sociais')) }}">Órgãos
+                                                                                Sociais</a></li>
+                                                                        <li><a href="{{ __(route('view.doc-insti')) }}">Documentos
+                                                                                institucionais</a></li>
+                                                                    </ul>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li class="dropdown0 icon-menu-drop">Informação
+                                                                        Financeira</li>
+                                                                    <ul class="dropdown1">
+                                                                        <li><a
+                                                                                href="{{ __(route('view.relatorio-conta')) }}">Relatório
+                                                                                & Contas</a></li>
+                                                                    </ul>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li class="dropdown0 icon-menu-drop">Recursos
+                                                                        Humanos</li>
+                                                                    <ul class="dropdown1">
+                                                                        <li><a
+                                                                                href="{{ __(route('view.equipe-gestao')) }}">Equipe
+                                                                                de Gestão</a></li>
+                                                                        <li><a
+                                                                                href="{{ __(route('view.programa-talento')) }}">Programa
+                                                                                de Talentos</a></li>
+                                                                        <li><a
+                                                                                href="{{ __(route('view.recrutamento')) }}">Recrutamento</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li class="dropdown0 icon-menu-drop">As nossas
+                                                                        Políticas</li>
+                                                                    <ul class="dropdown1">
+                                                                        <li><a href="{{ __(route('view.helpdesk')) }}">Help
+                                                                                Desk - Ética</a></li>
+                                                                        <li><a
+                                                                                href="../assets/documents/Codigo_Etica_Conduta.pdf">Código
+                                                                                de ética e conduta</a></li>
+                                                                        <li><a
+                                                                                href="../assets/documents/Politica_Corrupcao_Proposta_Revisao_VF.pdf">Política
+                                                                                de prevenção e combate <br>a corrupção e
+                                                                                fraude</a></li>
+                                                                        <li><a
+                                                                                href="../assets/documents/Politica_Brindes_Presentes_VF.pdf">Política
+                                                                                de brindes</a></li>
+                                                                        <li><a
+                                                                                href="../assets/documents/Politica_Identificacao_clientes.pdf">Política
+                                                                                de Identificacao <br>de Clientes</a>
+                                                                        </li>
+                                                                        <li><a
+                                                                                href="../assets/documents/Politica_PrevencaoCombate_Assedio_Trabalho_VF.pdf">Política
+                                                                                de prevenção e combate ao <br>assédio no
+                                                                                trabalho </a></li>
+                                                                        <li><a
+                                                                                href="../assets/documents/Politica_Proteccao_Denunciante.pdf">Política
+                                                                                de Protecção ao Denunciante</a></li>
+                                                                    </ul>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li class="dropdown0 icon-menu-drop">
+                                                                        Sustentabilidade</li>
+                                                                    <ul class="dropdown1">
+                                                                        <li><a
+                                                                                href="{{ __(route('view.relatorio')) }}">Relatórios</a>
+                                                                        </li>
+                                                                        <li><a
+                                                                                href="{{ __(route('view.certificacoes')) }}">Certificações</a>
+                                                                        </li>
+                                                                        <li><a
+                                                                                href="{{ __(route('view.agremiacoes')) }}">Agremiações</a>
+                                                                        </li>
+                                                                        <li><a
+                                                                                href="{{ __(route('view.resp-social')) }}">Responsabilidade
+                                                                                Social</a></li>
+                                                                    </ul>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li class="dropdown0 icon-menu-drop">Parcerias</li>
+                                                                    <ul class="dropdown1">
+                                                                        <li><a href="{{ __(route('view.advogados')) }}">Advogados</a></li>
+                                                                        <li><a
+                                                                                href="{{ __(route('view.fornecedores')) }}">Fornecedores</a>
+                                                                        </li>
+                                                                        <li><a
+                                                                                href="{{ __(route('view.mediadores')) }}">Mediadores</a>
+                                                                        </li>
+                                                                        <li><a
+                                                                                href="{{ __(route('view.oficina')) }}">Oficinas</a>
+                                                                        </li>
+                                                                        <li><a
+                                                                                href="{{ __(route('view.presta-medicos')) }}">Prestadores
+                                                                                Médicos</a></li>
+                                                                        
+                                                                    </ul>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li class="dropdown0 icon-menu-drop">Satisfação</li>
+                                                                    <ul class="dropdown1">
+                                                                        <li><a
+                                                                                href="../assets/documents/Politica_Qualidade.pdf">Política
+                                                                                de
+                                                                                Qualidade</a></li>
+                                                                        <li><a
+                                                                                href="../assets/documents/Processo_Gestao_Reclamaes.pdf">Política
+                                                                                de
+                                                                                Gestão de
+                                                                                Reclamações</a></li>
+                                                                        <li><a
+                                                                                href="{{ __(route('view.inq-analise-marca')) }}">Inquérito
+                                                                                de Análise de Marca </a></li>
+                                                                    </ul>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li class="dropdown0 icon-menu-drop">Canal de
+                                                                        Denúncias</li>
+                                                                    <ul class="dropdown1">
+                                                                        <li><a
+                                                                                href="{{ __(route('view.denucias')) }}">Denúncias</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-0">
+                                                            <li class="icon-menu-drop">Sala da Imprensa</li>
+                                                            <div class="list-item">
+                                                                <ul>
+                                                                    <li class=" dropdown0 icon-menu-drop">Notícias</li>
+                                                                    <ul class="dropdown1">
+                                                                        <li><a
+                                                                                href="{{ __(route('view.noticia')) }}">Notícias</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-0">
+                                                            <li class="icon-menu-drop">Educação Financeira</li>
+                                                            <div class="list-item">
+                                                                <ul>
+                                                                    <li class=" dropdown0 icon-menu-drop">Literácia
+                                                                        Financeira</li>
+                                                                    <ul class="dropdown1">
+                                                                        <li><a
+                                                                                href="{{ __(route('view.artigos')) }}">Artigos</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="component col-12 background-light-gray agencias">
+                                    <a href="{{ __(route('view.agencias')) }}">Agências</a>
+                                </div>
+                                <div class="component col-12 background-light-gray contactos">
+                                    <a href="{{ __(route('view.contacts')) }}">Contactos</a>
+                                </div>
+                                <div class="component col-12 background-light-gray perguntas">
+                                    <a href="{{ __(route('view.faq')) }}">Perguntas Frequentes</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-                <div class="component col-12 background-light-gray agencias">
-                  <a href="{{ __(route('view.agencias')) }}">Agências</a>
-                </div>
-                <div class="component col-12 background-light-gray contactos">
-                  <a href="{{ __(route('view.contacts'))}}">Contactos</a>
-                </div>
-                <div class="component col-12 background-light-gray perguntas">
-                  <a href="{{ __(route('view.faq'))}}">Perguntas Frequentes</a>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-    <div class="row shadow-bottom main-menu-container">
-      <div class="left-top-menu-area"></div>
-      <div class="container-menu">
-        <div class="logo-area">
-          <a href="{{ __(route('view.home')) }}">
-            <img src="../assets/img/IndicoSeguro_IconPrincipal.png" alt="Indico Seguros">
-          </a>
-        </div>
-        <div class="menu-area">
-          <div class="main-top-bar-container">
-            <div class="search-top-area">
-              <div class="triangle"></div>
-              <div class="square"></div>
-              <div class="search-area bx bx-search" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              </div>
-              <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">Faça a sua Pesquisa!
-                      </h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <form>
-                        <input type="text" class="form-control" placeholder="Pesquisar...">
-                      </form>
-                    </div>
+        <div class="row shadow-bottom main-menu-container">
+            <div class="left-top-menu-area"></div>
+            <div class="container-menu">
+                <div class="logo-area">
+                    <a href="{{ __(route('view.home')) }}">
+                        <img src="../assets/img/IndicoSeguro_IconPrincipal.png" alt="Indico Seguros">
+                    </a>
+                </div>
+                <div class="menu-area">
+                    <div class="main-top-bar-container">
+                        <div class="search-top-area">
+                            <div class="triangle"></div>
+                            <div class="square"></div>
+                            <div class="search-area bx bx-search" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                            </div>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Faça a sua Pesquisa!
+                                            </h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <input type="text" class="form-control"
+                                                    placeholder="Pesquisar...">
+                                            </form>
+                                        </div>
 
-                  </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-top-menu-bar">
+                            <div class="segment-area">
+                                <ul>
+                                    <li class="">
+                                        <div class="bg-shape">
+                                            <div class="left-triangle"></div>
+                                            <div class="right-triangle"></div>
+                                        </div>
+                                        <div class="content-text">
+                                            <a href="{{ __(route('view.home')) }}">Particulares</a>
+                                        </div>
+                                    </li>
+                                    <li class="">
+                                        <div class="bg-shape">
+                                            <div class="left-triangle"></div>
+                                            <div class="right-triangle"></div>
+                                        </div>
+                                        <div class="content-text">
+                                            <a href="{{ __(route('view.empresas')) }}">Empresas</a>
+                                        </div>
+                                    </li>
+                                    <li class="mnu-selected">
+                                        <div class="bg-shape">
+                                            <div class="left-triangle"></div>
+                                            <div class="right-triangle"></div>
+                                        </div>
+                                        <div class="content-text">
+                                            <a href="{{ __(route('view.indico')) }}">Índico</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="utility-area">
+                                <ul>
+                                    <li><a href="{{ __(route('view.agencias')) }}">Agências</a></li>
+                                    <li><a href="{{ __(route('view.faq')) }}">Perguntas Frequentes</a></li>
+                                    <li class="show-on-xs mobile-menu">
+                                        <a href="#"></a>
+                                        <span class="hide-on-xs"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="secondary-top-menu-bar">
+                        <div class="show-on-xs">
+                            <a href="#" class="back-menu"></a>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="label-title-area">
+                                    <a href="#">Institucional</a>
+                                </div>
+                                <div class="label-title-link">
+                                    <a href="#">Institucional</a>
+                                </div>
+                                <ul class="submenu-container">
+                                    <li>
+                                        <div class="container1 item-area">
+                                            <ul>
+                                                <li class="title">Identidade Corporativa</li>
+                                                <li><a href="{{ __(route('view.dados-empresas')) }}">Dados da
+                                                        Empresa</a></li>
+                                                <li><a href="{{ __(route('view.historia')) }}">História</a></li>
+                                                <li><a href="{{ __(route('view.proposito')) }}">Proposito</a></li>
+                                            </ul>
+                                            <ul>
+                                                <li class="title">Governação</li>
+                                                <li><a href="../assets/documents/Codigo_Governacao_Corporativa.pdf">Código
+                                                        de
+                                                        governação <br>corporativa</a></li>
+                                                <li><a href="../assets/img/Organograma_2023.png">Organograma</a></li>
+                                                <li><a href="{{ __(route('view.estru-accionista')) }}">Estrutura
+                                                        Accionista</a></li>
+                                                <li><a href="{{ __(route('view.orgao-sociais')) }}">Órgãos Sociais</a>
+                                                </li>
+                                                <li><a href="{{ __(route('view.doc-insti')) }}">Documentos
+                                                        institucionais</a></li>
+                                            </ul>
+                                            <ul>
+                                                <li class="title">Informação Financeira</li>
+                                                <li><a href="{{ __(route('view.relatorio-conta')) }}">Relatório &
+                                                        Contas</a></li>
+                                            </ul>
+                                            <ul>
+                                                <li class="title">Recursos Humanos</li>
+                                                <li><a href="{{ __(route('view.equipe-gestao')) }}">Equipe de
+                                                        Gestão</a></li>
+                                                <li><a href="{{ __(route('view.programa-talento')) }}">Programa de
+                                                        Talentos</a></li>
+                                                <li><a href="{{ __(route('view.recrutamento')) }}">Recrutamento</a>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li class="title">As nossas Políticas</li>
+                                                <li><a href="{{ __(route('view.helpdesk')) }}">Help Desk - Ética</a>
+                                                </li>
+                                                <li><a href="../assets/documents/Codigo_Etica_Conduta.pdf">Código
+                                                        de ética e conduta</a></li>
+                                                <li><a
+                                                        href="../assets/documents/Politica_Corrupcao_Proposta_Revisao_VF.pdf">Política
+                                                        de prevenção e combate <br>a corrupção e
+                                                        fraude</a></li>
+                                                <li><a href="../assets/documents/Politica_Brindes_Presentes_VF.pdf">Política
+                                                        de brindes</a></li>
+                                                <li><a href="../assets/documents/Politica_Identificacao_clientes.pdf">Política
+                                                        de Identificacao <br>de Clientes</a></li>
+                                                <li><a
+                                                        href="../assets/documents/Politica_PrevencaoCombate_Assedio_Trabalho_VF.pdf">Política
+                                                        de prevenção e combate ao <br>assédio no trabalho </a></li>
+                                                <li><a href="../assets/documents/Politica_Proteccao_Denunciante.pdf">Política
+                                                        de Protecção ao Denunciante</a></li>
+                                            </ul>
+                                            <ul>
+                                                <li class="title">Sustentabilidade</li>
+                                                <li><a href="{{ __(route('view.relatorio')) }}">Relatórios</a></li>
+                                                <li><a href="{{ __(route('view.certificacoes')) }}">Certificações</a>
+                                                </li>
+                                                <li><a href="{{ __(route('view.agremiacoes')) }}">Agremiações</a></li>
+                                                <li><a href="{{ __(route('view.resp-social')) }}">Responsabilidade
+                                                        Social</a></li>
+                                            </ul>
+                                            <ul>
+                                                <li class="title">Parcerias</li>
+                                                <li><a href="{{ __(route('view.advogados')) }}">Advogados</a></li>
+                                                <li><a href="{{ __(route('view.fornecedores')) }}">Fornecedores</a>
+                                                </li>
+                                                <li><a href="{{ __(route('view.mediadores')) }}">Mediadores</a></li>
+                                                <li><a href="{{ __(route('view.oficina')) }}">Oficinas</a></li>
+                                                <li><a href="{{ __(route('view.presta-medicos')) }}">Prestadores
+                                                        Médicos</a></li>
+                                                
+                                            </ul>
+                                            <ul>
+                                                <li class="title">Satisfação</li>
+                                                <li><a href="../assets/documents/Politica_Qualidade.pdf">Política de
+                                                        Qualidade</a></li>
+                                                <li><a href="../assets/documents/Processo_Gestao_Reclamaes.pdf">Política
+                                                        de Gestão de
+                                                        Reclamações</a></li>
+                                                <li><a href="{{ __(route('view.inq-analise-marca')) }}">Inquérito de
+                                                        Análise de Marca </a></li>
+                                            </ul>
+                                            <ul>
+                                                <li class="title">Canal de Denúncias</li>
+                                                <li><a href="{{ __(route('view.denucias')) }}">Denúncias</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="label-title-area">
+                                    <a href="#">Sala da Imprensa</a>
+                                </div>
+                                <div class="label-title-link">
+                                    <a href="#">Sala da Imprensa</a>
+                                </div>
+                                <ul class="submenu-container">
+                                    <li>
+                                        <div class="container1 item-area">
+                                            <ul>
+                                                <li class="title">Notícias</li>
+                                                <li><a href="{{ __(route('view.noticia')) }}">Notícias</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="label-title-area">
+                                    <a href="#">Educação Financeira</a>
+                                </div>
+                                <div class="label-title-link">
+                                    <a href="#">Educação Financeira</a>
+                                </div>
+                                <ul class="submenu-container">
+                                    <li>
+                                        <div class="container1 item-area">
+                                            <ul>
+                                                <li class="title">Literácia Financeira</li>
+                                                <li><a href="{{ __(route('view.artigos')) }}">Artigos</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="main-top-menu-bar">
-              <div class="segment-area">
-                <ul>
-                  <li class="">
-                    <div class="bg-shape">
-                      <div class="left-triangle"></div>
-                      <div class="right-triangle"></div>
-                    </div>
-                    <div class="content-text">
-                      <a href="{{ __(route('view.home')) }}">Particulares</a>
-                    </div>
-                  </li>
-                  <li class="">
-                    <div class="bg-shape">
-                      <div class="left-triangle"></div>
-                      <div class="right-triangle"></div>
-                    </div>
-                    <div class="content-text">
-                      <a href="{{ __(route('view.empresas')) }}">Empresas</a>
-                    </div>
-                  </li>
-                  <li class="mnu-selected">
-                    <div class="bg-shape">
-                      <div class="left-triangle"></div>
-                      <div class="right-triangle"></div>
-                    </div>
-                    <div class="content-text">
-                      <a href="{{ __(route('view.indico')) }}">Índico</a>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="utility-area">
-                <ul>
-                  <li><a href="{{ __(route('view.agencias')) }}">Agências</a></li>
-                  <li><a href="{{ __(route('view.faq'))}}">Perguntas Frequentes</a></li>
-                  <li class="show-on-xs mobile-menu">
-                    <a href="#"></a>
-                    <span class="hide-on-xs"></span>
-                  </li>
-                </ul>
-              </div>
+            <div class="right-top-menu-area">
+                <div class="gray-bar"></div>
             </div>
-          </div>
-          <div class="secondary-top-menu-bar">
-            <div class="show-on-xs">
-              <a href="#" class="back-menu"></a>
-            </div>
-            <ul>
-              <li>
-                <div class="label-title-area">
-                  <a href="#">Institucional</a>
-                </div>
-                <div class="label-title-link">
-                  <a href="#">Institucional</a>
-                </div>
-                <ul class="submenu-container">
-                  <li>
-                    <div class="container1 item-area">
-                      <ul>
-                        <li class="title">Identidade Corporativa</li>
-                        <li><a href="{{ __(route('view.dados-empresas')) }}">Dados da Empresa</a></li>
-                        <li><a href="{{ __(route('view.historia')) }}">História</a></li>
-                        <li><a href="{{ __(route('view.proposito'))}}">Proposito</a></li>
-                      </ul>
-                      <ul>
-                        <li class="title">Governação</li>
-                        <li><a href="../assets/documents/Codigo_Governacao_Corporativa.pdf">Código de
-                            governação corporativa</a></li>
-                        <li><a href="../assets/img/Organograma_2023.png">Organograma</a></li>
-                        <li><a href="{{ __(route('view.estru-accionista')) }}">Estrutura Accionista</a></li>
-                        <li><a href="{{ __(route('view.orgao-sociais')) }}">Órgãos Sociais</a></li>
-                        <li><a href="{{ __(route('view.doc-insti')) }}">Documentos institucionais</a></li>
-                      </ul>
-                      <ul>
-                        <li class="title">Informação Financeira</li>
-                        <li><a href="{{ __(route('view.relatorio-conta')) }}">Relatório & Contas</a></li>
-                      </ul>
-                      <ul>
-                        <li class="title">Recursos Humanos</li>
-                        <li><a href="{{ __(route('view.equipe-gestao')) }}">Equipe de Gestão</a></li>
-                        <li><a href="{{ __(route('view.programa-talento'))}}">Programa de Talentos</a></li>
-                        <li><a href="{{ __(route('view.recrutamento'))}}">Recrutamento</a></li>
-                      </ul>
-                      <ul>
-                        <li class="title">As nossas Políticas</li>
-                        <li><a href="{{ __(route('view.helpdesk'))}}">Help Desk - Ética</a></li>
-                        <li><a href="../assets/documents/Codigo_Etica_Conduta.pdf">Código
-                            de ética e conduta</a></li>
-                        <li><a
-                            href="../assets/documents/Politica_Corrupcao_Proposta_Revisao_VF.pdf">Política
-                            de prevenção e combate <br>a corrupção e
-                            fraude</a></li>
-                        <li><a href="../assets/documents/Politica_Brindes_Presentes_VF.pdf">Política
-                            de brindes</a></li>
-                        <li><a
-                            href="../assets/documents/Politica_Identificacao_clientes.pdf">Política
-                            de Identificacao <br>de Clientes</a></li>
-                        <li><a
-                            href="../assets/documents/Politica_PrevencaoCombate_Assedio_Trabalho_VF.pdf">Política
-                            de prevenção e combate ao <br>assédio no trabalho </a></li>
-                        <li><a
-                            href="../assets/documents/Politica_Proteccao_Denunciante.pdf">Política
-                            de Protecção ao Denunciante</a></li>
-                      </ul>
-                      <ul>
-                        <li class="title">Sustentabilidade</li>
-                        <li><a href="{{ __(route('view.relatorio'))}}">Relatórios</a></li>
-                        <li><a href="{{ __(route('view.certificacoes'))}}">Certificações</a></li>
-                        <li><a href="{{ __(route('view.agremiacoes'))}}">Agremiações</a></li>
-                        <li><a href="{{ __(route('view.resp-social'))}}">Responsabilidade Social</a></li>
-                      </ul>
-                      <ul>
-                        <li class="title">Parcerias</li>
-                        <li><a href="{{ __(route('view.fornecedores'))}}">Fornecedores</a></li>
-                        <li><a href="{{ __(route('view.mediadores'))}}">Mediadores</a></li>
-                        <li><a href="{{ __(route('view.oficina'))}}">Oficinas</a></li>
-                        <li><a href="{{ __(route('view.presta-medicos'))}}">Prestadores Médicos</a></li>
-                      </ul>
-                      <ul>
-                        <li class="title">Satisfação</li>
-                        <li><a href="../assets/documents/Politica_Qualidade.pdf">Política de Qualidade</a></li>
-                        <li><a href="../assets/documents/Processo_Gestao_Reclamaes.pdf">Política de Gestão de
-                            Reclamações</a></li>
-                        <li><a href="{{ __(route('view.inq-analise-marca'))}}">Inquérito de Análise de Marca </a></li>
-                      </ul>
-                      <ul>
-                        <li class="title">Canal de Denúncias</li>
-                        <li><a href="{{ __(route('view.denucias'))}}">Denúncias</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <div class="label-title-area">
-                  <a href="#">Sala da Imprensa</a>
-                </div>
-                <div class="label-title-link">
-                  <a href="#">Sala da Imprensa</a>
-                </div>
-                <ul class="submenu-container">
-                  <li>
-                    <div class="container1 item-area">
-                      <ul>
-                        <li class="title">Notícias</li>
-                        <li><a href="{{ __(route('view.noticia'))}}">Notícias</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <div class="label-title-area">
-                  <a href="#">Educação Financeira</a>
-                </div>
-                <div class="label-title-link">
-                  <a href="#">Educação Financeira</a>
-                </div>
-                <ul class="submenu-container">
-                  <li>
-                    <div class="container1 item-area">
-                      <ul>
-                        <li class="title">Literácia Financeira</li>
-                        <li><a href="{{ __(route('view.artigos')) }}">Artigos</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="right-top-menu-area">
-        <div class="gray-bar"></div>
-      </div>
 
+        </div>
     </div>
-  </div>
 </header>
 
 <body style="background: #e1e1e1;">
@@ -431,15 +514,6 @@
             </div>
             <div class="text">
               <label for=""><a href="#">M-pesa</a></label><br>
-              <small>Cód de comerciante: <strong>900148</strong></small>
-            </div>
-          </li>
-          <li>
-            <div class="icon me-2">
-              <i class="fas fa-caret-right"></i>
-            </div>
-            <div class="text">
-              <label for=""><a href="#">E-mola</a></label><br>
               <small>Cód de comerciante: <strong>900148</strong></small>
             </div>
           </li>

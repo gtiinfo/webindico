@@ -108,9 +108,8 @@
                                   <li><a href="{{ __(route('view.recibo-part')) }}">Recibo</a></li>
                                 </ul>
                                 <ul>
-                                  <li class="dropdown0 icon-menu-drop">Denúcia</li>
+                                  <li class="dropdown0 icon-menu-drop">Reclamações</li>
                                   <ul class="dropdown1">
-                                    <li><a href=" {{ __(route('view.parti-fraude-part')) }}">Participar de Fraude</a></li>
                                     <li><a href=" {{ __(route('view.reclamacoes-part')) }} ">Reclamações</a></li>
                                   </ul>
                                 </ul>
@@ -332,8 +331,7 @@
                         <li><a href="{{ __(route('view.recibo-part')) }}">Recibo</a></li>
                       </ul>
                       <ul>
-                        <li class="title">Denúcia</li>
-                        <li><a href="{{ __(route('view.parti-fraude-part')) }}">Participar Fraude</a></li>
+                        <li class="title">Reclamações</li>
                         <li><a href="{{ __(route('view.reclamacoes-part')) }}">Reclamações</a></li>
                       </ul>
                       <ul>
@@ -386,15 +384,6 @@
             </div>
             <div class="text">
               <label for=""><a href="#">M-pesa</a></label><br>
-              <small>Cód de comerciante: <strong>900148</strong></small>
-            </div>
-          </li>
-          <li>
-            <div class="icon me-2">
-              <i class="fas fa-caret-right"></i>
-            </div>
-            <div class="text">
-              <label for=""><a href="#">E-mola</a></label><br>
               <small>Cód de comerciante: <strong>900148</strong></small>
             </div>
           </li>
@@ -826,7 +815,7 @@
               <li class="title">Particulares</li>
               <li><a href="./danos-proprios.php">Danos Próprios</a></li>
               <li><a href="./responsabilidade-civil.php">Responsabilidade Civil</a></li>
-              <li><a href="./responsabilidade-civil-bombas.php">Responsabilidade Civil Bombas</a></li>
+              <li><a href="./responsabilidade-civil-bombas.php">Resp. Civil Bombas</a></li>
               <li><a href="./habitacao.php">Multirisco Habitação</a></li>
               <li><a href="./empregado-domesticos.php">Empregados Domésticos</a></li>
               <li><a href="./funeral.php">Funeral</a></li>

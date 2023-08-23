@@ -114,9 +114,8 @@
                                   <li><a href="{{ __(route('view.recibo-emp')) }}">Recibo</a></li>
                                 </ul>
                                 <ul>
-                                  <li class="dropdown0 icon-menu-drop">Denúcia</li>
+                                  <li class="dropdown0 icon-menu-drop">Reclamações</li>
                                   <ul class="dropdown1">
-                                    <li><a href="{{ __(route('view.part-fraude-emp')) }}">Participar de Fraude</a></li>
                                     <li><a href="{{ __(route('view.reclamacoes')) }}">Reclamações</a></li>
                                   </ul>
                                 </ul>
@@ -339,8 +338,7 @@
                         <li><a href="{{ __(route('view.recibo-emp')) }}">Recibo</a></li>
                       </ul>
                       <ul>
-                        <li class="title">Denúcia</li>
-                        <li><a href="{{ __(route('view.part-fraude-emp')) }}">Participar Fraude</a></li>
+                        <li class="title">Reclamações</li>
                         <li><a href="{{ __(route('view.reclamacoes')) }}">Reclamações</a></li>
                       </ul>
                       <ul>

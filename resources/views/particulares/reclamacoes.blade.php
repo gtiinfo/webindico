@@ -689,7 +689,7 @@
           <div class="box-medium" style="max-width: 600px;">
             <div class="title-bar">
               <div class="title-icon"></div>
-              <h4 class="title">Recibo</h4>
+              <h4 class="title">Reclamações</h4>
             </div>
             <div class="content">
               <form action="" class="needs-validation" novalidate>
