@@ -15,13 +15,28 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
    
     
     Route::prefix('admin')->group(function(){
-        Route::get('/artigos-add', 'AdminController@artigosAdd')->name('view.artigos-add');
-        Route::get('/artigo', 'AdminController@artigos')->name('view.artigo');
-        Route::post('/artigos-add', 'AdminController@storeArticle');
+        Route::get('/artigo/add', 'AdminController@artigosAdd')->name('view.artigos-add');
+        Route::get('/artigos', 'AdminController@indexArticles')->name('view.artigo');
+        Route::get('/artigo/edit/{article}', 'AdminController@editArticle');
+        Route::post('/artigo/add', 'AdminController@storeArticle');
+        Route::put('/artigo/{article}', 'AdminController@updateArticles');
+        Route::delete('/artigo/{article}', 'AdminController@destroyArticles');
+      
+        Route::get('recrutamentos','AdminController@indexRecrutamento')->name('view.recrutamentos');
+        Route::get('recrutamento/add', 'AdminController@recrutamentoAdd')->name('view.recrutamento-add');
+        Route::post('recrutamento/add', 'AdminController@storeRecrutamento');
+        Route::get('/recrutamento/edit/{recruitment}', 'AdminController@editRecrutamento');
+        Route::put('/recrutamento/{recruitment}', 'AdminController@updateRecrutamento');
+        Route::delete('/recrutamento/{recruitment}', 'AdminController@destroyRecrutamento');
+
         Route::get('/user-add', 'AdminController@userAdd')->name('view.user-add');
         Route::get('/users', 'AdminController@users')->name('view.users');
         Route::get('/noticias', 'AdminController@noticia')->name('view.noticias');
-        Route::get('/noticias-add', 'AdminController@noticiaAdd')->name('view.noticias-add');
+        Route::get('/noticias/add', 'AdminController@noticiaAdd')->name('view.noticias-add');
+        Route::post('noticias/add', 'AdminController@storeNoticias');
+        Route::get('/noticia/edit/{newsletter}', 'AdminController@editNoticia');
+        Route::put('/noticia/{newsletter}', 'AdminController@updateNoticia');
+        Route::delete('/noticia/{newsletter}', 'AdminController@destroyNoticias');
 
 
 
@@ -105,6 +120,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         Route::get('/programa-talento', 'IndicoController@programaTalento')->name('view.programa-talento');
         Route::get('/proposito', 'IndicoController@proposito')->name('view.proposito');
         Route::get('/recrutamento', 'IndicoController@recrutamento')->name('view.recrutamento');
+        Route::get('/recrutamento-candidatura', 'IndicoController@candidatura')->name('view.candidatura');
         Route::get('/relatorio-contas', 'IndicoController@relatorioContas')->name('view.relatorio-conta');
         Route::get('/relatorio', 'IndicoController@relatorio')->name('view.relatorio');
         Route::get('/responsabilidade-social', 'IndicoController@responsabilidadeSocial')->name('view.resp-social');
