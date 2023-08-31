@@ -3,29 +3,29 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Índico Seguros Create Article | Admin Dashboard</title>
+    <title>Índico Seguros Edit Article | Admin Dashboard</title>
 
     <!-- App favicon -->
-    <link rel="../shortcut icon" href="../../assets/images/favicon.ico">
+    <link rel="shortcut icon" href="../../../assets/images/favicon.ico">
 
 
     <!-- Bootstrap Datepicker css -->
-    <link href="../../assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../../assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Select2 Plugins css -->
-    <link href="../../assets/vendor/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../../assets/vendor/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Theme Config Js -->
-    <script src="../../assets/js/hyper-config.js"></script>
+    <script src="../../../assets/js/hyper-config.js"></script>
 
     <!-- App css -->
-    <link href="../../assets/css/app-saas.min.css" rel="stylesheet" type="text/css" id="app-style" />
+    <link href="../../../assets/css/app-saas.min.css" rel="stylesheet" type="text/css" id="app-style" />
 
     <!-- Icons css -->
-    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     
 
-    <link href="../../assets/vendor/simplemde/simplemde.min.css" rel="stylesheet" type="text/css" />                                                    
+    <link href="../../../assets/vendor/simplemde/simplemde.min.css" rel="stylesheet" type="text/css" />                                                    
                                                                                                         
                                                  
 </head>
@@ -45,20 +45,20 @@
                         <!-- Logo light -->
                         <a href="{{ __(route('view.home'))}}" class="logo-light">
                             <span class="logo-lg">
-                                <img src="../../assets/images/logo.png" alt="logo">
+                                <img src="../../../assets/images/logo.png" alt="logo">
                             </span>
                             <span class="logo-sm">
-                                <img src="../../assets/images/logo-sm.png" alt="small logo">
+                                <img src="../../../assets/images/logo-sm.png" alt="small logo">
                             </span>
                         </a>
 
                         <!-- Logo Dark -->
                         <a href="index.html" class="logo-dark">
                             <span class="logo-lg">
-                                <img src="../../assets/images/logo-dark.png" alt="dark logo">
+                                <img src="../../../assets/images/logo-dark.png" alt="dark logo">
                             </span>
                             <span class="logo-sm">
-                                <img src="../../assets/images/logo-dark-sm.png" alt="small logo">
+                                <img src="../../../assets/images/logo-dark-sm.png" alt="small logo">
                             </span>
                         </a>
                     </div>
@@ -97,7 +97,7 @@
                         <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown" href="#"
                             role="button" aria-haspopup="false" aria-expanded="false">
                             <span class="account-user-avatar">
-                                <img src="../../assets/images/users/avatar-1.jpg" alt="user-image" width="32"
+                                <img src="../../../assets/images/users/avatar-1.jpg" alt="user-image" width="32"
                                     class="rounded-circle">
                             </span>
                             <span class="d-lg-flex flex-column gap-1 d-none">
@@ -135,20 +135,20 @@
             <!-- Brand Logo Light -->
             <a href="{{ __(route('view.home'))}}" class="logo logo-light">
                 <span class="logo-lg">
-                    <img src="../assets/images/logo.png" alt="logo">
+                    <img src="../../../assets/images/logo.png" alt="logo">
                 </span>
                 <span class="logo-sm">
-                    <img src="../assets/images/logo-sm.png" alt="small logo">
+                    <img src="../../../assets/images/logo-sm.png" alt="small logo">
                 </span>
             </a>
 
             <!-- Brand Logo Dark -->
             <a href="{{ __(route('view.home'))}}" class="logo logo-dark">
                 <span class="logo-lg">
-                    <img src="../assets/images/logo-dark.png" alt="dark logo">
+                    <img src="../../../assets/images/logo-dark.png" alt="dark logo">
                 </span>
                 <span class="logo-sm">
-                    <img src="../assets/images/logo-dark-sm.png" alt="small logo">
+                    <img src="../../../assets/images/logo-dark-sm.png" alt="small logo">
                 </span>
             </a>
 
@@ -167,7 +167,7 @@
                 <!-- Leftbar User -->
                 <div class="leftbar-user">
                     <a href="pages-profile.html">
-                        <img src="../assets/images/users/avatar-1.jpg" alt="user-image" height="42"
+                        <img src="../../../assets/images/users/avatar-1.jpg" alt="user-image" height="42"
                             class="rounded-circle shadow-sm">
                         <span class="leftbar-user-name mt-2">Dominic Keller</span>
                     </a>
@@ -291,10 +291,10 @@
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Article</a></li>
-                                        <li class="breadcrumb-item active">Create Article</li>
+                                        <li class="breadcrumb-item active">Edit Article</li>
                                     </ol>
                                 </div>
-                                <h4 class="page-title">Create Article</h4>
+                                <h4 class="page-title">Edit Article</h4>
                             </div>
                         </div>
                     </div>
@@ -316,13 +316,31 @@
                                       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                     </div>
                                     @endif
-                                    <form action="" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+                                    <form action="/admin/artigo/{{ $article->id }}" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
                                         @csrf
+                                        @method('PUT')
                                         <div class="row">
                                             <div class="col-xl-6">
+
+                                                <div class="mb-3" style="width: 100px; height: 100px">
+                                                    <img src="{{ asset('storage/upload/img/'.$article->image) }}" alt="table-user" class="me-2 rounded-circle" style="width: 100%">
+                                                </div>
+
+                                                <div class="position-relative mb-3">
+                                                    <label for="example-fileinput" class="form-label">Image</label>
+                                                    <input type="file" id="image" class="form-control"
+                                                        name="image" required>
+                                                        <div class="valid-tooltip">
+                                                            Looks good!
+                                                        </div>
+                                                        <div class="invalid-tooltip">
+                                                            Please enter Image.
+                                                        </div>
+                                                </div>
+
                                                 <div class="position-relative mb-3">
                                                     <label for="fullname" class="form-label">Full Author's full name </label>
-                                                    <input class="form-control @error('fullname') is-invalid @enderror " name="fullname" type="text" id="fullname" placeholder="Please write the author's full name" required>
+                                                    <input class="form-control @error('fullname') is-invalid @enderror " name="fullname" type="text" id="fullname" value="{{ $article->name }}" placeholder="Please write the author's full name" required>
                                                     <div class="valid-tooltip">
                                                         Looks good!
                                                     </div>
@@ -333,7 +351,7 @@
 
                                                 <div class="position-relative mb-3">
                                                     <label for="newslettername" class="form-label">Title</label>
-                                                    <textarea class="form-control" name="title" id="example-textarea" rows="4" required placeholder="Please write the title of the article"></textarea>                                      
+                                                    <textarea class="form-control" name="title" id="example-textarea" rows="4" required placeholder="Please write the title of the article">{{ $article->title }}</textarea>                                      
                                                     <!-- HTML -->
                                                     <!-- <textarea id="simplemde1"></textarea> -->
                                                     <div class="valid-tooltip">
@@ -343,22 +361,11 @@
                                                         Please enter Title.
                                                     </div>
                                                 </div>
- 
-                                                <div class="position-relative mb-3">
-                                                    <label for="example-fileinput" class="form-label">Image</label>
-                                                    <input type="file" id="example-fileinput" class="form-control"
-                                                        name="image" required>
-                                                        <div class="valid-tooltip">
-                                                            Looks good!
-                                                        </div>
-                                                        <div class="invalid-tooltip">
-                                                           Please enter Image.
-                                                        </div>
-                                                </div>
 
                                                 <div class="position-relative mb-3">
                                                     <label for="example-select" class="form-label">Year</label>
                                                     <select class="form-select" name="year" id="example-select" required>
+                                                        <option value="" disabled>{{ $article->year}}</option>
                                                         <option value="2023">2023</option>
                                                         <option value="2022">2022</option>
                                                         <option value="2021">2021</option>
@@ -431,27 +438,27 @@
     <!-- END wrapper -->
 
     <!-- Vendor js -->
-    <script src="../../assets/js/vendor.min.js"></script>
+    <script src="../../../assets/js/vendor.min.js"></script>
 
     <!-- Bootstrap Datepicker Plugin js -->
-    <script src="../../assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../../../assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 
     <!-- Select2 js  -->
-    <script src="../../assets/vendor/select2/js/select2.min.js"></script>
+    <script src="../../../assets/vendor/select2/js/select2.min.js"></script>
 
     <!-- Dropzone File Upload js -->
-    <script src="../../assets/vendor/dropzone/min/dropzone.min.js"></script>
+    <script src="../../../assets/vendor/dropzone/min/dropzone.min.js"></script>
 
     <!-- init js -->
-    <script src="../../assets/js/ui/component.fileupload.js"></script>
+    <script src="../../../assets/js/ui/component.fileupload.js"></script>
 
     <!-- App js -->
-    <script src="../../assets/js/app.min.js"></script>
+    <script src="../../../assets/js/app.min.js"></script>
 
        <!-- SimpleMDE js -->
-       <script src="../../assets/vendor/simplemde/simplemde.min.js"></script>
+       <script src="../../../assets/vendor/simplemde/simplemde.min.js"></script>
        <!-- SimpleMDE demo -->
-       <script src="../../assets/js/pages/demo.simplemde.js"></script>
+       <script src="../../../assets/js/pages/demo.simplemde.js"></script>
 
 </body>
 

@@ -182,16 +182,16 @@
                             <a data-bs-toggle="collapse" href="#sidebarAccounts" aria-expanded="false"
                                 aria-controls="sidebarAccounts" class="side-nav-link">
                                 <i class="ri-group-line"></i>
-                                <span> Accounts </span>
+                                <span> Contas </span>
                                 <span class="menu-arrow"></span>
                             </a>
                             <div class="collapse" id="sidebarAccounts">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="{{ __(route('view.users')) }}">All Users</a>
+                                        <a href="{{ __(route('view.users')) }}">Usuários</a>
                                     </li>
                                     <li>
-                                        <a href="{{ __(route('view.user-add')) }}">Create User</a>
+                                        <a href="{{ __(route('view.user-add')) }}">Adicionar Usuário</a>
                                     </li>
                                 </ul>
                             </div>
@@ -207,10 +207,10 @@
                             <div class="collapse" id="sidebarNewsletter">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="{{ __(route('view.noticias'))}}">All Newsletter</a>
+                                        <a href="{{ __(route('view.noticias'))}}">Newsletter</a>
                                     </li>
                                     <li>
-                                        <a href="{{ __(route('view.noticias-add'))}}">Create Newsletter</a>
+                                        <a href="{{ __(route('view.noticias-add'))}}">Adicionar Newsletter</a>
                                     </li>
                                 </ul>
                             </div>
@@ -220,16 +220,34 @@
                             <a data-bs-toggle="collapse" href="#sidebarArticles" aria-expanded="false"
                                 aria-controls="sidebarArticles" class="side-nav-link">
                                 <i class="ri-file-paper-2-line"></i>
-                                <span> Articles </span>
+                                <span> Artigo </span>
                                 <span class="menu-arrow"></span>
                             </a>
                             <div class="collapse" id="sidebarArticles">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="{{ __(route('view.artigo'))}}">All Articles</a>
+                                        <a href="{{ __(route('view.artigo'))}}">Artigos</a>
                                     </li>
                                     <li>
-                                        <a href="{{ __(route('view.artigos-add'))}}">Create Articles</a>
+                                        <a href="{{ __(route('view.artigos-add'))}}">Adicionar Artigos</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="side-nav-item">
+                            <a data-bs-toggle="collapse" href="#sidebarRecrutamento" aria-expanded="false"
+                                aria-controls="sidebarRecrutamento" class="side-nav-link">
+                                <i class=" ri-hand-heart-line"></i>
+                                <span> Recrutamento </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <div class="collapse" id="sidebarRecrutamento">
+                                <ul class="side-nav-second-level">
+                                    <li>
+                                        <a href="{{ __(route('view.recrutamentos'))}}">Recrutamentos</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ __(route('view.recrutamento-add'))}}">Adicionar Recrutamentos</a>
                                     </li>
                                 </ul>
                             </div>
@@ -273,7 +291,12 @@
                             </div>
                         </div>
                         <!-- end page title -->
-
+                        @if(session('message'))
+                        <div class="alert alert-{{ session('status') }} alert-dismissible fade show" role="alert">
+                          <strong>{{ session('message') }}</strong>
+                          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        @endif
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">
@@ -309,8 +332,8 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                  {{ dd($articles)}}
-                                                    @foreach ($articles as $article)
+                                                 
+                                                    @forelse($articles as $key => $article)
                                                     
                                                     <tr>
                                                         <td>
@@ -320,7 +343,7 @@
                                                             </div>
                                                         </td>
                                                         <td class="table-user">
-                                                            <img src="{{ asset($article->image) }}" alt="table-user" class="me-2 rounded-circle">
+                                                            <img src="{{ asset('storage/upload/img/'.$article->image) }}" alt="table-user" class="me-2 rounded-circle">
                                                         </td>
                                                         <td>
                                                             {{ $article->name }}
@@ -332,12 +355,32 @@
                                                             {{ $article->year }}
                                                         </td>                    
                                                         <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                            <a href="/admin/artigo/edit/{{$article->id}}" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
+                                                            <a href="javascript:void(0);" class="action-icon"  data-bs-toggle="modal" data-bs-target="#danger-alert-modal"> <i class="mdi mdi-delete"></i></a>
                                                         </td>
                                                     </tr>
-                                                    
-                                                    @endforeach                                                 
+
+                                                    <div id="danger-alert-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+                                                        <div class="modal-dialog modal-sm">
+                                                            <div class="modal-content modal-filled bg-danger">
+                                                                <div class="modal-body p-4">
+                                                                    <div class="text-center">
+                                                                        <i class="ri-close-circle-line h1"></i>
+                                                                        <h4 class="mt-2">Oh Danger!</h4>
+                                                                        <p class="mt-3">Se você deseja excluir permanentemente o artigo clica em sim</p>
+                                                                        <form action="/admin/artigo/{{ $article->id }}" method="POST">
+                                                                            @csrf   
+                                                                             @method('DELETE')
+                                                                            <button type="submit" class="btn btn-light my-2" data-bs-dismiss="modal">Sim</button>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!-- /.modal-content -->
+                                                        </div><!-- /.modal-dialog -->
+                                                    </div><!-- /.modal -->
+                                                  
+                                                    @endforeach 
+                                                                                                  
                                                 </tbody>
                                             </table>
                                         </div>

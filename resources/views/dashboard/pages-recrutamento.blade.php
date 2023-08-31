@@ -6,7 +6,7 @@
         <title>Índico Seguros Newsletter | Admin Dashboard</title>
 
         <!-- App favicon -->
-        <link rel="../shortcut icon" href="assets/images/favicon.ico">
+        <link rel="shortcut icon" href="../assets/images/favicon.ico">
 
         <!-- Datatable css -->
         <link href="../assets/vendor/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
@@ -181,16 +181,16 @@
                             <a data-bs-toggle="collapse" href="#sidebarAccounts" aria-expanded="false"
                                 aria-controls="sidebarAccounts" class="side-nav-link">
                                 <i class="ri-group-line"></i>
-                                <span> Accounts </span>
+                                <span> Contas </span>
                                 <span class="menu-arrow"></span>
                             </a>
                             <div class="collapse" id="sidebarAccounts">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="{{ __(route('view.users')) }}">All Users</a>
+                                        <a href="{{ __(route('view.users')) }}">Usuários</a>
                                     </li>
                                     <li>
-                                        <a href="{{ __(route('view.user-add')) }}">Create User</a>
+                                        <a href="{{ __(route('view.user-add')) }}">Adicionar Usuário</a>
                                     </li>
                                 </ul>
                             </div>
@@ -206,10 +206,10 @@
                             <div class="collapse" id="sidebarNewsletter">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="{{ __(route('view.noticias'))}}">All Newsletter</a>
+                                        <a href="{{ __(route('view.noticias'))}}">Newsletter</a>
                                     </li>
                                     <li>
-                                        <a href="{{ __(route('view.noticias-add'))}}">Create Newsletter</a>
+                                        <a href="{{ __(route('view.noticias-add'))}}">Adicionar Newsletter</a>
                                     </li>
                                 </ul>
                             </div>
@@ -219,16 +219,34 @@
                             <a data-bs-toggle="collapse" href="#sidebarArticles" aria-expanded="false"
                                 aria-controls="sidebarArticles" class="side-nav-link">
                                 <i class="ri-file-paper-2-line"></i>
-                                <span> Articles </span>
+                                <span> Artigo </span>
                                 <span class="menu-arrow"></span>
                             </a>
                             <div class="collapse" id="sidebarArticles">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="{{ __(route('view.artigo'))}}">All Articles</a>
+                                        <a href="{{ __(route('view.artigo'))}}">Artigos</a>
                                     </li>
                                     <li>
-                                        <a href="{{ __(route('view.artigos-add'))}}">Create Articles</a>
+                                        <a href="{{ __(route('view.artigos-add'))}}">Adicionar Artigos</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="side-nav-item">
+                            <a data-bs-toggle="collapse" href="#sidebarRecrutamento" aria-expanded="false"
+                                aria-controls="sidebarRecrutamento" class="side-nav-link">
+                                <i class=" ri-hand-heart-line"></i>
+                                <span> Recrutamento </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <div class="collapse" id="sidebarRecrutamento">
+                                <ul class="side-nav-second-level">
+                                    <li>
+                                        <a href="{{ __(route('view.recrutamentos'))}}">Recrutamentos</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ __(route('view.recrutamento-add'))}}">Adicionar Recrutamentos</a>
                                     </li>
                                 </ul>
                             </div>
@@ -265,34 +283,33 @@
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
-                                            <li class="breadcrumb-item active">Newsletter</li>
+                                            <li class="breadcrumb-item active">Recrutamento</li>
                                         </ol>
                                     </div>
-                                    <h4 class="page-title">Newsletter</h4>
+                                    <h4 class="page-title">Recrutamento</h4>
                                 </div>
                             </div>
                         </div>
                         <!-- end page title -->
-
+                        @if(session('message'))
+                        <div class="alert alert-{{ session('status') }} alert-dismissible fade show" role="alert">
+                          <strong>{{ session('message') }}</strong>
+                          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        @endif
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="row mb-2">
                                             <div class="col-sm-5">
-                                                <a href="{{ __(route('view.noticias-add'))}}" class="btn btn-danger mb-2"><i class="mdi mdi-plus-circle me-2"></i> Add Newsletter</a>
+                                                <a href="{{ __(route('view.recrutamento-add'))}}" class="btn btn-danger mb-2"><i class="mdi mdi-plus-circle me-2"></i> Add Recrutamento</a>
                                             </div>
-                                            <div class="col-sm-7">
-                                                <div class="text-sm-end">
-                                                    <button type="button" class="btn btn-success mb-2 me-1"><i class="mdi mdi-cog-outline"></i></button>
-                                                    <button type="button" class="btn btn-light mb-2 me-1">Import</button>
-                                                    <button type="button" class="btn btn-light mb-2">Export</button>
-                                                </div>
-                                            </div><!-- end col-->
+                                           
                                         </div>
                 
                                         <div class="table-responsive">
-                                            <table class="table table-centered w-100 dt-responsive nowrap" id="products-datatable">
+                                            <table class="table table-centered w-100 dt-responsive nowrap">
                                                 <thead class="table-light">
                                                     <tr>
                                                         <th class="all" style="width: 20px;">
@@ -301,14 +318,17 @@
                                                                 <label class="form-check-label" for="customCheck1">&nbsp;</label>
                                                             </div>
                                                         </th>
-                                                        <th class="all">Newsletter</th>
+                                                        <th class="all">Recrutamento</th>
                                                         <th>Title</th>
-                                                        <th>Added Date</th>
+                                                        <th>Position</th>
                                                         <th>Status</th>
                                                         <th style="width: 85px;">Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                    @foreach ($recrutamentos as $key => $recrutamento )
+                                                        
+                                                    
                                                     <tr>
                                                         <td>
                                                             <div class="form-check">
@@ -317,57 +337,51 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <img src="assets/images/aida_leong.jpg" alt="image" class="img-fluid avatar-sm rounded-circle" >
+                                                            <img src="{{ asset('storage/upload/img/'.$recrutamento->image) }}" alt="image" class="img-fluid avatar-sm rounded-circle" >
                                                             <p class="m-0 d-inline-block align-middle font-16">
                                                                
                                                             </p>
                                                         </td>
                                                         <td>
-                                                            Aeron Chairs
+                                                            {{ $recrutamento->title }}
                                                         </td>
                                                         <td>
-                                                            Março - 2022
+                                                            {{ $recrutamento->position }}
                                                         </td>
                                                         <td>
-                                                            <span class="badge bg-success">Active</span>
+                                                            @if ($recrutamento->status == 1)
+                                                                <span class="badge bg-success">Activo</span>
+                                                             @else
+                                                                <span class="badge bg-danger">Desativo</span>
+                                                             @endif
                                                         </td>
                     
                                                         <td class="table-action">
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-eye"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                            <a href="/indico/recrutamento" class="action-icon"> <i class="mdi mdi-eye"></i></a>
+                                                            <a href="/admin/recrutamento/edit/{{$recrutamento->id}}" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
+                                                            <a href="javascript:void(0);" class="action-icon"  data-bs-toggle="modal" data-bs-target="#danger-alert-modal"> <i class="mdi mdi-delete"></i></a>
                                                         </td>
                                                     </tr>
-                                                    
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck3">
-                                                                <label class="form-check-label" for="customCheck3">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <img src="assets/images/amanda.jpg" alt="image" class="img-fluid avatar-sm rounded-circle">
-                                                            <p class="m-0 d-inline-block align-middle font-16">
-                                                                
-                                                            </p>
-                                                        </td>
-                                                        <td>
-                                                            Wooden Chairs
-                                                        </td>
-                                                        <td>
-                                                            Julho - 2022
-                                                        </td>
-                                                        <td>
-                                                            <span class="badge bg-success">Active</span>
-                                                        </td>
-                                                        <td class="table-action">
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-eye"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    
+
+                                                    <div id="danger-alert-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+                                                        <div class="modal-dialog modal-sm">
+                                                            <div class="modal-content modal-filled bg-danger">
+                                                                <div class="modal-body p-4">
+                                                                    <div class="text-center">
+                                                                        <i class="ri-close-circle-line h1"></i>
+                                                                        <h4 class="mt-2">Oh Danger!</h4>
+                                                                        <p class="mt-3">Se você deseja excluir permanentemente o Recrutamento clica em sim</p>
+                                                                        <form action="/admin/recrutamento/{{ $recrutamento->id }}" method="POST">
+                                                                            @csrf   
+                                                                             @method('DELETE')
+                                                                            <button type="submit" class="btn btn-light my-2" data-bs-dismiss="modal">Sim</button>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!-- /.modal-content -->
+                                                        </div><!-- /.modal-dialog -->
+                                                    </div><!-- /.modal -->
+                                                    @endforeach                                                                                                      
                                                 </tbody>
                                             </table>
                                         </div>

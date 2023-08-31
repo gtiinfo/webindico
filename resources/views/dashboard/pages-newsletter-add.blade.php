@@ -6,23 +6,23 @@
     <title>Índico Seguros Create Newsletter | Admin Dashboard</title>
 
     <!-- App favicon -->
-    <link rel="../shortcut icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" href="../../../assets/images/favicon.ico">
 
 
     <!-- Bootstrap Datepicker css -->
-    <link href="../assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../../assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Select2 Plugins css -->
-    <link href="../assets/vendor/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../../assets/vendor/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Theme Config Js -->
-    <script src="../assets/js/hyper-config.js"></script>
+    <script src="../../../assets/js/hyper-config.js"></script>
 
     <!-- App css -->
-    <link href="../assets/css/app-saas.min.css" rel="stylesheet" type="text/css" id="app-style" />
+    <link href="../../../assets/css/app-saas.min.css" rel="stylesheet" type="text/css" id="app-style" />
 
     <!-- Icons css -->
-    <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -40,20 +40,20 @@
                         <!-- Logo light -->
                         <a href="{{ __(route('view.home'))}}" class="logo-light">
                             <span class="logo-lg">
-                                <img src="../assets/images/logo.png" alt="logo">
+                                <img src="../../../assets/images/logo.png" alt="logo">
                             </span>
                             <span class="logo-sm">
-                                <img src="../assets/images/logo-sm.png" alt="small logo">
+                                <img src="../../../assets/images/logo-sm.png" alt="small logo">
                             </span>
                         </a>
 
                         <!-- Logo Dark -->
                         <a href="index.html" class="logo-dark">
                             <span class="logo-lg">
-                                <img src="../assets/images/logo-dark.png" alt="dark logo">
+                                <img src="../../../assets/images/logo-dark.png" alt="dark logo">
                             </span>
                             <span class="logo-sm">
-                                <img src="../assets/images/logo-dark-sm.png" alt="small logo">
+                                <img src="../../../assets/images/logo-dark-sm.png" alt="small logo">
                             </span>
                         </a>
                     </div>
@@ -92,7 +92,7 @@
                         <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown" href="#"
                             role="button" aria-haspopup="false" aria-expanded="false">
                             <span class="account-user-avatar">
-                                <img src="../assets/images/users/avatar-1.jpg" alt="user-image" width="32"
+                                <img src="../../../assets/images/users/avatar-1.jpg" alt="user-image" width="32"
                                     class="rounded-circle">
                             </span>
                             <span class="d-lg-flex flex-column gap-1 d-none">
@@ -130,20 +130,20 @@
             <!-- Brand Logo Light -->
             <a href="{{ __(route('view.home'))}}" class="logo logo-light">
                 <span class="logo-lg">
-                    <img src="../assets/images/logo.png" alt="logo">
+                    <img src="../../../assets/images/logo.png" alt="logo">
                 </span>
                 <span class="logo-sm">
-                    <img src="../assets/images/logo-sm.png" alt="small logo">
+                    <img src="../../../assets/images/logo-sm.png" alt="small logo">
                 </span>
             </a>
 
             <!-- Brand Logo Dark -->
             <a href="{{ __(route('view.home'))}}" class="logo logo-dark">
                 <span class="logo-lg">
-                    <img src="../assets/images/logo-dark.png" alt="dark logo">
+                    <img src="../../../assets/images/logo-dark.png" alt="dark logo">
                 </span>
                 <span class="logo-sm">
-                    <img src="../assets/images/logo-dark-sm.png" alt="small logo">
+                    <img src="../../../assets/images/logo-dark-sm.png" alt="small logo">
                 </span>
             </a>
 
@@ -162,7 +162,7 @@
                 <!-- Leftbar User -->
                 <div class="leftbar-user">
                     <a href="pages-profile.html">
-                        <img src="../assets/images/users/avatar-1.jpg" alt="user-image" height="42"
+                        <img src="../../../assets/images/users/avatar-1.jpg" alt="user-image" height="42"
                             class="rounded-circle shadow-sm">
                         <span class="leftbar-user-name mt-2">Dominic Keller</span>
                     </a>
@@ -184,16 +184,16 @@
                         <a data-bs-toggle="collapse" href="#sidebarAccounts" aria-expanded="false"
                             aria-controls="sidebarAccounts" class="side-nav-link">
                             <i class="ri-group-line"></i>
-                            <span> Accounts </span>
+                            <span> Contas </span>
                             <span class="menu-arrow"></span>
                         </a>
                         <div class="collapse" id="sidebarAccounts">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="{{ __(route('view.users')) }}">All Users</a>
+                                    <a href="{{ __(route('view.users')) }}">Usuários</a>
                                 </li>
                                 <li>
-                                    <a href="{{ __(route('view.user-add')) }}">Create User</a>
+                                    <a href="{{ __(route('view.user-add')) }}">Adicionar Usuário</a>
                                 </li>
                             </ul>
                         </div>
@@ -209,10 +209,10 @@
                         <div class="collapse" id="sidebarNewsletter">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="{{ __(route('view.noticias'))}}">All Newsletter</a>
+                                    <a href="{{ __(route('view.noticias'))}}">Newsletter</a>
                                 </li>
                                 <li>
-                                    <a href="{{ __(route('view.noticias-add'))}}">Create Newsletter</a>
+                                    <a href="{{ __(route('view.noticias-add'))}}">Adicionar Newsletter</a>
                                 </li>
                             </ul>
                         </div>
@@ -222,16 +222,34 @@
                         <a data-bs-toggle="collapse" href="#sidebarArticles" aria-expanded="false"
                             aria-controls="sidebarArticles" class="side-nav-link">
                             <i class="ri-file-paper-2-line"></i>
-                            <span> Articles </span>
+                            <span> Artigo </span>
                             <span class="menu-arrow"></span>
                         </a>
                         <div class="collapse" id="sidebarArticles">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="{{ __(route('view.artigo'))}}">All Articles</a>
+                                    <a href="{{ __(route('view.artigo'))}}">Artigos</a>
                                 </li>
                                 <li>
-                                    <a href="{{ __(route('view.artigos-add'))}}">Create Articles</a>
+                                    <a href="{{ __(route('view.artigos-add'))}}">Adicionar Artigos</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="side-nav-item">
+                        <a data-bs-toggle="collapse" href="#sidebarRecrutamento" aria-expanded="false"
+                            aria-controls="sidebarRecrutamento" class="side-nav-link">
+                            <i class=" ri-hand-heart-line"></i>
+                            <span> Recrutamento </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <div class="collapse" id="sidebarRecrutamento">
+                            <ul class="side-nav-second-level">
+                                <li>
+                                    <a href="{{ __(route('view.recrutamentos'))}}">Recrutamentos</a>
+                                </li>
+                                <li>
+                                    <a href="{{ __(route('view.recrutamento-add'))}}">Adicionar Recrutamentos</a>
                                 </li>
                             </ul>
                         </div>
@@ -289,6 +307,9 @@
                                   @else
                                   {{ __(session('message')) }}
                                   @endif
+                                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                    @endif
                                 <div class="card-body">
                                     <form action="" method="post" class="needs-validation" enctype="multipart/form-data" novalidate>
                                         @csrf
@@ -296,7 +317,7 @@
                                             <div class="col-xl-6">
                                                 <div class="position-relative mb-3">
                                                     <label for="newslettername" class="form-label">Title</label>
-                                                    <input type="text" id="newslettername" name="newsname"
+                                                    <input type="text" id="newslettername" name="title"
                                                         class="form-control" placeholder="Enter newsletter name" required>
                                                     <div class="valid-tooltip">
                                                         Looks good!
@@ -309,7 +330,7 @@
                                                 <!-- Date View -->
                                                 <div class="mb-3 position-relative" id="datepicker1">
                                                     <label class="form-label"> Date</label>
-                                                    <input type="text" class="form-control" name="newsdata"
+                                                    <input type="text" class="form-control" name="date" id="data"
                                                         data-provide="datepicker" data-date-container="#datepicker1"
                                                         data-date-format="d-M-yyyy" data-date-autoclose="true" required>
                                                         <div class="valid-tooltip">
@@ -322,7 +343,7 @@
                                                 <div class="position-relative mb-3">
                                                     <label for="example-fileinput" class="form-label">Image</label>
                                                     <input type="file" id="example-fileinput" class="form-control"
-                                                        name="newsimg" required>
+                                                        name="image" required>
                                                         <div class="valid-tooltip">
                                                             Looks good!
                                                         </div>
@@ -338,7 +359,7 @@
                                                     <label for="example-fileinput" class="form-label">Document
                                                         (.pdf)</label>
                                                     <input type="file" id="example-fileinput" class="form-control"
-                                                        name="newsdoc" required>
+                                                        name="document" required>
                                                         <div class="valid-tooltip">
                                                             Looks good!
                                                         </div>
@@ -395,22 +416,22 @@
     <!-- END wrapper -->
 
     <!-- Vendor js -->
-    <script src="../assets/js/vendor.min.js"></script>
+    <script src="../../../assets/js/vendor.min.js"></script>
 
     <!-- Bootstrap Datepicker Plugin js -->
-    <script src="../assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../../../assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 
     <!-- Select2 js  -->
-    <script src="../assets/vendor/select2/js/select2.min.js"></script>
+    <script src="../../../assets/vendor/select2/js/select2.min.js"></script>
 
     <!-- Dropzone File Upload js -->
-    <script src="../assets/vendor/dropzone/min/dropzone.min.js"></script>
+    <script src="../../../assets/vendor/dropzone/min/dropzone.min.js"></script>
 
     <!-- init js -->
-    <script src="../assets/js/ui/component.fileupload.js"></script>
+    <script src="../../../assets/js/ui/component.fileupload.js"></script>
 
     <!-- App js -->
-    <script src="../assets/js/app.min.js"></script>
+    <script src="../../../assets/js/app.min.js"></script>
 
 </body>
 

@@ -184,16 +184,16 @@
                         <a data-bs-toggle="collapse" href="#sidebarAccounts" aria-expanded="false"
                             aria-controls="sidebarAccounts" class="side-nav-link">
                             <i class="ri-group-line"></i>
-                            <span> Accounts </span>
+                            <span> Contas </span>
                             <span class="menu-arrow"></span>
                         </a>
                         <div class="collapse" id="sidebarAccounts">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="{{ __(route('view.users')) }}">All Users</a>
+                                    <a href="{{ __(route('view.users')) }}">Usuários</a>
                                 </li>
                                 <li>
-                                    <a href="{{ __(route('view.user-add')) }}">Create User</a>
+                                    <a href="{{ __(route('view.user-add')) }}">Adicionar Usuário</a>
                                 </li>
                             </ul>
                         </div>
@@ -209,10 +209,10 @@
                         <div class="collapse" id="sidebarNewsletter">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="{{ __(route('view.noticias'))}}">All Newsletter</a>
+                                    <a href="{{ __(route('view.noticias'))}}">Newsletter</a>
                                 </li>
                                 <li>
-                                    <a href="{{ __(route('view.noticias-add'))}}">Create Newsletter</a>
+                                    <a href="{{ __(route('view.noticias-add'))}}">Adicionar Newsletter</a>
                                 </li>
                             </ul>
                         </div>
@@ -222,16 +222,34 @@
                         <a data-bs-toggle="collapse" href="#sidebarArticles" aria-expanded="false"
                             aria-controls="sidebarArticles" class="side-nav-link">
                             <i class="ri-file-paper-2-line"></i>
-                            <span> Articles </span>
+                            <span> Artigo </span>
                             <span class="menu-arrow"></span>
                         </a>
                         <div class="collapse" id="sidebarArticles">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="{{ __(route('view.artigo'))}}">All Articles</a>
+                                    <a href="{{ __(route('view.artigo'))}}">Artigos</a>
                                 </li>
                                 <li>
-                                    <a href="{{ __(route('view.artigos-add'))}}">Create Articles</a>
+                                    <a href="{{ __(route('view.artigos-add'))}}">Adicionar Artigos</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="side-nav-item">
+                        <a data-bs-toggle="collapse" href="#sidebarRecrutamento" aria-expanded="false"
+                            aria-controls="sidebarRecrutamento" class="side-nav-link">
+                            <i class=" ri-hand-heart-line"></i>
+                            <span> Recrutamento </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <div class="collapse" id="sidebarRecrutamento">
+                            <ul class="side-nav-second-level">
+                                <li>
+                                    <a href="{{ __(route('view.recrutamentos'))}}">Recrutamentos</a>
+                                </li>
+                                <li>
+                                    <a href="{{ __(route('view.recrutamento-add'))}}">Adicionar Recrutamentos</a>
                                 </li>
                             </ul>
                         </div>

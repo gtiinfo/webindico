@@ -181,16 +181,16 @@
                         <a data-bs-toggle="collapse" href="#sidebarAccounts" aria-expanded="false"
                             aria-controls="sidebarAccounts" class="side-nav-link">
                             <i class="ri-group-line"></i>
-                            <span> Accounts </span>
+                            <span> Contas </span>
                             <span class="menu-arrow"></span>
                         </a>
                         <div class="collapse" id="sidebarAccounts">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="{{ __(route('view.users')) }}">All Users</a>
+                                    <a href="{{ __(route('view.users')) }}">Usuários</a>
                                 </li>
                                 <li>
-                                    <a href="{{ __(route('view.user-add')) }}">Create User</a>
+                                    <a href="{{ __(route('view.user-add')) }}">Adicionar Usuário</a>
                                 </li>
                             </ul>
                         </div>
@@ -206,10 +206,10 @@
                         <div class="collapse" id="sidebarNewsletter">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="{{ __(route('view.noticias'))}}">All Newsletter</a>
+                                    <a href="{{ __(route('view.noticias'))}}">Newsletter</a>
                                 </li>
                                 <li>
-                                    <a href="{{ __(route('view.noticias-add'))}}">Create Newsletter</a>
+                                    <a href="{{ __(route('view.noticias-add'))}}">Adicionar Newsletter</a>
                                 </li>
                             </ul>
                         </div>
@@ -219,16 +219,34 @@
                         <a data-bs-toggle="collapse" href="#sidebarArticles" aria-expanded="false"
                             aria-controls="sidebarArticles" class="side-nav-link">
                             <i class="ri-file-paper-2-line"></i>
-                            <span> Articles </span>
+                            <span> Artigo </span>
                             <span class="menu-arrow"></span>
                         </a>
                         <div class="collapse" id="sidebarArticles">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="{{ __(route('view.artigo'))}}">All Articles</a>
+                                    <a href="{{ __(route('view.artigo'))}}">Artigos</a>
                                 </li>
                                 <li>
-                                    <a href="{{ __(route('view.artigos-add'))}}">Create Articles</a>
+                                    <a href="{{ __(route('view.artigos-add'))}}">Adicionar Artigos</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="side-nav-item">
+                        <a data-bs-toggle="collapse" href="#sidebarRecrutamento" aria-expanded="false"
+                            aria-controls="sidebarRecrutamento" class="side-nav-link">
+                            <i class=" ri-hand-heart-line"></i>
+                            <span> Recrutamento </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <div class="collapse" id="sidebarRecrutamento">
+                            <ul class="side-nav-second-level">
+                                <li>
+                                    <a href="{{ __(route('view.recrutamentos'))}}">Recrutamentos</a>
+                                </li>
+                                <li>
+                                    <a href="{{ __(route('view.recrutamento-add'))}}">Adicionar Recrutamentos</a>
                                 </li>
                             </ul>
                         </div>
@@ -278,17 +296,17 @@
                             <div class="card widget-inline">
                                 <div class="card-body p-0">
                                     <div class="row g-0">
-                                        <div class="col-sm-6 col-lg-4">
+                                        <div class="col-sm-6 col-lg-3">
                                             <div class="card rounded-0 shadow-none m-0">
                                                 <div class="card-body text-center">
                                                     <i class="ri-group-line text-muted font-24"></i>
                                                     <h3><span>29</span></h3>
-                                                    <p class="text-muted font-15 mb-0">Total Accounts</p>
+                                                    <p class="text-muted font-15 mb-0">Total Contas</p>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div class="col-sm-6 col-lg-4">
+                                        <div class="col-sm-6 col-lg-3">
                                             <div class="card rounded-0 shadow-none m-0 border-start border-light">
                                                 <div class="card-body text-center">
                                                     <i class="ri-book-open-line text-muted font-24"></i>
@@ -298,12 +316,22 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-sm-6 col-lg-4">
+                                        <div class="col-sm-6 col-lg-3">
                                             <div class="card rounded-0 shadow-none m-0 border-start border-light">
                                                 <div class="card-body text-center">
                                                     <i class="ri-file-paper-2-line text-muted font-24"></i>
                                                     <h3><span>31</span></h3>
-                                                    <p class="text-muted font-15 mb-0">Total Articles</p>
+                                                    <p class="text-muted font-15 mb-0">Total Artigos</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6 col-lg-3">
+                                            <div class="card rounded-0 shadow-none m-0 border-start border-light">
+                                                <div class="card-body text-center">
+                                                    <i class="ri-hand-heart-line text-muted font-24"></i>
+                                                    <h3><span>31</span></h3>
+                                                    <p class="text-muted font-15 mb-0">Total Recrutamentos</p>
                                                 </div>
                                             </div>
                                         </div>
