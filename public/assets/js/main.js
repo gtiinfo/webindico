@@ -162,125 +162,6 @@ $("#btnSimular").on("click", function () {
   }
 });
 
-// $("#btnParticipar").on("click", function () {
-//   var selectBox = $("#tipoSeguroParticular");
-//   var selectedValue = selectBox.val();
-
-//   if (selectedValue === "automovel") {
-//     $(".card-form").addClass("active");
-//     $(".form").submit(function (e) {
-//       e.preventDefault(); // Impede o envio padrão do formulário
-
-//       // Definir a ação do formulário
-//       $(".form").attr("action", "./sinistro/auto.php");
-
-//       // Continuar com o envio do formulário
-//       this.submit();
-//     });
-//   } else if (selectedValue === "habitacao") {
-//     $(".card-form").addClass("active");
-//     $(".form").submit(function (e) {
-//       e.preventDefault();
-
-//       $(".form").attr("action", "./sinistro/habitacao.php");
-
-//       this.submit();
-//     });
-//   } else if (selectedValue === "acidentesPessoais") {
-//     $(".card-form").addClass("active");
-//     $(".form").submit(function (e) {
-//       e.preventDefault();
-
-//       $(".form").attr("action", "./sinistro/acidentes-pessoais.php");
-
-//       this.submit();
-//     });
-//   } else if (selectedValue === "funeral") {
-//     $(".card-form").addClass("active");
-//     $(".form").submit(function (e) {
-//       e.preventDefault();
-
-//       $(".form").attr("action", "./sinistro/funeral.php");
-//       this.submit();
-//     });
-//   }
-// });
-
-// $("#btnEmpresas").on("click", function () {
-//   var selectBox = $("#tipoSeguraEmpresa");
-//   var selectedValue = selectBox.val();
-
-//   // Verifique o valor selecionado e abra o PDF correspondente
-//   if (selectedValue === "automovel") {
-//     var auto = "Automóvel";
-//     $(".card-form").addClass("active");
-//     $(".title-card").text(auto);
-//     $(".teste").val(auto);
-//     $(".caminho").attr("href", "../../assets/documents/formularios/F.DS.01.R0 - Participacao Automovel  vFinal Editavel  Multilanguage 2022 - A.pdf");
-
-//   } else if (selectedValue === "acidenteTrabalho") {
-//     var acidenteTrabalho = "Acidente Trabalho";
-//     $(".card-form").addClass("active");
-//     $(".title-card").text(acidenteTrabalho);
-//     $(".teste").val(acidenteTrabalho);
-//     $(".caminho").attr("href", "../../assets/documents/formularios/Anexo2. VII Formulario Para Acidentes de Trabalho v04.pdf");
-
-//     // window.open("../../assets/documents/formularios/Anexo2. VII Formulario Para Acidentes de Trabalho v04.pdf", "_self");
-//   } else if (selectedValue === "multirisco") {
-//     var multi = "Multirisco Habitação";
-//     $(".card-form").addClass("active");
-//     $(".title-card").text(multi);
-//     $(".teste").val(multi);
-//     $(".caminho").attr("href", "../../assets/documents/formularios/Anexo2. IIF.DS.04.R0 - Moz Property Loss Damage V04.pdf");
-
-//   } else if (selectedValue === "engenharia") {
-//     var eng = "Engenharia";
-//     $(".card-form").addClass("active");
-//     $(".title-card").text(eng);
-//     $(".teste").val(eng);
-//     $(".caminho").attr("href", "../../assets/documents/formularios/Anexo2. IIF.DS.04.R0 - Moz Property Loss Damage V04.pdf");
-
-//   } else if (selectedValue === "transporteMercadorias") {
-//     var transporteMercadorias = "Transporte Mercadorias"
-//     $(".card-form").addClass("active");
-//     $(".title-card").text(transporteMercadorias);
-//     $(".teste").val(transporteMercadorias);
-//     $(".caminho").attr("href", "../../assets/documents/formularios/Anexo2. VI F.DS.08.R0 - GIT Claim form V04.pdf");
-
-//   } else if (selectedValue === "saude") {
-//     var saude = "Saúde";
-//     $(".card-form").addClass("active");
-//     $(".title-card").text(saude);
-//     $(".teste").val(saude);
-//     $(".caminho").attr("href", "../../assets/documents/formularios/Pedido de Reembolso v04.pdf");
-//   }
-// });
-
-//agences
-// $(document).ready(function() {
-//   $('.card-info').on('click', function() {
-//     console.log('Card info clicked');
-//     var card = $(this).closest('.card');
-//     var cardAlert = card.find('.card-alert');
-
-//     $('.card-alert').not(cardAlert).removeClass('active');
-//     cardAlert.toggleClass('active');
-//   });
-// });
-
-// $('.card').on('click', function (event) {
-//   event.preventDefault();
-//   console.log('Click PAULO');
-//    $('.card-alert').removeClass('active');
-//    $(this).next('.card-alert').addClass('active');
-//    $('.card-info').not(this).removeClass('active');
-//    $(this).addClass('active');
-//   //  var position = $(this).offset().bottom;
-//   //   $('.card-body').animate({
-//   //     scrollTop: position
-//   //   }, 500);
-// });
-
 
 // time status agences
 function checkTime() {
@@ -759,5 +640,7 @@ new Swiper('.gallery-slider', {
 
   });
 });
+
+
 
 
