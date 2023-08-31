@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
+use App\Models\Newsletter;
+use App\Models\Recruitment;
 use Illuminate\Http\Request;
 
 class IndicoController extends Controller
@@ -15,7 +18,8 @@ class IndicoController extends Controller
         return view('indico.agremiacoes');
     }
     public function artigos(){
-        return view('indico.artigos');
+        $artigo = Article::orderBy('year', 'asc')->get();
+        return view('indico.artigos', ['artigos' => $artigo]);
     }
     public function certificacoes(){
         return view('indico.certificacoes');
@@ -60,7 +64,8 @@ class IndicoController extends Controller
         return view('indico.mediadores');
     }
     public function noticia(){
-        return view('indico.noticia');
+        $news = Newsletter::all();
+        return view('indico.noticia', ['news' => $news]);
     }
     public function oficinas(){
         return view('indico.oficinas');
@@ -81,8 +86,13 @@ class IndicoController extends Controller
         return view('indico.proposito');
     }
     public function recrutamento(){
-        return view('indico.recrutamento');
+        $recrutamentos = Recruitment::all();
+        return view('indico.recrutamento',  ['recrutamentos'=>$recrutamentos]);
     }
+    public function candidatura(){
+        return view('indico.candidatura');
+    }
+    // 
     public function relatorioContas(){
         return view('indico.relatorio-contas');
     }
