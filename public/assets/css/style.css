@@ -16,7 +16,98 @@
     font-family: FrutigerBold;
     src: url(../fonts/FrutigerltStd_65_bold.otf);
 }
+.bg-primary-indico{
+    background-color: #00aeef;
+}
+.text-primary-indico{
+    color: #00aeef;
+}
+.btn-outline-primary-indico{
+    outline: #00aeef;
+    color: #00aeef;
+}
+.btn-outline-primary-indico:hover{
+    outline: #00aeef;
+    color: #00aeef;
+}
+.btn-primary-indico, .btn-primary-indico:hover{
+    background: #00aeef;
+    color: #fff;
+    transition: 0.5s;
+}
 
+.wrapper {
+    position: fixed;
+    bottom: 20px;
+    left: -670px;
+    max-width: 600px;
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px 25px 22px;
+    transition: left 0.3s ease;
+    z-index: 11111;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  .wrapper.show {
+    left: 20px;
+  }
+  .wrapper header {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+  }
+  header i {
+    color: #00aeef;
+    font-size: 32px;
+  }
+  header h2 {
+    color: #00aeef;
+    font-weight: 500;
+  }
+  .wrapper .data {
+    margin-top: 16px;
+  }
+  .wrapper .data p {
+    color: #535a55;
+    font-size: 16px;
+  }
+  .data p a {
+    color: #00aeef;
+    text-decoration: none;
+  }
+  .data p a:hover {
+    text-decoration: underline;
+  }
+  .wrapper .buttons {
+    margin-top: 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .buttons .button {
+    border: none;
+    color: #fff;
+    padding: 8px 0;
+    border-radius: 4px;
+    background: #00aeef;
+    cursor: pointer;
+    width: calc(100% / 2 - 10px);
+    transition: all 0.2s ease;
+  }
+  .buttons #acceptBtn:hover {
+    background-color: #00aeef;
+  }
+  #declineBtn {
+    border: 2px solid #00aeef;
+    background-color: #fff;
+    color: #00aeef;
+  }
+  #declineBtn:hover {
+    background-color: #00aeef;
+    color: #fff;
+  }
 
 * {
     font-family: Frutiger;

@@ -1,0 +1,305 @@
+
+@font-face {
+    font-family: 'TS Safaa';
+    src: url('../fonts/safa/TSSafaa-Bold.woff2') format('woff2'),
+        url('../fonts/safa/TSSafaa-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TS Safaa';
+    src: url('../fonts/safa/TSSafaa-Medium.woff2') format('woff2'),
+        url('../fonts/safa/TSSafaa-Medium.html') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TS Safaa';
+    src: url('../fonts/safa/TSSafaa-Light.woff2') format('woff2'),
+        url('../fonts/safa/TSSafaa-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TS Safaa';
+    src: url('../fonts/safa/TSSafaa-Regular.woff2') format('woff2'),
+        url('../fonts/safa/TSSafaa-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body{
+
+	    font-family: 'TS Safaa' !important;
+
+}
+p{
+	 font-family: 'NewJuneMedium' !important;
+}
+h1, h2, h3, h4, h5, h6{
+		font-family: 'TS Safaa' !important;
+}
+.inner_prod ul li a, .inner_prod ul li{
+		 font-family: 'NewJuneMedium' !important;
+}
+.container-fluid.head_logo_sec .right_links .navbar .nav li a{
+	font-weight: 500;
+}
+.container-fluid.banner.inner_banner .container .inner_ban_right_content .w_cont h1{
+	font-size: 40px;
+}
+.container-fluid.inner_prod .container .side_bar_prod .offers h2 {
+    font-weight: 500;
+}
+.side_bar_prod.cont .contact p {
+    font-family: 'TS Safaa' !important;
+}
+.mob_mmnu ul.dropdown-menu.level_one li.right_content_wrap .right_content h4{
+	font-size: 18px;
+}
+li.renew_only_pc a::after{
+	    background: #009FE3;
+}
+li.renew_only_pc a::before{
+	background: #005D9F;
+}
+.container-fluid.head_top .container ul li.header-report-accident a::after{
+	background: #009FE3;
+}
+.container-fluid.head_top .container ul li.header-report-accident a::before{
+	background: #005D9F;
+}
+.container-fluid.head_top .container ul li:last-child a::after{
+		background: #009FE3;
+}
+.container-fluid.head_top .container ul li:last-child a::before{
+		background: #005D9F;
+}
+.container-fluid.head_logo_sec .right_links .navbar .nav li a::before{
+	background: #005D9F;
+}
+.mob_mmnu ul.dropdown-menu.level_one li h4{
+	    color: #009FE3;
+}
+.mob_mmnu ul.dropdown-menu.level_one li.right_content_wrap .right_content a.mnu_more{
+	color: #009FE3;
+}
+li.language a.active{
+	border-bottom: 1px solid #009FE3;
+    color: #009FE3;
+}
+.header-links{
+	background-color: #009FE3;
+}
+.header-links:hover{
+	background-color: #005D9F;
+}
+.container-fluid.banner.inner_banner .container .inner_ban_right_content {
+    background: #009FE3;
+}
+.container-fluid.banner.inner_banner .container .inner_ban_right_content::before {
+    background: #009FE3;
+}
+.container-fluid.banner.inner_banner {
+    background: #009FE3;
+}
+.more.btn_1::before, .subs_btn::before, .btn_1::before, .more.btn_1:focus::before, .subs_btn:focus::before, .btn_1:focus::before{
+	background: #005D9F;
+}
+.container-fluid.banner.inner_banner .container .inner_ban_right_content .w_cont .btn_1{
+color: #009FE3;	
+}
+.subs_btn{
+	    border: 0 !important;
+}
+.top_pop ul li .click_button .pop_div h5{
+	color: #FFCC00;
+}
+.top_pop ul li .click_button{
+	background: #FFCC00;
+    border-bottom: 1px solid #fbd335;
+}
+.top_pop ul li .click_button:hover{
+	background: #FFCC00;
+}
+.top_pop ul li .click_button .pop_div{
+	background: #1D1D1B;
+
+}
+.more::after, .buy_btn::after{
+	    background: #009FE3;
+}
+.more::before, .buy_btn::before{
+	    background: #005D9F;
+}
+.container-fluid.help .container .bor .help_form .align_c p select{
+	color: #009FE3;
+}
+.container-fluid.help .container .bor .help_form .align_c p span:after{
+	background: #009FE3;
+}
+.container-fluid.press.second .nexs_box1 .out .news_content h3{
+	    color: #009FE3;
+}
+.container-fluid.press.second .nexs_box1 .out .news_content::before{
+	    background: #009FE3;
+}
+.container-fluid.subscribe:before{
+	background: #009FE3;
+}
+.container-fluid.footer .container .footrer_box1 ul li a:hover {
+    color: #009FE3;
+}
+
+.container-fluid.footer .foot-bottom .foot-btm ul.social li a i:hover{
+	color: #009FE3;
+}
+.cc-color-override-1253311064.cc-window {
+    background-color: rgb(0 159 227) !important;
+}
+.container-fluid.inner_prod .container .side_bar_prod ul li:hover{
+	    background: #009FE3;
+}
+.container-fluid.inner_prod .container .prod_container .box_222 .box_sing{
+	background: #009FE3;
+}
+a.btn_1{
+	color: #009FE3;
+}
+.container-fluid.inner_prod .container .prod_container h3{
+	color: #009FE3;
+}
+.container-fluid.inner_prod .container .prod_container .additional.claims .add_content h3{
+	color: #009FE3;
+}
+.container-fluid.inner_prod .container .prod_container .inside_cover.pdf_link a{
+	color: #005D9F;
+}
+.container-fluid.inner_prod .container .prod_container .inside_cover.pdf_link a .fa{
+	color: #005D9F;
+}
+.faq_wrap .panel-heading.active{
+	background-color: #009FE3;
+}
+.inside_cover.blank h3{
+	    background: #009FE3 !important;
+}
+.price_form input, .price_form select, .price_form textarea{
+	background: #009FE3;
+}
+.pdf_form_cont h5{
+	    color: #009FE3;
+}
+h5.sml-text{
+	color: #009FE3;
+}
+.abt-text .more-btn a{
+	color: #009FE3;
+}
+.we-global .threeboxes .counter-box h2 span{
+	color: #009fe3;
+}
+.dex .owl-item .showing h4, .dex2 .owl-item .showing h4{
+	color: #009FE3;
+}
+.container-fluid.team_wrap .container .prod_container.team .team_box .team_out .text_container p.small {
+    color: #009fe3 !important;
+}
+.find-more h2{
+		color: #009FE3;
+}
+.container-fluid.team_wrap .container .prod_container.team .team_box .team_out .text_container p {
+    color: #FFCC00;
+}
+.blue_bg {
+    background-color: #009FE3 !important;
+}
+.mob_mmnu ul.dropdown-menu.level_one li.opening a:hover{
+	    color: #009FE3;
+}
+.mob_mmnu ul.dropdown-menu.level_one li.opening a:hover .fa{
+	    color: #009FE3;
+}
+.side_bar_prod.cont .contact p{
+	 color: #009FE3;
+}
+.btn_1.contact{
+	color: #009FE3;
+}
+.btn_1.contact:hover{
+	    border: 1px solid #009FE3;
+}
+.container-fluid.complaint .prod_container .complaint_form form button.btn_1{
+	border-color: #009FE3;
+}
+.container-fluid.complaint .prod_container .complaint_form form button.btn_1:hover {
+    border: 1px solid #009FE3;
+}
+.view_selector li a.active, .view_selector li a:hover{
+	    background-color: #009FE3 !important;
+}
+.marker-cluster-small div {
+    background-color: #009FE3 !important;
+}
+.marker-cluster-small {
+    background-color: rgb(73 81 124 / 28%) !important;
+}
+.marker-cluster-medium div {
+    background-color: #009FE3 !important;
+}
+.marker-cluster-medium {
+   background-color: rgb(73 81 124 / 28%) !important;
+}
+
+.container-fluid.help .container .bor .help_form{
+	    padding-left: 35px;
+}
+li.language ul.drop li a:hover {
+    background: #009FE3;
+    border-bottom: 1px solid #009FE3;
+}
+.header-links.js-header-icons .pop_out ul li a{
+	background: #005d9f;
+}
+
+.cc-banner .cc-message{
+    font-family: 'NewJuneMedium' !important;
+}
+.container-fluid.inner_prod .container .prod_container .additional h2::before {
+    background: #FFCC00;
+}
+.container-fluid.inner_prod .container .side_bar_prod .offers a.btn_1{
+	color: #005d9f;
+}
+.container-fluid.services .container .serv_box1{
+	background: transparent !important;
+    border-left: 1px solid rgba(221,221,221,0.71) !important;
+}
+.container-fluid.banner.inner_banner .container .inner_ban_right_content .w_cont ul li{
+font-family: 'NewJuneMedium' !important;
+}
+.container-fluid.services .container{
+	    background: #009fe3 !important;
+}
+#sm_menu_ham span{
+    background-color: #009fe3;
+}
+.sm_menu_outer .mobile_menu a:hover {
+    color: #009fe3;
+}
+@media(max-width:768px){
+.sm_menu_outer .mobile_menu li ul.language_ul li{
+background: #009fe3;
+}
+.top_pop::before{
+color: #009fe3;
+}
+}
