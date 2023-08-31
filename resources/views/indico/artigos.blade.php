@@ -498,6 +498,101 @@
     <div class="loading-spinner">
         <div class="spinner"></div>
     </div>
+    <div class="wrapper">
+        <header>
+            <i class="bx bx-cookie"></i>
+            <h2>Cookies & Privacidades</h2>
+        </header>
+        <div class="data">
+            <p>Os cookies são pequenos textos enviados ao navegador e que ajudam o site a armazenar informações sobre a
+                sua visita ao nosso website, o que pode facilitar o próximo acesso e deixá-lo site mais útil para você,
+                proporcionando-lhe uma melhor experiência de navegação. <a href="javascrip:void(0)"
+                    id="openModalLink"> Read more...</a></p>
+        </div>
+        <div class="buttons">
+            <button class="button" id="acceptBtn">Accept</button>
+            <button class="button" id="declineBtn">Decline</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal top fade" style="z-index: 1111111" id="cookieconsent3" tabindex="-1" aria-labelledby="cookieconsentLabel3"
+        aria-hidden="true" data-mdb-backdrop="static" data-mdb-keyboard="false">
+        <div class="modal-dialog" style="max-width: 800px;">
+            <div class="modal-content d-block text-start">
+                <div class="modal-header d-block ">
+                    <h2 class="modal-title text-primary-indico" id="cookieconsentLabel3">Cookies & Privacidades</h2>
+                    <h5 class="text-primary-indico mt-3">Como Usamos os Cookies?</h5>
+                    <p>
+                        Esta página descreve os tipos de cookies e outras tecnologias que usamos, incluindo para efeitos de <a href="javascript:void(0)">publicidade</a>.
+                    </p>
+
+                    <p>
+                        Os cookies são pequenos textos enviados ao navegador e que ajudam o site a armazenar informações sobre a sua visita ao nosso website, o que pode facilitar o próximo acesso e deixá-lo site mais útil para você, proporcionando-lhe uma melhor experiência de navegação. 
+                    </p>
+
+                    <p>
+                        Outras tecnologias também podem ter essa finalidade, incluindo pixels, armazenamento local e identificadores únicos usados para identificar um navegador, app ou dispositivo. Os cookies e as outras tecnologias descritos nesta página podem ser usados para os fins explicados abaixo.
+                    </p>
+                    <p>
+                        Consulte a nossa <a href="javascript:void(0)">Política de Privacidade e Protecção de Dados Pessoais</a> para saber como protegemos a sua privacidade ao usar cookies e outras informações.
+                    </p>
+                   
+                </div>
+                <div class="modal-body">
+                    <h5 class="text-primary-indico mt-3">Tipos de Cookies </h5>
+                    <!-- Funcionalidade checkbox -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="necessary" checked />
+                        <label class="form-check-label" for="necessary">
+                            <p>
+                                <strong>Funcionalidade</strong>
+                                <muted>registam preferências (como o idioma), informações relacionadas à e otimizações de produtos que ajudam a manter e melhorar o nosso serviço.</muted>
+                            </p>
+                        </label>
+                    </div>
+                    <!-- Segurança checkbox -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="analytical" />
+                        <label class="form-check-label" for="analytical">
+                            <p>
+                                <strong>Segurança</strong>
+                                <muted>são usados para questões de segurança e ajudam a autenticar usuários, evitar fraudes e protegê-lo nas interacções com o nosso serviço.</muted>
+                            </p>
+                        </label>
+                    </div>
+                    <!--Análise checkbox -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="marketing" />
+                        <label class="form-check-label" for="marketing">
+                            <p>
+                                <strong>Análise</strong>
+                                <muted>ajudam a colectar dados que permitem a melhoria dos nossos conteúdos e da sua experiência.</muted>
+                            </p>
+                        </label>
+                    </div>
+                     <!--Publicidade checkbox -->
+                     <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="marketing" />
+                        <label class="form-check-label" for="marketing">
+                            <p>
+                                <strong>Publicidade</strong>
+                                <muted>são usados para publicidade, a sua personalização e envio de anúncios.</muted>
+                            </p>
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="acceptBtn" class="btn btn-outline-primary" data-mdb-dismiss="modal">
+                        Accept necessary
+                    </button>
+                    <button type="button" id="acceptBtn" class="btn btn-primary" data-mdb-dismiss="modal">
+                        Accept all
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- LATERAL MENU -->
     <div class="lateral-menu">
         <ul class="menu">
@@ -681,21 +776,21 @@
                 </div>
                 <div class="row">
                     <ul class="col-12 articles-list-content">
+                        @foreach ($artigos as $artigo)
                         <li>
-                            <a href="../assets/img/arquivos/artigos_2023/Artigo 01.pdf" class="text-decoration-none">
+                            <a href="{{ asset('storage/upload/documents/'.$artigo->document) }}" class="text-decoration-none">
                                 <div class="articles-card horizontal">
                                     <div class="articles-card-content">
                                         <div class="articles-card-content-letf">
-                                            <img src="../assets/img/arquivos/artigos_2023/aida_leong.jpg"
+                                            <img src="{{ asset('storage/upload/img/'.$artigo->image) }}"
                                                 alt="">
                                         </div>
                                         <div class="articles-card-content-right">
                                             <div class="articles-content">
-                                                <div class="title">Seguro Multirisco
-                                                    Habitação - Coberturas Complementares adequadas</div>
+                                                <div class="title">{{ $artigo->title }}</div>
                                                 <div class="line"></div>
-                                                <h2 class="year mt-3">2023</h2>
-                                                <h2 class="author">Aida Leong</h2>
+                                                <h2 class="year mt-3">{{ $artigo->year }}</h2>
+                                                <h2 class="author">{{ $artigo->name }}</h2>
                                             </div>
                                             <!-- <div class="img-bottom"></div> -->
                                         </div>
@@ -703,206 +798,7 @@
                                 </div>
                             </a>
                         </li>
-                        <li>
-                            <a href="../assets/img/arquivos/artigos_2023/Artigo 02.pdf" class="text-decoration-none">
-                                <div class="articles-card horizontal">
-                                    <div class="articles-card-content">
-                                        <div class="articles-card-content-letf">
-                                            <img src="../assets/img/arquivos/artigos_2023/ana.jpg" alt="">
-                                        </div>
-                                        <div class="articles-card-content-right">
-                                            <div class="articles-content">
-                                                <div class="title">PORQUÊ OS PROFISSIONAIS PRECISAM DO SEGURO DE
-                                                    RESPONSABILIDADE CIVIL
-                                                    PROFISSIONAL?</div>
-                                                <div class="line"></div>
-                                                <h2 class="year mt-3">2023</h2>
-                                                <h2 class="author">Ana Vilanculos</h2>
-                                            </div>
-                                            <!-- <div class="img-bottom"></div> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../assets/img/arquivos/artigos_2023/Artigo 03.pdf" class="text-decoration-none">
-                                <div class="articles-card horizontal">
-                                    <div class="articles-card-content">
-                                        <div class="articles-card-content-letf">
-                                            <img src="../assets/img/arquivos/artigos_2023/Assia Hussen-01.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="articles-card-content-right">
-                                            <div class="articles-content">
-                                                <div class="title">SEGURO MULTIRISCO
-                                                    HABITAÇÃO - COBERTURAS
-                                                    COMPLEMENTARES ADEQUADAS</div>
-                                                <div class="line"></div>
-                                                <h2 class="year mt-3">2023</h2>
-                                                <h2 class="author">Assia Hussen</h2>
-                                            </div>
-                                            <!-- <div class="img-bottom"></div> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../assets/img/arquivos/artigos_2023/Artigo 04.pdf" class="text-decoration-none">
-                                <div class="articles-card horizontal">
-                                    <div class="articles-card-content">
-                                        <div class="articles-card-content-letf">
-                                            <img src="../assets/img/arquivos/artigos_2023/Georgina.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="articles-card-content-right">
-                                            <div class="articles-content">
-                                                <div class="title">SEGURO MULTIRISCO
-                                                    HABITAÇÃO - COBERTURA DE
-                                                    TEMPESTADES, DEPRESSÃO TROPICAL VS CICLONES</div>
-                                                <div class="line"></div>
-                                                <h2 class="year mt-3">2023</h2>
-                                                <h2 class="author">Georgina Matsimbe</h2>
-                                            </div>
-                                            <!-- <div class="img-bottom"></div> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../assets/img/arquivos/artigos_2023/Artigo 05.pdf" class="text-decoration-none">
-                                <div class="articles-card horizontal">
-                                    <div class="articles-card-content">
-                                        <div class="articles-card-content-letf">
-                                            <img src="../assets/img/arquivos/artigos_2023/Dércio_Gimo.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="articles-card-content-right">
-                                            <div class="articles-content">
-                                                <div class="title">EVITE MULTAS, CONTRATE
-                                                    SEGURO AUTOMÓVEL</div>
-                                                <div class="line"></div>
-                                                <h2 class="year mt-3">2023</h2>
-                                                <h2 class="author">Dércio Gimo</h2>
-                                            </div>
-                                            <!-- <div class="img-bottom"></div> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../assets/img/arquivos/artigos_2023/Artigo 06.pdf" class="text-decoration-none">
-                                <div class="articles-card horizontal">
-                                    <div class="articles-card-content">
-                                        <div class="articles-card-content-letf">
-                                            <img src="../assets/img/arquivos/artigos_2023/Juvênia Fumo.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="articles-card-content-right">
-                                            <div class="articles-content">
-                                                <div class="title">OBRIGATORIEDADE DE
-                                                    CONTRATAÇÃO DO
-                                                    SEGURO DE RESPONSABILIDADE CIVIL
-                                                    AUTOMÓVEL</div>
-                                                <div class="line"></div>
-                                                <h2 class="year mt-3">2023</h2>
-                                                <h2 class="author">Juvênia Fumo</h2>
-                                            </div>
-                                            <!-- <div class="img-bottom"></div> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../assets/img/arquivos/artigos_2023/Artigo 07.pdf" class="text-decoration-none">
-                                <div class="articles-card horizontal">
-                                    <div class="articles-card-content">
-                                        <div class="articles-card-content-letf">
-                                            <img src="../assets/img/arquivos/artigos_2023/Eli Bié.jpg" alt="">
-                                        </div>
-                                        <div class="articles-card-content-right">
-                                            <div class="articles-content">
-                                                <div class="title">PORQUÊ CONTRATAR SEGURO
-                                                    DE DANOS
-                                                    PRÓPRIOS?</div>
-                                                <div class="line"></div>
-                                                <h2 class="year mt-3">2023</h2>
-                                                <h2 class="author">Eli Bié</h2>
-                                            </div>
-                                            <!-- <div class="img-bottom"></div> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../assets/img/arquivos/artigos_2023/Artigo 08.pdf" class="text-decoration-none">
-                                <div class="articles-card horizontal">
-                                    <div class="articles-card-content">
-                                        <div class="articles-card-content-letf">
-                                            <img src="../assets/img/arquivos/artigos_2023/Cleidy.jpg" alt="">
-                                        </div>
-                                        <div class="articles-card-content-right">
-                                            <div class="articles-content">
-                                                <div class="title">FRACCIONAMENTO DO PRÉMIO
-                                                    NO SEGURO</div>
-                                                <div class="line"></div>
-                                                <h2 class="year mt-3">2023</h2>
-                                                <h2 class="author">Cleidy Massangaia</h2>
-                                            </div>
-                                            <!-- <div class="img-bottom"></div> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../assets/img/arquivos/artigos_2023/Artigo 09.pdf" class="text-decoration-none">
-                                <div class="articles-card horizontal">
-                                    <div class="articles-card-content">
-                                        <div class="articles-card-content-letf">
-                                            <img src="../assets/img/arquivos/artigos_2023/amanda.jpg" alt="">
-                                        </div>
-                                        <div class="articles-card-content-right">
-                                            <div class="articles-content">
-                                                <div class="title">COMO AS SEGURADORAS
-                                                    TRATAM DOENÇAS
-                                                    PROFISSIONAIS</div>
-                                                <div class="line"></div>
-                                                <h2 class="year mt-3">2023</h2>
-                                                <h2 class="author">Amanda Franguane</h2>
-                                            </div>
-                                            <!-- <div class="img-bottom"></div> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../assets/img/arquivos/artigos_2023/Artigo 10.pdf" class="text-decoration-none">
-                                <div class="articles-card horizontal">
-                                    <div class="articles-card-content">
-                                        <div class="articles-card-content-letf">
-                                            <img src="../assets/img/arquivos/artigos_2023/edson.jpg" alt="">
-                                        </div>
-                                        <div class="articles-card-content-right">
-                                            <div class="articles-content">
-                                                <div class="title">FRANQUIA – O QUE É E
-                                                    PARA QUÊ SERVE?</div>
-                                                <div class="line"></div>
-                                                <h2 class="year mt-3">2023</h2>
-                                                <h2 class="author">Edson Mondlane</h2>
-                                            </div>
-                                            <!-- <div class="img-bottom"></div> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
+                        @endforeach
                     </ul>
                 </div>
             </section>
@@ -1019,7 +915,8 @@
     <script src="../assets/vendor/mdbootstrap/js/mdb.min.js?version=1.1"></script>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/function.js"></script>
-
+    <script src="../assets/js/freshchat.js"></script>
+    <script src="../assets/js/cookies.js"></script>
 </body>
 
 </html>

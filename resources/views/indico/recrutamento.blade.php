@@ -504,6 +504,101 @@
     <div class="loading-spinner">
         <div class="spinner"></div>
     </div>
+    <div class="wrapper">
+        <header>
+            <i class="bx bx-cookie"></i>
+            <h2>Cookies & Privacidades</h2>
+        </header>
+        <div class="data">
+            <p>Os cookies são pequenos textos enviados ao navegador e que ajudam o site a armazenar informações sobre a
+                sua visita ao nosso website, o que pode facilitar o próximo acesso e deixá-lo site mais útil para você,
+                proporcionando-lhe uma melhor experiência de navegação. <a href="javascrip:void(0)"
+                    id="openModalLink"> Read more...</a></p>
+        </div>
+        <div class="buttons">
+            <button class="button" id="acceptBtn">Accept</button>
+            <button class="button" id="declineBtn">Decline</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal top fade" style="z-index: 1111111" id="cookieconsent3" tabindex="-1" aria-labelledby="cookieconsentLabel3"
+        aria-hidden="true" data-mdb-backdrop="static" data-mdb-keyboard="false">
+        <div class="modal-dialog" style="max-width: 800px;">
+            <div class="modal-content d-block text-start">
+                <div class="modal-header d-block ">
+                    <h2 class="modal-title text-primary-indico" id="cookieconsentLabel3">Cookies & Privacidades</h2>
+                    <h5 class="text-primary-indico mt-3">Como Usamos os Cookies?</h5>
+                    <p>
+                        Esta página descreve os tipos de cookies e outras tecnologias que usamos, incluindo para efeitos de <a href="javascript:void(0)">publicidade</a>.
+                    </p>
+
+                    <p>
+                        Os cookies são pequenos textos enviados ao navegador e que ajudam o site a armazenar informações sobre a sua visita ao nosso website, o que pode facilitar o próximo acesso e deixá-lo site mais útil para você, proporcionando-lhe uma melhor experiência de navegação. 
+                    </p>
+
+                    <p>
+                        Outras tecnologias também podem ter essa finalidade, incluindo pixels, armazenamento local e identificadores únicos usados para identificar um navegador, app ou dispositivo. Os cookies e as outras tecnologias descritos nesta página podem ser usados para os fins explicados abaixo.
+                    </p>
+                    <p>
+                        Consulte a nossa <a href="javascript:void(0)">Política de Privacidade e Protecção de Dados Pessoais</a> para saber como protegemos a sua privacidade ao usar cookies e outras informações.
+                    </p>
+                   
+                </div>
+                <div class="modal-body">
+                    <h5 class="text-primary-indico mt-3">Tipos de Cookies </h5>
+                    <!-- Funcionalidade checkbox -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="necessary" checked />
+                        <label class="form-check-label" for="necessary">
+                            <p>
+                                <strong>Funcionalidade</strong>
+                                <muted>registam preferências (como o idioma), informações relacionadas à e otimizações de produtos que ajudam a manter e melhorar o nosso serviço.</muted>
+                            </p>
+                        </label>
+                    </div>
+                    <!-- Segurança checkbox -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="analytical" />
+                        <label class="form-check-label" for="analytical">
+                            <p>
+                                <strong>Segurança</strong>
+                                <muted>são usados para questões de segurança e ajudam a autenticar usuários, evitar fraudes e protegê-lo nas interacções com o nosso serviço.</muted>
+                            </p>
+                        </label>
+                    </div>
+                    <!--Análise checkbox -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="marketing" />
+                        <label class="form-check-label" for="marketing">
+                            <p>
+                                <strong>Análise</strong>
+                                <muted>ajudam a colectar dados que permitem a melhoria dos nossos conteúdos e da sua experiência.</muted>
+                            </p>
+                        </label>
+                    </div>
+                     <!--Publicidade checkbox -->
+                     <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="marketing" />
+                        <label class="form-check-label" for="marketing">
+                            <p>
+                                <strong>Publicidade</strong>
+                                <muted>são usados para publicidade, a sua personalização e envio de anúncios.</muted>
+                            </p>
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="acceptBtn" class="btn btn-outline-primary" data-mdb-dismiss="modal">
+                        Accept necessary
+                    </button>
+                    <button type="button" id="acceptBtn" class="btn btn-primary" data-mdb-dismiss="modal">
+                        Accept all
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- LATERAL MENU -->
     <div class="lateral-menu">
         <ul class="menu">
@@ -724,12 +819,6 @@
                                 </p>
                                 <small>Requisitos Mínimos</small>
                                 <div class="service_list_op">
-                                    {{-- <ul>
-                                        <li><i class="fas fa-check"></i></li>
-                                        <li><i class="fas fa-check"></i></li>
-                                        <li><i class="fas fa-check"></i></li>
-                                        <li><i class="fas fa-check"></i></li>
-                                    </ul> --}}
                                     <ul>
                                         <li><i class="fas fa-check"></i><a href="#">Nível Médio</a></li>
                                         <li><i class="fas fa-check"></i><a href="#">Grau de Licenciatura constitui vantagem(Marketing, Jornalismo, Publicidade e Proganda, Relações Públicas e áreas afins)</a></li>
@@ -738,7 +827,7 @@
                                     </ul>
                                 </div>
                                 <div class="service-btn witr_sbtn_s8 witr_11_btn">
-                                    <a class="btnslick" href="#">Read More</a>
+                                    <a class="btnslick" href="{{ __(route('view.candidatura')) }}">Candidatar-se</a>
                                     <div class="pluse_btn_slick">
                                         <span class="ti-arrow-right"></span>
                                     </div>
@@ -764,12 +853,6 @@
                                 </p>
                                 <small>Requisitos Mínimos</small>
                                 <div class="service_list_op">
-                                    {{-- <ul>
-                                        <li><i class="fas fa-check"></i></li>
-                                        <li><i class="fas fa-check"></i></li>
-                                        <li><i class="fas fa-check"></i></li>
-                                        <li><i class="fas fa-check"></i></li>
-                                    </ul> --}}
                                     <ul>
                                         <li><i class="fas fa-check"></i><a href="#">Lincenciatura em Gestão de Empresas, Ciências Actuarias, Enconomia, ou áreas afins</a></li>
                                         <li><i class="fas fa-check"></i><a href="#">Mínimo de 05 anos de experiência em Seguros</a></li>
@@ -778,7 +861,7 @@
                                     </ul>
                                 </div>
                                 <div class="service-btn witr_sbtn_s8 witr_11_btn">
-                                    <a class="btnslick" href="#">Read More</a>
+                                    <a class="btnslick" href="{{ __(route('view.candidatura')) }}">Candidatar-se</a>
                                     <div class="pluse_btn_slick">
                                         <span class="ti-arrow-right"></span>
                                     </div>
@@ -916,7 +999,8 @@
     <script src="../assets/rec/js/BeerSlider.js"></script>
     <script src="../assets/rec/js/theme-pluginjs.js"></script>
     <script src="../assets/rec/js/theme.js"></script>
-
+    <script src="../assets/js/freshchat.js"></script>
+    <script src="../assets/js/cookies.js"></script>
 </body>
 
 </html>

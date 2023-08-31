@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="../templates/indico-seguros/libs/jquery-accordion/css/jquery.accordion.css"
         media="screen">
     <link rel="stylesheet" href="../templates/indico-seguros/libs/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
+
 
     <link rel="stylesheet" href="../templates/indico-seguros/css/tree.css">
 
@@ -28,9 +30,31 @@
     <script src="../templates/indico-seguros/libs/jquery-accordion/js/jquery.accordion.js"></script>
     <script src="../templates/indico-seguros/js/jquery.formatCurrency-1.4.0.min.js"></script>
     <script src="../templates/indico-seguros/js/main.js"></script>
+<style>
+    .loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 9999; 
+    }
+
+    .loading-spinner img {
+        width: 70px;
+        height: 70px; 
+    }
+</style>
 </head>
 
 <body>
+    <div id="loading-spinner" class="loading-spinner" style="display: none;">
+        <img src="../assets/img/Spinner.gif" alt="Loading" />
+    </div>
     <!-- Body -->
     <div class="container-fluid">
 
@@ -4579,7 +4603,7 @@
 
         <script type="text/javascript"
             src="../templates/indico-seguros/js/participacao_online/main_sinistro_auto.js"></script>
-
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
     </div>
    
 

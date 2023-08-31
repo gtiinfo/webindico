@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="../assets/vendor/boxicons/css/boxicons.min.css">
     <link rel="stylesheet" href="../assets/css/extend.css?version=1.1" />
     <link rel="stylesheet" href="../assets/css/style.css?version=1.1" />
+    <link rel="stylesheet" href="../assets/css/DependencyHandler.css">
+    <link rel="stylesheet" href="../assets/css/new-style.css">
     <link rel="stylesheet" href="../assets/vendor/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="../assets/css/chatbot.css?version=1.1" />
     <link rel="stylesheet" href="../assets/vendor/hover/css/hover-min.css?version=1.1" />
@@ -499,6 +501,101 @@
     <div class="loading-spinner">
         <div class="spinner"></div>
     </div>
+    <div class="wrapper">
+        <header>
+            <i class="bx bx-cookie"></i>
+            <h2>Cookies & Privacidades</h2>
+        </header>
+        <div class="data">
+            <p>Os cookies são pequenos textos enviados ao navegador e que ajudam o site a armazenar informações sobre a
+                sua visita ao nosso website, o que pode facilitar o próximo acesso e deixá-lo site mais útil para você,
+                proporcionando-lhe uma melhor experiência de navegação. <a href="javascrip:void(0)"
+                    id="openModalLink"> Read more...</a></p>
+        </div>
+        <div class="buttons">
+            <button class="button" id="acceptBtn">Accept</button>
+            <button class="button" id="declineBtn">Decline</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal top fade" style="z-index: 1111111" id="cookieconsent3" tabindex="-1" aria-labelledby="cookieconsentLabel3"
+        aria-hidden="true" data-mdb-backdrop="static" data-mdb-keyboard="false">
+        <div class="modal-dialog" style="max-width: 800px;">
+            <div class="modal-content d-block text-start">
+                <div class="modal-header d-block ">
+                    <h2 class="modal-title text-primary-indico" id="cookieconsentLabel3">Cookies & Privacidades</h2>
+                    <h5 class="text-primary-indico mt-3">Como Usamos os Cookies?</h5>
+                    <p>
+                        Esta página descreve os tipos de cookies e outras tecnologias que usamos, incluindo para efeitos de <a href="javascript:void(0)">publicidade</a>.
+                    </p>
+
+                    <p>
+                        Os cookies são pequenos textos enviados ao navegador e que ajudam o site a armazenar informações sobre a sua visita ao nosso website, o que pode facilitar o próximo acesso e deixá-lo site mais útil para você, proporcionando-lhe uma melhor experiência de navegação. 
+                    </p>
+
+                    <p>
+                        Outras tecnologias também podem ter essa finalidade, incluindo pixels, armazenamento local e identificadores únicos usados para identificar um navegador, app ou dispositivo. Os cookies e as outras tecnologias descritos nesta página podem ser usados para os fins explicados abaixo.
+                    </p>
+                    <p>
+                        Consulte a nossa <a href="javascript:void(0)">Política de Privacidade e Protecção de Dados Pessoais</a> para saber como protegemos a sua privacidade ao usar cookies e outras informações.
+                    </p>
+                   
+                </div>
+                <div class="modal-body">
+                    <h5 class="text-primary-indico mt-3">Tipos de Cookies </h5>
+                    <!-- Funcionalidade checkbox -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="necessary" checked />
+                        <label class="form-check-label" for="necessary">
+                            <p>
+                                <strong>Funcionalidade</strong>
+                                <muted>registam preferências (como o idioma), informações relacionadas à e otimizações de produtos que ajudam a manter e melhorar o nosso serviço.</muted>
+                            </p>
+                        </label>
+                    </div>
+                    <!-- Segurança checkbox -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="analytical" />
+                        <label class="form-check-label" for="analytical">
+                            <p>
+                                <strong>Segurança</strong>
+                                <muted>são usados para questões de segurança e ajudam a autenticar usuários, evitar fraudes e protegê-lo nas interacções com o nosso serviço.</muted>
+                            </p>
+                        </label>
+                    </div>
+                    <!--Análise checkbox -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="marketing" />
+                        <label class="form-check-label" for="marketing">
+                            <p>
+                                <strong>Análise</strong>
+                                <muted>ajudam a colectar dados que permitem a melhoria dos nossos conteúdos e da sua experiência.</muted>
+                            </p>
+                        </label>
+                    </div>
+                     <!--Publicidade checkbox -->
+                     <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="marketing" />
+                        <label class="form-check-label" for="marketing">
+                            <p>
+                                <strong>Publicidade</strong>
+                                <muted>são usados para publicidade, a sua personalização e envio de anúncios.</muted>
+                            </p>
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="acceptBtn" class="btn btn-outline-primary" data-mdb-dismiss="modal">
+                        Accept necessary
+                    </button>
+                    <button type="button" id="acceptBtn" class="btn btn-primary" data-mdb-dismiss="modal">
+                        Accept all
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- LATERAL MENU -->
     <div class="lateral-menu">
         <ul class="menu">
@@ -675,81 +772,43 @@
               </ul>
     </div><!-- END LATERAL MENU -->
     <main style="margin-top: 110px;">
-        <div class="container">
-            <div class="row ">
-                <div class="component container col-12 content-extra-small">
-                    <div class="component-content">
-                        <div class="row">
-                            <div class="component title col-12 position-center">
-                                <div class="component-content">
-                                    <h1 class="field-title"  style="color:#00aeef">
-                                        Notícias
-                                    </h1>
+        
+        <section class="container-fluid press second mob_only_1024" style="max-height: 1800px;">
+            <h3 class="wow fadeInUp center_align" data-wow-delay="300ms">News &amp; Notícias</h3>
+            <div id="demo">
+                <section id="examples" class="snap-scrolling-example">
+                    <!-- content -->
+    
+                    <div id="content-1" class="content horizontal-images">
+                        <ul>
+                            @foreach ($news as $noticia )
+                                
+                            <li class="col-lg-6 col-md-3 col-sm-4 col-xs-12 nexs_box1">
+                                <div class="out">
+                                    <div class="news_pic">
+                                        <img src="{{ asset('storage/upload/img/'.$noticia->image) }}"
+                                            alt="newslatter_1 (Large)" />
+                                    </div>
+    
+                                    <div class="news_content">
+                                        <a href="{{ asset('storage/upload/ducuments/'.$noticia->document) }}">
+                                            <h3> {{ $noticia->title }} </h3>
+                                            <span class="press">Press Releases</span>
+                                            <span class="date">{{ $noticia->date }}</span>
+    
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="component newslatter-results col-12">
-                                <ul class="newslatter-result-list">
-                                    <li>
-                                        <div class="blog-card horizontal">
-                                            <div class="blog-card-content">
-                                                <div class="blog-card-content-top">
-                                                    <img src="../assets/img/newslatter_1.jpeg" alt="">
-                                                </div>
-                                                <div class="blog-card-content-bottom">
-                                                    <span class="card-data">Março-2022</span>
-                                                    <span class="card-title">Veja a 1ª edição da nossa Notícias</a>
-                                                        <div class="card-link">
-                                                            <a href="../assets/documents/Newsletter_Marco_Indico Seguros.pdf"
-                                                                class="link">Saiba
-                                                                Mais!</a>
-                                                        </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="blog-card horizontal">
-                                            <div class="blog-card-content">
-                                                <div href="#" class="blog-card-content-top">
-                                                    <img src="../assets/img/newslatter_2.jpeg" alt="">
-                                                </div>
-                                                <div class="blog-card-content-bottom">
-                                                    <span href="#" class="card-data">Julho-2022</span>
-                                                    <span href="#" class="card-title">Veja a 2ª edição da nossa
-                                                        Notícias</span>
-                                                    <div class="card-link">
-                                                        <a href="../assets/documents/Newsletter_Principal.pdf"
-                                                            class="link">Saiba Mais!</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="blog-card horizontal">
-                                            <div class="blog-card-content">
-                                                <div href="#" class="blog-card-content-top">
-                                                    <img src="../assets/img/Press_Release_Jornal.png" alt="">
-                                                </div>
-                                                <div class="blog-card-content-bottom">
-                                                    <span href="#" class="card-data">Abril-2023</span>
-                                                    <span href="#" class="card-title">Índico Seguros e Banco Letshego</span>
-                                                    <div class="card-link">
-                                                        <a href="../assets/img/Press_Release_Jornal.png"
-                                                            class="link">Saiba Mais!</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
+                            </li>                            
+                            @endforeach
+                        </ul>
                     </div>
-                </div>
+                </section>
             </div>
-        </div>
+        </section>
+
+
+
     </main>
     <footer>
         <div class="footer mt-5">
@@ -860,8 +919,12 @@
     <script src="../assets/vendor/jquery/js/jquery.min.js?version=1.1"></script>
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js?version=1.1"></script>
     <script src="../assets/vendor/mdbootstrap/js/mdb.min.js?version=1.1"></script>
+    <script src="../assets/js/DependencyHandler.js"></script>
+    <script src="../assets/js/jquery-3.5.1.mim.js"></script>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/function.js"></script>
+    <script src="../assets/js/freshchat.js"></script>
+    <script src="../assets/js/cookies.js"></script>
 
 </body>
 
