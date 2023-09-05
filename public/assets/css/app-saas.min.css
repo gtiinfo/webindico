@@ -6061,8 +6061,8 @@ fieldset:disabled .btn {
     --ct-pagination-focus-bg: var(--ct-secondary-bg);
     --ct-pagination-focus-box-shadow: none;
     --ct-pagination-active-color: #fff;
-    --ct-pagination-active-bg: #727cf5;
-    --ct-pagination-active-border-color: #727cf5;
+    --ct-pagination-active-bg: #00aeef; 
+    --ct-pagination-active-border-color: #00aeef;
     --ct-pagination-disabled-color: var(--ct-secondary-color);
     --ct-pagination-disabled-bg: var(--ct-secondary-bg);
     --ct-pagination-disabled-border-color: var(--ct-border-color);

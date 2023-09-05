@@ -1657,10 +1657,31 @@ small {
 }
 
 #articles .articles-list-content {
+    position: relative;
     list-style: none;
     display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.articles-list-content::-webkit-scrollbar {
+    width: 10px;
+    height: 8px;
+}
+.articles-list-content::-webkit-scrollbar-thumb {
+    background-color: #00aeef;
+    width: 10px;
+}
+.articles-list-content::-webkit-scrollbar-track {
+    background-color: transparent;
+}
 
-    overflow: auto;
+.articles-list-content::-webkit-scrollbar-track {
+    background-color: #f1f1f1; 
+    border-radius: 4px;
+}
+.articles-list-content::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
 }
 
 #articles .articles-list-content .articles-card.horizontal {
