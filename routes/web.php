@@ -1,8 +1,8 @@
 <?php
-
+use App\Http\Controllers;
+use App\Http\Controllers\Auth\AdminAuhController;
 use Illuminate\Support\Facades\Route;
 
- 
 Route::group(['namespace' => 'App\Http\Controllers'], function () {
     Route::get('/', 'HomeController@index')->name('view.home');
     Route::get('/empresas', 'EmpresaController@invoke')->name('view.empresas');
@@ -12,25 +12,23 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
     Route::get('/lista-agencias', 'HomeController@listAgencies')->name('view.agencias');
     Route::get('/admin', 'AdminController@dashboard')->name('view.admim');
     Route::post('/download', 'ParticipationController@sendEmail');
-   
-    
-    Route::prefix('admin')->group(function(){
+
+
+    Route::prefix('admin')->middleware(['auth'])->group(function () {
         Route::get('/artigo/add', 'AdminController@artigosAdd')->name('view.artigos-add');
         Route::get('/artigos', 'AdminController@indexArticles')->name('view.artigo');
         Route::get('/artigo/edit/{article}', 'AdminController@editArticle');
         Route::post('/artigo/add', 'AdminController@storeArticle');
         Route::put('/artigo/{article}', 'AdminController@updateArticles');
         Route::delete('/artigo/{article}', 'AdminController@destroyArticles');
-      
-        Route::get('recrutamentos','AdminController@indexRecrutamento')->name('view.recrutamentos');
+
+        Route::get('recrutamentos', 'AdminController@indexRecrutamento')->name('view.recrutamentos');
         Route::get('recrutamento/add', 'AdminController@recrutamentoAdd')->name('view.recrutamento-add');
         Route::post('recrutamento/add', 'AdminController@storeRecrutamento');
         Route::get('/recrutamento/edit/{recruitment}', 'AdminController@editRecrutamento');
         Route::put('/recrutamento/{recruitment}', 'AdminController@updateRecrutamento');
         Route::delete('/recrutamento/{recruitment}', 'AdminController@destroyRecrutamento');
 
-        Route::get('/user-add', 'AdminController@userAdd')->name('view.user-add');
-        Route::get('/users', 'AdminController@users')->name('view.users');
         Route::get('/noticias', 'AdminController@noticia')->name('view.noticias');
         Route::get('/noticias/add', 'AdminController@noticiaAdd')->name('view.noticias-add');
         Route::post('noticias/add', 'AdminController@storeNoticias');
@@ -38,10 +36,25 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         Route::put('/noticia/{newsletter}', 'AdminController@updateNoticia');
         Route::delete('/noticia/{newsletter}', 'AdminController@destroyNoticias');
 
-
-
+        // Rotas do AdminAuhController
+        Route::get('/user/add', 'AdminController@userAdd')->name('view.user-add');
+        Route::get('/users', 'AdminController@users')->name('view.users');
+        Route::post('/store', 'AdminController@store')->name('store');
+        Route::get('/user/edit/{user}', 'AdminController@editUser');
+        Route::put('/user/{user}', 'AdminController@updateUser');
+        Route::delete('/user/{user}', 'AdminController@destroyUser');
 
     });
+    Route::prefix('login')->middleware(['guest'])->group(function () {
+        Route::get('/', 'AdminController@login')->name('login');
+    });
+    Route::prefix('authenticate')->middleware(['guest'])->group(function () {
+        Route::post('/', 'AdminController@authenticate')->name('authenticate');
+    });
+    Route::prefix('logout')->middleware(['auth'])->group(function () {
+        Route::post('/logout', 'AdminController@logout')->name('logout');
+    });
+
 
     Route::prefix('particular')->group(function () {
         Route::get('/acidentes-pessoais', 'HomeController@acidentePessoal')->name('view.acidente-pessoal');
@@ -50,7 +63,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         Route::get('/aviso-cobranca', 'HomeController@avisoCobranca')->name('view.aviso-cobranca');
         Route::get('/condicoes-gerais', 'HomeController@condicoesGerais')->name('view.condicoes-gerais-part');
         Route::get('/consultar-sinitro', 'HomeController@consultaSinistro')->name('view.consul-sinistro-part');
-        Route::get('/danos-proprios', 'HomeController@danoProprios')->name('view.danos-proprios-part'); 
+        Route::get('/danos-proprios', 'HomeController@danoProprios')->name('view.danos-proprios-part');
         Route::get('/empregados-domesticos', 'HomeController@empregada')->name('view.empregados');
         Route::get('/funeral', 'HomeController@funeral')->name('view.funeral');
         Route::get('/habitacao', 'HomeController@habitacao')->name('view.habitacao');
@@ -68,7 +81,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
 
     });
 
-    Route::prefix('empresas')->group(function(){
+    Route::prefix('empresas')->group(function () {
         Route::get('/acidente-trabalho', 'EmpresaController@acidenteTrabalho')->name('view.acidente-trabalho');
         Route::get('/actualizacao-capital', 'EmpresaController@actualizacaoCapital')->name('view.actualizacao-capital-emp');
         Route::get('/actualizacao-dados', 'EmpresaController@actualizacaoDados')->name('view.actualizacao-dados-emp');
@@ -95,7 +108,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
 
     });
 
-    Route::prefix('indico')->group(function(){
+    Route::prefix('indico')->group(function () {
         Route::get('/agremiacoes', 'IndicoController@agremiacoes')->name('view.agremiacoes');
         Route::get('/advogados', 'IndicoController@advogados')->name('view.advogados');
         Route::get('/artigos', 'IndicoController@artigos')->name('view.artigos');
@@ -125,8 +138,20 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         Route::get('/relatorio', 'IndicoController@relatorio')->name('view.relatorio');
         Route::get('/responsabilidade-social', 'IndicoController@responsabilidadeSocial')->name('view.resp-social');
 
-        
+
     });
 
-
 });
+
+
+// Route::controller(AdminAuhController::class)->group(function () {
+//     Route::get('/login', 'login')->name('login');
+//     Route::post('/authenticate', 'authenticate')->name('authenticate');
+//     Route::post('/logout', 'logout')->name('logout');
+
+//     // Route::get('/admin/register', 'register')->name('register');
+//     Route::post('/admin/store', 'store')->name('store');
+//     Route::get('/admin/user/add', 'userAdd')->name('view.user-add');
+//     Route::get('/admin/users', 'users')->name('view.users');
+
+// });
