@@ -3,26 +3,27 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Índico Seguros Create Newsletter | Admin Dashboard</title>
+    <title>Índico Seguros Create User | Admin Dashboard</title>
 
     <!-- App favicon -->
-    <link rel="../shortcut icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" href="../../../assets/images/favicon.ico">
 
 
     <!-- Bootstrap Datepicker css -->
-    <link href="../assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../../assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet"
+        type="text/css" />
 
     <!-- Select2 Plugins css -->
-    <link href="../assets/vendor/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../../assets/vendor/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Theme Config Js -->
-    <script src="../assets/js/hyper-config.js"></script>
+    <script src="../../../assets/js/hyper-config.js"></script>
 
     <!-- App css -->
-    <link href="../assets/css/app-saas.min.css" rel="stylesheet" type="text/css" id="app-style" />
+    <link href="../../../assets/css/app-saas.min.css" rel="stylesheet" type="text/css" id="app-style" />
 
     <!-- Icons css -->
-    <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -38,22 +39,22 @@
                     <!-- Topbar Brand Logo -->
                     <div class="logo-topbar">
                         <!-- Logo light -->
-                        <a href="{{ __(route('view.home'))}}" class="logo-light">
+                        <a href="{{ __(route('view.home')) }}" class="logo-light">
                             <span class="logo-lg">
-                                <img src="../assets/images/logo.png" alt="logo">
+                                <img src="../../../assets/images/logo.png" alt="logo">
                             </span>
                             <span class="logo-sm">
-                                <img src="../assets/images/logo-sm.png" alt="small logo">
+                                <img src="../../../assets/images/logo-sm.png" alt="small logo">
                             </span>
                         </a>
 
                         <!-- Logo Dark -->
                         <a href="index.html" class="logo-dark">
                             <span class="logo-lg">
-                                <img src="../assets/images/logo-dark.png" alt="dark logo">
+                                <img src="../../../assets/images/logo-dark.png" alt="dark logo">
                             </span>
                             <span class="logo-sm">
-                                <img src="../assets/images/logo-dark-sm.png" alt="small logo">
+                                <img src="../../../assets/images/logo-dark-sm.png" alt="small logo">
                             </span>
                         </a>
                     </div>
@@ -89,15 +90,11 @@
                     </li>
 
                     <li class="dropdown">
-                        <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown" href="#"
-                            role="button" aria-haspopup="false" aria-expanded="false">
-                            <span class="account-user-avatar">
-                                <img src="../assets/images/users/avatar-1.jpg" alt="user-image" width="32"
-                                    class="rounded-circle">
-                            </span>
+                        <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown"
+                            href="#" role="button" aria-haspopup="false" aria-expanded="false">
+
                             <span class="d-lg-flex flex-column gap-1 d-none">
-                                <h5 class="my-0">Dominic Keller</h5>
-                                <h6 class="my-0 fw-normal">Founder</h6>
+                                <h5 class="my-0">{{ Auth::user()->name }}</h5>
                             </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated profile-dropdown">
@@ -107,16 +104,16 @@
                             </div>
 
                             <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item">
-                                <i class="mdi mdi-account-circle me-1"></i>
-                                <span>My Account</span>
-                            </a>                  
-
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item">
+                            <a href="{{ route('logout') }}" class="dropdown-item"
+                                onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
                                 <i class="mdi mdi-logout me-1"></i>
                                 <span>Logout</span>
+
                             </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                @csrf
+                            </form>
                         </div>
                     </li>
                 </ul>
@@ -128,22 +125,22 @@
         <div class="leftside-menu">
 
             <!-- Brand Logo Light -->
-            <a href="{{ __(route('view.home'))}}" class="logo logo-light">
+            <a href="{{ __(route('view.home')) }}" class="logo logo-light">
                 <span class="logo-lg">
-                    <img src="../assets/images/logo.png" alt="logo">
+                    <img src="../../../assets/images/logo.png" alt="logo">
                 </span>
                 <span class="logo-sm">
-                    <img src="../assets/images/logo-sm.png" alt="small logo">
+                    <img src="../../../assets/images/logo-sm.png" alt="small logo">
                 </span>
             </a>
 
             <!-- Brand Logo Dark -->
-            <a href="{{ __(route('view.home'))}}" class="logo logo-dark">
+            <a href="{{ __(route('view.home')) }}" class="logo logo-dark">
                 <span class="logo-lg">
-                    <img src="../assets/images/logo-dark.png" alt="dark logo">
+                    <img src="../../../assets/images/logo-dark.png" alt="dark logo">
                 </span>
                 <span class="logo-sm">
-                    <img src="../assets/images/logo-dark-sm.png" alt="small logo">
+                    <img src="../../../assets/images/logo-dark-sm.png" alt="small logo">
                 </span>
             </a>
 
@@ -161,10 +158,9 @@
             <div class="h-100" id="leftside-menu-container" data-simplebar>
                 <!-- Leftbar User -->
                 <div class="leftbar-user">
-                    <a href="pages-profile.html">
-                        <img src="../assets/images/users/avatar-1.jpg" alt="user-image" height="42"
-                            class="rounded-circle shadow-sm">
-                        <span class="leftbar-user-name mt-2">Dominic Keller</span>
+                    <a href="#">
+
+                        <span class="leftbar-user-name mt-2">{{ Auth::user()->name }}</span>
                     </a>
                 </div>
 
@@ -174,7 +170,7 @@
                     <li class="side-nav-title">Navigation</li>
 
                     <li class="side-nav-item">
-                        <a href="{{ __(route('view.admim'))}}" class="side-nav-link">
+                        <a href="{{ __(route('view.admim')) }}" class="side-nav-link">
                             <i class="uil-home-alt"></i>
                             <span> Dashboards</span>
                         </a>
@@ -209,10 +205,10 @@
                         <div class="collapse" id="sidebarNewsletter">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="{{ __(route('view.noticias'))}}">Newsletter</a>
+                                    <a href="{{ __(route('view.noticias')) }}">Newsletter</a>
                                 </li>
                                 <li>
-                                    <a href="{{ __(route('view.noticias-add'))}}">Adicionar Newsletter</a>
+                                    <a href="{{ __(route('view.noticias-add')) }}">Adicionar Newsletter</a>
                                 </li>
                             </ul>
                         </div>
@@ -228,10 +224,10 @@
                         <div class="collapse" id="sidebarArticles">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="{{ __(route('view.artigo'))}}">Artigos</a>
+                                    <a href="{{ __(route('view.artigo')) }}">Artigos</a>
                                 </li>
                                 <li>
-                                    <a href="{{ __(route('view.artigos-add'))}}">Adicionar Artigos</a>
+                                    <a href="{{ __(route('view.artigos-add')) }}">Adicionar Artigos</a>
                                 </li>
                             </ul>
                         </div>
@@ -246,19 +242,24 @@
                         <div class="collapse" id="sidebarRecrutamento">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="{{ __(route('view.recrutamentos'))}}">Recrutamentos</a>
+                                    <a href="{{ __(route('view.recrutamentos')) }}">Recrutamentos</a>
                                 </li>
                                 <li>
-                                    <a href="{{ __(route('view.recrutamento-add'))}}">Adicionar Recrutamentos</a>
+                                    <a href="{{ __(route('view.recrutamento-add')) }}">Adicionar Recrutamentos</a>
                                 </li>
                             </ul>
                         </div>
                     </li>
                     <li class="side-nav-item">
-                        <a href="#" aria-expanded="false" class="side-nav-link">
+                        <a href="{{ route('logout') }}" aria-expanded="false" class="side-nav-link"
+                            onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
                             <i class="mdi mdi-logout"></i>
                             <span> Logout </span>
                         </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                            @csrf
+                        </form>
                     </li>
                 </ul>
                 <!--- End Sidemenu -->
@@ -299,154 +300,114 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <form action="" method="post" class="needs-validation" novalidate>
+                                    <form action="{{ route('store') }}" method="POST" class="needs-validation"
+                                        novalidate>
+                                        @csrf
                                         <div class="row">
                                             <div class="col-xl-6">
                                                 <div class="position-relative mb-3">
                                                     <label for="username" class="form-label">Full Name</label>
-                                                    <input type="text" id="username" name="username"
-                                                        class="form-control" placeholder="Enter your full name"
-                                                        required>
-                                                    <div class="valid-tooltip">
-                                                        Looks good!
-                                                    </div>
-                                                    <div class="invalid-tooltip">
-                                                        Please enter full name.
-                                                    </div>
+                                                    <input class="form-control @error('name') is-invalid @enderror "
+                                                        value="{{ old('name') }}" type="text" id="fullname"
+                                                        name="name" placeholder="Enter your name" required>
+                                                    @if ($errors->has('name'))
+                                                        <span class="text-danger">{{ $errors->first('name') }}</span>
+                                                    @endif
+
                                                 </div>
 
                                                 <div class="position-relative mb-3">
                                                     <label for="example-email" class="form-label">Email</label>
-                                                    <input type="email" name="useremail" class="form-control"
-                                                        placeholder="Enter you Email Address" required>
-                                                    <div class="valid-tooltip">
-                                                        Looks good!
-                                                    </div>
-                                                    <div class="invalid-tooltip">
-                                                        Please enter Email address.
-                                                    </div>
+                                                    <input class="form-control @error('email') is-invalid @enderror"
+                                                        value="{{ old('email') }}" type="email" id="emailaddress"
+                                                        name="email" required placeholder="Enter your email">
+                                                    @if ($errors->has('email'))
+                                                        <span class="text-danger">{{ $errors->first('email') }}</span>
+                                                    @endif
                                                 </div>
-                                                <div class="position-relative mb-3">
-                                                    <label for="example-email" class="form-label">Phone Number</label>
-                                                    <input type="email" name="usernumber" class="form-control"
-                                                        placeholder="Enter you Email Address" required>
-                                                    <div class="valid-tooltip">
-                                                        Looks good!
-                                                    </div>
-                                                    <div class="invalid-tooltip">
-                                                        Please enter Phone number.
-                                                    </div>
-                                                </div>
-
-                                                <div class="position-relative mb-3">
-                                                    <label for="example-select" class="form-label">Roles</label>
-                                                    <select class="form-select" id="example-select" name="userrole">
-                                                        <option>Admin</option>
-                                                        <option>Membro</option>
-                                                    </select>
-                                                    <div class="valid-tooltip">
-                                                        Looks good!
-                                                    </div>
-                                                    <div class="invalid-tooltip">
-                                                        Please enter Role.
-                                                    </div>
-                                                </div>
-
-                                            </div> <!-- end col-->
-
-                                            <div class="col-xl-6">
-                                                <div class="position-relative mb-3">
+                                                <div class="mb-3">
                                                     <label for="password" class="form-label">Password</label>
-                                                    <div class="input-group input-group-merge">
-                                                        <input type="password" id="password" class="form-control"
-                                                            placeholder="Password" name="userpassword" required>
-                                                        <div class="input-group-text" data-password="false">
-                                                            <span class="password-eye"></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="valid-tooltip">
-                                                        Looks good!
-                                                    </div>
-                                                    <div class="invalid-tooltip">
-                                                        Please enter Password.
-                                                    </div>
+
+                                                    <input class="form-control @error('password') is-invalid @enderror"
+                                                        type="password" required id="password" name="password"
+                                                        placeholder="Enter your password">
+                                                    @if ($errors->has('password'))
+                                                        <span
+                                                            class="text-danger">{{ $errors->first('password') }}</span>
+                                                    @endif
                                                 </div>
 
-                                                <div class="position-relative mb-3">
-                                                    <label for="password" class="form-label">Re Confirm Password</label>
-                                                    <div class="input-group input-group-merge">
-                                                        <input type="password" id="password" class="form-control"
-                                                            placeholder="Re Confirm Password" name="userrepassword" required>
-                                                        <div class="input-group-text" data-password="false">
-                                                            <span class="password-eye"></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="valid-tooltip">
-                                                        Looks good!
-                                                    </div>
-                                                    <div class="invalid-tooltip">
-                                                        Please enter Re confirm .
-                                                    </div>
+                                                <div class="mb-3">
+                                                    <label for="password_confirmation" class="form-label">Confirm
+                                                        Password</label>
+                                                    <input type="password" class="form-control"
+                                                        id="password_confirmation" name="password_confirmation">
+
                                                 </div>
+
 
                                             </div> <!-- end col-->
+
                                             <div class="mb-3">
                                                 <button class="btn btn-danger" type="submit"><i
                                                         class="mdi mdi-account-circle me-2"></i>Save</button>
                                             </div>
                                         </div>
-                                    </form>
-                                    <!-- end row -->
+                                </div>
+                                </form>
+                                <!-- end row -->
 
-                                </div> <!-- end card-body -->
-                            </div> <!-- end card-->
-                        </div> <!-- end col-->
-                    </div>
-                    <!-- end row-->
-
-                </div> <!-- container -->
-
-            </div> <!-- content -->
-
-            <!-- Footer Start -->
-            <footer class="footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <script>document.write(new Date().getFullYear())</script> © Índico Seguros
-                        </div>
-                       
-                    </div>
+                            </div> <!-- end card-body -->
+                        </div> <!-- end card-->
+                    </div> <!-- end col-->
                 </div>
-            </footer>
-            <!-- end Footer -->
+                <!-- end row-->
 
-        </div>
+            </div> <!-- container -->
 
-        <!-- ============================================================== -->
-        <!-- End Page content -->
-        <!-- ============================================================== -->
+        </div> <!-- content -->
+
+        <!-- Footer Start -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script> © Índico Seguros
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+        <!-- end Footer -->
+
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
 
     </div>
     <!-- END wrapper -->
 
     <!-- Vendor js -->
-    <script src="../assets/js/vendor.min.js"></script>
+    <script src="../../../assets/js/vendor.min.js"></script>
 
     <!-- Bootstrap Datepicker Plugin js -->
-    <script src="../assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../../../assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 
     <!-- Select2 js  -->
-    <script src="../assets/vendor/select2/js/select2.min.js"></script>
+    <script src="../../../assets/vendor/select2/js/select2.min.js"></script>
 
     <!-- Dropzone File Upload js -->
-    <script src="../assets/vendor/dropzone/min/dropzone.min.js"></script>
+    <script src="../../../assets/vendor/dropzone/min/dropzone.min.js"></script>
 
     <!-- init js -->
-    <script src="../assets/js/ui/component.fileupload.js"></script>
+    <script src="../../../assets/js/ui/component.fileupload.js"></script>
 
     <!-- App js -->
-    <script src="../assets/js/app.min.js"></script>
+    <script src="../../../assets/js/app.min.js"></script>
 
 </body>
 

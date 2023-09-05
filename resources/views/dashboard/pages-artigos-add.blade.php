@@ -96,32 +96,27 @@
                     <li class="dropdown">
                         <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown" href="#"
                             role="button" aria-haspopup="false" aria-expanded="false">
-                            <span class="account-user-avatar">
-                                <img src="../../assets/images/users/avatar-1.jpg" alt="user-image" width="32"
-                                    class="rounded-circle">
-                            </span>
+                          
                             <span class="d-lg-flex flex-column gap-1 d-none">
-                                <h5 class="my-0">Dominic Keller</h5>
-                                <h6 class="my-0 fw-normal">Founder</h6>
+                                <h5 class="my-0">{{ Auth::user()->name }}</h5>
                             </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated profile-dropdown">
                             <!-- item-->
                             <div class=" dropdown-header noti-title">
                                 <h6 class="text-overflow m-0">Welcome !</h6>
-                            </div>
+                            </div>                  
 
                             <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item">
-                                <i class="mdi mdi-account-circle me-1"></i>
-                                <span>My Account</span>
-                            </a>                  
-
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item">
+                            <a href="{{ route('logout') }}" class="dropdown-item"  onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
                                 <i class="mdi mdi-logout me-1"></i>
                                 <span>Logout</span>
+                               
                             </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                @csrf
+                            </form>
                         </div>
                     </li>
                 </ul>
@@ -135,20 +130,20 @@
             <!-- Brand Logo Light -->
             <a href="{{ __(route('view.home'))}}" class="logo logo-light">
                 <span class="logo-lg">
-                    <img src="../assets/images/logo.png" alt="logo">
+                    <img src="../../assets/images/logo.png" alt="logo">
                 </span>
                 <span class="logo-sm">
-                    <img src="../assets/images/logo-sm.png" alt="small logo">
+                    <img src="../../assets/images/logo-sm.png" alt="small logo">
                 </span>
             </a>
 
             <!-- Brand Logo Dark -->
             <a href="{{ __(route('view.home'))}}" class="logo logo-dark">
                 <span class="logo-lg">
-                    <img src="../assets/images/logo-dark.png" alt="dark logo">
+                    <img src="../../assets/images/logo-dark.png" alt="dark logo">
                 </span>
                 <span class="logo-sm">
-                    <img src="../assets/images/logo-dark-sm.png" alt="small logo">
+                    <img src="../../assets/images/logo-dark-sm.png" alt="small logo">
                 </span>
             </a>
 
@@ -166,10 +161,9 @@
             <div class="h-100" id="leftside-menu-container" data-simplebar>
                 <!-- Leftbar User -->
                 <div class="leftbar-user">
-                    <a href="pages-profile.html">
-                        <img src="../assets/images/users/avatar-1.jpg" alt="user-image" height="42"
-                            class="rounded-circle shadow-sm">
-                        <span class="leftbar-user-name mt-2">Dominic Keller</span>
+                    <a href="#">
+                        
+                        <span class="leftbar-user-name mt-2">{{ Auth::user()->name }}</span>
                     </a>
                 </div>
 
@@ -260,10 +254,14 @@
                         </div>
                     </li>
                     <li class="side-nav-item">
-                        <a href="#" aria-expanded="false" class="side-nav-link">
+                        <a href="{{ route('logout') }}" aria-expanded="false" class="side-nav-link" onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
                             <i class="mdi mdi-logout"></i>
                             <span> Logout </span>
                         </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                            @csrf
+                        </form>
                     </li>
                 </ul>
                 <!--- End Sidemenu -->
@@ -304,73 +302,53 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
-                                    @if($errors->any() || session('message'))
-                                    <div class="alert alert-@php if($errors->any()) echo 'danger'; else echo 'success'; @endphp alert-dismissible fade show" role="alert">
-                                      @if($errors->any())
-                                        @foreach ( $errors as $error )
-                                            <p>{{ __($error) }}</p>
-                                        @endforeach                                       
-                                      @else
-                                      {{ __(session('message')) }}
-                                      @endif
-                                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                    </div>
-                                    @endif
+                                     
                                     <form action="" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
                                         @csrf
                                         <div class="row">
                                             <div class="col-xl-6">
                                                 <div class="position-relative mb-3">
                                                     <label for="fullname" class="form-label">Full Author's full name </label>
-                                                    <input class="form-control @error('fullname') is-invalid @enderror " name="fullname" type="text" id="fullname" placeholder="Please write the author's full name" required>
-                                                    <div class="valid-tooltip">
-                                                        Looks good!
-                                                    </div>
-                                                    <div class="invalid-tooltip">
-                                                        Please enter Title.
-                                                    </div>
+                                                    <input class="form-control @error('fullname') is-invalid @enderror "  value="{{ old('fullname') }}" name="fullname" type="text" id="fullname" placeholder="Please write the author's full name" required>
+                                                    @if ($errors->has('fullname'))
+                                                    <span class="text-danger">{{ $errors->first('fullname') }}</span>
+                                                     @endif
                                                 </div>
 
                                                 <div class="position-relative mb-3">
                                                     <label for="newslettername" class="form-label">Title</label>
-                                                    <textarea class="form-control" name="title" id="example-textarea" rows="4" required placeholder="Please write the title of the article"></textarea>                                      
-                                                    <!-- HTML -->
-                                                    <!-- <textarea id="simplemde1"></textarea> -->
-                                                    <div class="valid-tooltip">
-                                                        Looks good!
-                                                    </div>
-                                                    <div class="invalid-tooltip">
-                                                        Please enter Title.
-                                                    </div>
+                                                    <textarea class="form-control @error('title') is-invalid @enderror" value="{{ old('title') }}" name="title" id="example-textarea" rows="4" required placeholder="Please write the title of the article"></textarea>                                      
+                                                    @if ($errors->has('title'))
+                                                    <span class="text-danger">{{ $errors->first('title') }}</span>
+                                                     @endif
                                                 </div>
  
                                                 <div class="position-relative mb-3">
                                                     <label for="example-fileinput" class="form-label">Image</label>
-                                                    <input type="file" id="example-fileinput" class="form-control"
+                                                    <input type="file" id="example-fileinput" class="form-control @error('image') is-invalid @enderror"
                                                         name="image" required>
-                                                        <div class="valid-tooltip">
-                                                            Looks good!
-                                                        </div>
-                                                        <div class="invalid-tooltip">
-                                                           Please enter Image.
-                                                        </div>
+                                                    @if ($errors->has('image'))
+                                                      <span class="text-danger">{{ $errors->first('image') }}</span>
+                                                     @endif
                                                 </div>
 
                                                 <div class="position-relative mb-3">
                                                     <label for="example-select" class="form-label">Year</label>
-                                                    <select class="form-select" name="year" id="example-select" required>
-                                                        <option value="2023">2023</option>
-                                                        <option value="2022">2022</option>
-                                                        <option value="2021">2021</option>
-                                                        <option value="2020">2020</option>
-                                                        <option value="2019">2019</option>
+                                                    <select class="form-select @error('year') is-invalid @enderror" name="year" id="example-select" required>
+                                                        @php
+                                                        $currentYear = date('Y');
+                                                        @endphp
+                                                    
+                                                        @for ($year = $currentYear; $year >= 2019; $year--)
+                                                            <option value="{{ $year }}" {{ (old('year') == $year) ? 'selected' : '' }}>
+                                                                {{ $year }}
+                                                            </option>
+                                                        @endfor
                                                     </select>
-                                                    <div class="valid-tooltip">
-                                                        Looks good!
-                                                    </div>
-                                                    <div class="invalid-tooltip">
-                                                        Please enter Year.
-                                                    </div>
+
+                                                    @if ($errors->has('year'))
+                                                      <span class="text-danger">{{ $errors->first('year') }}</span>
+                                                     @endif
                                                 </div>
                                                
                                             </div> <!-- end col-->
@@ -379,14 +357,11 @@
                                                 <div class="position-relative mb-3">
                                                     <label for="example-fileinput" class="form-label">Document
                                                         (.pdf)</label>
-                                                    <input type="file" id="example-fileinput" class="form-control"
+                                                    <input type="file"  id="example-fileinput" class="form-control @error('document') is-invalid @enderror"
                                                         name="document" required>
-                                                        <div class="valid-tooltip">
-                                                            Looks good!
-                                                        </div>
-                                                        <div class="invalid-tooltip">
-                                                            Please enter Document.
-                                                        </div>
+                                                        @if ($errors->has('document'))
+                                                        <span class="text-danger">{{ $errors->first('document') }}</span>
+                                                       @endif
                                                 </div>
 
                                             </div> <!-- end col-->

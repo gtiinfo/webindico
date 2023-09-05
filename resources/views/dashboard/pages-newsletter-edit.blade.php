@@ -10,7 +10,8 @@
 
 
     <!-- Bootstrap Datepicker css -->
-    <link href="../../../assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../../assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet"
+        type="text/css" />
 
     <!-- Select2 Plugins css -->
     <link href="../../../assets/vendor/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
@@ -23,11 +24,11 @@
 
     <!-- Icons css -->
     <link href="../../../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-    
 
-    <link href="../../../assets/vendor/simplemde/simplemde.min.css" rel="stylesheet" type="text/css" />                                                    
-                                                                                                        
-                                                 
+
+    <link href="../../../assets/vendor/simplemde/simplemde.min.css" rel="stylesheet" type="text/css" />
+
+
 </head>
 
 <body>
@@ -43,7 +44,7 @@
                     <!-- Topbar Brand Logo -->
                     <div class="logo-topbar">
                         <!-- Logo light -->
-                        <a href="{{ __(route('view.home'))}}" class="logo-light">
+                        <a href="{{ __(route('view.home')) }}" class="logo-light">
                             <span class="logo-lg">
                                 <img src="../../../assets/images/logo.png" alt="logo">
                             </span>
@@ -94,15 +95,11 @@
                     </li>
 
                     <li class="dropdown">
-                        <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown" href="#"
-                            role="button" aria-haspopup="false" aria-expanded="false">
-                            <span class="account-user-avatar">
-                                <img src="../../../assets/images/users/avatar-1.jpg" alt="user-image" width="32"
-                                    class="rounded-circle">
-                            </span>
+                        <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown"
+                            href="#" role="button" aria-haspopup="false" aria-expanded="false">
+
                             <span class="d-lg-flex flex-column gap-1 d-none">
-                                <h5 class="my-0">Dominic Keller</h5>
-                                <h6 class="my-0 fw-normal">Founder</h6>
+                                <h5 class="my-0">{{ Auth::user()->name }}</h5>
                             </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated profile-dropdown">
@@ -112,16 +109,16 @@
                             </div>
 
                             <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item">
-                                <i class="mdi mdi-account-circle me-1"></i>
-                                <span>My Account</span>
-                            </a>                  
-
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item">
+                            <a href="{{ route('logout') }}" class="dropdown-item"
+                                onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
                                 <i class="mdi mdi-logout me-1"></i>
                                 <span>Logout</span>
+
                             </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                @csrf
+                            </form>
                         </div>
                     </li>
                 </ul>
@@ -133,7 +130,7 @@
         <div class="leftside-menu">
 
             <!-- Brand Logo Light -->
-            <a href="{{ __(route('view.home'))}}" class="logo logo-light">
+            <a href="{{ __(route('view.home')) }}" class="logo logo-light">
                 <span class="logo-lg">
                     <img src="../../../assets/images/logo.png" alt="logo">
                 </span>
@@ -143,12 +140,12 @@
             </a>
 
             <!-- Brand Logo Dark -->
-            <a href="{{ __(route('view.home'))}}" class="logo logo-dark">
+            <a href="{{ __(route('view.home')) }}" class="logo logo-dark">
                 <span class="logo-lg">
-                    <img src="../assets/images/logo-dark.png" alt="dark logo">
+                    <img src="../../../assets/images/logo-dark.png" alt="dark logo">
                 </span>
                 <span class="logo-sm">
-                    <img src="../assets/images/logo-dark-sm.png" alt="small logo">
+                    <img src="../../../assets/images/logo-dark-sm.png" alt="small logo">
                 </span>
             </a>
 
@@ -166,10 +163,9 @@
             <div class="h-100" id="leftside-menu-container" data-simplebar>
                 <!-- Leftbar User -->
                 <div class="leftbar-user">
-                    <a href="pages-profile.html">
-                        <img src="../assets/images/users/avatar-1.jpg" alt="user-image" height="42"
-                            class="rounded-circle shadow-sm">
-                        <span class="leftbar-user-name mt-2">Dominic Keller</span>
+                    <a href="#">
+
+                        <span class="leftbar-user-name mt-2">{{ Auth::user()->name }}</span>
                     </a>
                 </div>
 
@@ -179,7 +175,7 @@
                     <li class="side-nav-title">Navigation</li>
 
                     <li class="side-nav-item">
-                        <a href="{{ __(route('view.admim'))}}" class="side-nav-link">
+                        <a href="{{ __(route('view.admim')) }}" class="side-nav-link">
                             <i class="uil-home-alt"></i>
                             <span> Dashboards</span>
                         </a>
@@ -214,10 +210,10 @@
                         <div class="collapse" id="sidebarNewsletter">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="{{ __(route('view.noticias'))}}">Newsletter</a>
+                                    <a href="{{ __(route('view.noticias')) }}">Newsletter</a>
                                 </li>
                                 <li>
-                                    <a href="{{ __(route('view.noticias-add'))}}">Adicionar Newsletter</a>
+                                    <a href="{{ __(route('view.noticias-add')) }}">Adicionar Newsletter</a>
                                 </li>
                             </ul>
                         </div>
@@ -233,10 +229,10 @@
                         <div class="collapse" id="sidebarArticles">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="{{ __(route('view.artigo'))}}">Artigos</a>
+                                    <a href="{{ __(route('view.artigo')) }}">Artigos</a>
                                 </li>
                                 <li>
-                                    <a href="{{ __(route('view.artigos-add'))}}">Adicionar Artigos</a>
+                                    <a href="{{ __(route('view.artigos-add')) }}">Adicionar Artigos</a>
                                 </li>
                             </ul>
                         </div>
@@ -251,19 +247,24 @@
                         <div class="collapse" id="sidebarRecrutamento">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="{{ __(route('view.recrutamentos'))}}">Recrutamentos</a>
+                                    <a href="{{ __(route('view.recrutamentos')) }}">Recrutamentos</a>
                                 </li>
                                 <li>
-                                    <a href="{{ __(route('view.recrutamento-add'))}}">Adicionar Recrutamentos</a>
+                                    <a href="{{ __(route('view.recrutamento-add')) }}">Adicionar Recrutamentos</a>
                                 </li>
                             </ul>
                         </div>
                     </li>
                     <li class="side-nav-item">
-                        <a href="#" aria-expanded="false" class="side-nav-link">
+                        <a href="{{ route('logout') }}" aria-expanded="false" class="side-nav-link"
+                            onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
                             <i class="mdi mdi-logout"></i>
                             <span> Logout </span>
                         </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                            @csrf
+                        </form>
                     </li>
                 </ul>
                 <!--- End Sidemenu -->
@@ -304,91 +305,83 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
-                                    @if($errors->any() || session('message'))
-                                    <div class="alert alert-@php if($errors->any()) echo 'danger'; else echo 'success'; @endphp alert-dismissible fade show" role="alert">
-                                      @if($errors->any())
-                                        @foreach ( $errors as $error )
-                                            <p>{{ __($error) }}</p>
-                                        @endforeach                                       
-                                      @else
-                                      {{ __(session('message')) }}
-                                      @endif
-                                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                    </div>
-                                    @endif
-                                    <form action="/admin/noticia/{{ $news->id }}" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+
+                                    <form action="/admin/noticia/{{ $news->id }}" method="post"
+                                        enctype="multipart/form-data" class="needs-validation" novalidate>
                                         @csrf
                                         @method('PUT')
                                         <div class="row">
                                             <div class="col-xl-6">
 
                                                 <div class="mb-3" style="width: 100px; height: 100px">
-                                                    <img src="{{ asset('storage/upload/img/'.$news->image) }}" alt="table-user" class="me-2 rounded-circle" style="width: 100%" >
+                                                    <img src="{{ asset('storage/upload/img/' . $news->image) }}"
+                                                        alt="table-user" class="me-2 rounded-circle"
+                                                        style="width: 100%">
                                                 </div>
 
                                                 <div class="position-relative mb-3">
                                                     <label for="example-fileinput" class="form-label">Image</label>
-                                                    <input type="file" id="image" class="form-control"
+                                                    <input type="file" id="image"
+                                                        class="form-control @error('image') is-invalid @enderror "
                                                         name="image" required>
-                                                        <div class="valid-tooltip">
-                                                            Looks good!
-                                                        </div>
-                                                        <div class="invalid-tooltip">
-                                                            Please enter Image.
-                                                        </div>
+                                                    @if ($errors->has('image'))
+                                                        <span class="text-danger">{{ $errors->first('image') }}</span>
+                                                    @endif
                                                 </div>
 
                                                 <div class="row">
                                                     <div class="col-xl-6">
                                                         <div class="position-relative mb-3">
-                                                            <label for="newslettername" class="form-label">Title</label>
+                                                            <label for="newslettername"
+                                                                class="form-label">Title</label>
                                                             <input type="text" id="newslettername" name="title"
-                                                                class="form-control" placeholder="Enter newsletter name"value="{{ $news->title }}"  required>
-                                                            <div class="valid-tooltip" >
-                                                                Looks good!
-                                                            </div>
-                                                            <div class="invalid-tooltip">
-                                                                Please enter Title.
-                                                            </div>
+                                                                class="form-control @error('title') is-invalid @enderror "
+                                                                placeholder="Enter newsletter name"value="{{ $news->title }}"
+                                                                required>
+                                                            @if ($errors->has('title'))
+                                                                <span
+                                                                    class="text-danger">{{ $errors->first('title') }}</span>
+                                                            @endif
                                                         </div>
-        
+
                                                         <!-- Date View -->
                                                         <div class="mb-3 position-relative" id="datepicker1">
                                                             <label class="form-label"> Date</label>
-                                                            <input type="text" class="form-control" name="date" id="data" value="{{ $news->date }}"
-                                                                data-provide="datepicker" data-date-container="#datepicker1"
-                                                                data-date-format="d-M-yyyy" data-date-autoclose="true" required>
-                                                                <div class="valid-tooltip">
-                                                                    Looks good!
-                                                                </div>
-                                                                <div class="invalid-tooltip">
-                                                                    Please enter Date.
-                                                                </div>
+                                                            <input type="text"
+                                                                class="form-control @error('date') is-invalid @enderror "
+                                                                name="date" id="data"
+                                                                value="{{ $news->date }}" data-provide="datepicker"
+                                                                data-date-container="#datepicker1"
+                                                                data-date-format="d-M-yyyy" data-date-autoclose="true"
+                                                                required>
+                                                            @if ($errors->has('date'))
+                                                                <span
+                                                                    class="text-danger">{{ $errors->first('date') }}</span>
+                                                            @endif
                                                         </div>
-                                                       
+
                                                     </div> <!-- end col-->
-        
+
                                                     <div class="col-xl-6">
                                                         <div class="position-relative mb-3">
                                                             <label for="example-fileinput" class="form-label">Document
                                                                 (.pdf)</label>
-                                                            <input type="file" id="example-fileinput" class="form-control"
+                                                            <input type="file" id="example-fileinput"
+                                                                class="form-control @error('document') is-invalid @enderror "
                                                                 name="document" required>
-                                                                <div class="valid-tooltip">
-                                                                    Looks good!
-                                                                </div>
-                                                                <div class="invalid-tooltip">
-                                                                    Please enter Document.
-                                                                </div>
+                                                            @if ($errors->has('document'))
+                                                                <span
+                                                                    class="text-danger">{{ $errors->first('document') }}</span>
+                                                            @endif
                                                         </div>
-        
+
                                                     </div> <!-- end col-->
-        
-                                            <div class="mb-3">
-                                                <button class="btn btn-danger" type="submit"><i
-                                                        class="mdi mdi-account-circle me-2"></i>Update</button>
-                                            </div>
-                                        </div>
+
+                                                    <div class="mb-3">
+                                                        <button class="btn btn-danger" type="submit"><i
+                                                                class="mdi mdi-account-circle me-2"></i>Update</button>
+                                                    </div>
+                                                </div>
                                     </form>
                                     <!-- end row -->
 
@@ -407,9 +400,11 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-6">
-                            <script>document.write(new Date().getFullYear())</script> © Índico Seguros
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script> © Índico Seguros
                         </div>
-                        
+
                     </div>
                 </div>
             </footer>
@@ -442,10 +437,10 @@
     <!-- App js -->
     <script src="../../../assets/js/app.min.js"></script>
 
-       <!-- SimpleMDE js -->
-       <script src="../../../assets/vendor/simplemde/simplemde.min.js"></script>
-       <!-- SimpleMDE demo -->
-       <script src="../../../assets/js/pages/demo.simplemde.js"></script>
+    <!-- SimpleMDE js -->
+    <script src="../../../assets/vendor/simplemde/simplemde.min.js"></script>
+    <!-- SimpleMDE demo -->
+    <script src="../../../assets/js/pages/demo.simplemde.js"></script>
 
 </body>
 

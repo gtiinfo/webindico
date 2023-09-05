@@ -88,32 +88,27 @@
                         <li class="dropdown">
                             <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown" href="#"
                                 role="button" aria-haspopup="false" aria-expanded="false">
-                                <span class="account-user-avatar">
-                                    <img src="../assets/images/users/avatar-1.jpg" alt="user-image" width="32"
-                                        class="rounded-circle">
-                                </span>
+                              
                                 <span class="d-lg-flex flex-column gap-1 d-none">
-                                    <h5 class="my-0">Dominic Keller</h5>
-                                    <h6 class="my-0 fw-normal">Founder</h6>
+                                    <h5 class="my-0">{{ Auth::user()->name }}</h5>
                                 </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated profile-dropdown">
                                 <!-- item-->
                                 <div class=" dropdown-header noti-title">
                                     <h6 class="text-overflow m-0">Welcome !</h6>
-                                </div>
+                                </div>                  
     
                                 <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">
-                                    <i class="mdi mdi-account-circle me-1"></i>
-                                    <span>My Account</span>
-                                </a>                  
-    
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">
+                                <a href="{{ route('logout') }}" class="dropdown-item"  onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
                                     <i class="mdi mdi-logout me-1"></i>
                                     <span>Logout</span>
+                                   
                                 </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                    @csrf
+                                </form>
                             </div>
                         </li>
                     </ul>
@@ -123,7 +118,7 @@
     
             <!-- ========== Left Sidebar Start ========== -->
             <div class="leftside-menu">
-
+    
                 <!-- Brand Logo Light -->
                 <a href="{{ __(route('view.home'))}}" class="logo logo-light">
                     <span class="logo-lg">
@@ -158,10 +153,9 @@
                 <div class="h-100" id="leftside-menu-container" data-simplebar>
                     <!-- Leftbar User -->
                     <div class="leftbar-user">
-                        <a href="pages-profile.html">
-                            <img src="../assets/images/users/avatar-1.jpg" alt="user-image" height="42"
-                                class="rounded-circle shadow-sm">
-                            <span class="leftbar-user-name mt-2">Dominic Keller</span>
+                        <a href="#">
+                            
+                            <span class="leftbar-user-name mt-2">{{ Auth::user()->name }}</span>
                         </a>
                     </div>
     
@@ -252,10 +246,14 @@
                             </div>
                         </li>
                         <li class="side-nav-item">
-                            <a href="#" aria-expanded="false" class="side-nav-link">
+                            <a href="{{ route('logout') }}" aria-expanded="false" class="side-nav-link" onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
                                 <i class="mdi mdi-logout"></i>
                                 <span> Logout </span>
                             </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                @csrf
+                            </form>
                         </li>
                     </ul>
                     <!--- End Sidemenu -->
@@ -263,7 +261,6 @@
                     <div class="clearfix"></div>
                 </div>
             </div>
-    
             <!-- ========== Left Sidebar End ========== -->
 
             <!-- ============================================================== -->
@@ -386,6 +383,46 @@
                                             </table>
                                         </div>
                                     </div> <!-- end card-body-->
+                                    <ul class="pagination pagination-rounded justify-content-end text-end py-3 pe-3">
+                                        {{-- Link "Anterior" --}}
+                                        @if ($recrutamentos->onFirstPage())
+                                            <li class="page-item disabled">
+                                                <span class="page-link" aria-hidden="true">&laquo;</span>
+                                            </li>
+                                        @else
+                                            <li class="page-item">
+                                                <a class="page-link" href="{{ $recrutamentos->previousPageUrl() }}"
+                                                    aria-label="Anterior">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                </a>
+                                            </li>
+                                        @endif
+    
+                                        {{-- Links numéricos --}}
+                                        @foreach ($recrutamentos->getUrlRange(1, $recrutamentos->lastPage()) as $page => $url)
+                                            @if ($page == $recrutamentos->currentPage())
+                                                <li class="page-item active"><span
+                                                        class="page-link">{{ $page }}</span></li>
+                                            @else
+                                                <li class="page-item"><a class="page-link"
+                                                        href="{{ $url }}">{{ $page }}</a></li>
+                                            @endif
+                                        @endforeach
+    
+                                        {{-- Link "Próximo" --}}
+                                        @if ($recrutamentos->hasMorePages())
+                                            <li class="page-item">
+                                                <a class="page-link" href="{{ $recrutamentos->nextPageUrl() }}"
+                                                    aria-label="Próximo">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                </a>
+                                            </li>
+                                        @else
+                                            <li class="page-item disabled">
+                                                <span class="page-link" aria-hidden="true">&raquo;</span>
+                                            </li>
+                                        @endif
+                                    </ul>
                                 </div> <!-- end card-->
                             </div> <!-- end col -->
                         </div>

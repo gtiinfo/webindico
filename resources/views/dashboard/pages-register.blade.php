@@ -1,112 +1,105 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 
 <head>
-        <meta charset="utf-8" />
-        <title>Índico Seguros Register | Admin Dashboard</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <title>Índico Seguros Register | Admin Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
 
-        <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <!-- Theme Config Js -->
+    <script src="assets/js/hyper-config.js"></script>
 
-        <!-- Theme Config Js -->
-        <script src="assets/js/hyper-config.js"></script>
+    <!-- App css -->
+    <link href="assets/css/app-saas.min.css" rel="stylesheet" type="text/css" id="app-style" />
 
-        <!-- App css -->
-        <link href="assets/css/app-saas.min.css" rel="stylesheet" type="text/css" id="app-style" />
+    <!-- Icons css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+</head>
 
-        <!-- Icons css -->
-        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-    </head>
+<body class="authentication-bg pb-0">
 
-    <body class="authentication-bg">
+    <div class="auth-fluid">
+        <!--Auth fluid left content -->
+        <div class="auth-fluid-form-box">
+            <div class="card-body d-flex flex-column h-100 gap-3">
 
-        <div class="position-absolute start-0 end-0 start-0 bottom-0 w-100 h-100">
-            <svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 800 800'>
-                <g fill-opacity='0.22'>
-                    <circle style="fill: rgba(var(--ct-primary-rgb), 0.1);" cx='400' cy='400' r='600'/>
-                    <circle style="fill: rgba(var(--ct-primary-rgb), 0.2);" cx='400' cy='400' r='500'/>
-                    <circle style="fill: rgba(var(--ct-primary-rgb), 0.3);" cx='400' cy='400' r='300'/>
-                    <circle style="fill: rgba(var(--ct-primary-rgb), 0.4);" cx='400' cy='400' r='200'/>
-                    <circle style="fill: rgba(var(--ct-primary-rgb), 0.5);" cx='400' cy='400' r='100'/>
-                </g>
-            </svg>
-        </div>
-
-        <div class="account-pages pt-2 pt-sm-5 pb-4 pb-sm-5 position-relative">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xxl-4 col-lg-5">
-                        <div class="card">
-                            <!-- Logo-->
-                            <div class="card-header py-4 text-center bg-primary">
-                                <a href="index.html">
-                                    <span><img src="assets/images/logo.png" alt="logo" height="50"></span>
-                                </a>
-                            </div>
-
-                            <div class="card-body p-4">
-                                
-                                <div class="text-center w-75 m-auto">
-                                    <h4 class="text-dark-50 text-center mt-0 fw-bold">Register User</h4>
-                                </div>
-
-                                <form action="#">
-
-                                    <div class="mb-3">
-                                        <label for="fullname" class="form-label">Full Name</label>
-                                        <input class="form-control" type="text" id="fullname" placeholder="Enter your name" required>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="emailaddress" class="form-label">Email address</label>
-                                        <input class="form-control" type="email" id="emailaddress" required placeholder="Enter your email">
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="password" class="form-label">Password</label>
-                                        <div class="input-group input-group-merge">
-                                            <input type="password" id="password" class="form-control" placeholder="Enter your password">
-                                            <div class="input-group-text" data-password="false">
-                                                <span class="password-eye"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="mb-3 text-center">
-                                        <button class="btn btn-primary" type="submit"> Save </button>
-                                    </div>
-
-                                </form>
-                            </div> <!-- end card-body -->
-                        </div>
-                        <!-- end card -->
-
-                        <div class="row mt-3">
-                            <div class="col-12 text-center">
-                                <p class="text-muted">Already have account? <a href="pages-login.html" class="text-muted ms-1"><b>Log In</b></a></p>
-                            </div> <!-- end col-->
-                        </div>
-                        <!-- end row -->
-
-                    </div> <!-- end col -->
+                <!-- Logo -->
+                <div class="auth-brand text-center text-lg-start">
+                    <a href="index.html" class="logo-dark">
+                        <span><img src="assets/images/logo-dark.png" alt="dark logo" height="50"></span>
+                    </a>
+                    <a href="index.html" class="logo-light">
+                        <span><img src="assets/images/logo.png" alt="logo" height="50"></span>
+                    </a>
                 </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
+
+                <div class="my-auto">
+                    <!-- title-->
+                    <h4 class="mt-3">Register</h4>
+
+                    <!-- form -->
+                    <form action="{{ route('store') }}" method="POST">
+                        @csrf
+                        <div class="mb-3">
+                            <label for="fullname" class="form-label">Full Name</label>
+                            <input class="form-control @error('name') is-invalid @enderror "  value="{{ old('name') }}" type="text" id="fullname" name="name" placeholder="Enter your name" required>
+                            @if ($errors->has('name'))
+                            <span class="text-danger">{{ $errors->first('name') }}</span>
+                             @endif
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailaddress" class="form-label">Email address</label>
+                            <input class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" type="email" id="emailaddress" name="email" required placeholder="Enter your email">
+                            @if ($errors->has('email'))
+                                <span class="text-danger">{{ $errors->first('email') }}</span>
+                            @endif
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input class="form-control @error('password') is-invalid @enderror" type="password" required id="password" name="password" placeholder="Enter your password">
+                            @if ($errors->has('password'))
+                                <span class="text-danger">{{ $errors->first('password') }}</span>
+                            @endif
+                        </div>
+                        <div class="mb-3">
+                            <label for="password_confirmation" class="col-md-4 col-form-label text-md-end text-start">Confirm Password</label>
+                              <input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
+                        </div>
+                       
+                        <div class="mb-0 d-grid text-center">
+                            <button class="btn btn-primary" type="submit"><i class="mdi mdi-account-circle"></i> Save </button>
+                        </div>
+                       
+                    </form>
+                    <!-- end form-->
+                </div>
+
+                <!-- Footer-->
+                <footer class="footer footer-alt">
+                    <p class="text-muted">Already have account? <a href="pages-login-2.html" class="text-muted ms-1"><b>Log In</b></a></p>
+                </footer>
+
+            </div> <!-- end .card-body -->
         </div>
-        <!-- end page -->
+        <!-- end auth-fluid-form-box-->
 
-        <footer class="footer footer-alt">
-             2023 <!--- <script>document.write(new Date().getFullYear())</script> --> © Índico Seguros
-        </footer>
+        <!-- Auth fluid right content -->
+        <div class="auth-fluid-right text-center">
+            <div class="auth-user-testimonial">
+                <h2 class="mb-3">Viva sem Medo!</h2>
+            </div> <!-- end auth-user-testimonial-->
+        </div>
+        <!-- end Auth fluid right content -->
+    </div>
+    <!-- end auth-fluid-->
+    <!-- Vendor js -->
+    <script src="assets/js/vendor.min.js"></script>
 
-        <!-- Vendor js -->
-        <script src="assets/js/vendor.min.js"></script>
-        
-        <!-- App js -->
-        <script src="assets/js/app.min.js"></script>
+    <!-- App js -->
+    <script src="assets/js/app.min.js"></script>
 
-    </body>
+</body>
 
 </html>

@@ -3,7 +3,7 @@
 
 <head>
         <meta charset="utf-8" />
-        <title>Índico Seguros Usres | Admin Dashboard</title>
+        <title>Índico Seguros Users | Admin Dashboard</title>
 
 
         <!-- App favicon -->
@@ -89,32 +89,27 @@
                         <li class="dropdown">
                             <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown" href="#"
                                 role="button" aria-haspopup="false" aria-expanded="false">
-                                <span class="account-user-avatar">
-                                    <img src="../assets/images/users/avatar-1.jpg" alt="user-image" width="32"
-                                        class="rounded-circle">
-                                </span>
+                              
                                 <span class="d-lg-flex flex-column gap-1 d-none">
-                                    <h5 class="my-0">Dominic Keller</h5>
-                                    <h6 class="my-0 fw-normal">Founder</h6>
+                                    <h5 class="my-0">{{ Auth::user()->name }}</h5>
                                 </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated profile-dropdown">
                                 <!-- item-->
                                 <div class=" dropdown-header noti-title">
                                     <h6 class="text-overflow m-0">Welcome !</h6>
-                                </div>
+                                </div>                  
     
                                 <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">
-                                    <i class="mdi mdi-account-circle me-1"></i>
-                                    <span>My Account</span>
-                                </a>                  
-    
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">
+                                <a href="{{ route('logout') }}" class="dropdown-item"  onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
                                     <i class="mdi mdi-logout me-1"></i>
                                     <span>Logout</span>
+                                   
                                 </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                    @csrf
+                                </form>
                             </div>
                         </li>
                     </ul>
@@ -124,7 +119,7 @@
     
             <!-- ========== Left Sidebar Start ========== -->
             <div class="leftside-menu">
-
+    
                 <!-- Brand Logo Light -->
                 <a href="{{ __(route('view.home'))}}" class="logo logo-light">
                     <span class="logo-lg">
@@ -159,10 +154,9 @@
                 <div class="h-100" id="leftside-menu-container" data-simplebar>
                     <!-- Leftbar User -->
                     <div class="leftbar-user">
-                        <a href="pages-profile.html">
-                            <img src="../assets/images/users/avatar-1.jpg" alt="user-image" height="42"
-                                class="rounded-circle shadow-sm">
-                            <span class="leftbar-user-name mt-2">Dominic Keller</span>
+                        <a href="#">
+                            
+                            <span class="leftbar-user-name mt-2">{{ Auth::user()->name }}</span>
                         </a>
                     </div>
     
@@ -253,10 +247,14 @@
                             </div>
                         </li>
                         <li class="side-nav-item">
-                            <a href="#" aria-expanded="false" class="side-nav-link">
+                            <a href="{{ route('logout') }}" aria-expanded="false" class="side-nav-link" onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
                                 <i class="mdi mdi-logout"></i>
                                 <span> Logout </span>
                             </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                @csrf
+                            </form>
                         </li>
                     </ul>
                     <!--- End Sidemenu -->
@@ -291,7 +289,12 @@
                             </div>
                         </div>
                         <!-- end page title -->
-
+                        @if(session('message'))
+                        <div class="alert alert-{{ session('status') }} alert-dismissible fade show" role="alert">
+                          <strong>{{ session('message') }}</strong>
+                          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        @endif
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">
@@ -300,13 +303,7 @@
                                             <div class="col-sm-5">
                                                 <a href="{{ __(route('view.user-add')) }}" class="btn btn-danger mb-2"><i class="mdi mdi-plus-circle me-2"></i> Add Users</a>
                                             </div>
-                                            <div class="col-sm-7">
-                                                <div class="text-sm-end">
-                                                    <button type="button" class="btn btn-success mb-2 me-1"><i class="mdi mdi-cog"></i></button>
-                                                    <button type="button" class="btn btn-light mb-2 me-1">Import</button>
-                                                    <button type="button" class="btn btn-light mb-2">Export</button>
-                                                </div>
-                                            </div><!-- end col-->
+                                           
                                         </div>
                 
                                         <div class="table-responsive">
@@ -320,14 +317,14 @@
                                                             </div>
                                                         </th>
                                                         <th>User</th>
-                                                        <th>Phone</th>
                                                         <th>Email</th>
-                                                        <th>Role</th>
                                                         <th>Status</th>
                                                         <th style="width: 75px;">Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                    @foreach ($users as $user)
+                                                        
                                                     <tr>
                                                         <td>
                                                             <div class="form-check">
@@ -336,62 +333,87 @@
                                                             </div>
                                                         </td>
                                                         <td class="table-user">
-                                                            <img src="assets/images/users/avatar-4.jpg" alt="table-user" class="me-2 rounded-circle">
-                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Paul J. Friend</a>
+                                                            {{$user->name}}
                                                         </td>
                                                         <td>
-                                                            937-330-1634
+                                                           {{ $user->email }}
                                                         </td>
-                                                        <td>
-                                                            pauljfrnd@jourrapide.com
-                                                        </td>
-                                                        <td>
-                                                            Admin
-                                                        </td>
+                                                       
                                                         <td>
                                                             <span class="badge badge-success-lighten">Active</span>
                                                         </td>
                     
                                                         <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                            <a href="/admin/user/edit/{{$user->id}}" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
+                                                            <a href="javascript:void(0);" class="action-icon"  data-bs-toggle="modal" data-bs-target="#danger-alert-modal"> <i class="mdi mdi-delete"></i></a>
                                                         </td>
                                                     </tr>
-                                                    
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck3">
-                                                                <label class="form-check-label" for="customCheck3">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="table-user">
-                                                            <img src="assets/images/users/avatar-3.jpg" alt="table-user" class="me-2 rounded-circle">
-                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Bryan J. Luellen</a>
-                                                        </td>
-                                                        <td>
-                                                            215-302-3376
-                                                        </td>
-                                                        <td>
-                                                            bryuellen@dayrep.com
-                                                        </td>
-                                                        <td>
-                                                            Admin
-                                                        </td>
-                                                        <td>
-                                                            <span class="badge badge-success-lighten">Active</span>
-                                                        </td>
-                    
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
+
+                                                    <div id="danger-alert-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+                                                        <div class="modal-dialog modal-sm">
+                                                            <div class="modal-content modal-filled bg-danger">
+                                                                <div class="modal-body p-4">
+                                                                    <div class="text-center">
+                                                                        <i class="ri-close-circle-line h1"></i>
+                                                                        <h4 class="mt-2">Oh Danger!</h4>
+                                                                        <p class="mt-3">Se você deseja excluir permanentemente o artigo clica em sim</p>
+                                                                        <form action="/admin/user/{{ $user->id }}" method="POST">
+                                                                            @csrf   
+                                                                             @method('DELETE')
+                                                                            <button type="submit" class="btn btn-light my-2" data-bs-dismiss="modal">Sim</button>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!-- /.modal-content -->
+                                                        </div><!-- /.modal-dialog -->
+                                                    </div><!-- /.modal -->
+                                                    @endforeach
                                                     
                                                 </tbody>
                                             </table>
+                                            
                                         </div>
                                     </div> <!-- end card-body-->
+                                    <ul class="pagination pagination-rounded justify-content-end text-end py-3 pe-3">
+                                        {{-- Link "Anterior" --}}
+                                        @if ($users->onFirstPage())
+                                            <li class="page-item disabled">
+                                                <span class="page-link" aria-hidden="true">&laquo;</span>
+                                            </li>
+                                        @else
+                                            <li class="page-item">
+                                                <a class="page-link" href="{{ $users->previousPageUrl() }}"
+                                                    aria-label="Anterior">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                </a>
+                                            </li>
+                                        @endif
+    
+                                        {{-- Links numéricos --}}
+                                        @foreach ($users->getUrlRange(1, $users->lastPage()) as $page => $url)
+                                            @if ($page == $users->currentPage())
+                                                <li class="page-item active"><span
+                                                        class="page-link">{{ $page }}</span></li>
+                                            @else
+                                                <li class="page-item"><a class="page-link"
+                                                        href="{{ $url }}">{{ $page }}</a></li>
+                                            @endif
+                                        @endforeach
+    
+                                        {{-- Link "Próximo" --}}
+                                        @if ($users->hasMorePages())
+                                            <li class="page-item">
+                                                <a class="page-link" href="{{ $users->nextPageUrl() }}"
+                                                    aria-label="Próximo">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                </a>
+                                            </li>
+                                        @else
+                                            <li class="page-item disabled">
+                                                <span class="page-link" aria-hidden="true">&raquo;</span>
+                                            </li>
+                                        @endif
+                                    </ul>
                                 </div> <!-- end card-->
                             </div> <!-- end col -->
                         </div>

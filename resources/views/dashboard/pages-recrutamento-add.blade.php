@@ -97,13 +97,9 @@
                     <li class="dropdown">
                         <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown"
                             href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                            <span class="account-user-avatar">
-                                <img src="../../../assets/images/users/avatar-1.jpg" alt="user-image" width="32"
-                                    class="rounded-circle">
-                            </span>
+
                             <span class="d-lg-flex flex-column gap-1 d-none">
-                                <h5 class="my-0">Dominic Keller</h5>
-                                <h6 class="my-0 fw-normal">Founder</h6>
+                                <h5 class="my-0">{{ Auth::user()->name }}</h5>
                             </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated profile-dropdown">
@@ -113,16 +109,16 @@
                             </div>
 
                             <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item">
-                                <i class="mdi mdi-account-circle me-1"></i>
-                                <span>My Account</span>
-                            </a>
-
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item">
+                            <a href="{{ route('logout') }}" class="dropdown-item"
+                                onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
                                 <i class="mdi mdi-logout me-1"></i>
                                 <span>Logout</span>
+
                             </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                @csrf
+                            </form>
                         </div>
                     </li>
                 </ul>
@@ -168,10 +164,9 @@
             <div class="h-100" id="leftside-menu-container" data-simplebar>
                 <!-- Leftbar User -->
                 <div class="leftbar-user">
-                    <a href="pages-profile.html">
-                        <img src="../../../assets/images/users/avatar-1.jpg" alt="user-image" height="42"
-                            class="rounded-circle shadow-sm">
-                        <span class="leftbar-user-name mt-2">Dominic Keller</span>
+                    <a href="#">
+
+                        <span class="leftbar-user-name mt-2">{{ Auth::user()->name }}</span>
                     </a>
                 </div>
 
@@ -262,10 +257,15 @@
                         </div>
                     </li>
                     <li class="side-nav-item">
-                        <a href="#" aria-expanded="false" class="side-nav-link">
+                        <a href="{{ route('logout') }}" aria-expanded="false" class="side-nav-link"
+                            onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
                             <i class="mdi mdi-logout"></i>
                             <span> Logout </span>
                         </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                            @csrf
+                        </form>
                     </li>
                 </ul>
                 <!--- End Sidemenu -->
@@ -286,17 +286,19 @@
                 <div class="container-fluid">
 
                     <!-- start page title -->
-                    @if($errors->any() || session('message'))
-                    <div class="alert alert-@php if($errors->any()) echo 'danger'; else echo 'success'; @endphp alert-dismissible fade show" role="alert">
-                      @if($errors->any())
-                        @foreach ( $errors as $error )
-                            <p>{{ __($error) }}</p>
-                        @endforeach                                       
-                      @else
-                      {{ __(session('message')) }}
-                      @endif
-                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
+                    @if ($errors->any() || session('message'))
+                        <div class="alert alert-@php if($errors->any()) echo 'danger'; else echo 'success'; @endphp alert-dismissible fade show"
+                            role="alert">
+                            @if ($errors->any())
+                                @foreach ($errors as $error)
+                                    <p>{{ __($error) }}</p>
+                                @endforeach
+                            @else
+                                {{ __(session('message')) }}
+                            @endif
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                aria-label="Close"></button>
+                        </div>
                     @endif
                     <div class="row">
                         <div class="col-12">
@@ -319,64 +321,60 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <form action="" method="post" class="needs-validation" novalidate enctype="multipart/form-data" >
+                                    <form action="" method="post" class="needs-validation" novalidate
+                                        enctype="multipart/form-data">
                                         @csrf
                                         <div class="row">
                                             <div class="col-xl-6">
                                                 <div class="position-relative mb-3">
                                                     <label for="newslettername" class="form-label">Title</label>
                                                     <input type="text" id="newslettername" name="title"
-                                                        class="form-control" placeholder="Enter title name" required>
-                                                    <div class="valid-tooltip">
-                                                        Looks good!
-                                                    </div>
-                                                    <div class="invalid-tooltip">
-                                                        Please enter Title.
-                                                    </div>
+                                                        class="form-control @error('title') is-invalid @enderror "
+                                                        value="{{ old('title') }}" placeholder="Enter title name"
+                                                        required>
+                                                    @if ($errors->has('title'))
+                                                        <span class="text-danger">{{ $errors->first('title') }}</span>
+                                                    @endif
                                                 </div>
                                                 <div class="position-relative mb-3">
                                                     <label for="newslettername" class="form-label">Position</label>
                                                     <input type="text" id="newslettername" name="position"
-                                                        class="form-control" placeholder="Enter position" required>
-                                                    <div class="valid-tooltip">
-                                                        Looks good!
-                                                    </div>
-                                                    <div class="invalid-tooltip">
-                                                        Please enter Title.
-                                                    </div>
+                                                        class="form-control @error('position') is-invalid @enderror "
+                                                        value="{{ old('position') }}" placeholder="Enter position"
+                                                        required>
+                                                    @if ($errors->has('title'))
+                                                        <span class="text-danger">{{ $errors->first('title') }}</span>
+                                                    @endif
                                                 </div>
 
                                                 <div class="position-relative mb-3">
                                                     <label for="example-fileinput" class="form-label">Image</label>
-                                                    <input type="file" id="example-fileinput" class="form-control"
+                                                    <input type="file" id="example-fileinput"
+                                                        class="form-control  @error('image') is-invalid @enderror "
                                                         name="image" required>
-                                                    <div class="valid-tooltip">
-                                                        Looks good!
-                                                    </div>
-                                                    <div class="invalid-tooltip">
-                                                        Please enter Image.
-                                                    </div>
+                                                    @if ($errors->has('image'))
+                                                        <span class="text-danger">{{ $errors->first('image') }}</span>
+                                                    @endif
                                                 </div>
 
                                                 <div class="position-relative mb-3">
                                                     <label for="example-select" class="form-label">Status</label>
-                                                    <select class="form-select" name="status" id="example-select" required>
+                                                    <select class="form-select @error('status') is-invalid @enderror "
+                                                        name="status" id="example-select" required>
                                                         <option value="1">Activo</option>
                                                         <option value="0">Desativar</option>
                                                     </select>
-                                                    <div class="valid-tooltip">
-                                                        Looks good!
-                                                    </div>
-                                                    <div class="invalid-tooltip">
-                                                        Please enter Year.
-                                                    </div>
+                                                    @if ($errors->has('status'))
+                                                        <span
+                                                            class="text-danger">{{ $errors->first('status') }}</span>
+                                                    @endif
                                                 </div>
 
                                             </div> <!-- end col-->
 
                                             <div class="col-xl-6">
                                                 <label for="example-fileinput" class="form-label">Description</label>
-                                                <div id="snow-editor" style="height: 300px;" >
+                                                <div id="snow-editor" style="height: 300px;">
                                                 </div>
                                                 <input type="hidden" name="description" id="editor-content-input">
 

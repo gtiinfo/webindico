@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Índico Seguros Create Recrutamento | Admin Dashboard</title>
+    <title>Índico Seguros Create User | Admin Dashboard</title>
 
     <!-- App favicon -->
     <link rel="shortcut icon" href="../../../assets/images/favicon.ico">
@@ -24,11 +24,6 @@
 
     <!-- Icons css -->
     <link href="../../../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-
-
-    <!-- Quill css -->
-    <link href="../../../assets/vendor/quill/quill.core.css" rel="stylesheet" type="text/css" />
-    <link href="../../../assets/vendor/quill/quill.snow.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -44,22 +39,22 @@
                     <!-- Topbar Brand Logo -->
                     <div class="logo-topbar">
                         <!-- Logo light -->
-                        <a href="{{ __(route('view.home'))}}" class="logo-light">
+                        <a href="{{ __(route('view.home')) }}" class="logo-light">
                             <span class="logo-lg">
-                                <img src="../assets/images/logo.png" alt="logo">
+                                <img src="../../../assets/images/logo.png" alt="logo">
                             </span>
                             <span class="logo-sm">
-                                <img src="../assets/images/logo-sm.png" alt="small logo">
+                                <img src="../../../assets/images/logo-sm.png" alt="small logo">
                             </span>
                         </a>
 
                         <!-- Logo Dark -->
                         <a href="index.html" class="logo-dark">
                             <span class="logo-lg">
-                                <img src="../assets/images/logo-dark.png" alt="dark logo">
+                                <img src="../../../assets/images/logo-dark.png" alt="dark logo">
                             </span>
                             <span class="logo-sm">
-                                <img src="../assets/images/logo-dark-sm.png" alt="small logo">
+                                <img src="../../../assets/images/logo-dark-sm.png" alt="small logo">
                             </span>
                         </a>
                     </div>
@@ -95,9 +90,9 @@
                     </li>
 
                     <li class="dropdown">
-                        <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown" href="#"
-                            role="button" aria-haspopup="false" aria-expanded="false">
-                          
+                        <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown"
+                            href="#" role="button" aria-haspopup="false" aria-expanded="false">
+
                             <span class="d-lg-flex flex-column gap-1 d-none">
                                 <h5 class="my-0">{{ Auth::user()->name }}</h5>
                             </span>
@@ -106,14 +101,15 @@
                             <!-- item-->
                             <div class=" dropdown-header noti-title">
                                 <h6 class="text-overflow m-0">Welcome !</h6>
-                            </div>                  
+                            </div>
 
                             <!-- item-->
-                            <a href="{{ route('logout') }}" class="dropdown-item"  onclick="event.preventDefault();
+                            <a href="{{ route('logout') }}" class="dropdown-item"
+                                onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
                                 <i class="mdi mdi-logout me-1"></i>
                                 <span>Logout</span>
-                               
+
                             </a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST">
                                 @csrf
@@ -129,22 +125,22 @@
         <div class="leftside-menu">
 
             <!-- Brand Logo Light -->
-            <a href="{{ __(route('view.home'))}}" class="logo logo-light">
+            <a href="{{ __(route('view.home')) }}" class="logo logo-light">
                 <span class="logo-lg">
-                    <img src="../assets/images/logo.png" alt="logo">
+                    <img src="../../../assets/images/logo.png" alt="logo">
                 </span>
                 <span class="logo-sm">
-                    <img src="../assets/images/logo-sm.png" alt="small logo">
+                    <img src="../../../assets/images/logo-sm.png" alt="small logo">
                 </span>
             </a>
 
             <!-- Brand Logo Dark -->
-            <a href="{{ __(route('view.home'))}}" class="logo logo-dark">
+            <a href="{{ __(route('view.home')) }}" class="logo logo-dark">
                 <span class="logo-lg">
-                    <img src="../assets/images/logo-dark.png" alt="dark logo">
+                    <img src="../../../assets/images/logo-dark.png" alt="dark logo">
                 </span>
                 <span class="logo-sm">
-                    <img src="../assets/images/logo-dark-sm.png" alt="small logo">
+                    <img src="../../../assets/images/logo-dark-sm.png" alt="small logo">
                 </span>
             </a>
 
@@ -163,7 +159,7 @@
                 <!-- Leftbar User -->
                 <div class="leftbar-user">
                     <a href="#">
-                        
+
                         <span class="leftbar-user-name mt-2">{{ Auth::user()->name }}</span>
                     </a>
                 </div>
@@ -174,7 +170,7 @@
                     <li class="side-nav-title">Navigation</li>
 
                     <li class="side-nav-item">
-                        <a href="{{ __(route('view.admim'))}}" class="side-nav-link">
+                        <a href="{{ __(route('view.admim')) }}" class="side-nav-link">
                             <i class="uil-home-alt"></i>
                             <span> Dashboards</span>
                         </a>
@@ -209,10 +205,10 @@
                         <div class="collapse" id="sidebarNewsletter">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="{{ __(route('view.noticias'))}}">Newsletter</a>
+                                    <a href="{{ __(route('view.noticias')) }}">Newsletter</a>
                                 </li>
                                 <li>
-                                    <a href="{{ __(route('view.noticias-add'))}}">Adicionar Newsletter</a>
+                                    <a href="{{ __(route('view.noticias-add')) }}">Adicionar Newsletter</a>
                                 </li>
                             </ul>
                         </div>
@@ -228,10 +224,10 @@
                         <div class="collapse" id="sidebarArticles">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="{{ __(route('view.artigo'))}}">Artigos</a>
+                                    <a href="{{ __(route('view.artigo')) }}">Artigos</a>
                                 </li>
                                 <li>
-                                    <a href="{{ __(route('view.artigos-add'))}}">Adicionar Artigos</a>
+                                    <a href="{{ __(route('view.artigos-add')) }}">Adicionar Artigos</a>
                                 </li>
                             </ul>
                         </div>
@@ -246,16 +242,17 @@
                         <div class="collapse" id="sidebarRecrutamento">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="{{ __(route('view.recrutamentos'))}}">Recrutamentos</a>
+                                    <a href="{{ __(route('view.recrutamentos')) }}">Recrutamentos</a>
                                 </li>
                                 <li>
-                                    <a href="{{ __(route('view.recrutamento-add'))}}">Adicionar Recrutamentos</a>
+                                    <a href="{{ __(route('view.recrutamento-add')) }}">Adicionar Recrutamentos</a>
                                 </li>
                             </ul>
                         </div>
                     </li>
                     <li class="side-nav-item">
-                        <a href="{{ route('logout') }}" aria-expanded="false" class="side-nav-link" onclick="event.preventDefault();
+                        <a href="{{ route('logout') }}" aria-expanded="false" class="side-nav-link"
+                            onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
                             <i class="mdi mdi-logout"></i>
                             <span> Logout </span>
@@ -283,19 +280,17 @@
                 <div class="container-fluid">
 
                     <!-- start page title -->
-                   
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box">
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Recrutamentos</a>
-                                        </li>
-                                        <li class="breadcrumb-item active">Edit Recrutamentos</li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Users</a></li>
+                                        <li class="breadcrumb-item active">Create User</li>
                                     </ol>
                                 </div>
-                                <h4 class="page-title">Edit Recrutamentos</h4>
+                                <h4 class="page-title">Create User</h4>
                             </div>
                         </div>
                     </div>
@@ -305,116 +300,95 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <form action="/admin/recrutamento/{{ $recrutamento->id }}" method="post"
-                                        class="needs-validation" novalidate enctype="multipart/form-data">
+                                    <form action="{{ route('store') }}" method="POST" class="needs-validation"
+                                        novalidate>
                                         @csrf
-                                        @method('PUT')
                                         <div class="row">
                                             <div class="col-xl-6">
-                                                <div class="mb-3" style="width: 100px; height: 100px">
-                                                    <img src="{{ asset('storage/upload/img/' . $recrutamento->image) }}"
-                                                        alt="table-user" class="me-2 rounded-circle"
-                                                        style="width: 100%">
+                                                <div class="position-relative mb-3">
+                                                    <label for="username" class="form-label">Full Name</label>
+                                                    <input class="form-control @error('name') is-invalid @enderror "
+                                                        value="{{ $user->name }}" type="text" id="fullname"
+                                                        name="name" placeholder="Enter your name" required>
+                                                    @if ($errors->has('name'))
+                                                        <span class="text-danger">{{ $errors->first('name') }}</span>
+                                                    @endif
+
                                                 </div>
 
                                                 <div class="position-relative mb-3">
-                                                    <label for="newslettername" class="form-label">Title</label>
-                                                    <input type="text" id="newslettername" name="title"
-                                                        class="form-control @error('title') is-invalid @enderror " placeholder="Enter title name" required
-                                                        value="{{ $recrutamento->title }}">
-                                                        @if ($errors->has('title'))
-                                                        <span
-                                                            class="text-danger">{{ $errors->first('title') }}</span>
+                                                    <label for="example-email" class="form-label">Email</label>
+                                                    <input class="form-control @error('email') is-invalid @enderror"
+                                                        value="{{ $user->email }}" type="email" id="emailaddress"
+                                                        name="email" required placeholder="Enter your email">
+                                                    @if ($errors->has('email'))
+                                                        <span class="text-danger">{{ $errors->first('email') }}</span>
                                                     @endif
                                                 </div>
                                                 <div class="position-relative mb-3">
-                                                    <label for="newslettername" class="form-label">Position</label>
-                                                    <input type="text" id="newslettername" name="position"
-                                                        class="form-control @error('position') is-invalid @enderror" placeholder="Enter position" required
-                                                        value="{{ $recrutamento->position }}">
-                                                        @if ($errors->has('position'))
-                                                        <span
-                                                            class="text-danger">{{ $errors->first('position') }}</span>
-                                                    	 @endif
+                                                    <label for="password" class="form-label">Password</label>
+                                                    <div class="input-group input-group-merge">
+                                                        <input
+                                                            class="form-control @error('password') is-invalid @enderror"
+                                                            type="password" required id="password" name="password"
+                                                            placeholder="Enter your password">
+                                                        @if ($errors->has('password'))
+                                                            <span
+                                                                class="text-danger">{{ $errors->first('password') }}</span>
+                                                        @endif
+                                                    </div>
                                                 </div>
 
                                                 <div class="position-relative mb-3">
-                                                    <label for="example-fileinput" class="form-label">Image</label>
-                                                    <input type="file" id="example-fileinput" class="form-control @error('image') is-invalid @enderror"
-                                                        name="image" required>
-                                                        @if ($errors->has('image'))
-                                                        <span
-                                                            class="text-danger">{{ $errors->first('image') }}</span>
-                                                    	 @endif
+                                                    <label for="password_confirmation" class="form-label">Confirm
+                                                        Password</label>
+                                                    <input type="password" class="form-control"
+                                                        id="password_confirmation" name="password_confirmation">
+
                                                 </div>
 
-                                                <div class="position-relative mb-3">
-                                                    <label for="example-select" class="form-label">Status</label>
-                                                    <select class="form-select @error('status') is-invalid @enderror" name="status" id="example-select"
-                                                        required>
-                                                        <option value="1">Activo</option>
-                                                        <option value="0">Desativar</option>
-                                                    </select>
-                                                    @if ($errors->has('status'))
-                                                        <span
-                                                            class="text-danger">{{ $errors->first('status') }}</span>
-                                                    @endif
-                                                </div>
 
                                             </div> <!-- end col-->
 
-                                            <div class="col-xl-6">
-                                                <label for="example-fileinput" class="form-label">Description</label>
-                                                <div id="snow-editor" style="height: 300px;">
-                                                </div>
-                                                <input type="hidden" name="description" id="editor-content-input"
-                                                    value="{{ $recrutamento->description }}">
-
-                                            </div> <!-- end col-->
                                             <div class="mb-3">
                                                 <button class="btn btn-danger" type="submit"><i
-                                                        class="mdi mdi-account-circle me-2"></i>Update</button>
+                                                        class="mdi mdi-account-circle me-2"></i>Save</button>
                                             </div>
                                         </div>
-                                    </form>
-                                    <!-- end row -->
+                                </div>
+                                </form>
+                                <!-- end row -->
 
-                                </div> <!-- end card-body -->
-                            </div> <!-- end card-->
-                        </div> <!-- end col-->
-                    </div>
-                    <!-- end row-->
-
-                </div> <!-- container -->
-
-            </div> <!-- content -->
-
-            <!-- Footer Start -->
-            <footer class="footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <script>
-                                document.write(new Date().getFullYear())
-                            </script> © Índico Seguros
-                        </div>
-                        <div class="col-md-6">
-                            <div class="text-md-end footer-links d-none d-md-block">
-                                <a href="javascript: void(0);">About</a>
-                                <a href="javascript: void(0);">Support</a>
-                                <a href="javascript: void(0);">Contact Us</a>
-                            </div>
-                        </div>
-                    </div>
+                            </div> <!-- end card-body -->
+                        </div> <!-- end card-->
+                    </div> <!-- end col-->
                 </div>
-            </footer>
-            <!-- end Footer -->
+                <!-- end row-->
 
-        </div>
+            </div> <!-- container -->
 
-        <!-- ============================================================== -->
-        <!-- End Page content -->
-        <!-- ============================================================== -->
+        </div> <!-- content -->
+
+        <!-- Footer Start -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script> © Índico Seguros
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+        <!-- end Footer -->
+
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
 
     </div>
     <!-- END wrapper -->
@@ -436,20 +410,6 @@
 
     <!-- App js -->
     <script src="../../../assets/js/app.min.js"></script>
-
-    <!-- quill js -->
-    <script src="../../../assets/vendor/quill/quill.min.js"></script>
-    <!-- quill Init js-->
-    <script src="../../../assets/js/pages/demo.quilljs.js"></script>
-
-    <script>
-        var quill = new Quill('#snow-editor', {
-            theme: 'snow'
-        });
-
-        var editorContent = document.getElementById('editor-content-input').value;
-        quill.setContents(JSON.parse(editorContent));   
-    </script>
 
 </body>
 
