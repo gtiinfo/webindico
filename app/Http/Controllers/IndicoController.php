@@ -18,7 +18,7 @@ class IndicoController extends Controller
         return view('indico.agremiacoes');
     }
     public function artigos(){
-        $artigo = Article::orderBy('year', 'asc')->get();
+        $artigo = Article::orderBy('year', 'desc')->get();
         return view('indico.artigos', ['artigos' => $artigo]);
     }
     public function certificacoes(){
