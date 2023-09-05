@@ -801,65 +801,23 @@
         <div class="container">
             <div class="service_active">
                 <div class="witr_cars11_idteam ">
-                    <!-- fridge_serive2_01 -->
+                  @foreach ($recrutamentos as $recrut )
+                      
+                  
                     <div class="witr_all_mb_30 col-lg-12 ">
                         <div class=" witr_service_11 all_color_service  text- ">
                             <div class="service_top_image">
-                                <img src="../assets/rec/images/img_service_ussd.png" alt="">
+                                <img src="{{ asset('storage/upload/img/'. $recrut->image)}}" alt="">
                             </div>
                             <div class=" wirt_detail_texti">
                                 <div class=" wirt_detail_icon all_icon_color"></div>
                                 <div class="wirt_detail_title">
-                                    <h3><a href="#">Call Center</a></h3>
-                                    <h2>Estagio Profissional</h2>
+                                    <h3><a href="#">{{ $recrut->title }}</a></h3>
+                                    <h2>{{ $recrut->position }}</h2>
                                 </div>
                             </div>
                             <div class="wirt_detail_content">
-                                <p>A ÍNDICO SEGUROS pretende recrutar estagiários para seu quadro de pessoal para integrar a equipe do Contact Center
-                                </p>
-                                <small>Requisitos Mínimos</small>
-                                <div class="service_list_op">
-                                    <ul>
-                                        <li><i class="fas fa-check"></i><a href="#">Nível Médio</a></li>
-                                        <li><i class="fas fa-check"></i><a href="#">Grau de Licenciatura constitui vantagem(Marketing, Jornalismo, Publicidade e Proganda, Relações Públicas e áreas afins)</a></li>
-                                        <li><i class="fas fa-check"></i><a href="#">Idade não superior a 35 anos</a></li>
-                                        <li><i class="fas fa-check"></i><a href="#">Conhecimento basico da língua inglesa</a></li>
-                                    </ul>
-                                </div>
-                                <div class="service-btn witr_sbtn_s8 witr_11_btn">
-                                    <a class="btnslick" href="{{ __(route('view.candidatura')) }}">Candidatar-se</a>
-                                    <div class="pluse_btn_slick">
-                                        <span class="ti-arrow-right"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- fridge_serive2_02 -->
-                    <div class="witr_all_mb_30 col-lg-12 ">
-                        <div class=" witr_service_11 all_color_service  text- ">
-                            <div class="service_top_image">
-                                <img src="../assets/rec/images/negecio_larg.jpg" alt="">
-                            </div>
-                            <div class=" wirt_detail_texti">
-                                <div class=" wirt_detail_icon all_icon_color"></div>
-                                <div class="wirt_detail_title">
-                                    <h3><a href="#">Gerente</a></h3>
-                                    <h2>Temporario</h2>
-                                </div>
-                            </div>
-                            <div class="wirt_detail_content">
-                                <p>A Índico Seguros pretende recrutar um(a) Gerente para o seu quadro de pessoal para integrar a equipe da Agência de Nampula.
-                                </p>
-                                <small>Requisitos Mínimos</small>
-                                <div class="service_list_op">
-                                    <ul>
-                                        <li><i class="fas fa-check"></i><a href="#">Lincenciatura em Gestão de Empresas, Ciências Actuarias, Enconomia, ou áreas afins</a></li>
-                                        <li><i class="fas fa-check"></i><a href="#">Mínimo de 05 anos de experiência em Seguros</a></li>
-                                        <li><i class="fas fa-check"></i><a href="#">Conhecimento do mercado local de Seguros</a></li>
-                                        <li><i class="fas fa-check"></i><a href="#">Fluência oral e escrita da língua inglesa</a></li>
-                                    </ul>
-                                </div>
+                                {{ $recrut->description }}
                                 <div class="service-btn witr_sbtn_s8 witr_11_btn">
                                     <a class="btnslick" href="{{ __(route('view.candidatura')) }}">Candidatar-se</a>
                                     <div class="pluse_btn_slick">
@@ -870,6 +828,7 @@
                         </div>
                     </div>
 
+                    @endforeach
                 </div>
             </div>
         </div>
