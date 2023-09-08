@@ -309,14 +309,6 @@
                                                 class="btn btn-danger mb-2"><i class="mdi mdi-plus-circle me-2"></i>
                                                 Add Article</a>
                                         </div>
-                                        <div class="col-sm-7">
-                                            <div class="text-sm-end">
-                                                <button type="button" class="btn btn-success mb-2 me-1"><i
-                                                        class="mdi mdi-cog"></i></button>
-                                                <button type="button" class="btn btn-light mb-2 me-1">Import</button>
-                                                <button type="button" class="btn btn-light mb-2">Export</button>
-                                            </div>
-                                        </div><!-- end col-->
                                     </div>
 
                                     <div class="table-responsive">

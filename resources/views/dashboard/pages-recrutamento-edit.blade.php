@@ -25,10 +25,10 @@
     <!-- Icons css -->
     <link href="../../../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 
+    <!-- SimpleMDE css -->
+    <link href="../../../assets/vendor/simplemde/simplemde.min.css" rel="stylesheet" type="text/css" /> 
 
-    <!-- Quill css -->
-    <link href="../../../assets/vendor/quill/quill.core.css" rel="stylesheet" type="text/css" />
-    <link href="../../../assets/vendor/quill/quill.snow.css" rel="stylesheet" type="text/css" />
+   
 </head>
 
 <body>
@@ -341,7 +341,7 @@
                                                 <div class="position-relative mb-3">
                                                     <label for="example-fileinput" class="form-label">Image</label>
                                                     <input type="file" id="example-fileinput" class="form-control @error('image') is-invalid @enderror"
-                                                        name="image" required>
+                                                        name="image" value="{{ asset('storage/upload/img/' . $recrutamento->image) }}" required>
                                                         @if ($errors->has('image'))
                                                         <span
                                                             class="text-danger">{{ $errors->first('image') }}</span>
@@ -365,10 +365,13 @@
 
                                             <div class="col-xl-6">
                                                 <label for="example-fileinput" class="form-label">Description</label>
-                                                <div id="snow-editor" style="height: 300px;">
-                                                </div>
-                                                <input type="hidden" name="description" id="editor-content-input"
-                                                    value="{{ $recrutamento->description }}">
+                                               <!-- HTML -->
+    	                                        <textarea id="simplemde1" class="@error('description') is-invalid @enderror "
+                                                name="description" value="" required>{{ $recrutamento->description }}</textarea>
+                                                @if ($errors->has('description'))
+                                                        <span
+                                                            class="text-danger">{{ $errors->first('description') }}</span>
+                                                    @endif
 
                                             </div> <!-- end col-->
                                             <div class="mb-3">
@@ -442,15 +445,11 @@
     <!-- quill Init js-->
     <script src="../../../assets/js/pages/demo.quilljs.js"></script>
 
-    <script>
-        var quill = new Quill('#snow-editor', {
-            theme: 'snow'
-        });
-
-        var editorContent = document.getElementById('editor-content-input').value;
-        quill.setContents(JSON.parse(editorContent));   
-    </script>
-
+     <!-- SimpleMDE js -->
+     <script src="../../../assets/vendor/simplemde/simplemde.min.js"></script>
+     <!-- SimpleMDE demo -->
+     <script src="../../../assets/js/pages/demo.simplemde.js"></script>
+   
 </body>
 
 </html>

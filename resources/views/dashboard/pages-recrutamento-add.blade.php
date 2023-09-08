@@ -25,10 +25,8 @@
     <!-- Icons css -->
     <link href="../../../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 
-
-    <!-- Quill css -->
-    <link href="../../../assets/vendor/quill/quill.core.css" rel="stylesheet" type="text/css" />
-    <link href="../../../assets/vendor/quill/quill.snow.css" rel="stylesheet" type="text/css" />
+    <!-- SimpleMDE css -->
+    <link href="../../../assets/vendor/simplemde/simplemde.min.css" rel="stylesheet" type="text/css" />    
 </head>
 
 <body>
@@ -374,9 +372,13 @@
 
                                             <div class="col-xl-6">
                                                 <label for="example-fileinput" class="form-label">Description</label>
-                                                <div id="snow-editor" style="height: 300px;">
-                                                </div>
-                                                <input type="hidden" name="description" id="editor-content-input">
+                                                <!-- HTML -->
+    	                                        <textarea id="simplemde1" class="@error('description') is-invalid @enderror "
+                                                name="description" required></textarea>
+                                                @if ($errors->has('description'))
+                                                        <span
+                                                            class="text-danger">{{ $errors->first('description') }}</span>
+                                                    @endif
 
                                             </div> <!-- end col-->
                                             <div class="mb-3">
@@ -444,13 +446,12 @@
 
     <!-- App js -->
     <script src="../../../assets/js/app.min.js"></script>
-
-    <!-- quill js -->
-    <script src="../../../assets/vendor/quill/quill.min.js"></script>
-    <!-- quill Init js-->
-    <script src="../../../assets/js/pages/demo.quilljs.js"></script>
-
-    <script>
+  
+    <!-- SimpleMDE js -->
+    <script src="../../../assets/vendor/simplemde/simplemde.min.js"></script>
+    <!-- SimpleMDE demo -->
+    <script src="../../../assets/js/pages/demo.simplemde.js"></script>
+    {{-- <script>
         var quill = new Quill('#snow-editor', {
             theme: 'snow'
         });
@@ -459,7 +460,7 @@
             var editorContent = quill.root.innerHTML;
             document.getElementById('editor-content-input').value = editorContent;
         });
-    </script>
+    </script> --}}
 
 </body>
 
