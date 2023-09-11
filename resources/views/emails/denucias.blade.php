@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pedido de cotação Empresa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap"
+        rel="stylesheet">
+    <style>
+        .title {
+            position: relative;
+            display: flex;
+            text-align: center;
+            padding: 5px;
+            color: #fff;
+            background: #00aeef;
+            margin-bottom: 15px;
+        }
+
+        .content {
+            padding: 20px 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h4 class="title">Denúcias</h4>
+    <div class="content">
+        <p><strong>Tipo de Denúncia:</strong> {{ $data['complaintType'] }}</p>
+        <p><strong>Nome:</strong> {{ $data['name'] }}</p>
+        <p><strong>Denúncia:</strong> {{ $data['complaint'] }}</p>
+        <p><strong>Nome do Denunciado:</strong> {{ $data['nameAccused'] }}</p>
+        <p><strong>Local da Ocorrência:</strong> {{ $data['placeOccurrence'] }}</p>
+        <p><strong>Testemunhas:</strong> {{ $data['witness'] }}</p>
+    
+        @if ($attachment)
+            <p><strong>Anexo:</strong> Veja o anexo abaixo.</p>
+        @endif
+    </div>
+</body>
+
+</html>
