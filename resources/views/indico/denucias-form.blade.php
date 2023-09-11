@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Artigos | ÍNDICO SEGUROS</title>
+    <title>Denúncias | ÍNDICO SEGUROS</title>
     <link rel="shortcut icon" href="../assets/img/favicon.ico" />
     <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css?version=1.1" />
     <link rel="stylesheet" href="../assets/vendor/mdbootstrap/css/mdb.min.css?version=1.1" />
@@ -165,7 +165,9 @@
                                                                 <ul>
                                                                     <li class="dropdown0 icon-menu-drop">Parcerias</li>
                                                                     <ul class="dropdown1">
-                                                                        <li><a href="{{ __(route('view.advogados')) }}">Advogados</a></li>
+                                                                        <li><a
+                                                                                href="{{ __(route('view.advogados')) }}">Advogados</a>
+                                                                        </li>
                                                                         <li><a
                                                                                 href="{{ __(route('view.fornecedores')) }}">Fornecedores</a>
                                                                         </li>
@@ -178,11 +180,12 @@
                                                                         <li><a
                                                                                 href="{{ __(route('view.presta-medicos')) }}">Prestadores
                                                                                 Médicos</a></li>
-                                                                        
+
                                                                     </ul>
                                                                 </ul>
                                                                 <ul>
-                                                                    <li class="dropdown0 icon-menu-drop">Satisfação</li>
+                                                                    <li class="dropdown0 icon-menu-drop">Satisfação
+                                                                    </li>
                                                                     <ul class="dropdown1">
                                                                         <li><a
                                                                                 href="../assets/documents/Politica_Qualidade.pdf">Política
@@ -426,7 +429,7 @@
                                                 <li><a href="{{ __(route('view.oficina')) }}">Oficinas</a></li>
                                                 <li><a href="{{ __(route('view.presta-medicos')) }}">Prestadores
                                                         Médicos</a></li>
-                                                
+
                                             </ul>
                                             <ul>
                                                 <li class="title">Satisfação</li>
@@ -493,6 +496,7 @@
         </div>
     </div>
 </header>
+
 <body>
     <!-- LOADING -->
     <div class="loading-spinner">
@@ -516,28 +520,36 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal top fade" style="z-index: 1111111" id="cookieconsent3" tabindex="-1" aria-labelledby="cookieconsentLabel3"
-        aria-hidden="true" data-mdb-backdrop="static" data-mdb-keyboard="false">
+    <div class="modal top fade" style="z-index: 1111111" id="cookieconsent3" tabindex="-1"
+        aria-labelledby="cookieconsentLabel3" aria-hidden="true" data-mdb-backdrop="static"
+        data-mdb-keyboard="false">
         <div class="modal-dialog" style="max-width: 800px;">
             <div class="modal-content d-block text-start">
                 <div class="modal-header d-block ">
                     <h2 class="modal-title text-primary-indico" id="cookieconsentLabel3">Cookies & Privacidades</h2>
                     <h5 class="text-primary-indico mt-3">Como Usamos os Cookies?</h5>
                     <p>
-                        Esta página descreve os tipos de cookies e outras tecnologias que usamos, incluindo para efeitos de <a href="javascript:void(0)">publicidade</a>.
+                        Esta página descreve os tipos de cookies e outras tecnologias que usamos, incluindo para efeitos
+                        de <a href="javascript:void(0)">publicidade</a>.
                     </p>
 
                     <p>
-                        Os cookies são pequenos textos enviados ao navegador e que ajudam o site a armazenar informações sobre a sua visita ao nosso website, o que pode facilitar o próximo acesso e deixá-lo site mais útil para você, proporcionando-lhe uma melhor experiência de navegação. 
+                        Os cookies são pequenos textos enviados ao navegador e que ajudam o site a armazenar informações
+                        sobre a sua visita ao nosso website, o que pode facilitar o próximo acesso e deixá-lo site mais
+                        útil para você, proporcionando-lhe uma melhor experiência de navegação.
                     </p>
 
                     <p>
-                        Outras tecnologias também podem ter essa finalidade, incluindo pixels, armazenamento local e identificadores únicos usados para identificar um navegador, app ou dispositivo. Os cookies e as outras tecnologias descritos nesta página podem ser usados para os fins explicados abaixo.
+                        Outras tecnologias também podem ter essa finalidade, incluindo pixels, armazenamento local e
+                        identificadores únicos usados para identificar um navegador, app ou dispositivo. Os cookies e as
+                        outras tecnologias descritos nesta página podem ser usados para os fins explicados abaixo.
                     </p>
                     <p>
-                        Consulte a nossa <a href="javascript:void(0)">Política de Privacidade e Protecção de Dados Pessoais</a> para saber como protegemos a sua privacidade ao usar cookies e outras informações.
+                        Consulte a nossa <a href="javascript:void(0)">Política de Privacidade e Protecção de Dados
+                            Pessoais</a> para saber como protegemos a sua privacidade ao usar cookies e outras
+                        informações.
                     </p>
-                   
+
                 </div>
                 <div class="modal-body">
                     <h5 class="text-primary-indico mt-3">Tipos de Cookies </h5>
@@ -547,7 +559,8 @@
                         <label class="form-check-label" for="necessary">
                             <p>
                                 <strong>Funcionalidade</strong>
-                                <muted>registam preferências (como o idioma), informações relacionadas à e otimizações de produtos que ajudam a manter e melhorar o nosso serviço.</muted>
+                                <muted>registam preferências (como o idioma), informações relacionadas à e otimizações
+                                    de produtos que ajudam a manter e melhorar o nosso serviço.</muted>
                             </p>
                         </label>
                     </div>
@@ -557,7 +570,8 @@
                         <label class="form-check-label" for="analytical">
                             <p>
                                 <strong>Segurança</strong>
-                                <muted>são usados para questões de segurança e ajudam a autenticar usuários, evitar fraudes e protegê-lo nas interacções com o nosso serviço.</muted>
+                                <muted>são usados para questões de segurança e ajudam a autenticar usuários, evitar
+                                    fraudes e protegê-lo nas interacções com o nosso serviço.</muted>
                             </p>
                         </label>
                     </div>
@@ -567,12 +581,13 @@
                         <label class="form-check-label" for="marketing">
                             <p>
                                 <strong>Análise</strong>
-                                <muted>ajudam a colectar dados que permitem a melhoria dos nossos conteúdos e da sua experiência.</muted>
+                                <muted>ajudam a colectar dados que permitem a melhoria dos nossos conteúdos e da sua
+                                    experiência.</muted>
                             </p>
                         </label>
                     </div>
-                     <!--Publicidade checkbox -->
-                     <div class="form-check">
+                    <!--Publicidade checkbox -->
+                    <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="marketing" />
                         <label class="form-check-label" for="marketing">
                             <p>
@@ -732,78 +747,170 @@
                 </div>
                 <ul>
                     <li>
-                      <div class="icon me-2">
-                        <i class="fas fa-caret-right"></i>
-                      </div>
-                      <div class="text">
-                        <label for=""><a href="{{ __(route('view.danos-proprios-part')) }}">Automóvel</a></label>
-                      </div>
+                        <div class="icon me-2">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                        <div class="text">
+                            <label for=""><a
+                                    href="{{ __(route('view.danos-proprios-part')) }}">Automóvel</a></label>
+                        </div>
                     </li>
                     <li>
-                      <div class="icon me-2">
-                        <i class="fas fa-caret-right"></i>
-                      </div>
-                      <div class="text">
-                        <label for=""><a href="{{ __(route('view.viagem-part')) }}">Viagem</a></label>
-                      </div>
+                        <div class="icon me-2">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                        <div class="text">
+                            <label for=""><a href="{{ __(route('view.viagem-part')) }}">Viagem</a></label>
+                        </div>
                     </li>
                     <li>
-                      <div class="icon me-2">
-                        <i class="fas fa-caret-right"></i>
-                      </div>
-                      <div class="text">
-                        <label for=""><a href="{{ __(route('view.funeral')) }}">Funeral</a></label>
-                      </div>
+                        <div class="icon me-2">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                        <div class="text">
+                            <label for=""><a href="{{ __(route('view.funeral')) }}">Funeral</a></label>
+                        </div>
                     </li>
                     <li>
-                      <div class="icon me-2">
-                        <i class="fas fa-caret-right"></i>
-                      </div>
-                      <div class="text">
-                        <label for=""><a href="{{ __(route('view.acidente-trabalho')) }}">Acidente de Trabalho</a></label>
-                      </div>
+                        <div class="icon me-2">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                        <div class="text">
+                            <label for=""><a href="{{ __(route('view.acidente-trabalho')) }}">Acidente de
+                                    Trabalho</a></label>
+                        </div>
                     </li>
-                  </ul>
-                  <div class="img-bottom"></div>
-                </li>
-              </ul>
+                </ul>
+                <div class="img-bottom"></div>
+            </li>
+        </ul>
     </div><!-- END LATERAL MENU -->
-    <main style="margin-top: 150px; padding-bottom: 50px;">
-        <div class="container">
-            <section id="articles" class="articles">
-                <div class="header">
-                    <h2 style="color:#00aeef">Artigos</h2>
-                </div>
-                <div class="row">
-                    <ul class="col-12 articles-list-content">
-                        @foreach ($artigos as $artigo)
-                        <li>
-                            <a href="{{ asset('storage/upload/ducuments/'.$artigo->document) }}" class="text-decoration-none">
-                                <div class="articles-card horizontal">
-                                    <div class="articles-card-content">
-                                        <div class="articles-card-content-letf">
-                                            <img src="{{ asset('storage/upload/img/'.$artigo->image) }}"
-                                                alt="">
-                                        </div>
-                                        <div class="articles-card-content-right">
-                                            <div class="articles-content">
-                                                <div class="title">{{ $artigo->title }}</div>
-                                                <div class="line"></div>
-                                                <h2 class="year mt-3">{{ $artigo->year }}</h2>
-                                                <h2 class="author">{{ $artigo->name }}</h2>
-                                            </div>
-                                            <!-- <div class="img-bottom"></div> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        @endforeach
-                    </ul>
-                </div>
-            </section>
+    <section class="intro-box-section">
+        <!-- Intro-Box -->
+        <div id="intro-box d-flex" class="bg-image"
+            style="background: url(../assets/img/background.png); height: 400px;">
         </div>
-    </main>
+        <!-- End Intro-Box -->
+    </section>
+    <!-- Box-Proposito -->
+    @if (session('message'))
+        <div class="alert alert-{{ session('status') }} alert-dismissible fade show" role="alert">
+            <strong>{{ session('message') }}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
+    <section class="box">
+        <div class="">
+            <div class="box-center">
+                <div class="box-medium" style="max-width: 800px;">
+                    <div class="title-bar">
+                        <div class="title-icon"></div>
+                        <h4 class="title">Denúncias</h4>
+                    </div>
+                    <div class="content">
+                        {{--  --}}
+                        <form action="/indico/email/denucias" method="POST" novalidate class="needs-validation"
+                            enctype="multipart/form-data">
+                            @csrf
+                            <div class="mb-4">
+                                <label for="">Tipo de denucia</label>
+                                <select class="form-control @error('complaintType') is-invalid @enderror"
+                                    value="{{ old('complaintType') }}" required name="complaintType">
+                                    <option disabled="" selected=""> -- Seleccione uma opção -- </option>
+                                    <option value="1">Ameaça</option>
+                                    <option value="2">Discriminação</option>
+                                    <option value="3">Assédio</option>
+                                    <option value="4">Corrupção</option>
+                                    <option value="5">Roubo e/ou furto</option>
+                                    <option value="6">Violação às regras de higiene e segurança no local de
+                                        trabalho
+                                    </option>
+                                    <option value="7">Fraude</option>
+                                    <option value="8">Uso indevido dos nossos recursos</option>
+                                    <option value="9">Quebra de sigilo profissional</option>
+                                    <option value="10">Maus-tratos aos clientes, fornecedores, parceiros de negócio
+                                        ou entre colegas de trabalho
+                                    </option>
+                                    <option value="11">Outros</option>
+                                </select>
+                                @if ($errors->has('complaintType'))
+                                    <span class="text-danger">{{ $errors->first('complaintType') }}</span>
+                                @endif
+                            </div>
+                            <div class="mb-3">
+                                <label for="">Nome</label>
+                                <div>
+                                    <input type="text" class="form-control @error('name') is-invalid @enderror"
+                                        value="{{ old('name') }}" name="name" required>
+                                    @if ($errors->has('name'))
+                                        <span class="text-danger">{{ $errors->first('name') }}</span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="">Denúncia </label>
+                                <div>
+                                    <textarea class="form-control @error('complaint') is-invalid @enderror" cols="30" rows="3"
+                                        name="complaint">{{ old('complaint') }}</textarea>
+                                    @if ($errors->has('complaint'))
+                                        <span class="text-danger">{{ $errors->first('complaint') }}</span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="">Nome do denunciado</label>
+                                <div>
+                                    <input type="text"
+                                        class="form-control @error('nameAccused') is-invalid @enderror"
+                                        name="nameAccused" value="{{ old('nameAccused') }}">
+                                    @if ($errors->has('nameAccused'))
+                                        <span class="text-danger">{{ $errors->first('nameAccused') }}</span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="">Local da ocorrência</label>
+                                <div>
+                                    <input type="text"
+                                        class="form-control @error('placeOccurrence') is-invalid @enderror"
+                                        name="placeOccurrence" value="{{ old('placeOccurrence') }}">
+                                    @if ($errors->has('placeOccurrence'))
+                                        <span class="text-danger">{{ $errors->first('placeOccurrence') }}</span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="">Testemunhas</label>
+                                <div>
+                                    <textarea name="witness" id="" class="form-control @error('witness') is-invalid @enderror" cols="30"
+                                        rows="3">{{ old('witness') }}</textarea>
+                                    @if ($errors->has('witness'))
+                                        <span class="text-danger">{{ $errors->first('witness') }}</span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="">Anexos</label>
+                                <div>
+                                    <input type="file" class="form-control @error('file') is-invalid @enderror"
+                                        name="file">
+                                    @if ($errors->has('file'))
+                                        <span class="text-danger">{{ $errors->first('file') }}</span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <button class="btn btn-indico btn-primary" type="submit">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="img-border-bottom"></div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
     <footer>
         <div class="footer mt-5">
             <div class="container d-flex">

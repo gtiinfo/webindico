@@ -19,6 +19,7 @@
     <link rel="stylesheet" type="text/css" href="../assets/rec/css/plugin_theme_css.css" />
     <link rel="stylesheet" type="text/css" href="../assets/rec/css/style.css" />
     <link rel="stylesheet" type="text/css" href="../assets/rec/css/responsive.css" />
+  
     <script src="../assets/rec/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <header class="header">
@@ -504,7 +505,7 @@
     <div class="loading-spinner">
         <div class="spinner"></div>
     </div>
-    <div class="wrapper">
+    <div class="wrapper" style="position: absolute;">
         <header>
             <i class="bx bx-cookie"></i>
             <h2>Cookies & Privacidades</h2>
@@ -801,9 +802,9 @@
         <div class="container">
             <div class="service_active">
                 <div class="witr_cars11_idteam ">
-                  @foreach ($recrutamentos as $recrut )
-                      
-                  
+                    @if (count($recrutamentos) > 0 )
+                  @foreach ($recrutamentos as $recrut )  
+                  @if($recrut->status == 1)           
                     <div class="witr_all_mb_30 col-lg-12 ">
                         <div class=" witr_service_11 all_color_service  text- ">
                             <div class="service_top_image">
@@ -817,9 +818,9 @@
                                 </div>
                             </div>
                             <div class="wirt_detail_content">
-                                {{ $recrut->description }}
+                                {!! $recrut->description !!}
                                 <div class="service-btn witr_sbtn_s8 witr_11_btn">
-                                    <a class="btnslick" href="{{ __(route('view.candidatura')) }}">Candidatar-se</a>
+                                    <a class="btnslick" href="{{ __(route('view.form-recrutamente')) }}">Candidatar-se</a>
                                     <div class="pluse_btn_slick">
                                         <span class="ti-arrow-right"></span>
                                     </div>
@@ -827,8 +828,25 @@
                             </div>
                         </div>
                     </div>
-
+                    @else
+                    <div class="card" style="width: 25rem; background: #00aeef">
+                        <div class="card-body">
+                          <h5 class="card-title text-white">Sem Recrutamentos</h5>
+                          <p class="card-text text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur eligendi incidunt, maxime corrupti voluptatem sed corporis rem hic, iure officia quam distinctio repudiandae tempora deleniti ipsum, illo repellendus amet debitis?</p>
+                        </div>
+                      </div>
+                      
+                    @endif
                     @endforeach
+                    @else
+                    <div class="card" style="width: 25rem; background: #00aeef">
+                        <div class="card-body">
+                          <h5 class="card-title text-white">Sem Recrutamentos</h5>
+                          <p class="card-text text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur eligendi incidunt, maxime corrupti voluptatem sed corporis rem hic, iure officia quam distinctio repudiandae tempora deleniti ipsum, illo repellendus amet debitis?</p>
+                        </div>
+                      </div>
+                      
+                    @endif
                 </div>
             </div>
         </div>
@@ -960,6 +978,8 @@
     <script src="../assets/rec/js/theme.js"></script>
     <script src="../assets/js/freshchat.js"></script>
     <script src="../assets/js/cookies.js"></script>
+
+    
 </body>
 
 </html>

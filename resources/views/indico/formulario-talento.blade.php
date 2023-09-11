@@ -780,130 +780,152 @@
     </section>
     <!-- Box-Proposito -->
     <section class="box">
+        <section class="box">
+            @if (session('message'))
+            <div class="alert alert-{{ session('status') }} alert-dismissible fade show" role="alert">
+                <strong>{{ session('message') }}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
         <div class="">
             <div class="box-center">
-                <div class="box-medium" style="max-width: 720px;">
+                <div class="box-medium" style="max-width: 800px;">
                     <div class="title-bar">
                         <div class="title-icon"></div>
-                        <h4 class="text-uppercase" style="color: #00aeef;">Recrutamento</h4>
+                        <h4 class="text-uppercase" style="color: #00aeef;">Programa de Talentos Candidatura</h4>
                     </div>
-                    <form class="needs-validation" novalidate>
+                    <form action="/indico/email/talentos" method="POST" class="needs-validation" novalidate
+                        enctype="multipart/form-data">
+                        @csrf
                         <div class="row">
                             <div class="col-md-5 offset-md-1 col-sm-12 contact-column">
                                 <label class="title">Dados Pessoas</label>
                                 <div class="mt-2 has-validation">
                                     <label for="" class="fw-bold">Nome Próprio<span
                                             class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" required>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
+                                    <input type="text" class="form-control @error('name') is-invalid @enderror"
+                                        value="{{ old('name') }}" name="name" required>
+                                    @if ($errors->has('name'))
+                                        <span class="text-danger">{{ $errors->first('name') }}</span>
+                                    @endif
                                 </div>
                                 <div class="mt-4 has-validation">
                                     <label for="" class="fw-bold">Apelido<span
                                             class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" required>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
+                                    <input type="text" class="form-control @error('apelido') is-invalid @enderror"
+                                        value="{{ old('apelido') }}" name="apelido" required>
+                                    @if ($errors->has('apelido'))
+                                        <span class="text-danger">{{ $errors->first('apelido') }}</span>
+                                    @endif
                                 </div>
                                 <div class="mt-4 has-validation">
                                     <label class="fw-bold">Sexo<span class="text-danger">*</span></label>
                                     <div class="d-flex">
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio1" value="option1" required>
+                                            <input class="form-check-input" type="radio" name="radioMasculino"
+                                                id="inlineRadio1" value="Masculino" required>
                                             <label class="form-check-label" for="inlineRadio1">Masculino</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio2" value="option2" required>
+                                            <input class="form-check-input" type="radio" name="radioFeminino"
+                                                id="inlineRadio2" value="Feminino" required>
                                             <label class="form-check-label" for="inlineRadio2">Feminino</label>
                                         </div>
-                                        <small class="invalid-feedback">
-                                            Por favor o campo é obrigatorio!
-                                        </small>
+
                                     </div>
                                 </div>
                                 <div class="mt-4 has-validation">
                                     <label for="" class="fw-bold">Data de Nascimento<span
                                             class="text-danger">*</span></label>
-                                    <input type="date" class="form-control" required>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
+                                    <input type="date"
+                                        class="form-control @error('dataNascimento') is-invalid @enderror"
+                                        value="{{ old('dataNascimento') }}" name="dataNascimento" required>
+                                    @if ($errors->has('apelido'))
+                                        <span class="text-danger">{{ $errors->first('apelido') }}</span>
+                                    @endif
                                 </div>
                                 <div class="mt-4 has-validation">
                                     <label for="" class="fw-bold">Nacionalidade<span
                                             class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" required>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
+                                    <input type="text"
+                                        class="form-control @error('nacionalidade') is-invalid @enderror"
+                                        value="{{ old('nacionalidade') }}" name="nacionalidade" required>
+                                    @if ($errors->has('nacionalidade'))
+                                        <span class="text-danger">{{ $errors->first('nacionalidade') }}</span>
+                                    @endif
                                 </div><br>
-                                <label class="title">Residência</label>
-                                <div class="mt-2 has-validation">
-                                    <label for="" class="fw-bold">Província de Residência<span
-                                            class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" required>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
-                                </div>
-                                <div class="mt-4 has-validation">
-                                    <label for="" class="fw-bold">Cidade de Residência<span
-                                            class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" required>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
-                                </div><br>
+
                                 <label class="title">Contactos</label>
                                 <div class="mt-2">
                                     <label for="" class="fw-bold">Contacto Telefónico<span
                                             class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" required>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
+                                    <input type="text" class="form-control @error('contacto') is-invalid @enderror"
+                                        value="{{ old('contacto') }}" name="contacto" required>
+                                    @if ($errors->has('contacto'))
+                                        <span class="text-danger">{{ $errors->first('contacto') }}</span>
+                                    @endif
                                 </div>
-                                <div class="mt-4">
-                                    <label for="" class="fw-bold">Contacto Alternativo</label>
-                                    <input type="text" class="form-control">
-                                </div>
+
                                 <div class="mt-4">
                                     <label for="" class="fw-bold">Email</label>
-                                    <input type="email" class="form-control">
+                                    <input type="email" class="form-control @error('email') is-invalid @enderror"
+                                        value="{{ old('email') }}" name="email">
+                                    @if ($errors->has('email'))
+                                        <span class="text-danger">{{ $errors->first('email') }}</span>
+                                    @endif
                                 </div><br>
                                 <label class="title">Formação Académica</label>
                                 <div class="mt-2 has-validation">
                                     <label for="" class="fw-bold">Nível Acadêmico<span
                                             class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" required>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
+                                    <input type="text"
+                                        class="form-control @error('nivelAcademico') is-invalid @enderror"
+                                        value="{{ old('nivelAcademico') }}" name="nivelAcademico" required>
+                                    @if ($errors->has('nivelAcademico'))
+                                        <span class="text-danger">{{ $errors->first('nivelAcademico') }}</span>
+                                    @endif
                                 </div>
                                 <div class="mt-4">
                                     <label for="" class="fw-bold">Curso</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control @error('curso') is-invalid @enderror"
+                                        value="{{ old('curso') }}" name="curso">
+                                    @if ($errors->has('curso'))
+                                        <span class="text-danger">{{ $errors->first('curso') }}</span>
+                                    @endif
                                 </div>
                                 <div class="mt-4">
                                     <label for="" class="fw-bold">Instituição de Ensino</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text"
+                                        class="form-controll @error('instituicaoEnsino') is-invalid @enderror"
+                                        value="{{ old('instituicaoEnsino') }}" name="instituicaoEnsino">
+                                    @if ($errors->has('instituicaoEnsino'))
+                                        <span class="text-danger">{{ $errors->first('instituicaoEnsino') }}</span>
+                                    @endif
                                 </div><br>
                                 <label class="title">Anexos</label>
                                 <div class="mt-2">
                                     <label for="" class="fw-bold">Curriculum Vitae</label>
-                                    <input type="file" class="">
+                                    <input type="file" class="@error('currVitae') is-invalid @enderror"
+                                        value="{{ old('currVitae') }}" name="currVitae" required>
+                                    @if ($errors->has('currVitae'))
+                                        <span class="text-danger">{{ $errors->first('currVitae') }}</span>
+                                    @endif
                                 </div>
                                 <div class="mt-4">
                                     <label for="" class="fw-bold">NUIT</label>
-                                    <input type="file" class="">
+                                    <input type="file" class="@error('nuit') is-invalid @enderror"
+                                        value="{{ old('nuit') }}" name="nuit" required>
+                                    @if ($errors->has('nuit'))
+                                        <span class="text-danger">{{ $errors->first('nuit') }}</span>
+                                    @endif
                                 </div>
                                 <div class="mt-4">
                                     <label for="" class="fw-bold">Bilhete de Identidade</label>
-                                    <input type="file" class="">
+                                    <input type="file" class="@error('bilheteIdent') is-invalid @enderror"
+                                        value="{{ old('bilheteIdent') }}" name="bilheteIdent" required>
+                                    @if ($errors->has('bilheteIdent'))
+                                        <span class="text-danger">{{ $errors->first('bilheteIdent') }}</span>
+                                    @endif
                                 </div>
                             </div>
                             <div class="col-md-5 contact-dark-area contact-column">
@@ -911,7 +933,8 @@
                                 <div class="mt-2 has-validation">
                                     <label for="" class="fw-bold">Português<span
                                             class="text-danger">*</span></label>
-                                    <select class="form-control" required id="portugues" name="portugues">
+                                    <select class="form-control @error('linguaPt') is-invalid @enderror"
+                                        value="{{ old('linguaPt') }}" required id="portugues" name="linguaPt">
                                         <option disabled="" selected="" value=""> -- Seleccione uma opção
                                             -- </option>
                                         <option value="Não Fala">Não Fala</option>
@@ -919,14 +942,15 @@
                                         <option value="Intermediário">Intermediário</option>
                                         <option value="Fluente">Fluente</option>
                                     </select>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
+                                    @if ($errors->has('linguaPt'))
+                                        <span class="text-danger">{{ $errors->first('linguaPt') }}</span>
+                                    @endif
                                 </div>
                                 <div class="mt-4 has-validation">
                                     <label for="" class="fw-bold">Inglês<span
                                             class="text-danger">*</span></label>
-                                    <select class="form-control" required id="portugues" name="portugues">
+                                    <select class="form-control @error('linguaIng') is-invalid @enderror"
+                                        value="{{ old('linguaIng') }}" required id="" name="linguaIng">
                                         <option disabled="" selected="" value=""> -- Seleccione uma opção
                                             -- </option>
                                         <option value="Não Fala">Não Fala</option>
@@ -934,74 +958,88 @@
                                         <option value="Intermediário">Intermediário</option>
                                         <option value="Fluente">Fluente</option>
                                     </select>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
+                                    @if ($errors->has('linguaIng'))
+                                        <span class="text-danger">{{ $errors->first('linguaIng') }}</span>
+                                    @endif
                                 </div>
                                 <div class="mt-4">
                                     <label for="" class="fw-bold">Línguas Locais</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text"
+                                        class="form-control @error('liguaLocais') is-invalid @enderror"
+                                        value="{{ old('liguaLocais') }}" name="liguaLocais">
+                                    @if ($errors->has('liguaLocais'))
+                                        <span class="text-danger">{{ $errors->first('liguaLocais') }}</span>
+                                    @endif
                                 </div>
                                 <div class="mt-4">
                                     <label for="" class="fw-bold">Outras Línguas</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text"
+                                        class="form-control @error('outrasLinguas') is-invalid @enderror"
+                                        value="{{ old('outrasLinguas') }}" name="outrasLinguas">
+                                    @if ($errors->has('outrasLinguas'))
+                                        <span class="text-danger">{{ $errors->first('outrasLinguas') }}</span>
+                                    @endif
                                 </div><br>
                                 <label class="title">Informática</label>
                                 <div class="mt-2 has-validation">
                                     <label for="" class="fw-bold">Word<span
                                             class="text-danger">*</span></label>
-                                    <select class="form-control" required id="word" name="word">
+                                    <select class="form-control @error('word') is-invalid @enderror"
+                                        value="{{ old('word') }}" required id="word" name="word">
                                         <option disabled="" selected="" value=""> -- Seleccione uma opção
                                             -- </option>
                                         <option value="Básico">Básico</option>
                                         <option value="Intermediário">Intermediário</option>
                                         <option value="Avançado">Avançado</option>
                                     </select>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
+                                    @if ($errors->has('word'))
+                                        <span class="text-danger">{{ $errors->first('word') }}</span>
+                                    @endif
                                 </div>
                                 <div class="mt-4 has-validation">
                                     <label for="" class="fw-bold">Excel<span
                                             class="text-danger">*</span></label>
-                                    <select class="form-control" required id="word" name="word">
+                                    <select class="form-control @error('excel') is-invalid @enderror"
+                                        value="{{ old('excel') }}" required name="excel">
                                         <option disabled="" selected="" value=""> -- Seleccione uma opção
                                             -- </option>
                                         <option value="Básico">Básico</option>
                                         <option value="Intermediário">Intermediário</option>
                                         <option value="Avançado">Avançado</option>
                                     </select>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
+                                    @if ($errors->has('excel'))
+                                        <span class="text-danger">{{ $errors->first('excel') }}</span>
+                                    @endif
                                 </div>
                                 <div class="mt-4 has-validation">
                                     <label for="" class="fw-bold">Power Point<span
                                             class="text-danger">*</span></label>
-                                    <select class="form-control" required id="word" name="word">
+                                    <select class="form-control @error('powerPoint') is-invalid @enderror"
+                                        value="{{ old('powerPoint') }}" required id="word" name="powerPoint">
                                         <option disabled="" selected="" value=""> -- Seleccione uma opção
                                             -- </option>
                                         <option value="Básico">Básico</option>
                                         <option value="Intermediário">Intermediário</option>
                                         <option value="Avançado">Avançado</option>
                                     </select>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
+                                    @if ($errors->has('powerPoint'))
+                                        <span class="text-danger">{{ $errors->first('powerPoint') }}</span>
+                                    @endif
                                 </div>
                                 <div class="mt-4 has-validation">
                                     <label for="" class="fw-bold">Access<span
                                             class="text-danger">*</span></label>
-                                    <select class="form-control" required id="word" name="word">
+                                    <select class="form-control @error('access') is-invalid @enderror"
+                                        value="{{ old('access') }}" required id="word" name="access">
                                         <option disabled="" selected="" value=""> -- Seleccione uma opção
                                             -- </option>
                                         <option value="Básico">Básico</option>
                                         <option value="Intermediário">Intermediário</option>
                                         <option value="Avançado">Avançado</option>
                                     </select>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
+                                    @if ($errors->has('access'))
+                                        <span class="text-danger">{{ $errors->first('access') }}</span>
+                                    @endif
                                 </div><br>
                                 <label class="title">Experiência Profissional</label>
                                 <div class="mt-2 has-validation">
@@ -1009,25 +1047,23 @@
                                             class="text-danger">*</span></label>
                                     <div class="d-flex">
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio1" value="option1" required>
-                                            <label class="form-check-label" for="inlineRadio1">1</label>
+                                            <input class="form-check-input" type="radio" name="exSim"
+                                                id="inlineRadio1" value="Sim" required>
+                                            <label class="form-check-label" for="inlineRadio1">Sim</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio2" value="option2" required>
-                                            <label class="form-check-label" for="inlineRadio2">2</label>
+                                            <input class="form-check-input" type="radio" name="exNao"
+                                                id="inlineRadio2" value="Não" required>
+                                            <label class="form-check-label" for="inlineRadio2">Não</label>
                                         </div>
-                                        <small class="invalid-feedback">
-                                            Por favor o campo é obrigatorio!
-                                        </small>
                                     </div>
                                 </div><br>
                                 <label class="title">Áreas de Interesses</label>
                                 <div class="mt-2 has-validation">
                                     <label for="" class="fw-bold">Área<span
                                             class="text-danger">*</span></label>
-                                    <select class="form-control" id="word" name="word" required>
+                                    <select class="form-control @error('area') is-invalid @enderror"
+                                        value="{{ old('area') }}" required name="area">
                                         <option disabled="" selected="" value=""> -- Seleccione uma opção
                                             -- </option>
                                         <option value="Produção">Produção</option>
@@ -1043,18 +1079,19 @@
                                         <option value="Qualidade e Controlo Interno">Qualidade e Controlo Interno
                                         </option>
                                     </select>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
+                                    @if ($errors->has('area'))
+                                        <span class="text-danger">{{ $errors->first('area') }}</span>
+                                    @endif
                                 </div><br>
                                 <label class="title">Motivação</label>
                                 <div class="mb-3">
                                     <label for="" class="fw-bold">Motivação para a candidatura<span
                                             class="text-danger">*</span></label>
-                                    <textarea name="" id="" cols="30" rows="3" required class="form-control"></textarea>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
+                                    <textarea id="" cols="30" rows="3" required
+                                        class="form-control @error('motivacao') is-invalid @enderror" name="motivacao">{{ old('motivacao') }}</textarea>
+                                    @if ($errors->has('motivacao'))
+                                        <span class="text-danger">{{ $errors->first('motivacao') }}</span>
+                                    @endif
                                 </div>
                             </div>
                         </div>

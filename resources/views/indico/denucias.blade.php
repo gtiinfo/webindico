@@ -818,83 +818,12 @@
                         </ul>
 
                         <div class="my-3">
-                            <button type="button" class="btn btn-primary btn-indico denucia">Denúcie aqui</button>
+                            <a href="{{ __(route('view.form-denucias'))}}" class="btn btn-primary btn-indico">Denúcie aqui</a>
                         </div>
                     </div>
                     <div class="img-border-bottom"></div>
                 </div>
             </div>
-        </div>
-        <div class="card-form overflow-y-scroll">
-            <div class="close"></div>
-            <div class="title">
-                <h5>Denucie aqui</h5>
-            </div>
-            <div class="list-inpts">
-                <div class="mb-4">
-                    <label for="">Tipo de denucia</label>
-                    <select class="form-control" required id="tipoViatura" name="">
-                        <option disabled="" selected=""> -- Seleccione uma opção -- </option>
-                        <option value="1">Ameaça</option>
-                        <option value="2">Discriminação</option>
-                        <option value="3">Assédio</option>
-                        <option value="4">Corrupção</option>
-                        <option value="5">Roubo e/ou furto</option>
-                        <option value="6">Violação às regras de higiene e segurança no <br>local de trabalho
-                        </option>
-                        <option value="7">Fraude</option>
-                        <option value="8">Uso indevido dos nossos recursos</option>
-                        <option value="9">Quebra de sigilo profissional</option>
-                        <option value="10">Maus-tratos aos clientes, fornecedores, parceiros de negócio ou entre
-                            colegas de trabalho
-                        </option>
-                        <option value="11">Outros</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="">Nome</label>
-                    <div>
-                        <input type="text" class="form-control">
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="">Denúncia </label>
-                    <div>
-                        <textarea name="" id="" class="form-control" cols="30" rows="3"></textarea>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="">Nome do denunciado</label>
-                    <div>
-                        <input type="text" class="form-control">
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="">Local da ocorrência</label>
-                    <div>
-                        <input type="text" class="form-control">
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="">Testemunhas </label>
-                    <div>
-                        <textarea name="" id="" class="form-control" cols="30" rows="3"></textarea>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="">Anexos</label>
-                    <div>
-                        <input type="file" class="form-control">
-                    </div>
-                </div>
-
-
-                <div class="mb-3">
-                    <button class="btn btn-indico btn-primary">Enviar</button>
-                </div>
-            </div>
-
-
         </div>
         </div>
     </section>

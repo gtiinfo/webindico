@@ -891,7 +891,7 @@
                                 <li><a href="{{ __(route('view.funeral')) }}">Funeral</a></li>
                                 <li><a href="{{ __(route('view.acidente-pessoal')) }}">Acidentes Pessoais</a></li>
                                 <li><a href="{{ __(route('view.viagem-part')) }}">Viagem</a></li>
-    
+     
     
                             </ul>
                         </div>

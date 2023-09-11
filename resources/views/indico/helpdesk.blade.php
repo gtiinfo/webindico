@@ -165,7 +165,9 @@
                                                                 <ul>
                                                                     <li class="dropdown0 icon-menu-drop">Parcerias</li>
                                                                     <ul class="dropdown1">
-                                                                        <li><a href="{{ __(route('view.advogados')) }}">Advogados</a></li>
+                                                                        <li><a
+                                                                                href="{{ __(route('view.advogados')) }}">Advogados</a>
+                                                                        </li>
                                                                         <li><a
                                                                                 href="{{ __(route('view.fornecedores')) }}">Fornecedores</a>
                                                                         </li>
@@ -178,11 +180,12 @@
                                                                         <li><a
                                                                                 href="{{ __(route('view.presta-medicos')) }}">Prestadores
                                                                                 Médicos</a></li>
-                                                                        
+
                                                                     </ul>
                                                                 </ul>
                                                                 <ul>
-                                                                    <li class="dropdown0 icon-menu-drop">Satisfação</li>
+                                                                    <li class="dropdown0 icon-menu-drop">Satisfação
+                                                                    </li>
                                                                     <ul class="dropdown1">
                                                                         <li><a
                                                                                 href="../assets/documents/Politica_Qualidade.pdf">Política
@@ -426,7 +429,7 @@
                                                 <li><a href="{{ __(route('view.oficina')) }}">Oficinas</a></li>
                                                 <li><a href="{{ __(route('view.presta-medicos')) }}">Prestadores
                                                         Médicos</a></li>
-                                                
+
                                             </ul>
                                             <ul>
                                                 <li class="title">Satisfação</li>
@@ -518,28 +521,36 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal top fade" style="z-index: 1111111" id="cookieconsent3" tabindex="-1" aria-labelledby="cookieconsentLabel3"
-        aria-hidden="true" data-mdb-backdrop="static" data-mdb-keyboard="false">
+    <div class="modal top fade" style="z-index: 1111111" id="cookieconsent3" tabindex="-1"
+        aria-labelledby="cookieconsentLabel3" aria-hidden="true" data-mdb-backdrop="static"
+        data-mdb-keyboard="false">
         <div class="modal-dialog" style="max-width: 800px;">
             <div class="modal-content d-block text-start">
                 <div class="modal-header d-block ">
                     <h2 class="modal-title text-primary-indico" id="cookieconsentLabel3">Cookies & Privacidades</h2>
                     <h5 class="text-primary-indico mt-3">Como Usamos os Cookies?</h5>
                     <p>
-                        Esta página descreve os tipos de cookies e outras tecnologias que usamos, incluindo para efeitos de <a href="javascript:void(0)">publicidade</a>.
+                        Esta página descreve os tipos de cookies e outras tecnologias que usamos, incluindo para efeitos
+                        de <a href="javascript:void(0)">publicidade</a>.
                     </p>
 
                     <p>
-                        Os cookies são pequenos textos enviados ao navegador e que ajudam o site a armazenar informações sobre a sua visita ao nosso website, o que pode facilitar o próximo acesso e deixá-lo site mais útil para você, proporcionando-lhe uma melhor experiência de navegação. 
+                        Os cookies são pequenos textos enviados ao navegador e que ajudam o site a armazenar informações
+                        sobre a sua visita ao nosso website, o que pode facilitar o próximo acesso e deixá-lo site mais
+                        útil para você, proporcionando-lhe uma melhor experiência de navegação.
                     </p>
 
                     <p>
-                        Outras tecnologias também podem ter essa finalidade, incluindo pixels, armazenamento local e identificadores únicos usados para identificar um navegador, app ou dispositivo. Os cookies e as outras tecnologias descritos nesta página podem ser usados para os fins explicados abaixo.
+                        Outras tecnologias também podem ter essa finalidade, incluindo pixels, armazenamento local e
+                        identificadores únicos usados para identificar um navegador, app ou dispositivo. Os cookies e as
+                        outras tecnologias descritos nesta página podem ser usados para os fins explicados abaixo.
                     </p>
                     <p>
-                        Consulte a nossa <a href="javascript:void(0)">Política de Privacidade e Protecção de Dados Pessoais</a> para saber como protegemos a sua privacidade ao usar cookies e outras informações.
+                        Consulte a nossa <a href="javascript:void(0)">Política de Privacidade e Protecção de Dados
+                            Pessoais</a> para saber como protegemos a sua privacidade ao usar cookies e outras
+                        informações.
                     </p>
-                   
+
                 </div>
                 <div class="modal-body">
                     <h5 class="text-primary-indico mt-3">Tipos de Cookies </h5>
@@ -549,7 +560,8 @@
                         <label class="form-check-label" for="necessary">
                             <p>
                                 <strong>Funcionalidade</strong>
-                                <muted>registam preferências (como o idioma), informações relacionadas à e otimizações de produtos que ajudam a manter e melhorar o nosso serviço.</muted>
+                                <muted>registam preferências (como o idioma), informações relacionadas à e otimizações
+                                    de produtos que ajudam a manter e melhorar o nosso serviço.</muted>
                             </p>
                         </label>
                     </div>
@@ -559,7 +571,8 @@
                         <label class="form-check-label" for="analytical">
                             <p>
                                 <strong>Segurança</strong>
-                                <muted>são usados para questões de segurança e ajudam a autenticar usuários, evitar fraudes e protegê-lo nas interacções com o nosso serviço.</muted>
+                                <muted>são usados para questões de segurança e ajudam a autenticar usuários, evitar
+                                    fraudes e protegê-lo nas interacções com o nosso serviço.</muted>
                             </p>
                         </label>
                     </div>
@@ -569,12 +582,13 @@
                         <label class="form-check-label" for="marketing">
                             <p>
                                 <strong>Análise</strong>
-                                <muted>ajudam a colectar dados que permitem a melhoria dos nossos conteúdos e da sua experiência.</muted>
+                                <muted>ajudam a colectar dados que permitem a melhoria dos nossos conteúdos e da sua
+                                    experiência.</muted>
                             </p>
                         </label>
                     </div>
-                     <!--Publicidade checkbox -->
-                     <div class="form-check">
+                    <!--Publicidade checkbox -->
+                    <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="marketing" />
                         <label class="form-check-label" for="marketing">
                             <p>
@@ -735,41 +749,43 @@
                 </div>
                 <ul>
                     <li>
-                      <div class="icon me-2">
-                        <i class="fas fa-caret-right"></i>
-                      </div>
-                      <div class="text">
-                        <label for=""><a href="{{ __(route('view.danos-proprios-part')) }}">Automóvel</a></label>
-                      </div>
+                        <div class="icon me-2">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                        <div class="text">
+                            <label for=""><a
+                                    href="{{ __(route('view.danos-proprios-part')) }}">Automóvel</a></label>
+                        </div>
                     </li>
                     <li>
-                      <div class="icon me-2">
-                        <i class="fas fa-caret-right"></i>
-                      </div>
-                      <div class="text">
-                        <label for=""><a href="{{ __(route('view.viagem-part')) }}">Viagem</a></label>
-                      </div>
+                        <div class="icon me-2">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                        <div class="text">
+                            <label for=""><a href="{{ __(route('view.viagem-part')) }}">Viagem</a></label>
+                        </div>
                     </li>
                     <li>
-                      <div class="icon me-2">
-                        <i class="fas fa-caret-right"></i>
-                      </div>
-                      <div class="text">
-                        <label for=""><a href="{{ __(route('view.funeral')) }}">Funeral</a></label>
-                      </div>
+                        <div class="icon me-2">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                        <div class="text">
+                            <label for=""><a href="{{ __(route('view.funeral')) }}">Funeral</a></label>
+                        </div>
                     </li>
                     <li>
-                      <div class="icon me-2">
-                        <i class="fas fa-caret-right"></i>
-                      </div>
-                      <div class="text">
-                        <label for=""><a href="{{ __(route('view.acidente-trabalho')) }}">Acidente de Trabalho</a></label>
-                      </div>
+                        <div class="icon me-2">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                        <div class="text">
+                            <label for=""><a href="{{ __(route('view.acidente-trabalho')) }}">Acidente de
+                                    Trabalho</a></label>
+                        </div>
                     </li>
-                  </ul>
-                  <div class="img-bottom"></div>
-                </li>
-              </ul>
+                </ul>
+                <div class="img-bottom"></div>
+            </li>
+        </ul>
     </div><!-- END LATERAL MENU -->
     <section class="intro-box-section">
         <!-- Intro-Box -->
@@ -779,38 +795,12 @@
         <!-- End Intro-Box -->
     </section>
     <!-- Box-Proposito -->
-    <?php
-  if (!empty($_POST["send"])) {
-    $name = $_POST["name"];
-    $contacto = $_POST["contacto"];
-    $email = $_POST["email"];
-    $mensage = $_POST["mensage"];
-    $destinatario = "paulomaculuve758@gmail.com";
-    $assuntoEmail = "Help Desk";
-    $corpo = "Nome $name, número de contacto $contacto e endereço e-mail $email \n\nCom o assunto, $mensage";
-    if (mail($destinatario, $assuntoEmail, $corpo)) { ?>
-    <div class="alert alert-success text-center" role="alert">
-        E-mail enviado com sucesso!
-    </div>
-    <?php
-    } else {
-      ?>
-    <div class="alert alert-danger text-center" role="alert">
-        E-mail não enviado!
-    </div>
-    <?php
-    }
-
-  } else {
-    ?>
-    <div class="alert alert-danger text-center" role="alert">
-        Erro de envio!
-    </div>
-    <?php
-  }
-
-  ?>
-
+    @if (session('message'))
+        <div class="alert alert-{{ session('status') }} alert-dismissible fade show" role="alert">
+            <strong>{{ session('message') }}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
     <section class="box">
         <div class="">
             <div class="box-center">
@@ -829,27 +819,43 @@
                         </ul>
                         <div class="form">
                             <!-- When sending, it must be delivered to the email ==> helpdesketica@indicoseguros.co.mz -->
-                            <form action="" method="POST">
+                            <form action="/indico/email/hepldesk" method="POST" class="needs-validation" novalidate
+                                enctype="multipart/form-data">
+                                @csrf
                                 <div class="my-3">
                                     <small for="">Nome</small>
-                                    <input type="text" class="form-control" name="name" required>
+                                    <input type="text" class="form-control @error('name') is-invalid @enderror"
+                                        value="{{ old('name') }}" name="name" required>
+                                    @if ($errors->has('name'))
+                                        <span class="text-danger">{{ $errors->first('name') }}</span>
+                                    @endif
                                 </div>
                                 <div class="my-3">
                                     <small for="">Contacto</small>
-                                    <input type="text" class="form-control" name="contacto" required>
+                                    <input type="text" class="form-control @error('contacto') is-invalid @enderror"
+                                        value="{{ old('contacto') }}" name="contacto" required>
+                                    @if ($errors->has('contacto'))
+                                        <span class="text-danger">{{ $errors->first('contacto') }}</span>
+                                    @endif
                                 </div>
                                 <div class="my-3">
                                     <small for="">Email</small>
-                                    <input type="emal" class="form-control" name="email" required>
+                                    <input type="email" class="form-control @error('email') is-invalid @enderror"
+                                        value="{{ old('email') }}" name="email" required>
+                                    @if ($errors->has('email'))
+                                        <span class="text-danger">{{ $errors->first('email') }}</span>
+                                    @endif
                                 </div>
                                 <div class="my-3">
                                     <small for="">Como podemos ajuda-lo?</small>
-                                    <textarea id="" class="form-control" cols="30" rows="3" placeholder="Digite uma messagem..."
-                                        name="mensage" required></textarea>
+                                    <textarea id="" class="form-control @error('mensage') is-invalid @enderror" cols="30" rows="3"
+                                        placeholder="Digite uma messagem..." name="mensage" required>{{ old('mensage') }}</textarea>
+                                    @if ($errors->has('mensage'))
+                                        <span class="text-danger">{{ $errors->first('mensage') }}</span>
+                                    @endif
                                 </div>
                                 <div class="my-3">
-                                    <input type="submit" class="btn btn-indico btn-primary" name="send"
-                                        value="Enviar">
+                                    <input type="submit" class="btn btn-indico btn-primary" value="Enviar">
                                 </div>
                             </form>
                         </div>

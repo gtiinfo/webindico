@@ -820,7 +820,7 @@
                                     Valores.</span></li>
                         </ul>
                         <div class="mb-3">
-                            <a href="{{ __route('view.form-talento') }}" class="text-uppercase">Inscreva-se aqui!</a>
+                            <a href="{{ __(route('view.form-talento')) }}" class="text-uppercase">Inscreva-se aqui!</a>
                         </div>
                     </div>
                     <div class="img-border-bottom"></div>
