@@ -208,7 +208,7 @@ ul {
     padding: 0;
 }
 li {
-  list-style:none;
+  /* list-style:none; */
 }
 
 
@@ -11893,24 +11893,29 @@ overflow:hidden;
 .wirt_detail_content{
     padding: 25px 30px 20px;  
 }
-.witr_service_11 .service_list_op {
+.witr_service_11 .wirt_detail_content {
     margin-bottom: 15px;
 }
-.service_list_op ul {
+.wirt_detail_content ul {
   display: table-cell;
     padding: 0;
 }
-.service_list_op ul li{
+.wirt_detail_content ul li{
   margin-bottom:7px;
+  list-style: square;
 }
-.service_list_op ul li a:hover{
+.wirt_detail_content ul li a:hover{
   color: #00aeef;
 }
-.service_list_op ul i{
+.wirt_detail_content ul li::marker {
+  color: #00aeef;
+  margin-left: 20px;
+}
+.wirt_detail_content ul i{
   margin-right:15px;
   color: #00aeef;
 }
-.service_list_op ul+ul i{
+.wirt_detail_content ul+ul i{
   margin-left:15px;
 }
 
@@ -15743,7 +15748,7 @@ color: #fff;
     border-radius: 5px;
 } 
 
-.tutor-single-course-segment {;
+.tutor-single-course-segment {
 box-shadow: 0px 0px 12px 0px #dddddd4f;
 padding: 20px 15px 20px;
 }
