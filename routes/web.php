@@ -12,8 +12,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
     Route::get('/lista-agencias', 'HomeController@listAgencies')->name('view.agencias');
     Route::get('/admin', 'AdminController@dashboard')->name('view.admim');
     Route::post('/download', 'ParticipationController@sendEmail');
-
-
+   
     Route::prefix('admin')->middleware(['auth'])->group(function () {
         Route::get('/artigo/add', 'AdminController@artigosAdd')->name('view.artigos-add');
         Route::get('/artigos', 'AdminController@indexArticles')->name('view.artigo');
@@ -79,6 +78,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         Route::get('/participacao-sinistros', 'HomeController@partSinistro')->name('view.sinistros-part');
         Route::get('/viagem', 'HomeController@viagem')->name('view.viagem-part');
 
+        Route::post('/enviar/cotacao', 'FormController@emailParticular');
+
     });
 
     Route::prefix('empresas')->group(function () {
@@ -105,6 +106,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         Route::get('/saude', 'EmpresaController@saude')->name('view.saude');
         Route::get('/participacao-sinistro', 'EmpresaController@sinistro')->name('view.sinistro-emp');
 
+        Route::post('/enviar/cotacao', 'FormController@emailEmpresa');
+
 
     });
 
@@ -115,6 +118,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         Route::get('/certificacoes', 'IndicoController@certificacoes')->name('view.certificacoes');
         Route::get('/dados-empresas', 'IndicoController@dadosEmpresas')->name('view.dados-empresas');
         Route::get('/denucias', 'IndicoController@denucias')->name('view.denucias');
+        Route::get('/formulario-denucia', 'IndicoController@denuciasForm')->name('view.form-denucias');
         Route::get('/documentos-institucionais', 'IndicoController@docInstitucionais')->name('view.doc-insti');
         Route::get('/equipe-gestao', 'IndicoController@equiGestao')->name('view.equipe-gestao');
         Route::get('/estrutura-accionista', 'IndicoController@estrAccionista')->name('view.estru-accionista');
@@ -138,20 +142,13 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         Route::get('/relatorio', 'IndicoController@relatorio')->name('view.relatorio');
         Route::get('/responsabilidade-social', 'IndicoController@responsabilidadeSocial')->name('view.resp-social');
 
+        Route::post('/email/hepldesk', 'FormController@emailHelpDesk');
+        Route::post('/email/denucias', 'FormController@emailDenuncias');
+        Route::post('/email/recrutamento', 'FormController@emailRecrutamento');
+        Route::post('/email/talentos', 'FormController@emailTalento');
+
+
 
     });
 
 });
-
-
-// Route::controller(AdminAuhController::class)->group(function () {
-//     Route::get('/login', 'login')->name('login');
-//     Route::post('/authenticate', 'authenticate')->name('authenticate');
-//     Route::post('/logout', 'logout')->name('logout');
-
-//     // Route::get('/admin/register', 'register')->name('register');
-//     Route::post('/admin/store', 'store')->name('store');
-//     Route::get('/admin/user/add', 'userAdd')->name('view.user-add');
-//     Route::get('/admin/users', 'users')->name('view.users');
-
-// });
