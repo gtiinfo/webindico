@@ -25,8 +25,8 @@
     <!-- Icons css -->
     <link href="../../../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 
-    <!-- SimpleMDE css -->
-    <link href="../../../assets/vendor/simplemde/simplemde.min.css" rel="stylesheet" type="text/css" />    
+    <link href="../../../assets/vendor/quill/quill.core.css" rel="stylesheet" type="text/css" />
+    <link href="../../../assets/vendor/quill/quill.snow.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -373,13 +373,13 @@
                                             <div class="col-xl-6">
                                                 <label for="example-fileinput" class="form-label">Description</label>
                                                 <!-- HTML -->
-    	                                        <textarea id="simplemde1" class="@error('description') is-invalid @enderror "
-                                                name="description" required></textarea>
+                                                <div id="snow-editor-quill" style="height: 300px;"
+                                                    class="@error('description') is-invalid @enderror"></div>
+                                                <input type="hidden" id="description" name="description">
                                                 @if ($errors->has('description'))
-                                                        <span
-                                                            class="text-danger">{{ $errors->first('description') }}</span>
-                                                    @endif
-
+                                                    <span
+                                                        class="text-danger">{{ $errors->first('description') }}</span>
+                                                @endif
                                             </div> <!-- end col-->
                                             <div class="mb-3">
                                                 <button class="btn btn-danger" type="submit"><i
@@ -446,21 +446,24 @@
 
     <!-- App js -->
     <script src="../../../assets/js/app.min.js"></script>
-  
-    <!-- SimpleMDE js -->
-    <script src="../../../assets/vendor/simplemde/simplemde.min.js"></script>
-    <!-- SimpleMDE demo -->
-    <script src="../../../assets/js/pages/demo.simplemde.js"></script>
-    {{-- <script>
-        var quill = new Quill('#snow-editor', {
-            theme: 'snow'
+
+    <!-- quill js -->
+    <script src="../../../assets/vendor/quill/quill.min.js"></script>
+    <!-- quill Init js-->
+    <script src="../../../assets/js/pages/demo.quilljs.js"></script>
+    
+    <script>
+        var quill = new Quill('#snow-editor-quill', {
+            theme: 'snow',
         });
 
         quill.on('text-change', function() {
-            var editorContent = quill.root.innerHTML;
-            document.getElementById('editor-content-input').value = editorContent;
+            document.getElementById('description').value = quill.root.innerHTML;
         });
-    </script> --}}
+
+        var description = document.getElementById('description').value;
+        quill.root.innerHTML = description;
+    </script>
 
 </body>
 

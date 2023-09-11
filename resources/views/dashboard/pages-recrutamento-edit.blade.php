@@ -25,10 +25,10 @@
     <!-- Icons css -->
     <link href="../../../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 
-    <!-- SimpleMDE css -->
-    <link href="../../../assets/vendor/simplemde/simplemde.min.css" rel="stylesheet" type="text/css" /> 
+    <link href="../../../assets/vendor/quill/quill.core.css" rel="stylesheet" type="text/css" />
+    <link href="../../../assets/vendor/quill/quill.snow.css" rel="stylesheet" type="text/css" />
 
-   
+
 </head>
 
 <body>
@@ -44,7 +44,7 @@
                     <!-- Topbar Brand Logo -->
                     <div class="logo-topbar">
                         <!-- Logo light -->
-                        <a href="{{ __(route('view.home'))}}" class="logo-light">
+                        <a href="{{ __(route('view.home')) }}" class="logo-light">
                             <span class="logo-lg">
                                 <img src="../assets/images/logo.png" alt="logo">
                             </span>
@@ -95,9 +95,9 @@
                     </li>
 
                     <li class="dropdown">
-                        <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown" href="#"
-                            role="button" aria-haspopup="false" aria-expanded="false">
-                          
+                        <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown"
+                            href="#" role="button" aria-haspopup="false" aria-expanded="false">
+
                             <span class="d-lg-flex flex-column gap-1 d-none">
                                 <h5 class="my-0">{{ Auth::user()->name }}</h5>
                             </span>
@@ -106,14 +106,15 @@
                             <!-- item-->
                             <div class=" dropdown-header noti-title">
                                 <h6 class="text-overflow m-0">Welcome !</h6>
-                            </div>                  
+                            </div>
 
                             <!-- item-->
-                            <a href="{{ route('logout') }}" class="dropdown-item"  onclick="event.preventDefault();
+                            <a href="{{ route('logout') }}" class="dropdown-item"
+                                onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
                                 <i class="mdi mdi-logout me-1"></i>
                                 <span>Logout</span>
-                               
+
                             </a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST">
                                 @csrf
@@ -129,7 +130,7 @@
         <div class="leftside-menu">
 
             <!-- Brand Logo Light -->
-            <a href="{{ __(route('view.home'))}}" class="logo logo-light">
+            <a href="{{ __(route('view.home')) }}" class="logo logo-light">
                 <span class="logo-lg">
                     <img src="../assets/images/logo.png" alt="logo">
                 </span>
@@ -139,7 +140,7 @@
             </a>
 
             <!-- Brand Logo Dark -->
-            <a href="{{ __(route('view.home'))}}" class="logo logo-dark">
+            <a href="{{ __(route('view.home')) }}" class="logo logo-dark">
                 <span class="logo-lg">
                     <img src="../assets/images/logo-dark.png" alt="dark logo">
                 </span>
@@ -149,7 +150,8 @@
             </a>
 
             <!-- Sidebar Hover Menu Toggle Button -->
-            <div class="button-sm-hover" data-bs-toggle="tooltip" data-bs-placement="right" title="Show Full Sidebar">
+            <div class="button-sm-hover" data-bs-toggle="tooltip" data-bs-placement="right"
+                title="Show Full Sidebar">
                 <i class="ri-checkbox-blank-circle-line align-middle"></i>
             </div>
 
@@ -163,7 +165,7 @@
                 <!-- Leftbar User -->
                 <div class="leftbar-user">
                     <a href="#">
-                        
+
                         <span class="leftbar-user-name mt-2">{{ Auth::user()->name }}</span>
                     </a>
                 </div>
@@ -174,7 +176,7 @@
                     <li class="side-nav-title">Navigation</li>
 
                     <li class="side-nav-item">
-                        <a href="{{ __(route('view.admim'))}}" class="side-nav-link">
+                        <a href="{{ __(route('view.admim')) }}" class="side-nav-link">
                             <i class="uil-home-alt"></i>
                             <span> Dashboards</span>
                         </a>
@@ -209,10 +211,10 @@
                         <div class="collapse" id="sidebarNewsletter">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="{{ __(route('view.noticias'))}}">Newsletter</a>
+                                    <a href="{{ __(route('view.noticias')) }}">Newsletter</a>
                                 </li>
                                 <li>
-                                    <a href="{{ __(route('view.noticias-add'))}}">Adicionar Newsletter</a>
+                                    <a href="{{ __(route('view.noticias-add')) }}">Adicionar Newsletter</a>
                                 </li>
                             </ul>
                         </div>
@@ -228,10 +230,10 @@
                         <div class="collapse" id="sidebarArticles">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="{{ __(route('view.artigo'))}}">Artigos</a>
+                                    <a href="{{ __(route('view.artigo')) }}">Artigos</a>
                                 </li>
                                 <li>
-                                    <a href="{{ __(route('view.artigos-add'))}}">Adicionar Artigos</a>
+                                    <a href="{{ __(route('view.artigos-add')) }}">Adicionar Artigos</a>
                                 </li>
                             </ul>
                         </div>
@@ -246,16 +248,17 @@
                         <div class="collapse" id="sidebarRecrutamento">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="{{ __(route('view.recrutamentos'))}}">Recrutamentos</a>
+                                    <a href="{{ __(route('view.recrutamentos')) }}">Recrutamentos</a>
                                 </li>
                                 <li>
-                                    <a href="{{ __(route('view.recrutamento-add'))}}">Adicionar Recrutamentos</a>
+                                    <a href="{{ __(route('view.recrutamento-add')) }}">Adicionar Recrutamentos</a>
                                 </li>
                             </ul>
                         </div>
                     </li>
                     <li class="side-nav-item">
-                        <a href="{{ route('logout') }}" aria-expanded="false" class="side-nav-link" onclick="event.preventDefault();
+                        <a href="{{ route('logout') }}" aria-expanded="false" class="side-nav-link"
+                            onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
                             <i class="mdi mdi-logout"></i>
                             <span> Logout </span>
@@ -283,7 +286,7 @@
                 <div class="container-fluid">
 
                     <!-- start page title -->
-                   
+
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box">
@@ -320,38 +323,41 @@
                                                 <div class="position-relative mb-3">
                                                     <label for="newslettername" class="form-label">Title</label>
                                                     <input type="text" id="newslettername" name="title"
-                                                        class="form-control @error('title') is-invalid @enderror " placeholder="Enter title name" required
+                                                        class="form-control @error('title') is-invalid @enderror "
+                                                        placeholder="Enter title name" required
                                                         value="{{ $recrutamento->title }}">
-                                                        @if ($errors->has('title'))
-                                                        <span
-                                                            class="text-danger">{{ $errors->first('title') }}</span>
+                                                    @if ($errors->has('title'))
+                                                        <span class="text-danger">{{ $errors->first('title') }}</span>
                                                     @endif
                                                 </div>
                                                 <div class="position-relative mb-3">
                                                     <label for="newslettername" class="form-label">Position</label>
                                                     <input type="text" id="newslettername" name="position"
-                                                        class="form-control @error('position') is-invalid @enderror" placeholder="Enter position" required
+                                                        class="form-control @error('position') is-invalid @enderror"
+                                                        placeholder="Enter position" required
                                                         value="{{ $recrutamento->position }}">
-                                                        @if ($errors->has('position'))
+                                                    @if ($errors->has('position'))
                                                         <span
                                                             class="text-danger">{{ $errors->first('position') }}</span>
-                                                    	 @endif
+                                                    @endif
                                                 </div>
 
                                                 <div class="position-relative mb-3">
                                                     <label for="example-fileinput" class="form-label">Image</label>
-                                                    <input type="file" id="example-fileinput" class="form-control @error('image') is-invalid @enderror"
-                                                        name="image" value="{{ asset('storage/upload/img/' . $recrutamento->image) }}" required>
-                                                        @if ($errors->has('image'))
-                                                        <span
-                                                            class="text-danger">{{ $errors->first('image') }}</span>
-                                                    	 @endif
+                                                    <input type="file" id="example-fileinput"
+                                                        class="form-control @error('image') is-invalid @enderror"
+                                                        name="image"
+                                                        value="{{ asset('storage/upload/img/' . $recrutamento->image) }}"
+                                                        required>
+                                                    @if ($errors->has('image'))
+                                                        <span class="text-danger">{{ $errors->first('image') }}</span>
+                                                    @endif
                                                 </div>
 
                                                 <div class="position-relative mb-3">
                                                     <label for="example-select" class="form-label">Status</label>
-                                                    <select class="form-select @error('status') is-invalid @enderror" name="status" id="example-select"
-                                                        required>
+                                                    <select class="form-select @error('status') is-invalid @enderror"
+                                                        name="status" id="example-select" required>
                                                         <option value="1">Activo</option>
                                                         <option value="0">Desativar</option>
                                                     </select>
@@ -365,14 +371,15 @@
 
                                             <div class="col-xl-6">
                                                 <label for="example-fileinput" class="form-label">Description</label>
-                                               <!-- HTML -->
-    	                                        <textarea id="simplemde1" class="@error('description') is-invalid @enderror "
-                                                name="description" value="" required>{{ $recrutamento->description }}</textarea>
+                                                <!-- HTML -->
+                                                <div id="snow-editor-quill" style="height: 300px;"
+                                                    class="@error('description') is-invalid @enderror"></div>
+                                                <input type="hidden" id="description" name="description"
+                                                    value="{{ $recrutamento->description }}">
                                                 @if ($errors->has('description'))
-                                                        <span
-                                                            class="text-danger">{{ $errors->first('description') }}</span>
-                                                    @endif
-
+                                                    <span
+                                                        class="text-danger">{{ $errors->first('description') }}</span>
+                                                @endif
                                             </div> <!-- end col-->
                                             <div class="mb-3">
                                                 <button class="btn btn-danger" type="submit"><i
@@ -445,11 +452,22 @@
     <!-- quill Init js-->
     <script src="../../../assets/js/pages/demo.quilljs.js"></script>
 
-     <!-- SimpleMDE js -->
-     <script src="../../../assets/vendor/simplemde/simplemde.min.js"></script>
-     <!-- SimpleMDE demo -->
-     <script src="../../../assets/js/pages/demo.simplemde.js"></script>
-   
+    <!-- quill js -->
+    <script src="../../../assets/vendor/quill/quill.min.js"></script>
+    <!-- quill Init js-->
+    <script src="../../../assets/js/pages/demo.quilljs.js"></script>
+    <script>
+        var quill = new Quill('#snow-editor-quill', {
+            theme: 'snow',
+        });
+
+        quill.on('text-change', function() {
+            document.getElementById('description').value = quill.root.innerHTML;
+        });
+
+        var description = document.getElementById('description').value;
+        quill.root.innerHTML = description;
+    </script>
 </body>
 
 </html>
