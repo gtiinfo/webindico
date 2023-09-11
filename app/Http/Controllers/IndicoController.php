@@ -26,9 +26,12 @@ class IndicoController extends Controller
     }
     public function dadosEmpresas(){
         return view('indico.dados-empresas');
-    }
+    } 
     public function denucias(){
         return view('indico.denucias');
+    }
+    public function denuciasForm(){
+        return view('indico.denucias-form');
     }
     public function docInstitucionais(){
         return view('indico.documentos-institucionais');
@@ -40,7 +43,8 @@ class IndicoController extends Controller
         return view('indico.estrutura-accionista');
     }
     public function formularioRecrutamento(){
-        return view('indico.formulario-recrutamento');
+        $recrutamentos = Recruitment::all();
+        return view('indico.formulario-recrutamento', ['recrut' => $recrutamentos]);
     }
     public function formularioTalento(){
         return view('indico.formulario-talento');

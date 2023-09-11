@@ -134,6 +134,7 @@ class AdminController extends Controller
       $percArtigos = ($countArticles / $totalMax) * 100;
       $percNewsletter = ($countNewsletter / $totalMax) * 100;
       $percRecrutamento = ($countRecrut / $totalMax) * 100;
+
       return view('dashboard.index', ['user' => $countUsers, 'recrutamento' => $countRecrut, 'newsletter' => $countNewsletter, 'artigos' => $countArticles, 
       'percUsers'=> $percUsers, 'percArtigos' => $percArtigos, 'percNews'=>$percNewsletter, 'percRecrutamento'=>$percRecrutamento]);
     }
@@ -171,7 +172,7 @@ class AdminController extends Controller
     $request->validate([
       'title' => 'required|string|max:255',
       'date' => 'required',
-      'image' => 'required|file|mimes:jpeg,jpg,png,gif|max:4096',
+      'image' => 'required|file|mimes:jpeg,jpg,png,gif',
       'document' => 'required|file|mimes:pdf,jpeg,jpg,png',
     ]);
 
@@ -196,7 +197,7 @@ class AdminController extends Controller
     $request->validate([
       'title' => 'required',
       'date' => 'required',
-      'image' => 'required|file|mimes:jpeg,jpg,png,gif|max:4096',
+      'image' => 'required|file|mimes:jpeg,jpg,png,gif',
       'document' => 'required|file|mimes:pdf,jpeg,jpg,png',
     ]);
 
@@ -245,7 +246,7 @@ class AdminController extends Controller
   public function storeRecrutamento(Request $request)
   {
     $request->validate([
-      'image' => 'required|file|mimes:jpeg,jpg,png,gif|max:4096',
+      'image' => 'required|file|mimes:jpeg,jpg,png,gif',
       'title' => 'required',
       'position' => 'required',
       'status' => 'required',
@@ -274,7 +275,7 @@ class AdminController extends Controller
   public function updateRecrutamento(Request $request, Recruitment $recruitment)
   {
     $request->validate([
-      'image' => 'required|file|mimes:jpeg,jpg,png,gif|max:4096',
+      'image' => 'required|file|mimes:jpeg,jpg,png,gif',
       'title' => 'required',
       'position' => 'required',
       'status' => 'required',
@@ -321,8 +322,8 @@ class AdminController extends Controller
       'fullname' => 'required',
       'year' => 'required',
       'title' => 'required',
-      'image' => 'required|file|mimes:jpeg,jpg,png,gif|max:4096',
-      'document' => 'required|file|mimes:pdf,jpeg,jpg,png|max:5120',
+      'image' => 'required|file|mimes:jpeg,jpg,png,gif',
+      'document' => 'required|file|mimes:pdf,jpeg,jpg,png',
     ]);
 
     $imageName = time() . '.' . $request->image->extension();
@@ -347,8 +348,8 @@ class AdminController extends Controller
       'fullname' => 'required',
       'year' => 'required',
       'title' => 'required',
-      'image' => 'required|file|mimes:jpeg,jpg,png,gif|max:4096',
-      'document' => 'required|file|mimes:pdf,jpeg,jpg,png|max:5120',
+      'image' => 'required|file|mimes:jpeg,jpg,png,gif',
+      'document' => 'required|file|mimes:pdf,jpeg,jpg,png',
     ]);
 
     $imageName = '';
