@@ -9,10 +9,10 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class ContatoParticularEmail extends Mailable
+class EmailHelpDesk extends Mailable
 {
     use Queueable, SerializesModels;
-    public $data;
+
     /**
      * Create a new message instance.
      *
@@ -20,15 +20,17 @@ class ContatoParticularEmail extends Mailable
      */
     public function __construct($data)
     {
+        //
         $this->data = $data;
     }
 
     public function build()
     {
-        return $this->subject('Solicitação de Cotação Particulares')
-            ->view('emails.formParticular')
+        return $this->subject('Help Desk')
+            ->view('emails.helpdesk')
             ->with([
                 'data' => $this->data,
             ]);
     }
+  
 }
