@@ -536,28 +536,36 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal top fade" style="z-index: 1111111" id="cookieconsent3" tabindex="-1" aria-labelledby="cookieconsentLabel3"
-        aria-hidden="true" data-mdb-backdrop="static" data-mdb-keyboard="false">
+    <div class="modal top fade" style="z-index: 1111111" id="cookieconsent3" tabindex="-1"
+        aria-labelledby="cookieconsentLabel3" aria-hidden="true" data-mdb-backdrop="static"
+        data-mdb-keyboard="false">
         <div class="modal-dialog" style="max-width: 800px;">
             <div class="modal-content d-block text-start">
                 <div class="modal-header d-block ">
                     <h2 class="modal-title text-primary-indico" id="cookieconsentLabel3">Cookies & Privacidades</h2>
                     <h5 class="text-primary-indico mt-3">Como Usamos os Cookies?</h5>
                     <p>
-                        Esta página descreve os tipos de cookies e outras tecnologias que usamos, incluindo para efeitos de <a href="javascript:void(0)">publicidade</a>.
+                        Esta página descreve os tipos de cookies e outras tecnologias que usamos, incluindo para efeitos
+                        de <a href="javascript:void(0)">publicidade</a>.
                     </p>
 
                     <p>
-                        Os cookies são pequenos textos enviados ao navegador e que ajudam o site a armazenar informações sobre a sua visita ao nosso website, o que pode facilitar o próximo acesso e deixá-lo site mais útil para você, proporcionando-lhe uma melhor experiência de navegação. 
+                        Os cookies são pequenos textos enviados ao navegador e que ajudam o site a armazenar informações
+                        sobre a sua visita ao nosso website, o que pode facilitar o próximo acesso e deixá-lo site mais
+                        útil para você, proporcionando-lhe uma melhor experiência de navegação.
                     </p>
 
                     <p>
-                        Outras tecnologias também podem ter essa finalidade, incluindo pixels, armazenamento local e identificadores únicos usados para identificar um navegador, app ou dispositivo. Os cookies e as outras tecnologias descritos nesta página podem ser usados para os fins explicados abaixo.
+                        Outras tecnologias também podem ter essa finalidade, incluindo pixels, armazenamento local e
+                        identificadores únicos usados para identificar um navegador, app ou dispositivo. Os cookies e as
+                        outras tecnologias descritos nesta página podem ser usados para os fins explicados abaixo.
                     </p>
                     <p>
-                        Consulte a nossa <a href="javascript:void(0)">Política de Privacidade e Protecção de Dados Pessoais</a> para saber como protegemos a sua privacidade ao usar cookies e outras informações.
+                        Consulte a nossa <a href="javascript:void(0)">Política de Privacidade e Protecção de Dados
+                            Pessoais</a> para saber como protegemos a sua privacidade ao usar cookies e outras
+                        informações.
                     </p>
-                   
+
                 </div>
                 <div class="modal-body">
                     <h5 class="text-primary-indico mt-3">Tipos de Cookies </h5>
@@ -567,7 +575,8 @@
                         <label class="form-check-label" for="necessary">
                             <p>
                                 <strong>Funcionalidade</strong>
-                                <muted>registam preferências (como o idioma), informações relacionadas à e otimizações de produtos que ajudam a manter e melhorar o nosso serviço.</muted>
+                                <muted>registam preferências (como o idioma), informações relacionadas à e otimizações
+                                    de produtos que ajudam a manter e melhorar o nosso serviço.</muted>
                             </p>
                         </label>
                     </div>
@@ -577,7 +586,8 @@
                         <label class="form-check-label" for="analytical">
                             <p>
                                 <strong>Segurança</strong>
-                                <muted>são usados para questões de segurança e ajudam a autenticar usuários, evitar fraudes e protegê-lo nas interacções com o nosso serviço.</muted>
+                                <muted>são usados para questões de segurança e ajudam a autenticar usuários, evitar
+                                    fraudes e protegê-lo nas interacções com o nosso serviço.</muted>
                             </p>
                         </label>
                     </div>
@@ -587,12 +597,13 @@
                         <label class="form-check-label" for="marketing">
                             <p>
                                 <strong>Análise</strong>
-                                <muted>ajudam a colectar dados que permitem a melhoria dos nossos conteúdos e da sua experiência.</muted>
+                                <muted>ajudam a colectar dados que permitem a melhoria dos nossos conteúdos e da sua
+                                    experiência.</muted>
                             </p>
                         </label>
                     </div>
-                     <!--Publicidade checkbox -->
-                     <div class="form-check">
+                    <!--Publicidade checkbox -->
+                    <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="marketing" />
                         <label class="form-check-label" for="marketing">
                             <p>
@@ -752,41 +763,43 @@
                 </div>
                 <ul>
                     <li>
-                      <div class="icon me-2">
-                        <i class="fas fa-caret-right"></i>
-                      </div>
-                      <div class="text">
-                        <label for=""><a href="{{ __(route('view.danos-proprios-part')) }}">Automóvel</a></label>
-                      </div>
+                        <div class="icon me-2">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                        <div class="text">
+                            <label for=""><a
+                                    href="{{ __(route('view.danos-proprios-part')) }}">Automóvel</a></label>
+                        </div>
                     </li>
                     <li>
-                      <div class="icon me-2">
-                        <i class="fas fa-caret-right"></i>
-                      </div>
-                      <div class="text">
-                        <label for=""><a href="{{ __(route('view.viagem-part')) }}">Viagem</a></label>
-                      </div>
+                        <div class="icon me-2">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                        <div class="text">
+                            <label for=""><a href="{{ __(route('view.viagem-part')) }}">Viagem</a></label>
+                        </div>
                     </li>
                     <li>
-                      <div class="icon me-2">
-                        <i class="fas fa-caret-right"></i>
-                      </div>
-                      <div class="text">
-                        <label for=""><a href="{{ __(route('view.funeral')) }}">Funeral</a></label>
-                      </div>
+                        <div class="icon me-2">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                        <div class="text">
+                            <label for=""><a href="{{ __(route('view.funeral')) }}">Funeral</a></label>
+                        </div>
                     </li>
                     <li>
-                      <div class="icon me-2">
-                        <i class="fas fa-caret-right"></i>
-                      </div>
-                      <div class="text">
-                        <label for=""><a href="{{ __(route('view.acidente-trabalho')) }}">Acidente de Trabalho</a></label>
-                      </div>
+                        <div class="icon me-2">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                        <div class="text">
+                            <label for=""><a href="{{ __(route('view.acidente-trabalho')) }}">Acidente de
+                                    Trabalho</a></label>
+                        </div>
                     </li>
-                  </ul>
-                  <div class="img-bottom"></div>
-                </li>
-              </ul>
+                </ul>
+                <div class="img-bottom"></div>
+            </li>
+        </ul>
     </div><!-- END LATERAL MENU -->
     <section class="intro-box-section">
         <!-- Intro-Box -->
@@ -797,6 +810,12 @@
     </section>
     <!-- Box-Proposito -->
     <section class="box" style="margin-top: 150px;">
+        @if (session('message'))
+            <div class="alert alert-{{ session('status') }} alert-dismissible fade show" role="alert">
+                <strong>{{ session('message') }}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
         <div class="">
             <div class="box-center">
                 <div class="box-medium" style="max-width: 450px;">
@@ -805,51 +824,58 @@
                         <h4 class="title">Cadastro de Mediadores</h4>
                     </div>
                     <div class="content mb-4">
-                        <form action="" class="needs-validation" novalidate>
+                        <form action="/indico/email/mediadores" class="needs-validation" novalidate enctype="multipart/form-data">
+                            @csrf
                             <div class="component-container mx-auto">
                                 <div class="mt-2 has-validation">
-                                    <label for="" class="fw-bold">Nome Próprio<span
+                                    <label for="" class="fw-bold">Nome Mediadores<span
                                             class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" required>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
+                                    <input type="hidden" value="Cadastro de Oficinas" name="parceiria">
+                                    <input type="text" class="form-control @error('fullname') is-invalid @enderror"
+                                        value="{{ old('fullname') }}" name="fullname" required>
+                                    @if ($errors->has('fullname'))
+                                        <span class="text-danger">{{ $errors->first('fullname') }}</span>
+                                    @endif
                                 </div>
                                 <div class="mt-4 has-validation">
                                     <label for="" class="fw-bold">Contacto<span
                                             class="text-danger">*</span></label>
-                                    <input type="number" class="form-control" required>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
+                                    <input type="number" class="form-control @error('contacto') is-invalid @enderror"
+                                    value="{{ old('contacto') }}" name="contacto" required>
+                                    @if ($errors->has('contacto'))
+                                        <span class="text-danger">{{ $errors->first('contacto') }}</span>
+                                    @endif
                                 </div>
 
                                 <div class="mt-4 has-validation">
                                     <label for="" class="fw-bold">Email<span
                                             class="text-danger">*</span></label>
-                                    <input type="email" class="form-control" required>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
+                                    <input type="email" class="form-control @error('email') is-invalid @enderror"
+                                        value="{{ old('email') }}" name="email" required>
+                                    @if ($errors->has('email'))
+                                        <span class="text-danger">{{ $errors->first('email') }}</span>
+                                    @endif
                                 </div>
                                 <div class="mt-4 has-validation">
                                     <label for="" class="fw-bold">NUIT<span
                                             class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" required>
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
+                                    <input type="text" class="form-control @error('nuit') is-invalid @enderror"
+                                        value="{{ old('nuit') }}" name="nuit" required>
+                                    @if ($errors->has('nuit'))
+                                        <span class="text-danger">{{ $errors->first('nuit') }}</span>
+                                    @endif
                                 </div>
                                 <div class="mt-4">
                                     <label for="" class="fw-bold">Morada</label>
-                                    <input type="text" class="form-control">
-                                    <small class="invalid-feedback">
-                                        Por favor o campo é obrigatorio!
-                                    </small>
+                                    <input type="text" class="form-control @error('morada') is-invalid @enderror"
+                                        value="{{ old('morada') }}" name="morada">
+                                    @if ($errors->has('morada'))
+                                        <span class="text-danger">{{ $errors->first('morada') }}</span>
+                                    @endif
                                 </div>
                             </div>
                             <div class="mt-4">
-                                <button class="btn btn-primary btn-indico">Cadastrar</button>
+                                <button class="btn btn-primary btn-indico" type="submit">Cadastrar</button>
                             </div>
                         </form>
                     </div>
