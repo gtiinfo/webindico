@@ -146,6 +146,9 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         Route::post('/email/denucias', 'FormController@emailDenuncias');
         Route::post('/email/recrutamento', 'FormController@emailRecrutamento');
         Route::post('/email/talentos', 'FormController@emailTalento');
+        Route::post('/email/oficinas', 'FormController@emailOficinas');
+        Route::post('/email/mediadores', 'FormController@emailMediadores');
+        Route::post('/email/fornecedores', 'FormController@emailFornecedores');
 
 
 
