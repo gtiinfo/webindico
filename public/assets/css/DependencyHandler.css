@@ -16148,7 +16148,7 @@ h6 {
     width: 52px;
     height: 52px;
     top: -26px;
-    background: url("images/scroll_handle.png") no-repeat;
+    background: url("../img/scroll_handle.png") no-repeat;
     cursor: move;
 }
 
@@ -16156,7 +16156,7 @@ h6 {
     width: 52px !important;
     height: 52px !important;
     top: -12px !important;
-    background: url("images/scroll_handle.png") no-repeat;
+    background: url("../img/scroll_handle.png") no-repeat;
     cursor: move;
 }
 
