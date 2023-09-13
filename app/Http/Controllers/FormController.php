@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use App\Mail\ContatoEmpresaEmail;
 use App\Mail\ContatoParticularEmail;
 use App\Mail\EmailDenucia;
+use App\Mail\EmailFornecedores;
 use App\Mail\EmailHelpDesk;
+use App\Mail\EmailMediadores;
+use App\Mail\EmailOficinas;
 use App\Mail\EmailRecrutamento;
 use App\Mail\EmailTaleto;
 use Illuminate\Http\Request;
@@ -317,5 +320,84 @@ class FormController extends Controller
         session()->flash('status', 'success');
 
         return redirect()->back();
+    }
+
+    public function emailOficinas(Request $request)
+    {
+        $request->validate([
+            'fullname' => 'required',
+            'contacto' => 'required|numeric',
+            'email' => 'required|email',
+            'nuit' => 'required',
+            'morada' => 'nullable'
+        ]);
+        $data = [
+            'parceiria' => $request->input('parceiria'),
+            'fullname' => $request->input('fullname'),
+            'contacto' => $request->input('contacto'),
+            'email' => $request->input('email'),
+            'nuit' => $request->input('nuit'),
+            'morada' => $request->input('morada'),
+        ];
+
+        Mail::to(Env::get('MAIL_WORKSHOP'))->send(new EmailOficinas($data));
+
+        session()->flash('message', 'Solicitação de candidatura enviada com sucesso!');
+        session()->flash('status', 'success');
+
+        return redirect()->back();
+
+    }
+    public function emailMediadores(Request $request)
+    {
+        $request->validate([
+            'fullname' => 'required',
+            'contacto' => 'required|numeric',
+            'email' => 'required|email',
+            'nuit' => 'required',
+            'morada' => 'nullable'
+        ]);
+        $data = [
+            'parceiria' => $request->input('parceiria'),
+            'fullname' => $request->input('fullname'),
+            'contacto' => $request->input('contacto'),
+            'email' => $request->input('email'),
+            'nuit' => $request->input('nuit'),
+            'morada' => $request->input('morada'),
+        ];
+
+        Mail::to(Env::get('MAIL_WORKSHOP'))->send(new EmailMediadores($data));
+
+        session()->flash('message', 'Solicitação de candidatura enviada com sucesso!');
+        session()->flash('status', 'success');
+
+        return redirect()->back();
+
+    }
+    public function emailFornecedores(Request $request)
+    {
+        $request->validate([
+            'fullname' => 'required',
+            'contacto' => 'required|numeric',
+            'email' => 'required|email',
+            'nuit' => 'required',
+            'morada' => 'nullable'
+        ]);
+        $data = [
+            'parceiria' => $request->input('parceiria'),
+            'fullname' => $request->input('fullname'),
+            'contacto' => $request->input('contacto'),
+            'email' => $request->input('email'),
+            'nuit' => $request->input('nuit'),
+            'morada' => $request->input('morada'),
+        ];
+
+        Mail::to(Env::get('MAIL_WORKSHOP'))->send(new EmailFornecedores($data));
+
+        session()->flash('message', 'Solicitação de candidatura enviada com sucesso!');
+        session()->flash('status', 'success');
+
+        return redirect()->back();
+
     }
 }
