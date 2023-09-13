@@ -142,6 +142,15 @@
                                                                         <li><a
                                                                                 href="../assets/documents/Politica_Proteccao_Denunciante.pdf">Política
                                                                                 de Protecção ao Denunciante</a></li>
+                                                                        <li><a
+                                                                                href="../assets/documents/Politica_BackUp.pdf">Política
+                                                                                de Backup</a></li>
+                                                                        <li><a
+                                                                                href="../assets/documents/Politica_Salvaguarda_Informacao.pdf">Política
+                                                                                de Salvaguarda de Informação</a></li>
+                                                                        <li><a
+                                                                                href="../assets/documents/Politica_Controlos_Criptograficos.pdf">Política
+                                                                                de Controlos Criptográficos</a></li>
                                                                     </ul>
                                                                 </ul>
                                                                 <ul>
@@ -165,7 +174,9 @@
                                                                 <ul>
                                                                     <li class="dropdown0 icon-menu-drop">Parcerias</li>
                                                                     <ul class="dropdown1">
-                                                                        <li><a href="{{ __(route('view.advogados')) }}">Advogados</a></li>
+                                                                        <li><a
+                                                                                href="{{ __(route('view.advogados')) }}">Advogados</a>
+                                                                        </li>
                                                                         <li><a
                                                                                 href="{{ __(route('view.fornecedores')) }}">Fornecedores</a>
                                                                         </li>
@@ -178,11 +189,12 @@
                                                                         <li><a
                                                                                 href="{{ __(route('view.presta-medicos')) }}">Prestadores
                                                                                 Médicos</a></li>
-                                                                        
+
                                                                     </ul>
                                                                 </ul>
                                                                 <ul>
-                                                                    <li class="dropdown0 icon-menu-drop">Satisfação</li>
+                                                                    <li class="dropdown0 icon-menu-drop">Satisfação
+                                                                    </li>
                                                                     <ul class="dropdown1">
                                                                         <li><a
                                                                                 href="../assets/documents/Politica_Qualidade.pdf">Política
@@ -407,6 +419,13 @@
                                                         de prevenção e combate ao <br>assédio no trabalho </a></li>
                                                 <li><a href="../assets/documents/Politica_Proteccao_Denunciante.pdf">Política
                                                         de Protecção ao Denunciante</a></li>
+                                                <li><a href="../assets/documents/Politica_BackUp.pdf">Política de
+                                                        Backup</a></li>
+                                                <li><a href="../assets/documents/Politica_Salvaguarda_Informacao.pdf">Política
+                                                        de Salvaguarda de Informação</a></li>
+                                                <li><a
+                                                        href="../assets/documents/Politica_Controlos_Criptograficos.pdf">Política
+                                                        de Controlos Criptográficos</a></li>
                                             </ul>
                                             <ul>
                                                 <li class="title">Sustentabilidade</li>
@@ -426,7 +445,7 @@
                                                 <li><a href="{{ __(route('view.oficina')) }}">Oficinas</a></li>
                                                 <li><a href="{{ __(route('view.presta-medicos')) }}">Prestadores
                                                         Médicos</a></li>
-                                                
+
                                             </ul>
                                             <ul>
                                                 <li class="title">Satisfação</li>
@@ -517,28 +536,36 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal top fade" style="z-index: 1111111" id="cookieconsent3" tabindex="-1" aria-labelledby="cookieconsentLabel3"
-        aria-hidden="true" data-mdb-backdrop="static" data-mdb-keyboard="false">
+    <div class="modal top fade" style="z-index: 1111111" id="cookieconsent3" tabindex="-1"
+        aria-labelledby="cookieconsentLabel3" aria-hidden="true" data-mdb-backdrop="static"
+        data-mdb-keyboard="false">
         <div class="modal-dialog" style="max-width: 800px;">
             <div class="modal-content d-block text-start">
                 <div class="modal-header d-block ">
                     <h2 class="modal-title text-primary-indico" id="cookieconsentLabel3">Cookies & Privacidades</h2>
                     <h5 class="text-primary-indico mt-3">Como Usamos os Cookies?</h5>
                     <p>
-                        Esta página descreve os tipos de cookies e outras tecnologias que usamos, incluindo para efeitos de <a href="javascript:void(0)">publicidade</a>.
+                        Esta página descreve os tipos de cookies e outras tecnologias que usamos, incluindo para efeitos
+                        de <a href="javascript:void(0)">publicidade</a>.
                     </p>
 
                     <p>
-                        Os cookies são pequenos textos enviados ao navegador e que ajudam o site a armazenar informações sobre a sua visita ao nosso website, o que pode facilitar o próximo acesso e deixá-lo site mais útil para você, proporcionando-lhe uma melhor experiência de navegação. 
+                        Os cookies são pequenos textos enviados ao navegador e que ajudam o site a armazenar informações
+                        sobre a sua visita ao nosso website, o que pode facilitar o próximo acesso e deixá-lo site mais
+                        útil para você, proporcionando-lhe uma melhor experiência de navegação.
                     </p>
 
                     <p>
-                        Outras tecnologias também podem ter essa finalidade, incluindo pixels, armazenamento local e identificadores únicos usados para identificar um navegador, app ou dispositivo. Os cookies e as outras tecnologias descritos nesta página podem ser usados para os fins explicados abaixo.
+                        Outras tecnologias também podem ter essa finalidade, incluindo pixels, armazenamento local e
+                        identificadores únicos usados para identificar um navegador, app ou dispositivo. Os cookies e as
+                        outras tecnologias descritos nesta página podem ser usados para os fins explicados abaixo.
                     </p>
                     <p>
-                        Consulte a nossa <a href="javascript:void(0)">Política de Privacidade e Protecção de Dados Pessoais</a> para saber como protegemos a sua privacidade ao usar cookies e outras informações.
+                        Consulte a nossa <a href="javascript:void(0)">Política de Privacidade e Protecção de Dados
+                            Pessoais</a> para saber como protegemos a sua privacidade ao usar cookies e outras
+                        informações.
                     </p>
-                   
+
                 </div>
                 <div class="modal-body">
                     <h5 class="text-primary-indico mt-3">Tipos de Cookies </h5>
@@ -548,7 +575,8 @@
                         <label class="form-check-label" for="necessary">
                             <p>
                                 <strong>Funcionalidade</strong>
-                                <muted>registam preferências (como o idioma), informações relacionadas à e otimizações de produtos que ajudam a manter e melhorar o nosso serviço.</muted>
+                                <muted>registam preferências (como o idioma), informações relacionadas à e otimizações
+                                    de produtos que ajudam a manter e melhorar o nosso serviço.</muted>
                             </p>
                         </label>
                     </div>
@@ -558,7 +586,8 @@
                         <label class="form-check-label" for="analytical">
                             <p>
                                 <strong>Segurança</strong>
-                                <muted>são usados para questões de segurança e ajudam a autenticar usuários, evitar fraudes e protegê-lo nas interacções com o nosso serviço.</muted>
+                                <muted>são usados para questões de segurança e ajudam a autenticar usuários, evitar
+                                    fraudes e protegê-lo nas interacções com o nosso serviço.</muted>
                             </p>
                         </label>
                     </div>
@@ -568,12 +597,13 @@
                         <label class="form-check-label" for="marketing">
                             <p>
                                 <strong>Análise</strong>
-                                <muted>ajudam a colectar dados que permitem a melhoria dos nossos conteúdos e da sua experiência.</muted>
+                                <muted>ajudam a colectar dados que permitem a melhoria dos nossos conteúdos e da sua
+                                    experiência.</muted>
                             </p>
                         </label>
                     </div>
-                     <!--Publicidade checkbox -->
-                     <div class="form-check">
+                    <!--Publicidade checkbox -->
+                    <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="marketing" />
                         <label class="form-check-label" for="marketing">
                             <p>
@@ -733,41 +763,43 @@
                 </div>
                 <ul>
                     <li>
-                      <div class="icon me-2">
-                        <i class="fas fa-caret-right"></i>
-                      </div>
-                      <div class="text">
-                        <label for=""><a href="{{ __(route('view.danos-proprios-part')) }}">Automóvel</a></label>
-                      </div>
+                        <div class="icon me-2">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                        <div class="text">
+                            <label for=""><a
+                                    href="{{ __(route('view.danos-proprios-part')) }}">Automóvel</a></label>
+                        </div>
                     </li>
                     <li>
-                      <div class="icon me-2">
-                        <i class="fas fa-caret-right"></i>
-                      </div>
-                      <div class="text">
-                        <label for=""><a href="{{ __(route('view.viagem-part')) }}">Viagem</a></label>
-                      </div>
+                        <div class="icon me-2">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                        <div class="text">
+                            <label for=""><a href="{{ __(route('view.viagem-part')) }}">Viagem</a></label>
+                        </div>
                     </li>
                     <li>
-                      <div class="icon me-2">
-                        <i class="fas fa-caret-right"></i>
-                      </div>
-                      <div class="text">
-                        <label for=""><a href="{{ __(route('view.funeral')) }}">Funeral</a></label>
-                      </div>
+                        <div class="icon me-2">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                        <div class="text">
+                            <label for=""><a href="{{ __(route('view.funeral')) }}">Funeral</a></label>
+                        </div>
                     </li>
                     <li>
-                      <div class="icon me-2">
-                        <i class="fas fa-caret-right"></i>
-                      </div>
-                      <div class="text">
-                        <label for=""><a href="{{ __(route('view.acidente-trabalho')) }}">Acidente de Trabalho</a></label>
-                      </div>
+                        <div class="icon me-2">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                        <div class="text">
+                            <label for=""><a href="{{ __(route('view.acidente-trabalho')) }}">Acidente de
+                                    Trabalho</a></label>
+                        </div>
                     </li>
-                  </ul>
-                  <div class="img-bottom"></div>
-                </li>
-              </ul>
+                </ul>
+                <div class="img-bottom"></div>
+            </li>
+        </ul>
     </div><!-- END LATERAL MENU -->
     <main style="background: #f5f6f7;">
         <section class="container">
@@ -809,7 +841,11 @@
                                                                     <div class="sub-0">
                                                                         <div class="accordion-body">
                                                                             <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica e Judiciári | Regime: À peça/ solicitação | Contactos: alfiado.pascoal@tta-advogados.com, 843101590
+                                                                                Modalidade: Assistência Jurídica e
+                                                                                Judiciári | Regime: À peça/ solicitação
+                                                                                | Contactos:
+                                                                                alfiado.pascoal@tta-advogados.com,
+                                                                                843101590
                                                                             </p>
                                                                         </div>
                                                                     </div>
@@ -821,14 +857,17 @@
                                                                     <div class="sub-0">
                                                                         <div class="accordion-body">
                                                                             <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica e Judiciári | Regime: À Peça | Contactos: augusto.mhula@mmcadvogados.co.mz, 8488 66 885
+                                                                                Modalidade: Assistência Jurídica e
+                                                                                Judiciári | Regime: À Peça | Contactos:
+                                                                                augusto.mhula@mmcadvogados.co.mz, 8488
+                                                                                66 885
                                                                             </p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                               
+
                                                             </div>
-                                                            
+
                                                         </div>
                                                         <div class="list-item">
                                                             <div class="item0">
@@ -842,7 +881,9 @@
                                                                     <div class="sub-0">
                                                                         <div class="accordion-body">
                                                                             <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica | Regime: À peça/ solicitação | Contactos: scsimbine@gmail.com, 872040501
+                                                                                Modalidade: Assistência Jurídica |
+                                                                                Regime: À peça/ solicitação | Contactos:
+                                                                                scsimbine@gmail.com, 872040501
                                                                             </p>
                                                                         </div>
                                                                     </div>
@@ -854,7 +895,11 @@
                                                                     <div class="sub-0">
                                                                         <div class="accordion-body">
                                                                             <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica e Judiciári | Regime: À peça/ solicitação | Contactos: alfiado.pascoal@tta-advogados.com, 843101590
+                                                                                Modalidade: Assistência Jurídica e
+                                                                                Judiciári | Regime: À peça/ solicitação
+                                                                                | Contactos:
+                                                                                alfiado.pascoal@tta-advogados.com,
+                                                                                843101590
                                                                             </p>
                                                                         </div>
                                                                     </div>
@@ -866,14 +911,17 @@
                                                                     <div class="sub-0">
                                                                         <div class="accordion-body">
                                                                             <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica e Judiciári | Regime: À Peça | Contactos: augusto.mhula@mmcadvogados.co.mz, 8488 66 885
+                                                                                Modalidade: Assistência Jurídica e
+                                                                                Judiciári | Regime: À Peça | Contactos:
+                                                                                augusto.mhula@mmcadvogados.co.mz, 8488
+                                                                                66 885
                                                                             </p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                               
+
                                                             </div>
-                                                            
+
                                                         </div>
                                                         <div class="list-item">
                                                             <div class="item0">
@@ -887,7 +935,10 @@
                                                                     <div class="sub-0">
                                                                         <div class="accordion-body">
                                                                             <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica e Judiciária | Regime: À peça/ solicitação | Contactos: dajunioloco@gmail.com, 845001279
+                                                                                Modalidade: Assistência Jurídica e
+                                                                                Judiciária | Regime: À peça/ solicitação
+                                                                                | Contactos: dajunioloco@gmail.com,
+                                                                                845001279
                                                                             </p>
                                                                         </div>
                                                                     </div>
@@ -899,7 +950,11 @@
                                                                     <div class="sub-0">
                                                                         <div class="accordion-body">
                                                                             <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica e Judiciári | Regime: À peça/ solicitação | Contactos: alfiado.pascoal@tta-advogados.com, 843101590
+                                                                                Modalidade: Assistência Jurídica e
+                                                                                Judiciári | Regime: À peça/ solicitação
+                                                                                | Contactos:
+                                                                                alfiado.pascoal@tta-advogados.com,
+                                                                                843101590
                                                                             </p>
                                                                         </div>
                                                                     </div>
@@ -911,14 +966,17 @@
                                                                     <div class="sub-0">
                                                                         <div class="accordion-body">
                                                                             <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica e Judiciári | Regime: À Peça | Contactos: augusto.mhula@mmcadvogados.co.mz, 8488 66 885
+                                                                                Modalidade: Assistência Jurídica e
+                                                                                Judiciári | Regime: À Peça | Contactos:
+                                                                                augusto.mhula@mmcadvogados.co.mz, 8488
+                                                                                66 885
                                                                             </p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                               
+
                                                             </div>
-                                                            
+
                                                         </div>
                                                     </div>
                                                     <div class="region0">
@@ -934,7 +992,10 @@
                                                                     <div class="sub-0">
                                                                         <div class="accordion-body">
                                                                             <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica e Judiciária | Regime: À peça/ solicitação | Contactos: fmassambo@gmail.com, 8667411144
+                                                                                Modalidade: Assistência Jurídica e
+                                                                                Judiciária | Regime: À peça/ solicitação
+                                                                                | Contactos: fmassambo@gmail.com,
+                                                                                8667411144
                                                                             </p>
                                                                         </div>
                                                                     </div>
@@ -946,7 +1007,11 @@
                                                                     <div class="sub-0">
                                                                         <div class="accordion-body">
                                                                             <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica e Judiciári | Regime: À peça/ solicitação | Contactos: alfiado.pascoal@tta-advogados.com, 843101590
+                                                                                Modalidade: Assistência Jurídica e
+                                                                                Judiciári | Regime: À peça/ solicitação
+                                                                                | Contactos:
+                                                                                alfiado.pascoal@tta-advogados.com,
+                                                                                843101590
                                                                             </p>
                                                                         </div>
                                                                     </div>
@@ -958,14 +1023,17 @@
                                                                     <div class="sub-0">
                                                                         <div class="accordion-body">
                                                                             <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica e Judiciári | Regime: À Peça | Contactos: augusto.mhula@mmcadvogados.co.mz, 8488 66 885
+                                                                                Modalidade: Assistência Jurídica e
+                                                                                Judiciári | Regime: À Peça | Contactos:
+                                                                                augusto.mhula@mmcadvogados.co.mz, 8488
+                                                                                66 885
                                                                             </p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                               
+
                                                             </div>
-                                                            
+
                                                         </div>
                                                         <div class="list-item">
                                                             <div class="item0">
@@ -979,7 +1047,10 @@
                                                                     <div class="sub-0">
                                                                         <div class="accordion-body">
                                                                             <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica e Judiciária | Regime: À peça/ solicitação | Contactos: dmadeirajunior@yahoo.com.br, 843109879
+                                                                                Modalidade: Assistência Jurídica e
+                                                                                Judiciária | Regime: À peça/ solicitação
+                                                                                | Contactos:
+                                                                                dmadeirajunior@yahoo.com.br, 843109879
                                                                             </p>
                                                                         </div>
                                                                     </div>
@@ -991,7 +1062,10 @@
                                                                     <div class="sub-0">
                                                                         <div class="accordion-body">
                                                                             <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica e Judiciária | Regime: À peça/ solicitação | Contactos: stelajoanax@gmail.com, 845013500 / 828437910
+                                                                                Modalidade: Assistência Jurídica e
+                                                                                Judiciária | Regime: À peça/ solicitação
+                                                                                | Contactos: stelajoanax@gmail.com,
+                                                                                845013500 / 828437910
                                                                             </p>
                                                                         </div>
                                                                     </div>
@@ -1003,7 +1077,11 @@
                                                                     <div class="sub-0">
                                                                         <div class="accordion-body">
                                                                             <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica e Judiciári | Regime: À peça/ solicitação | Contactos: alfiado.pascoal@tta-advogados.com, 843101590
+                                                                                Modalidade: Assistência Jurídica e
+                                                                                Judiciári | Regime: À peça/ solicitação
+                                                                                | Contactos:
+                                                                                alfiado.pascoal@tta-advogados.com,
+                                                                                843101590
                                                                             </p>
                                                                         </div>
                                                                     </div>
@@ -1015,14 +1093,17 @@
                                                                     <div class="sub-0">
                                                                         <div class="accordion-body">
                                                                             <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica e Judiciári | Regime: À Peça | Contactos: augusto.mhula@mmcadvogados.co.mz, 8488 66 885
+                                                                                Modalidade: Assistência Jurídica e
+                                                                                Judiciári | Regime: À Peça | Contactos:
+                                                                                augusto.mhula@mmcadvogados.co.mz, 8488
+                                                                                66 885
                                                                             </p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                               
+
                                                             </div>
-                                                            
+
                                                         </div>
                                                         <div class="list-item">
                                                             <div class="item0">
@@ -1036,7 +1117,11 @@
                                                                     <div class="sub-0">
                                                                         <div class="accordion-body">
                                                                             <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica e Judiciári | Regime: À peça/ solicitação | Contactos: alfiado.pascoal@tta-advogados.com, 843101590
+                                                                                Modalidade: Assistência Jurídica e
+                                                                                Judiciári | Regime: À peça/ solicitação
+                                                                                | Contactos:
+                                                                                alfiado.pascoal@tta-advogados.com,
+                                                                                843101590
                                                                             </p>
                                                                         </div>
                                                                     </div>
@@ -1048,14 +1133,17 @@
                                                                     <div class="sub-0">
                                                                         <div class="accordion-body">
                                                                             <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica e Judiciári | Regime: À Peça | Contactos: augusto.mhula@mmcadvogados.co.mz, 8488 66 885
+                                                                                Modalidade: Assistência Jurídica e
+                                                                                Judiciári | Regime: À Peça | Contactos:
+                                                                                augusto.mhula@mmcadvogados.co.mz, 8488
+                                                                                66 885
                                                                             </p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                               
+
                                                             </div>
-                                                            
+
                                                         </div>
                                                         <div class="list-item">
                                                             <div class="item0">
@@ -1069,7 +1157,11 @@
                                                                     <div class="sub-0">
                                                                         <div class="accordion-body">
                                                                             <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica e Judiciári | Regime: À peça/ solicitação | Contactos: alfiado.pascoal@tta-advogados.com, 843101590
+                                                                                Modalidade: Assistência Jurídica e
+                                                                                Judiciári | Regime: À peça/ solicitação
+                                                                                | Contactos:
+                                                                                alfiado.pascoal@tta-advogados.com,
+                                                                                843101590
                                                                             </p>
                                                                         </div>
                                                                     </div>
@@ -1081,14 +1173,17 @@
                                                                     <div class="sub-0">
                                                                         <div class="accordion-body">
                                                                             <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica e Judiciári | Regime: À Peça | Contactos: augusto.mhula@mmcadvogados.co.mz, 8488 66 885
+                                                                                Modalidade: Assistência Jurídica e
+                                                                                Judiciári | Regime: À Peça | Contactos:
+                                                                                augusto.mhula@mmcadvogados.co.mz, 8488
+                                                                                66 885
                                                                             </p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                               
+
                                                             </div>
-                                                            
+
                                                         </div>
                                                     </div>
                                                     <div class="region0">
@@ -1104,7 +1199,10 @@
                                                                     <div class="sub-0">
                                                                         <div class="accordion-body">
                                                                             <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica e Judiciári | Regime: À peça/ solicitação | Contactos: faitoamilcar150@gmail.com, 840114484
+                                                                                Modalidade: Assistência Jurídica e
+                                                                                Judiciári | Regime: À peça/ solicitação
+                                                                                | Contactos: faitoamilcar150@gmail.com,
+                                                                                840114484
                                                                             </p>
                                                                         </div>
                                                                     </div>
@@ -1116,7 +1214,11 @@
                                                                     <div class="sub-0">
                                                                         <div class="accordion-body">
                                                                             <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica e Judiciári | Regime: À peça/ solicitação | Contactos: ilda.tembe@itembeadvogados.com , 873119112 / 860595767
+                                                                                Modalidade: Assistência Jurídica e
+                                                                                Judiciári | Regime: À peça/ solicitação
+                                                                                | Contactos:
+                                                                                ilda.tembe@itembeadvogados.com ,
+                                                                                873119112 / 860595767
                                                                             </p>
                                                                         </div>
                                                                     </div>
@@ -1128,7 +1230,11 @@
                                                                     <div class="sub-0">
                                                                         <div class="accordion-body">
                                                                             <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica e Judiciári | Regime: À peça/ solicitação | Contactos: alfiado.pascoal@tta-advogados.com, 843101590
+                                                                                Modalidade: Assistência Jurídica e
+                                                                                Judiciári | Regime: À peça/ solicitação
+                                                                                | Contactos:
+                                                                                alfiado.pascoal@tta-advogados.com,
+                                                                                843101590
                                                                             </p>
                                                                         </div>
                                                                     </div>
@@ -1140,92 +1246,106 @@
                                                                     <div class="sub-0">
                                                                         <div class="accordion-body">
                                                                             <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica e Judiciári | Regime: À Peça | Contactos: augusto.mhula@mmcadvogados.co.mz, 8488 66 885
+                                                                                Modalidade: Assistência Jurídica e
+                                                                                Judiciári | Regime: À Peça | Contactos:
+                                                                                augusto.mhula@mmcadvogados.co.mz, 8488
+                                                                                66 885
                                                                             </p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                               
+
                                                             </div>
-                                                            
+
                                                         </div>
                                                         <div class="list-item">
                                                             <div class="item0">
                                                                 <p>Cabo Delgado</p>
                                                             </div>
-                                                                <div class="item2">
-                                                                    <div>
-                                                                        <p>TTA</p>
-                                                                    </div>
-                                                                    <div class="sub-0">
-                                                                        <div class="accordion-body">
-                                                                            <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica e Judiciári | Regime: À peça/ solicitação | Contactos: alfiado.pascoal@tta-advogados.com, 843101590
-                                                                            </p>
-                                                                        </div>
+                                                            <div class="item2">
+                                                                <div>
+                                                                    <p>TTA</p>
+                                                                </div>
+                                                                <div class="sub-0">
+                                                                    <div class="accordion-body">
+                                                                        <p style="text-transform: none">
+                                                                            Modalidade: Assistência Jurídica e Judiciári
+                                                                            | Regime: À peça/ solicitação | Contactos:
+                                                                            alfiado.pascoal@tta-advogados.com, 843101590
+                                                                        </p>
                                                                     </div>
                                                                 </div>
-                                                                <div class="item2">
-                                                                    <div>
-                                                                        <p>MMC</p>
-                                                                    </div>
-                                                                    <div class="sub-0">
-                                                                        <div class="accordion-body">
-                                                                            <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica e Judiciári | Regime: À Peça | Contactos: augusto.mhula@mmcadvogados.co.mz, 8488 66 885
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                               
                                                             </div>
-                                                            
+                                                            <div class="item2">
+                                                                <div>
+                                                                    <p>MMC</p>
+                                                                </div>
+                                                                <div class="sub-0">
+                                                                    <div class="accordion-body">
+                                                                        <p style="text-transform: none">
+                                                                            Modalidade: Assistência Jurídica e Judiciári
+                                                                            | Regime: À Peça | Contactos:
+                                                                            augusto.mhula@mmcadvogados.co.mz, 8488 66
+                                                                            885
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
                                                         </div>
-                                                        <div class="list-item">
-                                                            <div class="item0">
-                                                                <p>Niassa</p>
-                                                            </div>
-                                                            <div class="item1">
-                                                                <div class="item2">
-                                                                    <div>
-                                                                        <p>Billy Julane</p>
-                                                                    </div>
-                                                                    <div class="sub-0">
-                                                                        <div class="accordion-body">
-                                                                            <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica e Judiciári | Regime: À peça/ solicitação | Contactos: bjjulane@gmail.com, 824139216 / 845139216
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="item2">
-                                                                    <div>
-                                                                        <p>TTA</p>
-                                                                    </div>
-                                                                    <div class="sub-0">
-                                                                        <div class="accordion-body">
-                                                                            <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica e Judiciári | Regime: À peça/ solicitação | Contactos: alfiado.pascoal@tta-advogados.com, 843101590
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="item2">
-                                                                    <div>
-                                                                        <p>MMC</p>
-                                                                    </div>
-                                                                    <div class="sub-0">
-                                                                        <div class="accordion-body">
-                                                                            <p style="text-transform: none">
-                                                                                Modalidade: Assistência Jurídica e Judiciári | Regime: À Peça | Contactos: augusto.mhula@mmcadvogados.co.mz, 8488 66 885
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                               
-                                                            </div>
-                                                            
+
+                                                    </div>
+                                                    <div class="list-item">
+                                                        <div class="item0">
+                                                            <p>Niassa</p>
                                                         </div>
+                                                        <div class="item1">
+                                                            <div class="item2">
+                                                                <div>
+                                                                    <p>Billy Julane</p>
+                                                                </div>
+                                                                <div class="sub-0">
+                                                                    <div class="accordion-body">
+                                                                        <p style="text-transform: none">
+                                                                            Modalidade: Assistência Jurídica e Judiciári
+                                                                            | Regime: À peça/ solicitação | Contactos:
+                                                                            bjjulane@gmail.com, 824139216 / 845139216
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item2">
+                                                                <div>
+                                                                    <p>TTA</p>
+                                                                </div>
+                                                                <div class="sub-0">
+                                                                    <div class="accordion-body">
+                                                                        <p style="text-transform: none">
+                                                                            Modalidade: Assistência Jurídica e Judiciári
+                                                                            | Regime: À peça/ solicitação | Contactos:
+                                                                            alfiado.pascoal@tta-advogados.com, 843101590
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item2">
+                                                                <div>
+                                                                    <p>MMC</p>
+                                                                </div>
+                                                                <div class="sub-0">
+                                                                    <div class="accordion-body">
+                                                                        <p style="text-transform: none">
+                                                                            Modalidade: Assistência Jurídica e Judiciári
+                                                                            | Regime: À Peça | Contactos:
+                                                                            augusto.mhula@mmcadvogados.co.mz, 8488 66
+                                                                            885
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -1236,6 +1356,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
             </div>
         </section>

@@ -142,6 +142,15 @@
                                                                         <li><a
                                                                                 href="../assets/documents/Politica_Proteccao_Denunciante.pdf">Política
                                                                                 de Protecção ao Denunciante</a></li>
+                                                                        <li><a
+                                                                                href="../assets/documents/Politica_BackUp.pdf">Política
+                                                                                de Backup</a></li>
+                                                                        <li><a
+                                                                                href="../assets/documents/Politica_Salvaguarda_Informacao.pdf">Política
+                                                                                de Salvaguarda de Informação</a></li>
+                                                                        <li><a
+                                                                                href="../assets/documents/Politica_Controlos_Criptograficos.pdf">Política
+                                                                                de Controlos Criptográficos</a></li>
                                                                     </ul>
                                                                 </ul>
                                                                 <ul>
@@ -165,7 +174,9 @@
                                                                 <ul>
                                                                     <li class="dropdown0 icon-menu-drop">Parcerias</li>
                                                                     <ul class="dropdown1">
-                                                                        <li><a href="{{ __(route('view.advogados')) }}">Advogados</a></li>
+                                                                        <li><a
+                                                                                href="{{ __(route('view.advogados')) }}">Advogados</a>
+                                                                        </li>
                                                                         <li><a
                                                                                 href="{{ __(route('view.fornecedores')) }}">Fornecedores</a>
                                                                         </li>
@@ -178,11 +189,12 @@
                                                                         <li><a
                                                                                 href="{{ __(route('view.presta-medicos')) }}">Prestadores
                                                                                 Médicos</a></li>
-                                                                        
+
                                                                     </ul>
                                                                 </ul>
                                                                 <ul>
-                                                                    <li class="dropdown0 icon-menu-drop">Satisfação</li>
+                                                                    <li class="dropdown0 icon-menu-drop">Satisfação
+                                                                    </li>
                                                                     <ul class="dropdown1">
                                                                         <li><a
                                                                                 href="../assets/documents/Politica_Qualidade.pdf">Política
@@ -407,6 +419,13 @@
                                                         de prevenção e combate ao <br>assédio no trabalho </a></li>
                                                 <li><a href="../assets/documents/Politica_Proteccao_Denunciante.pdf">Política
                                                         de Protecção ao Denunciante</a></li>
+                                                <li><a href="../assets/documents/Politica_BackUp.pdf">Política de
+                                                        Backup</a></li>
+                                                <li><a href="../assets/documents/Politica_Salvaguarda_Informacao.pdf">Política
+                                                        de Salvaguarda de Informação</a></li>
+                                                <li><a
+                                                        href="../assets/documents/Politica_Controlos_Criptograficos.pdf">Política
+                                                        de Controlos Criptográficos</a></li>
                                             </ul>
                                             <ul>
                                                 <li class="title">Sustentabilidade</li>
@@ -426,7 +445,7 @@
                                                 <li><a href="{{ __(route('view.oficina')) }}">Oficinas</a></li>
                                                 <li><a href="{{ __(route('view.presta-medicos')) }}">Prestadores
                                                         Médicos</a></li>
-                                                
+
                                             </ul>
                                             <ul>
                                                 <li class="title">Satisfação</li>

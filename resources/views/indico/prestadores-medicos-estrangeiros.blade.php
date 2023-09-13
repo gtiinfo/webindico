@@ -142,6 +142,15 @@
                                                                         <li><a
                                                                                 href="../assets/documents/Politica_Proteccao_Denunciante.pdf">Política
                                                                                 de Protecção ao Denunciante</a></li>
+                                                                        <li><a
+                                                                                href="../assets/documents/Politica_BackUp.pdf">Política
+                                                                                de Backup</a></li>
+                                                                        <li><a
+                                                                                href="../assets/documents/Politica_Salvaguarda_Informacao.pdf">Política
+                                                                                de Salvaguarda de Informação</a></li>
+                                                                        <li><a
+                                                                                href="../assets/documents/Politica_Controlos_Criptograficos.pdf">Política
+                                                                                de Controlos Criptográficos</a></li>
                                                                     </ul>
                                                                 </ul>
                                                                 <ul>
@@ -166,6 +175,9 @@
                                                                     <li class="dropdown0 icon-menu-drop">Parcerias</li>
                                                                     <ul class="dropdown1">
                                                                         <li><a
+                                                                                href="{{ __(route('view.advogados')) }}">Advogados</a>
+                                                                        </li>
+                                                                        <li><a
                                                                                 href="{{ __(route('view.fornecedores')) }}">Fornecedores</a>
                                                                         </li>
                                                                         <li><a
@@ -177,10 +189,12 @@
                                                                         <li><a
                                                                                 href="{{ __(route('view.presta-medicos')) }}">Prestadores
                                                                                 Médicos</a></li>
+
                                                                     </ul>
                                                                 </ul>
                                                                 <ul>
-                                                                    <li class="dropdown0 icon-menu-drop">Satisfação</li>
+                                                                    <li class="dropdown0 icon-menu-drop">Satisfação
+                                                                    </li>
                                                                     <ul class="dropdown1">
                                                                         <li><a
                                                                                 href="../assets/documents/Politica_Qualidade.pdf">Política
@@ -193,8 +207,7 @@
                                                                                 Reclamações</a></li>
                                                                         <li><a
                                                                                 href="{{ __(route('view.inq-analise-marca')) }}">Inquérito
-                                                                                de Análise de Marca
-                                                                            </a></li>
+                                                                                de Análise de Marca </a></li>
                                                                     </ul>
                                                                 </ul>
                                                                 <ul>
@@ -364,7 +377,7 @@
                                                 <li class="title">Governação</li>
                                                 <li><a href="../assets/documents/Codigo_Governacao_Corporativa.pdf">Código
                                                         de
-                                                        governação corporativa</a></li>
+                                                        governação <br>corporativa</a></li>
                                                 <li><a href="../assets/img/Organograma_2023.png">Organograma</a></li>
                                                 <li><a href="{{ __(route('view.estru-accionista')) }}">Estrutura
                                                         Accionista</a></li>
@@ -406,6 +419,13 @@
                                                         de prevenção e combate ao <br>assédio no trabalho </a></li>
                                                 <li><a href="../assets/documents/Politica_Proteccao_Denunciante.pdf">Política
                                                         de Protecção ao Denunciante</a></li>
+                                                <li><a href="../assets/documents/Politica_BackUp.pdf">Política de
+                                                        Backup</a></li>
+                                                <li><a href="../assets/documents/Politica_Salvaguarda_Informacao.pdf">Política
+                                                        de Salvaguarda de Informação</a></li>
+                                                <li><a
+                                                        href="../assets/documents/Politica_Controlos_Criptograficos.pdf">Política
+                                                        de Controlos Criptográficos</a></li>
                                             </ul>
                                             <ul>
                                                 <li class="title">Sustentabilidade</li>
@@ -418,12 +438,14 @@
                                             </ul>
                                             <ul>
                                                 <li class="title">Parcerias</li>
+                                                <li><a href="{{ __(route('view.advogados')) }}">Advogados</a></li>
                                                 <li><a href="{{ __(route('view.fornecedores')) }}">Fornecedores</a>
                                                 </li>
                                                 <li><a href="{{ __(route('view.mediadores')) }}">Mediadores</a></li>
                                                 <li><a href="{{ __(route('view.oficina')) }}">Oficinas</a></li>
                                                 <li><a href="{{ __(route('view.presta-medicos')) }}">Prestadores
                                                         Médicos</a></li>
+
                                             </ul>
                                             <ul>
                                                 <li class="title">Satisfação</li>
@@ -490,7 +512,6 @@
         </div>
     </div>
 </header>
-
 <body>
     <!-- LOADING -->
     <div class="loading-spinner">
